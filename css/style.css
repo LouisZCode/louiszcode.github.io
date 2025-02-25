@@ -773,3 +773,171 @@
       font-size: 16px;
     }
   }
+
+  /* Timeline Section for Experience Page */
+  .experience-header {
+    padding-top: 140px;
+    padding-bottom: 40px;
+    text-align: center;
+    background-color: var(--bg-secondary);
+  }
+
+  .experience-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+
+  .experience-header p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+  }
+
+  .resume-download {
+    margin-top: 30px;
+  }
+
+  .timeline-section {
+    padding: 60px 0;
+    background-color: var(--bg-primary);
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 3px;
+    background-color: var(--accent-primary);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 50px;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--accent-primary);
+    box-shadow: 0 0 10px rgba(26, 117, 255, 0.5);
+    transform: translateX(-50%);
+  }
+
+  .timeline-date {
+    color: var(--accent-primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+
+  .timeline-content {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+
+  .timeline-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+
+  .timeline-header h3 {
+    font-size: 1.4rem;
+    margin-right: 15px;
+  }
+
+  .company-name {
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  .achievement-list {
+    margin-top: 15px;
+    padding-left: 20px;
+  }
+
+  .achievement-list li {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+  }
+
+  .achievement-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+  }
+
+  .skills-section {
+    background-color: var(--bg-secondary);
+    padding: 60px 0;
+  }
+
+  .skills-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .timeline::before {
+      left: 50%;
+    }
+    
+    .timeline-item {
+      padding-left: 0;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      padding-right: 50px;
+      padding-left: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+      padding-left: 50px;
+      margin-left: 50%;
+    }
+    
+    .timeline-dot {
+      left: 50%;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-right: 50px;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: 30px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .timeline-item {
+      padding-left: 40px;
+    }
+    
+    .timeline::before {
+      left: 15px;
+    }
+    
+    .timeline-dot {
+      left: 15px;
+    }
+  }

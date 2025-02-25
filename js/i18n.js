@@ -4,6 +4,7 @@ const translations = {
     // Navigation
     "nav-home": "Home",
     "nav-portfolio": "Portfolio",
+    "nav-experience": "Experience",
     
     // Hero section
     "hero-greeting": "Hello, I'm",
@@ -54,12 +55,58 @@ const translations = {
     "filter-talent": "Talent Acquisition",
     "filter-hr": "HR",
     "filter-education": "Education",
+    
+    // Experience page
+    "experience-description": "A detailed overview of my career journey and professional achievements in talent acquisition and beyond.",
+    "download-resume": "Download Resume",
+    "professional-skills": "Professional Skills",
+    "soft-skills": "Soft Skills",
+    
+    // New translations for portfolio page
+    "ai-projects-heading": "AI Projects",
+    "ai-projects-description": "A collection of AI development projects showcasing my work with large language models, image generation, and autonomous agents.",
+    "filter-llm": "LLM Projects",
+    "filter-image-gen": "Image Generation",
+    "filter-local-llm": "Local AI",
+    
+    // Experience overview
+    "experience-overview": "M.B.A. with 3 years of experience in Talent Acquisition for the DACH region, 2 years also recruiting for EMEA (France, Italy, Spain, Benelux and Spain, DACH). Worked on both startup environments and big corp. Tackled Tech recruitment (Full-stack) and currently tackling Sales recruitment (Account Executives, Sales Engineers, BDRs).",
+    
+    // LucaNet Experience
+    "lucanet-position": "Talent Partner",
+    "lucanet-description": "Full-cycle recruiter for the revenue and financial teams, especially related to Account Executives, Sales Engineers, Account Managers, Consultants and Sales Operations and business development representatives (BDRs) on SaaS and Fintech related products.",
+    "lucanet-achievement1": "Sourcing, interviewing and evaluating candidates online for the DACH, Benelux, Spanish and French regions, recently opened the Italian team.",
+    "lucanet-achievement2": "Reached 150% of my KPIs in the last two quarters.",
+    
+    // Saily Experience
+    "saily-position": "Talent and Coordination Partner",
+    "saily-description": "Sadly, I was part of massive recent layoffs. More in this TechCrunch article: https://tcrn.ch/3He7Jdnb",
+    "saily-achievement1": "As coordination lead: Creation and execution of a completely new coordination automation process for the whole team, specifically for 180+ employees. 20+ hiring managers to C-level and leadership. Around 500+ interviews were successfully coordinated automatically.",
+    "saily-achievement2": "As a Talent Partner: Full-cycle recruiter for developers, data and engineers, especially related to backend development, frontend development, DevOps, product operations, APIs, AI, Rails, and API/Big Data.",
+    
+    // Velocopter Experience
+    "velocopter-position": "Talent Acquisition Specialist",
+    "velocopter-description": "Full-cycle recruiter for engineering, battery, tech, and project management with specialties in machine building, electrics, aerospace, programming, software development, automotive retail and energy.",
+    "velocopter-achievement": "The company went from around 200 to almost 600 employees the year I was working there.",
+    
+    // Microsoft Experience
+    "microsoft-position": "Human Resources Generalist, Data Entry Lead",
+    "microsoft-description": "Processed general data transactions for the EMEA, LATAM and North Microsoft employees using SAP and PeopleSoft.",
+    "microsoft-achievement": "Raised the incidents and SAF clearance of data (Quality) to 99% and the delivery handling time by 30% in the first 3 months and was maintained in the consequent months.",
+    
+    // Honeywell Experience
+    "honeywell-position": "Human Resources Generalist, Customer Exp. Lead",
+    
+    // Education
+    "mba-degree": "Master in Business Administration",
+    "bachelor-degree": "Bachelor of Business",
   },
   
   de: {
     // Navigation
     "nav-home": "Startseite",
     "nav-portfolio": "Portfolio",
+    "nav-experience": "Erfahrung",
     
     // Hero section
     "hero-greeting": "Hallo, ich bin",
@@ -110,12 +157,58 @@ const translations = {
     "filter-talent": "Talentakquise",
     "filter-hr": "Personalwesen",
     "filter-education": "Bildung",
+    
+    // Experience page
+    "experience-description": "Ein detaillierter Überblick über meinen beruflichen Werdegang und meine Erfolge im Talent Acquisition und darüber hinaus.",
+    "download-resume": "Lebenslauf herunterladen",
+    "professional-skills": "Berufliche Fähigkeiten",
+    "soft-skills": "Soft Skills",
+    
+    // New translations for portfolio page
+    "ai-projects-heading": "KI-Projekte",
+    "ai-projects-description": "Eine Sammlung von KI-Entwicklungsprojekten, die meine Arbeit mit großen Sprachmodellen, Bildgenerierung und autonomen Agenten zeigt.",
+    "filter-llm": "LLM-Projekte",
+    "filter-image-gen": "Bildgenerierung",
+    "filter-local-llm": "Lokale KI",
+    
+    // Experience overview
+    "experience-overview": "M.B.A. mit 3 Jahren Erfahrung im Talent Acquisition für die DACH-Region, 2 Jahre auch für EMEA (Frankreich, Italien, Spanien, Benelux und Spanien, DACH). Erfahrung sowohl in Startup-Umgebungen als auch in großen Unternehmen. Schwerpunkt auf Tech-Rekrutierung (Full-Stack) und aktuell Vertriebsrekrutierung (Account Executives, Sales Engineers, BDRs).",
+    
+    // LucaNet Experience
+    "lucanet-position": "Talent Partner",
+    "lucanet-description": "Full-Cycle-Recruiter für Revenue- und Finanzteams, speziell für Account Executives, Sales Engineers, Account Manager, Consultants sowie Sales Operations und Business Development Representatives (BDRs) im SaaS- und Fintech-Bereich.",
+    "lucanet-achievement1": "Sourcing, Interviews und Bewertung von Kandidaten online für die DACH-, Benelux-, spanischen und französischen Regionen, kürzlich auch für das italienische Team.",
+    "lucanet-achievement2": "150% meiner KPIs in den letzten zwei Quartalen erreicht.",
+    
+    // Saily Experience
+    "saily-position": "Talent- und Koordinationspartner",
+    "saily-description": "Leider war ich von massiven Entlassungen betroffen. Mehr in diesem TechCrunch-Artikel: https://tcrn.ch/3He7Jdnb",
+    "saily-achievement1": "Als Koordinationsleiter: Erstellung und Umsetzung eines völlig neuen Koordinationsautomatisierungsprozesses für das gesamte Team, speziell für 180+ Mitarbeiter. 20+ Hiring Manager bis zur C-Ebene und Führungskräfte. Etwa 500+ Interviews wurden erfolgreich automatisch koordiniert.",
+    "saily-achievement2": "Als Talent Partner: Full-Cycle-Recruiter für Entwickler, Daten und Ingenieure, besonders im Bereich Backend-Entwicklung, Frontend-Entwicklung, DevOps, Produktoperationen, APIs, KI, Rails und API/Big Data.",
+    
+    // Velocopter Experience
+    "velocopter-position": "Talent Acquisition Specialist",
+    "velocopter-description": "Full-Cycle-Recruiter für Engineering, Batterie, Technik und Projektmanagement mit Schwerpunkten im Maschinenbau, Elektrotechnik, Luft- und Raumfahrt, Programmierung, Softwareentwicklung, Automobileinzelhandel und Energie.",
+    "velocopter-achievement": "Das Unternehmen wuchs während meiner einjährigen Tätigkeit von etwa 200 auf fast 600 Mitarbeiter.",
+    
+    // Microsoft Experience
+    "microsoft-position": "Human Resources Generalist, Data Entry Lead",
+    "microsoft-description": "Bearbeitung allgemeiner Datentransaktionen für die EMEA-, LATAM- und nordamerikanischen Microsoft-Mitarbeiter mit SAP und PeopleSoft.",
+    "microsoft-achievement": "Steigerung der Datenqualität (Incidents und SAF-Bereinigung) auf 99% und Reduzierung der Bearbeitungszeit um 30% in den ersten 3 Monaten, was in den folgenden Monaten beibehalten wurde.",
+    
+    // Honeywell Experience
+    "honeywell-position": "Human Resources Generalist, Customer Exp. Lead",
+    
+    // Education
+    "mba-degree": "Master in Betriebswirtschaftslehre",
+    "bachelor-degree": "Bachelor in Betriebswirtschaft",
   },
   
   es: {
     // Navigation
     "nav-home": "Inicio",
     "nav-portfolio": "Portafolio",
+    "nav-experience": "Experiencia",
     
     // Hero section
     "hero-greeting": "Hola, soy",
@@ -166,6 +259,51 @@ const translations = {
     "filter-talent": "Adquisición de Talento",
     "filter-hr": "RRHH",
     "filter-education": "Educación",
+    
+    // Experience page
+    "experience-description": "Una visión detallada de mi trayectoria profesional y logros en adquisición de talento y más allá.",
+    "download-resume": "Descargar Currículum",
+    "professional-skills": "Habilidades Profesionales",
+    "soft-skills": "Habilidades Blandas",
+    
+    // New translations for portfolio page
+    "ai-projects-heading": "Proyectos de IA",
+    "ai-projects-description": "Una colección de proyectos de desarrollo de IA que muestra mi trabajo con modelos de lenguaje grandes, generación de imágenes y agentes autónomos.",
+    "filter-llm": "Proyectos LLM",
+    "filter-image-gen": "Generación de Imágenes",
+    "filter-local-llm": "IA Local",
+    
+    // Experience overview
+    "experience-overview": "M.B.A. con 3 años de experiencia en Adquisición de Talento para la región DACH, 2 años también reclutando para EMEA (Francia, Italia, España, Benelux y España, DACH). Experiencia tanto en entornos de startups como en grandes corporaciones. Especializado en reclutamiento tecnológico (Full-stack) y actualmente en reclutamiento de ventas (Account Executives, Sales Engineers, BDRs).",
+    
+    // LucaNet Experience
+    "lucanet-position": "Talent Partner",
+    "lucanet-description": "Reclutador de ciclo completo para equipos de ingresos y finanzas, especialmente relacionado con Account Executives, Sales Engineers, Account Managers, Consultants y Sales Operations y representantes de desarrollo de negocios (BDRs) en productos SaaS y Fintech.",
+    "lucanet-achievement1": "Sourcing, entrevistas y evaluación de candidatos en línea para las regiones DACH, Benelux, española y francesa, recientemente abrí el equipo italiano.",
+    "lucanet-achievement2": "Alcancé el 150% de mis KPIs en los últimos dos trimestres.",
+    
+    // Saily Experience
+    "saily-position": "Talent and Coordination Partner",
+    "saily-description": "Lamentablemente, fui parte de despidos masivos recientes. Más información en este artículo de TechCrunch: https://tcrn.ch/3He7Jdnb",
+    "saily-achievement1": "Como líder de coordinación: Creación y ejecución de un proceso de automatización de coordinación completamente nuevo para todo el equipo, específicamente para más de 180 empleados. Más de 20 gerentes de contratación hasta nivel C y liderazgo. Alrededor de 500+ entrevistas fueron coordinadas automáticamente con éxito.",
+    "saily-achievement2": "Como Talent Partner: Reclutador de ciclo completo para desarrolladores, datos e ingenieros, especialmente relacionados con desarrollo backend, desarrollo frontend, DevOps, operaciones de producto, APIs, IA, Rails y API/Big Data.",
+    
+    // Velocopter Experience
+    "velocopter-position": "Especialista en Adquisición de Talento",
+    "velocopter-description": "Reclutador de ciclo completo para ingeniería, baterías, tecnología y gestión de proyectos con especialidades en construcción de máquinas, sistemas eléctricos, aeroespacial, programación, desarrollo de software, retail automotriz y energía.",
+    "velocopter-achievement": "La empresa pasó de aproximadamente 200 a casi 600 empleados durante el año que estuve trabajando allí.",
+    
+    // Microsoft Experience
+    "microsoft-position": "Generalista de Recursos Humanos, Líder de Entrada de Datos",
+    "microsoft-description": "Procesamiento de transacciones generales de datos para los empleados de Microsoft en EMEA, LATAM y Norte utilizando SAP y PeopleSoft.",
+    "microsoft-achievement": "Aumenté la calidad de datos de incidentes y SAF al 99% y reduje el tiempo de gestión en un 30% en los primeros 3 meses, manteniéndose en los meses consecuentes.",
+    
+    // Honeywell Experience
+    "honeywell-position": "Generalista de Recursos Humanos, Líder de Exp. al Cliente",
+    
+    // Education
+    "mba-degree": "Maestría en Administración de Empresas",
+    "bachelor-degree": "Licenciatura en Negocios",
   }
 };
 
