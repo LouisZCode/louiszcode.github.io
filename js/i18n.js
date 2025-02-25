@@ -47,7 +47,13 @@ const translations = {
     "contact-text": "Feel free to reach out to me for collaborations or just a friendly chat.",
     
     // Footer
-    "copyright": "© 2025 Luis Zermeno. All Rights Reserved."
+    "copyright": "© 2025 Luis Zermeno. All Rights Reserved.",
+    
+    // Portfolio page
+    "portfolio-description": "A collection of my professional roles and achievements spanning talent acquisition and HR.",
+    "filter-talent": "Talent Acquisition",
+    "filter-hr": "HR",
+    "filter-education": "Education",
   },
   
   de: {
@@ -97,7 +103,13 @@ const translations = {
     "contact-text": "Kontaktieren Sie mich gerne für Zusammenarbeit oder einfach für einen freundlichen Austausch.",
     
     // Footer
-    "copyright": "© 2025 Luis Zermeno. Alle Rechte vorbehalten."
+    "copyright": "© 2025 Luis Zermeno. Alle Rechte vorbehalten.",
+    
+    // Portfolio page
+    "portfolio-description": "Eine Sammlung meiner beruflichen Rollen und Erfolge in den Bereichen Talentakquise und Personalwesen.",
+    "filter-talent": "Talentakquise",
+    "filter-hr": "Personalwesen",
+    "filter-education": "Bildung",
   },
   
   es: {
@@ -147,7 +159,13 @@ const translations = {
     "contact-text": "No dudes en contactarme para colaboraciones o simplemente para una charla amistosa.",
     
     // Footer
-    "copyright": "© 2025 Luis Zermeno. Todos los derechos reservados."
+    "copyright": "© 2025 Luis Zermeno. Todos los derechos reservados.",
+    
+    // Portfolio page
+    "portfolio-description": "Una colección de mis roles profesionales y logros en adquisición de talento y recursos humanos.",
+    "filter-talent": "Adquisición de Talento",
+    "filter-hr": "RRHH",
+    "filter-education": "Educación",
   }
 };
 
