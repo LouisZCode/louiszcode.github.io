@@ -122,4 +122,30 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-}); 
+    
+    // Contact form functionality
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real scenario, you would send the form data to a server here
+            // For now, we'll just simulate a successful submission
+            
+            // Hide the form and show success message
+            contactForm.style.display = 'none';
+            formSuccess.classList.add('visible');
+            
+            // Reset form fields
+            contactForm.reset();
+            
+            // Optional: Hide success message and show form again after some time
+            setTimeout(() => {
+                formSuccess.classList.remove('visible');
+                contactForm.style.display = 'flex';
+            }, 5000);
+        });
+    }
+});

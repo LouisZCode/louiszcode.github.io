@@ -46,6 +46,16 @@ const translations = {
     // Contact section
     "contact-heading": "Get In Touch",
     "contact-text": "Feel free to reach out to me for collaborations or just a friendly chat.",
+    "contact-name": "Name",
+    "contact-name-placeholder": "Your name",
+    "contact-email": "Email",
+    "contact-email-placeholder": "Your email",
+    "contact-subject": "Subject",
+    "contact-subject-placeholder": "Subject",
+    "contact-message": "Message",
+    "contact-message-placeholder": "Your message",
+    "contact-send": "Send Message",
+    "contact-success": "Your message has been sent successfully!",
     
     // Footer
     "copyright": "© 2025 Luis Zermeno. All Rights Reserved.",
@@ -148,6 +158,16 @@ const translations = {
     // Contact section
     "contact-heading": "Kontakt aufnehmen",
     "contact-text": "Kontaktieren Sie mich gerne für Zusammenarbeit oder einfach für einen freundlichen Austausch.",
+    "contact-name": "Name",
+    "contact-name-placeholder": "Ihr Name",
+    "contact-email": "E-Mail",
+    "contact-email-placeholder": "Ihre E-Mail",
+    "contact-subject": "Betreff",
+    "contact-subject-placeholder": "Betreff",
+    "contact-message": "Nachricht",
+    "contact-message-placeholder": "Ihre Nachricht",
+    "contact-send": "Nachricht senden",
+    "contact-success": "Ihre Nachricht wurde erfolgreich gesendet!",
     
     // Footer
     "copyright": "© 2025 Luis Zermeno. Alle Rechte vorbehalten.",
@@ -250,6 +270,16 @@ const translations = {
     // Contact section
     "contact-heading": "Ponte en contacto",
     "contact-text": "No dudes en contactarme para colaboraciones o simplemente para una charla amistosa.",
+    "contact-name": "Nombre",
+    "contact-name-placeholder": "Tu nombre",
+    "contact-email": "Correo electrónico",
+    "contact-email-placeholder": "Tu correo electrónico",
+    "contact-subject": "Asunto",
+    "contact-subject-placeholder": "Asunto",
+    "contact-message": "Mensaje",
+    "contact-message-placeholder": "Tu mensaje",
+    "contact-send": "Enviar mensaje",
+    "contact-success": "¡Tu mensaje ha sido enviado con éxito!",
     
     // Footer
     "copyright": "© 2025 Luis Zermeno. Todos los derechos reservados.",
@@ -365,4 +395,4 @@ document.addEventListener('DOMContentLoaded', () => {
       updateLanguage('en');
     }
   }
-}); 
+});
