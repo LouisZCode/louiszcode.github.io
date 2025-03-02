@@ -9,7 +9,7 @@ const translations = {
     // Hero section
     "hero-greeting": "Hello, I'm",
     "hero-title": "Senior Talent Partner and AI Developer",
-    "hero-description": "M.B.A. with 3+ years of experience in Talent Acquisition for DACH and EMEA regions, specializing in tech and sales recruitment. Passionate about AI development and implementation.",
+    "hero-description": "M.B.A. with 4+ years of experience in Talent Acquisition for DACH and EMEA regions, specializing in tech and sales recruitment. Passionate about AI development and implementation.",
     "hero-cta-portfolio": "View My Work",
     "hero-cta-contact": "Contact Me",
     
@@ -26,7 +26,7 @@ const translations = {
     // About section
     "about-heading": "About Me",
     "about-p1": "I'm an AI Developer and enthusiast focused on creating innovative solutions through autonomous agents, fine-tuned LLMs, and custom workflows. My passion lies in developing AI applications that enhance productivity and create new opportunities for businesses and individuals.",
-    "about-p2": "Alongside my technical AI projects, I bring 3+ years of experience as a Senior Talent Partner for tech companies across the DACH region. This unique combination allows me to bridge technical expertise with people-focused strategic thinking.",
+    "about-p2": "Alongside my technical AI projects, I bring 4+ years of experience as a Senior Talent Partner for tech companies across the DACH region. This unique combination allows me to bridge technical expertise with people-focused strategic thinking.",
     "about-p3": "I'm currently working on several AI initiatives including custom agents for recruitment automation, personalized learning assistants, and creative tools using ComfyUI and various large language models.",
     
     // Skills section
@@ -80,7 +80,7 @@ const translations = {
     "filter-local-llm": "Local AI",
     
     // Experience overview
-    "experience-overview": "M.B.A. with 3 years of experience in Talent Acquisition for the DACH region, 2 years also recruiting for EMEA (France, Italy, Spain, Benelux and Spain, DACH). Worked on both startup environments and big corp. Tackled Tech recruitment (Full-stack) and currently tackling Sales recruitment (Account Executives, Sales Engineers, BDRs).",
+    "experience-overview": "M.B.A. with 4+ years of experience in Talent Acquisition for the DACH region, 2 years also recruiting for EMEA (France, Italy, Spain, Benelux and Spain, DACH). Worked on both startup environments and big corp. Tackled Tech recruitment (Full-stack) and currently tackling Sales recruitment (Account Executives, Sales Engineers, BDRs).",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -121,7 +121,7 @@ const translations = {
     // Hero section
     "hero-greeting": "Hallo, ich bin",
     "hero-title": "Senior Talent Partner und KI-Entwickler",
-    "hero-description": "M.B.A. mit mehr als 3 Jahren Erfahrung im Talent Acquisition für die DACH- und EMEA-Regionen, spezialisiert auf Tech- und Vertriebsrekrutierung. Leidenschaftlich an KI-Entwicklung und -Implementierung interessiert.",
+    "hero-description": "M.B.A. mit mehr als 4 Jahren Erfahrung im Talent Acquisition für die DACH- und EMEA-Regionen, spezialisiert auf Tech- und Vertriebsrekrutierung. Leidenschaftlich an KI-Entwicklung und -Implementierung interessiert.",
     "hero-cta-portfolio": "Meine Arbeit ansehen",
     "hero-cta-contact": "Kontakt aufnehmen",
     
@@ -138,7 +138,7 @@ const translations = {
     // About section
     "about-heading": "Über mich",
     "about-p1": "Ich bin KI-Entwickler und Enthusiast, der sich auf die Entwicklung innovativer Lösungen durch autonome Agenten, feinabgestimmte LLMs und benutzerdefinierte Workflows konzentriert. Meine Leidenschaft liegt in der Entwicklung von KI-Anwendungen, die die Produktivität steigern und neue Möglichkeiten für Unternehmen und Einzelpersonen schaffen.",
-    "about-p2": "Neben meinen technischen KI-Projekten bringe ich 3+ Jahre Erfahrung als Senior Talent Partner für Technologieunternehmen in der DACH-Region mit. Diese einzigartige Kombination ermöglicht es mir, technisches Fachwissen mit personenbezogenem strategischem Denken zu verbinden.",
+    "about-p2": "Neben meinen technischen KI-Projekten bringe ich mehr als 4 Jahre Erfahrung als Senior Talent Partner für Technologieunternehmen in der DACH-Region mit. Diese einzigartige Kombination ermöglicht es mir, technisches Fachwissen mit personenbezogenem strategischem Denken zu verbinden.",
     "about-p3": "Ich arbeite derzeit an mehreren KI-Initiativen, darunter maßgeschneiderte Agenten für die Rekrutierungsautomatisierung, personalisierte Lernassistenten und kreative Tools mit ComfyUI und verschiedenen großen Sprachmodellen.",
     
     // Skills section
@@ -192,7 +192,7 @@ const translations = {
     "filter-local-llm": "Lokale KI",
     
     // Experience overview
-    "experience-overview": "M.B.A. mit 3 Jahren Erfahrung im Talent Acquisition für die DACH-Region, 2 Jahre auch für EMEA (Frankreich, Italien, Spanien, Benelux und Spanien, DACH). Erfahrung sowohl in Startup-Umgebungen als auch in großen Unternehmen. Schwerpunkt auf Tech-Rekrutierung (Full-Stack) und aktuell Vertriebsrekrutierung (Account Executives, Sales Engineers, BDRs).",
+    "experience-overview": "M.B.A. mit mehr als 4 Jahren Erfahrung im Talent Acquisition für die DACH-Region, 2 Jahre auch für EMEA (Frankreich, Italien, Spanien, Benelux und Spanien, DACH). Erfahrung sowohl in Startup-Umgebungen als auch in großen Unternehmen. Schwerpunkt auf Tech-Rekrutierung (Full-Stack) und aktuell Vertriebsrekrutierung (Account Executives, Sales Engineers, BDRs).",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -233,7 +233,7 @@ const translations = {
     // Hero section
     "hero-greeting": "Hola, soy",
     "hero-title": "Senior Talent Partner y Desarrollador de IA",
-    "hero-description": "M.B.A. con más de 3 años de experiencia en Adquisición de Talento para las regiones DACH y EMEA, especializado en reclutamiento de tecnología y ventas. Apasionado por el desarrollo e implementación de IA.",
+    "hero-description": "M.B.A. con más de 4 años de experiencia en Adquisición de Talento para las regiones DACH y EMEA, especializado en reclutamiento de tecnología y ventas. Apasionado por el desarrollo e implementación de IA.",
     "hero-cta-portfolio": "Ver mi trabajo",
     "hero-cta-contact": "Contactarme",
     
@@ -250,7 +250,7 @@ const translations = {
     // About section
     "about-heading": "Sobre mí",
     "about-p1": "Soy desarrollador y entusiasta de la IA, enfocado en crear soluciones innovadoras a través de agentes autónomos, LLMs personalizados y flujos de trabajo a medida. Mi pasión radica en desarrollar aplicaciones de IA que mejoren la productividad y creen nuevas oportunidades para empresas e individuos.",
-    "about-p2": "Junto a mis proyectos técnicos de IA, aporto más de 3 años de experiencia como Senior Talent Partner para empresas tecnológicas en la región DACH. Esta combinación única me permite unir la experiencia técnica con el pensamiento estratégico centrado en las personas.",
+    "about-p2": "Junto a mis proyectos técnicos de IA, aporto más de 4 años de experiencia como Senior Talent Partner para empresas tecnológicas en la región DACH. Esta combinación única me permite unir la experiencia técnica con el pensamiento estratégico centrado en las personas.",
     "about-p3": "Actualmente trabajo en varias iniciativas de IA, incluyendo agentes personalizados para automatización de reclutamiento, asistentes de aprendizaje personalizados y herramientas creativas utilizando ComfyUI y varios modelos de lenguaje de gran escala.",
     
     // Skills section
@@ -304,7 +304,7 @@ const translations = {
     "filter-local-llm": "IA Local",
     
     // Experience overview
-    "experience-overview": "M.B.A. con 3 años de experiencia en Adquisición de Talento para la región DACH, 2 años también reclutando para EMEA (Francia, Italia, España, Benelux y España, DACH). Experiencia tanto en entornos de startups como en grandes corporaciones. Especializado en reclutamiento tecnológico (Full-stack) y actualmente en reclutamiento de ventas (Account Executives, Sales Engineers, BDRs).",
+    "experience-overview": "M.B.A. con más de 4 años de experiencia en Adquisición de Talento para la región DACH, 2 años también reclutando para EMEA (Francia, Italia, España, Benelux y España, DACH). Experiencia tanto en entornos de startups como en grandes corporaciones. Especializado en reclutamiento tecnológico (Full-stack) y actualmente en reclutamiento de ventas (Account Executives, Sales Engineers, BDRs).",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
