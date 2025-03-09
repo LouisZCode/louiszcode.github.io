@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#242424"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Connect the matching wires!</text>
+  
+  <!-- Wire Endpoints - Left Side -->
+  <circle cx="200" cy="120" r="15" fill="#ff0000" stroke="#333" stroke-width="3"/>
+  <circle cx="200" cy="220" r="15" fill="#00ff00" stroke="#333" stroke-width="3"/>
+  <circle cx="200" cy="320" r="15" fill="#0000ff" stroke="#333" stroke-width="3"/>
+  
+  <!-- Wire Endpoints - Right Side -->
+  <circle cx="600" cy="280" r="15" fill="#ff0000" stroke="#333" stroke-width="3"/>
+  <circle cx="600" cy="180" r="15" fill="#00ff00" stroke="#333" stroke-width="3"/>
+  <circle cx="600" cy="80" r="15" fill="#0000ff" stroke="#333" stroke-width="3"/>
+  
+  <!-- Wires -->
+  <path d="M200,120 C300,120 400,240 600,280" stroke="#ff0000" stroke-width="5" fill="none"/>
+  <path d="M200,220 C300,220 500,180 600,180" stroke="#00ff00" stroke-width="5" fill="none"/>
+  <path d="M200,320 C300,280 500,100 600,80" stroke="#0000ff" stroke-width="5" fill="none"/>
+  
+  <!-- Paw Cursor -->
+  <g transform="translate(400, 200)">
+    <circle cx="0" cy="0" r="20" fill="#986543" opacity="0.7"/>
+    <circle cx="-10" cy="-10" r="8" fill="#986543"/>
+    <circle cx="10" cy="-10" r="8" fill="#986543"/>
+    <circle cx="-10" cy="10" r="8" fill="#986543"/>
+    <circle cx="10" cy="10" r="8" fill="#986543"/>
+  </g>
+  
+  <!-- Instructions -->
+  <text x="400" y="400" font-family="Arial" font-size="16" fill="#aaaaaa" text-anchor="middle">Use WASD to move the paw and E to connect wires</text>
+  
+  <!-- Timer Bar -->
+  <rect x="250" y="30" width="300" height="10" fill="#333333" rx="5"/>
+  <rect x="250" y="30" width="200" height="10" fill="#1a75ff" rx="5"/>
+</svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background - Living Room Scene -->
+  <rect width="800" height="450" fill="#1e1e1e"/>
+  
+  <!-- Wall -->
+  <rect x="0" y="0" width="800" height="300" fill="#2a2a2a"/>
+  
+  <!-- Floor -->
+  <rect x="0" y="300" width="800" height="150" fill="#3a3a3a"/>
+  
+  <!-- Picture Frames on Wall -->
+  <rect x="100" y="80" width="80" height="100" fill="#0a0a0a" stroke="#444" stroke-width="3"/>
+  <rect x="620" y="100" width="120" height="80" fill="#0a0a0a" stroke="#444" stroke-width="3"/>
+  
+  <!-- Sofa -->
+  <rect x="400" y="280" width="250" height="100" rx="10" fill="#663366"/>
+  <rect x="400" y="260" width="250" height="30" rx="10" fill="#553355"/>
+  <rect x="400" y="260" width="20" height="120" rx="5" fill="#553355"/>
+  <rect x="630" y="260" width="20" height="120" rx="5" fill="#553355"/>
+  
+  <!-- Coffee Table -->
+  <rect x="440" y="375" width="180" height="10" fill="#805030"/>
+  <rect x="450" y="385" width="15" height="50" fill="#805030"/>
+  <rect x="595" y="385" width="15" height="50" fill="#805030"/>
+  
+  <!-- Lamp -->
+  <rect x="650" y="230" width="20" height="50" fill="#805030"/>
+  <path d="M640,230 h40 l-20,-60 z" fill="#aaaa44"/>
+  
+  <!-- Plant -->
+  <rect x="150" y="350" width="30" height="40" fill="#553311"/>
+  <path d="M150,350 c15,-30 15,-30 30,0" fill="#225522" stroke="#225522" stroke-width="5"/>
+  <path d="M150,340 c15,-40 15,-40 30,0" fill="#225522" stroke="#225522" stroke-width="3"/>
+  <path d="M160,330 c5,-25 5,-25 10,0" fill="#225522" stroke="#225522" stroke-width="2"/>
+  
+  <!-- TV/Monitor with date happening -->
+  <rect x="50" y="200" width="300" height="180" fill="#0a0a0a" stroke="#444" stroke-width="4"/>
+  <!-- Dating couple silhouette -->
+  <circle cx="150" cy="260" r="25" fill="#444"/>
+  <rect x="142" y="285" width="16" height="60" fill="#444"/>
+  <circle cx="250" cy="260" r="25" fill="#444"/>
+  <rect x="242" y="285" width="16" height="60" fill="#444"/>
+  <!-- Hearts -->
+  <path d="M200,240 c5,-10 15,-10 20,0 c5,-10 15,-10 20,0 l-20,20 z" fill="#ff6b6b"/>
+  <path d="M180,220 c3,-6 9,-6 12,0 c3,-6 9,-6 12,0 l-12,12 z" fill="#ff6b6b"/>
+  <path d="M220,220 c3,-6 9,-6 12,0 c3,-6 9,-6 12,0 l-12,12 z" fill="#ff6b6b"/>
+  
+  <!-- Dog Character -->
+  <g transform="translate(300, 400)">
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="30" ry="20" fill="#986543"/>
+    <!-- Head -->
+    <circle cx="25" cy="-10" r="20" fill="#b57e54"/>
+    <!-- Ears -->
+    <ellipse cx="15" cy="-25" rx="8" ry="12" fill="#986543"/>
+    <ellipse cx="35" cy="-25" rx="8" ry="12" fill="#986543"/>
+    <!-- Eyes -->
+    <circle cx="30" cy="-12" r="3" fill="#000000"/>
+    <!-- Nose -->
+    <ellipse cx="40" cy="-5" rx="5" ry="3" fill="#333333"/>
+    <!-- Tail -->
+    <path d="M-25,0 Q-40,-20 -30,-30" stroke="#986543" stroke-width="10" fill="none"/>
+    <!-- Legs -->
+    <rect x="-20" y="15" width="8" height="15" fill="#986543"/>
+    <rect x="15" y="15" width="8" height="15" fill="#986543"/>
+  </g>
+  
+  <!-- Problem Indicator -->
+  <g transform="translate(480, 220)">
+    <circle cx="0" cy="0" r="20" fill="#ff6b6b"/>
+    <text x="0" y="6" font-family="Arial" font-size="24" fill="white" text-anchor="middle" font-weight="bold">!</text>
+    <!-- Pulsing effect -->
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#ff6b6b" stroke-width="2">
+      <animate attributeName="r" values="22;30;22" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- UI Elements -->
+  <!-- Love Meter -->
+  <rect x="20" y="30" width="30" height="150" fill="#333333" rx="5"/>
+  <rect x="20" y="105" width="30" height="75" fill="#ff6b6b" rx="5"/>
+  <text x="35" y="20" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Love</text>
+  
+  <!-- Timer -->
+  <rect x="700" y="30" width="30" height="150" fill="#333333" rx="5"/>
+  <rect x="700" y="80" width="30" height="100" fill="#1a75ff" rx="5"/>
+  <text x="715" y="20" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Time</text>
+  
+  <!-- Direction Arrow to Problem -->
+  <g transform="translate(300, 350)">
+    <path d="M0,0 l20,-15 v10 h20 v10 h-20 v10 z" fill="#1a75ff"/>
+  </g>
+</svg>

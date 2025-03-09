@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Dog Game - Luis Zermeno</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Domain canonical reference -->
+    <link rel="canonical" href="https://www.luiszermeno.info/projects/lovedog.html">
+    <!-- Favicon and touch icons -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Love Dog - A heart-warming 2D platformer game where you play as a loyal dog trying to protect your owner's romantic date from distractions.">
+    <meta name="keywords" content="game development, Godot, 2D platformer, game jam, Brackeys Game Jam 2025, indie game, Luis Zermeno, game design">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">Luis Zermeno</a>
+            </div>
+            <div class="profile-circle">
+                <img src="../images/profile_luis.png" alt="Luis Zermeno">
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html" data-i18n="nav-home">Home</a></li>
+                <li><a href="../experience.html" data-i18n="nav-experience">Experience</a></li>
+                <li><a href="../portfolio.html" class="active" data-i18n="nav-portfolio">Portfolio</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-details">
+        <div class="container">
+            <div class="project-header">
+                <h1>Love Dog - Brackeys Game Jam 2025</h1>
+                <div class="project-meta">
+                    <span class="project-category"><i class="fas fa-gamepad"></i> AI Game Development</span>
+                    <span class="project-date"><i class="far fa-calendar-alt"></i> February 2025</span>
+                    <span class="project-duration"><i class="far fa-clock"></i> 1-Week Game Jam</span>
+                    <span class="project-link"><i class="fas fa-external-link-alt"></i> <a href="https://life-of-luis.itch.io/love-dog" target="_blank">Play on itch.io</a></span>
+                </div>
+            </div>
+
+            <div class="project-showcase">
+                <div class="project-image">
+                    <img src="../images/lovedog_game.png" alt="Love Dog Game Screenshot" class="main-image" onerror="this.src='../images/lovedog_game.svg'">
+                </div>
+                <div class="project-thumbnail-grid">
+                    <img src="../images/lovedog_minigame1.png" alt="Wire Fixing Minigame" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/lovedog_minigame1.svg'">
+                    <img src="../images/lovedog_minigame2.png" alt="Password Minigame" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/lovedog_minigame2.svg'">
+                    <img src="../images/lovedog_gameplay.png" alt="Gameplay Screenshot" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/lovedog_gameplay.svg'">
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>Project Overview</h2>
+                    <p>
+                    "Love Dog" is a heart-warming 2D platformer created for the Brackeys Game Jam 2025, where the theme was "Connections." In this game, you play as a loyal dog with a mission: to protect your owner's romantic date from any distractions that might ruin their special evening.
+                    </p>
+                    <p>
+                    The game features a combination of platforming, puzzle-solving, and mini-games as you race against time to fix various household problems before they disturb your owner's date. With multiple levels of increasing difficulty across three "nights," you'll need quick reflexes and problem-solving skills to ensure the perfect romantic atmosphere.
+                    </p>
+                        <p>
+                            What makes this game unique is that approximately half of the assets, music, and sound effects were created using AI tools, particularly ComfyUI for image generation. This innovative approach allowed for rapid development of the game within a 1-week timeframe while maintaining a cohesive visual and audio style.
+                        </p>
+                </div>
+
+                <div class="project-features">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>
+                            <strong>Character-Driven Narrative:</strong> Experience the story from the perspective of a loyal dog determined to protect their owner's happiness.
+                        </li>
+                        <li>
+                            <strong>Progressive Difficulty System:</strong> Three nights of increasing challenges with different difficulty settings that adjust the timing and number of problems.
+                        </li>
+                        <li>
+                            <strong>Multiple Minigames:</strong> Engage with various interactive puzzles including wire fixing, password puzzles, and quick cleaning challenges.
+                        </li>
+                        <li>
+                            <strong>Dynamic Love Meter:</strong> A responsive system that tracks how well the date is going based on your performance at managing distractions.
+                        </li>
+                        <li>
+                            <strong>Expressive 2D Animation:</strong> Charming character animations that bring the dog protagonist to life with running, jumping, and barking actions.
+                        </li>
+                        <li>
+                            <strong>Immersive Sound Design:</strong> Ambient music that changes based on the date's status, with sound effects providing feedback on game events.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="project-development">
+                    <h2>Development Process</h2>
+                    <p>
+                        The game was developed in one week for the Brackeys Game Jam 2025. Using the Godot Engine (version 4.3) and GDScript, I focused on creating a cohesive gameplay experience that blended platforming with minigames. The development was accelerated by leveraging AI tools to generate assets.
+                    </p>
+                    <p>
+                        The development process included:
+                    </p>
+                    <ul>
+                        <li>Conceptualizing the game design around the theme of "Connections"</li>
+                        <li>Implementing core mechanics including player movement, interactions, and the problem management system</li>
+                        <li>Designing and coding three unique minigames with escalating difficulty</li>
+                        <li>Creating pixel art assets and animations for the game's characters and environment</li>
+                        <li>Balancing gameplay difficulty across three progressive nights</li>
+                        <li>Implementing audio design with dynamic music that responds to the game state</li>
+                    </ul>
+                </div>
+
+                <div class="technical-details">
+                    <h2>Technical Highlights</h2>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <i class="fas fa-code"></i>
+                            <h3>Godot Engine 4.3</h3>
+                            <p>Used for the game's core development, taking advantage of its 2D capabilities and scene system</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-file-code"></i>
+                            <h3>GDScript</h3>
+                            <p>Custom scripting for game mechanics, character controls, and minigame interactions</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-microchip"></i>
+                            <h3>AI-Generated Assets</h3>
+                            <p>Approximately 50% of assets, music, and sound effects were created using ComfyUI and other AI tools</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-music"></i>
+                            <h3>Dynamic Audio</h3>
+                            <p>Responsive music system that changes based on the state of the date</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-challenges">
+                    <h2>Challenges & Solutions</h2>
+                    <div class="challenge-item">
+                        <h3>Time Constraint</h3>
+                        <p><strong>Challenge:</strong> Developing a complete game with multiple systems in only 1 week.</p>
+                        <p><strong>Solution:</strong> Prioritized core gameplay mechanics first, then leveraged AI tools like ComfyUI to generate assets, music, and sound effects efficiently.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Balancing Difficulty</h3>
+                        <p><strong>Challenge:</strong> Creating a difficulty curve that was challenging but not frustrating.</p>
+                        <p><strong>Solution:</strong> Implemented a dynamic difficulty system that adjusts based on the night number, with carefully tuned parameters for problem frequency and time limits.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Minigame Integration</h3>
+                        <p><strong>Challenge:</strong> Seamlessly integrating multiple minigames without disrupting the main gameplay flow.</p>
+                        <p><strong>Solution:</strong> Developed a flexible minigame manager system that handles transitions and maintains game state across different gameplay modes.</p>
+                    </div>
+                </div>
+
+                <div class="project-results">
+                    <h2>Results & Takeaways</h2>
+                    <p>
+                    The game was successfully completed within the 1-week time constraint of the Brackeys Game Jam 2025. By leveraging AI tools like ComfyUI for asset generation, I was able to create a more polished experience than would otherwise have been possible in such a short timeframe.
+                    </p>
+                    <p>
+                        Key learnings from this project include:
+                    </p>
+                    <ul>
+                        <li>Effective scope management for game jam projects</li>
+                        <li>Techniques for rapidly prototyping and implementing gameplay systems</li>
+                        <li>Advanced use of Godot's signal system for event-driven gameplay</li>
+                        <li>Creating compelling game feel through responsive controls and visual feedback</li>
+                    </ul>
+                </div>
+
+                <div class="project-links-section">
+                    <h2>Links & Resources</h2>
+                    <div class="links-grid">
+                        <a href="https://github.com/louiszcode/love_dog_brackeysJam_2025" target="_blank" class="link-card github">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Repository</span>
+                        </a>
+                        <a href="#" class="link-card gameplay">
+                            <i class="fab fa-youtube"></i>
+                            <span>Gameplay Video</span>
+                        </a>
+                        <a href="https://life-of-luis.itch.io/love-dog" target="_blank" class="link-card website">
+                        <i class="fas fa-gamepad"></i>
+                        <span>Play the Game</span>
+                        </a>
+                        <a href="#" class="link-card documentation">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Devlog</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Luis Zermeno. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/louiszcode" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/luis-zermeno-3b2210108/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top-btn" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Handle fallback for PNG to SVG if PNG is not available
+        function checkImageSrc(img) {
+            if (img.src.endsWith('.png') && img.naturalWidth === 0) {
+                img.src = img.src.replace('.png', '.svg');
+            }
+        }
+        
+        // Initialize all images with error handlers
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('error', function() {
+                    if (img.src.endsWith('.png')) {
+                        img.src = img.src.replace('.png', '.svg');
+                    }
+                });
+            });
+        });
+        
+        // Function to change the main image
+        function changeMainImage(src) {
+            const mainImage = document.querySelector('.main-image');
+            mainImage.src = src;
+            // If PNG fails, try SVG
+            mainImage.addEventListener('error', function() {
+                if (mainImage.src.endsWith('.png')) {
+                    mainImage.src = mainImage.src.replace('.png', '.svg');
+                }
+            });
+        }
+    </script>
+    <script src="../js/main.js"></script>
+    <script src="../js/i18n.js"></script>
+</body>
+</html>

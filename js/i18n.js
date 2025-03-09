@@ -78,6 +78,7 @@ const translations = {
     "filter-llm": "LLM Projects",
     "filter-image-gen": "Image Generation",
     "filter-local-llm": "Local AI",
+    "filter-game": "AI Game Dev",
     
     // Experience overview
     "experience-overview": "M.B.A. with 4+ years of experience in Talent Acquisition for the DACH region, 2 years also recruiting for EMEA (France, Italy, Spain, Benelux and Spain, DACH). Worked on both startup environments and big corp. Tackled Tech recruitment (Full-stack) and currently tackling Sales recruitment (Account Executives, Sales Engineers, BDRs).",
@@ -190,6 +191,7 @@ const translations = {
     "filter-llm": "LLM-Projekte",
     "filter-image-gen": "Bildgenerierung",
     "filter-local-llm": "Lokale KI",
+    "filter-game": "KI-Spieleentwicklung",
     
     // Experience overview
     "experience-overview": "M.B.A. mit mehr als 4 Jahren Erfahrung im Talent Acquisition für die DACH-Region, 2 Jahre auch für EMEA (Frankreich, Italien, Spanien, Benelux und Spanien, DACH). Erfahrung sowohl in Startup-Umgebungen als auch in großen Unternehmen. Schwerpunkt auf Tech-Rekrutierung (Full-Stack) und aktuell Vertriebsrekrutierung (Account Executives, Sales Engineers, BDRs).",
@@ -302,6 +304,7 @@ const translations = {
     "filter-llm": "Proyectos LLM",
     "filter-image-gen": "Generación de Imágenes",
     "filter-local-llm": "IA Local",
+    "filter-game": "Desarrollo de Juegos con IA",
     
     // Experience overview
     "experience-overview": "M.B.A. con más de 4 años de experiencia en Adquisición de Talento para la región DACH, 2 años también reclutando para EMEA (Francia, Italia, España, Benelux y España, DACH). Experiencia tanto en entornos de startups como en grandes corporaciones. Especializado en reclutamiento tecnológico (Full-stack) y actualmente en reclutamiento de ventas (Account Executives, Sales Engineers, BDRs).",
