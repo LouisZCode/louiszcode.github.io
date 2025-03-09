@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Add lazy loading to images for better performance
+    const images = document.querySelectorAll('img:not(.profile-circle img)');
+    images.forEach(img => {
+        img.setAttribute('loading', 'lazy');
+    });
+
     // Navigation menu toggle for mobile
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -26,11 +32,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectCards = document.querySelectorAll('.project-card');
 
     if (filterBtns.length > 0) {
-        filterBtns.forEach(btn => {
+        // Add ARIA attributes for accessibility
+        filterBtns.forEach((btn, index) => {
+            // Set ARIA roles and attributes
+            btn.setAttribute('role', 'tab');
+            btn.setAttribute('aria-selected', btn.classList.contains('active') ? 'true' : 'false');
+            btn.setAttribute('id', `filter-tab-${btn.getAttribute('data-filter')}`);
+            btn.setAttribute('aria-controls', 'project-grid');
+            
             btn.addEventListener('click', () => {
                 // Update active button
-                filterBtns.forEach(b => b.classList.remove('active'));
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
                 btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
                 
                 const filter = btn.getAttribute('data-filter');
                 
@@ -38,15 +55,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 projectCards.forEach(card => {
                     if (filter === 'all') {
                         card.style.display = 'block';
+                        card.setAttribute('aria-hidden', 'false');
                     } else {
                         const categories = card.getAttribute('data-category').split(' ');
                         if (categories.includes(filter)) {
                             card.style.display = 'block';
+                            card.setAttribute('aria-hidden', 'false');
                         } else {
                             card.style.display = 'none';
+                            card.setAttribute('aria-hidden', 'true');
                         }
                     }
                 });
+                
+                // Announce filter change to screen readers
+                const projectsContainer = document.querySelector('.projects-grid');
+                if (projectsContainer) {
+                    projectsContainer.setAttribute('aria-live', 'polite');
+                    projectsContainer.setAttribute('id', 'project-grid');
+                }
             });
         });
     }

@@ -22,8 +22,9 @@
     <meta name="author" content="Luis Zermeno">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <header role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
             <div class="logo">
                 <a href="index.html">Luis Zermeno</a>
             </div>
@@ -48,13 +49,13 @@
         </nav>
     </header>
 
-    <main>
+    <main role="main" id="main-content">
         <section class="portfolio-header">
             <div class="container">
                 <h1 data-i18n="ai-projects-heading">AI Projects</h1>
                 <p data-i18n="ai-projects-description">A collection of AI development projects showcasing my work with large language models, image generation, and autonomous agents.</p>
                 
-                <div class="filter-buttons">
+                <div class="filter-buttons" role="tablist" aria-label="Project filters">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="local-llm" data-i18n="filter-local-llm">Local AI</button>
                     <button class="filter-btn" data-filter="game" data-i18n="filter-game">AI Game Dev</button>
@@ -129,7 +130,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <p data-i18n="copyright">© 2025 Luis Zermeno. All Rights Reserved.</p>

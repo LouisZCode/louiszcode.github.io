@@ -358,6 +358,9 @@ function updateLanguage(lang) {
   // Save language preference
   localStorage.setItem('preferredLanguage', lang);
   
+  // Update HTML lang attribute for screen readers
+  document.documentElement.setAttribute('lang', lang);
+  
   // Update all translatable elements
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
@@ -373,6 +376,18 @@ function updateLanguage(lang) {
       element.setAttribute('placeholder', translations[lang][key]);
     }
   });
+  
+  // Update skip to content link text based on language
+  const skipLink = document.querySelector('.skip-to-content');
+  if (skipLink) {
+    if (lang === 'de') {
+      skipLink.textContent = 'Zum Inhalt springen';
+    } else if (lang === 'es') {
+      skipLink.textContent = 'Saltar al contenido';
+    } else {
+      skipLink.textContent = 'Skip to content';
+    }
+  }
 }
 
 // Initialize language system
