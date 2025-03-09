@@ -1328,6 +1328,98 @@
     color: var(--accent-tertiary);
 }
 
+/* Reviews Section Styles */
+.reviews-section {
+    margin: 60px 0;
+}
+
+.overall-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.rating-stars {
+    font-size: 2rem;
+    color: #FFD700;
+    margin-right: 20px;
+}
+
+.rating-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.rating-count {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.review-card {
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: var(--accent-primary);
+    font-size: 1.1rem;
+}
+
+.review-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.review-rating {
+    width: 100%;
+    margin-top: 10px;
+    color: #FFD700;
+}
+
+.review-content {
+    color: var(--text-secondary);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.review-content p {
+    margin: 0;
+}
+
 /* Responsive adjustments for project details */
 @media (max-width: 992px) {
     .project-details {
@@ -1360,6 +1452,20 @@
     }
     
     .links-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .overall-rating {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .rating-stars {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .reviews-grid {
         grid-template-columns: 1fr;
     }
 }
