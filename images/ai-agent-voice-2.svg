@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#1e1e1e"/>
+  
+  <!-- Main App Window -->
+  <rect x="50" y="30" width="700" height="390" rx="5" fill="#2a2a2a"/>
+  
+  <!-- Title Bar -->
+  <rect x="50" y="30" width="700" height="30" rx="5" fill="#333333"/>
+  <text x="75" y="50" font-family="Arial" font-size="14" fill="white">Luis AI HUB with Voice</text>
+  <circle cx="720" cy="45" r="8" fill="#ff5f57"/>
+  <circle cx="695" cy="45" r="8" fill="#27c93f"/>
+  <circle cx="670" cy="45" r="8" fill="#ffbd2e"/>
+  
+  <!-- Chat History Area -->
+  <rect x="65" y="70" width="670" height="270" rx="5" fill="#111111" stroke="#333333"/>
+  
+  <!-- System Message -->
+  <text x="80" y="90" font-family="Arial" font-size="12" fill="#888888" font-weight="bold">System:</text>
+  <text x="80" y="110" font-family="Arial" font-size="12" fill="#888888">Welcome to Luis AI HUB! Using model: llama3.1:8b</text>
+  <text x="80" y="130" font-family="Arial" font-size="12" fill="#888888">Type your message below or use voice input to start chatting.</text>
+  
+  <!-- User Message -->
+  <text x="80" y="160" font-family="Arial" font-size="12" fill="#4CAF50" font-weight="bold">You:</text>
+  <text x="80" y="180" font-family="Arial" font-size="12" fill="#4CAF50">What's the best way to implement text-to-speech in a Python application?</text>
+  
+  <!-- AI Message -->
+  <text x="80" y="210" font-family="Arial" font-size="12" fill="#1a75ff" font-weight="bold">AI:</text>
+  <foreignObject x="80" y="220" width="640" height="110">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial; font-size: 12px; color: #1a75ff;">
+      For implementing text-to-speech in Python, you have several good options:
+      
+      1. **pyttsx3**: A simple, offline TTS library that works with your system's installed voices. It's easy to use and doesn't require internet access.
+      
+      2. **gTTS** (Google Text-to-Speech): Offers high-quality speech but requires internet connection as it uses Google's servers.
+      
+      3. **XTTS-v2**: A neural TTS model that provides extremely natural-sounding voices with customization options, though it requires more computational resources.
+      
+      For the best quality with offline capability, I recommend using XTTS-v2 for natural voices with a fallback to pyttsx3 for compatibility.
+    </div>
+  </foreignObject>
+  
+  <!-- Input Area -->
+  <rect x="65" y="350" width="600" height="40" rx="5" fill="#333333" stroke="#555555"/>
+  <rect x="675" y="350" width="60" height="40" rx="5" fill="#1a75ff"/>
+  <text x="705" y="375" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Send</text>
+  
+  <!-- Voice Controls Section -->
+  <rect x="65" y="400" width="670" height="60" rx="5" fill="#222222" stroke="#333333"/>
+  <text x="400" y="415" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">Voice Controls</text>
+  
+  <!-- Voice Input Section -->
+  <rect x="80" y="420" width="300" height="30" rx="3" fill="#333333" stroke="#444444"/>
+  <text x="230" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">Voice Input</text>
+  <rect x="90" y="423" width="90" height="24" rx="3" fill="#444444"/>
+  <text x="135" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">🎤 Select Mic</text>
+  <rect x="190" y="423" width="90" height="24" rx="3" fill="#444444"/>
+  <text x="235" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">🎤 Enable Voice</text>
+  
+  <!-- Voice Output Section With Focus -->
+  <rect x="400" y="420" width="320" height="30" rx="3" fill="#333333" stroke="#1a75ff" stroke-width="2"/>
+  <text x="560" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">AI Voice Output</text>
+  
+  <!-- TTS Checkbox -->
+  <rect x="410" y="423" width="15" height="15" rx="2" fill="#1a75ff" stroke="#555555"/>
+  <path d="M413,430 L417,434 L423,426" stroke="white" stroke-width="2" fill="none"/>
+  <text x="440" y="435" font-family="Arial" font-size="10" fill="#ffffff">Enable AI Voice</text>
+  
+  <!-- Voice Dropdown Menu (Open) -->
+  <text x="510" y="435" font-family="Arial" font-size="10" fill="#ffffff">Voice:</text>
+  <rect x="550" y="423" width="90" height="24" rx="3" fill="#444444" stroke="#1a75ff"/>
+  <text x="595" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">English Female</text>
+  <polygon points="625,430 635,430 630,435" fill="#ffffff"/>
+  
+  <!-- Dropdown Options -->
+  <rect x="550" y="447" width="90" height="120" rx="3" fill="#333333" stroke="#555555"/>
+  <rect x="550" y="447" width="90" height="24" rx="3" fill="#1a75ff"/> <!-- Selected -->
+  <text x="595" y="464" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">English Female</text>
+  <rect x="550" y="471" width="90" height="24" rx="0"/>
+  <text x="595" y="488" font-family="Arial" font-size="10" fill="#dddddd" text-anchor="middle">English Male</text>
+  <rect x="550" y="495" width="90" height="24" rx="0"/>
+  <text x="595" y="512" font-family="Arial" font-size="10" fill="#dddddd" text-anchor="middle">German Female</text>
+  <rect x="550" y="519" width="90" height="24" rx="0"/>
+  <text x="595" y="536" font-family="Arial" font-size="10" fill="#dddddd" text-anchor="middle">Spanish Male</text>
+  <rect x="550" y="543" width="90" height="24" rx="0"/>
+  <text x="595" y="560" font-family="Arial" font-size="10" fill="#dddddd" text-anchor="middle">My Custom Voice</text>
+  
+  <!-- Clone Voice Button -->
+  <rect x="650" y="423" width="60" height="24" rx="3" fill="#444444"/>
+  <text x="680" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">Clone Voice</text>
+  
+  <!-- Voice Indicator Animation -->
+  <g transform="translate(480, 430)">
+    <rect x="0" y="-10" width="2" height="6" fill="#1a75ff">
+      <animate attributeName="height" values="6;15;6" dur="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="4" y="-10" width="2" height="10" fill="#1a75ff">
+      <animate attributeName="height" values="10;6;10" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="8" y="-10" width="2" height="8" fill="#1a75ff">
+      <animate attributeName="height" values="8;12;8" dur="0.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="12" y="-10" width="2" height="14" fill="#1a75ff">
+      <animate attributeName="height" values="14;8;14" dur="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="16" y="-10" width="2" height="10" fill="#1a75ff">
+      <animate attributeName="height" values="10;16;10" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Status Bar -->
+  <rect x="50" y="420" width="700" height="20" rx="0" fill="#1a1a1a"/>
+  <text x="65" y="435" font-family="Arial" font-size="10" fill="#888888">TTS initialized and ready</text>
+</svg>

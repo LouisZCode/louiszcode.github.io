@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#1e1e1e"/>
+  
+  <!-- Main App Window -->
+  <rect x="50" y="30" width="700" height="390" rx="5" fill="#2a2a2a"/>
+  
+  <!-- Title Bar -->
+  <rect x="50" y="30" width="700" height="30" rx="5" fill="#333333"/>
+  <text x="75" y="50" font-family="Arial" font-size="14" fill="white">Luis AI HUB with Voice</text>
+  <circle cx="720" cy="45" r="8" fill="#ff5f57"/>
+  <circle cx="695" cy="45" r="8" fill="#27c93f"/>
+  <circle cx="670" cy="45" r="8" fill="#ffbd2e"/>
+  
+  <!-- Control Toolbar -->
+  <rect x="65" y="70" width="670" height="40" rx="5" fill="#222222"/>
+  <text x="85" y="95" font-family="Arial" font-size="12" fill="#999999">Model: </text>
+  <rect x="135" y="77" width="120" height="25" rx="3" fill="#333333" stroke="#444444"/>
+  <text x="145" y="95" font-family="Arial" font-size="12" fill="#ffffff">llama3.1:8b</text>
+  <polygon points="245,85 255,85 250,95" fill="#ffffff"/>
+  
+  <rect x="270" y="77" width="150" height="25" rx="3" fill="#1a75ff"/>
+  <text x="290" y="95" font-family="Arial" font-size="12" fill="#ffffff">Restart Conversation</text>
+  
+  <!-- Chat History Area -->
+  <rect x="65" y="120" width="670" height="220" rx="5" fill="#111111" stroke="#333333"/>
+  
+  <!-- System Message -->
+  <text x="80" y="140" font-family="Arial" font-size="12" fill="#888888" font-weight="bold">System:</text>
+  <text x="80" y="160" font-family="Arial" font-size="12" fill="#888888">Welcome to Luis AI HUB! Using model: llama3.1:8b</text>
+  <text x="80" y="180" font-family="Arial" font-size="12" fill="#888888">Type your message below or use voice input to start chatting.</text>
+  
+  <!-- User Message -->
+  <text x="80" y="210" font-family="Arial" font-size="12" fill="#4CAF50" font-weight="bold">You:</text>
+  <text x="80" y="230" font-family="Arial" font-size="12" fill="#4CAF50">Tell me about voice-enabled AI assistants.</text>
+  
+  <!-- AI Message -->
+  <text x="80" y="260" font-family="Arial" font-size="12" fill="#1a75ff" font-weight="bold">AI:</text>
+  <foreignObject x="80" y="270" width="640" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: Arial; font-size: 12px; color: #1a75ff;">
+      Voice-enabled AI assistants combine speech recognition and natural language processing to create an interface that lets users interact with AI using voice commands. They typically have three main components: speech-to-text for understanding user input, an AI model to generate responses, and text-to-speech to deliver answers verbally.
+    </div>
+  </foreignObject>
+  
+  <!-- Input Area -->
+  <rect x="65" y="350" width="600" height="40" rx="5" fill="#333333" stroke="#555555"/>
+  <rect x="675" y="350" width="60" height="40" rx="5" fill="#1a75ff"/>
+  <text x="705" y="375" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Send</text>
+  
+  <!-- Voice Controls Section -->
+  <rect x="65" y="400" width="670" height="60" rx="5" fill="#222222" stroke="#333333"/>
+  <text x="400" y="415" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">Voice Controls</text>
+  
+  <rect x="80" y="420" width="300" height="30" rx="3" fill="#333333" stroke="#444444"/>
+  <text x="230" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">Voice Input</text>
+  <rect x="90" y="423" width="90" height="24" rx="3" fill="#444444"/>
+  <text x="135" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">🎤 Select Mic</text>
+  <rect x="190" y="423" width="90" height="24" rx="3" fill="#444444"/>
+  <text x="235" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">🎤 Enable Voice</text>
+  
+  <rect x="400" y="420" width="320" height="30" rx="3" fill="#333333" stroke="#444444"/>
+  <text x="560" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">AI Voice Output</text>
+  <rect x="410" y="423" width="15" height="15" rx="2" fill="#444444" stroke="#555555"/>
+  <text x="440" y="435" font-family="Arial" font-size="10" fill="#ffffff">Enable AI Voice</text>
+  <text x="510" y="435" font-family="Arial" font-size="10" fill="#999999">Voice:</text>
+  <rect x="550" y="423" width="90" height="24" rx="3" fill="#444444"/>
+  <text x="595" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">Default</text>
+  <rect x="650" y="423" width="60" height="24" rx="3" fill="#444444"/>
+  <text x="680" y="440" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle">Clone Voice</text>
+  
+  <!-- Speech Waveform Decorations -->
+  <g transform="translate(350, 25)" opacity="0.3">
+    <rect x="0" y="0" width="4" height="10" fill="#1a75ff"><animate attributeName="height" values="10;25;10" dur="1s" repeatCount="indefinite"/></rect>
+    <rect x="6" y="0" width="4" height="10" fill="#1a75ff"><animate attributeName="height" values="10;30;10" dur="1.3s" repeatCount="indefinite"/></rect>
+    <rect x="12" y="0" width="4" height="20" fill="#1a75ff"><animate attributeName="height" values="20;10;20" dur="0.7s" repeatCount="indefinite"/></rect>
+    <rect x="18" y="0" width="4" height="15" fill="#1a75ff"><animate attributeName="height" values="15;25;15" dur="0.9s" repeatCount="indefinite"/></rect>
+    <rect x="24" y="0" width="4" height="10" fill="#1a75ff"><animate attributeName="height" values="10;15;10" dur="1.2s" repeatCount="indefinite"/></rect>
+  </g>
+  
+  <!-- Status Bar -->
+  <rect x="50" y="420" width="700" height="20" rx="0" fill="#1a1a1a"/>
+  <text x="65" y="435" font-family="Arial" font-size="10" fill="#888888">Ready</text>
+</svg>

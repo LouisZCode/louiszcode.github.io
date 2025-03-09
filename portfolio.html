@@ -56,8 +56,6 @@
                 
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="llm" data-i18n="filter-llm">LLM Projects</button>
-                    <button class="filter-btn" data-filter="image-gen" data-i18n="filter-image-gen">Image Generation</button>
                     <button class="filter-btn" data-filter="local-llm" data-i18n="filter-local-llm">Local AI</button>
                     <button class="filter-btn" data-filter="game" data-i18n="filter-game">AI Game Dev</button>
                 </div>
@@ -67,6 +65,36 @@
         <section class="portfolio-projects">
             <div class="container">
                 <div class="projects-grid">
+                    <!-- AI Agent with Voice Project -->
+                    <div class="project-card" data-category="ai local-llm">
+                        <div class="project-img">
+                            <img src="images/ai-agent-voice.svg" alt="AI Agent with Voice">
+                        </div>
+                        <div class="project-content">
+                            <h3>AI Agent with Voice</h3>
+                            <p>A Python application that enables natural voice interaction with language models through offline speech recognition and high-quality text-to-speech capabilities.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TKinter</span>
+                                <span class="tech-tag">Vosk</span>
+                                <span class="tech-tag">XTTS-v2</span>
+                                <span class="tech-tag">Ollama</span>
+                            </div>
+                            <div class="project-highlights">
+                                <ul>
+                                    <li>Voice input through offline speech recognition</li>
+                                    <li>AI responses with natural-sounding text-to-speech</li>
+                                    <li>Support for multiple language models via Ollama</li>
+                                    <li>MVC architecture for clean code organization</li>
+                                    <li>Privacy-focused with all processing done locally</li>
+                                </ul>
+                            </div>
+                            <div class="project-links">
+                                <a href="projects/ai-agent-voice.html" class="btn secondary-btn">View Details</a>
+                                <a href="https://github.com/louiszcode/ai_agent_with_voice" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Game Project - Love Dog -->
                     <div class="project-card" data-category="game unity">
                         <div class="project-img">
@@ -96,68 +124,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- AI Project 1 -->
-                    <div class="project-card" data-category="ai llm">
-                        <div class="project-img">
-                            <img src="images/ai-project-1.png" alt="AI Recruiting Assistant">
-                        </div>
-                        <div class="project-content">
-                            <h3>AI Recruitment Assistant</h3>
-                            <p>A custom large language model fine-tuned on recruiting data to automate candidate screening, interview question generation, and follow-up communications.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">LangChain</span>
-                                <span class="tech-tag">Claude API</span>
-                                <span class="tech-tag">Fine-tuning</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="btn secondary-btn">View Details</a>
-                                <a href="https://github.com/louisztv/ai-recruitment-assistant" target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- AI Project 2 -->
-                    <div class="project-card" data-category="ai image-gen">
-                        <div class="project-img">
-                            <img src="images/ai-project-2.png" alt="ComfyUI Custom Workflows">
-                        </div>
-                        <div class="project-content">
-                            <h3>ComfyUI Custom Workflows</h3>
-                            <p>A collection of specialized image generation pipelines for consistent brand visuals and creative content production using advanced ComfyUI nodes and custom workflows.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">ComfyUI</span>
-                                <span class="tech-tag">Stable Diffusion</span>
-                                <span class="tech-tag">ControlNet</span>
-                                <span class="tech-tag">Python</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="btn secondary-btn">View Details</a>
-                                <a href="https://github.com/louisztv/comfyui-workflows" target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- AI Project 3 -->
-                    <div class="project-card" data-category="ai local-llm">
-                        <div class="project-img">
-                            <img src="images/ai-project-3.png" alt="Local LLM Integration Suite">
-                        </div>
-                        <div class="project-content">
-                            <h3>Local LLM Integration Suite</h3>
-                            <p>A privacy-focused system using Ollama to run AI models locally for document analysis, summarization, and personal knowledge management without cloud dependencies.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Ollama</span>
-                                <span class="tech-tag">Mistral</span>
-                                <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">RAG</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="btn secondary-btn">View Details</a>
-                                <a href="https://github.com/louisztv/local-llm-toolkit" target="_blank"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -182,4 +148,4 @@
     <script src="js/main.js"></script>
     <script src="js/i18n.js"></script>
 </body>
-</html> 
+</html>
