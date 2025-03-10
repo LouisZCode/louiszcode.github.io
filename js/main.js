@@ -3,6 +3,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('img:not(.profile-circle img)');
     images.forEach(img => {
         img.setAttribute('loading', 'lazy');
+        
+        // Add PNG to SVG fallback for all images
+        img.addEventListener('error', function() {
+            if (this.src.endsWith('.png')) {
+                console.log('Image failed to load, trying SVG fallback:', this.src);
+                this.onerror = null; // Prevent infinite loop
+                this.src = this.src.replace('.png', '.svg');
+            }
+        });
     });
 
     // Navigation menu toggle for mobile

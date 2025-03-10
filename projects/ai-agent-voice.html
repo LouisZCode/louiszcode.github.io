@@ -61,9 +61,15 @@
                     <img src="../images/ai-agent-voice.png" alt="AI Agent with Voice Interface" class="main-image" onerror="this.src='../images/ai-agent-voice.svg'">
                 </div>
                 <div class="project-thumbnail-grid">
-                    <img src="../images/ai-agent-voice-1.png" alt="Voice Recognition Interface" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/ai-agent-voice-1.svg'">
-                    <img src="../images/ai-agent-voice-2.png" alt="Text-to-Speech Component" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/ai-agent-voice-2.svg'">
-                    <img src="../images/ai_agent_voice.png" alt="Application Architecture" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/ai_agent_voice.svg'">
+                    <div class="thumbnail-container">
+                        <img src="../images/ai-agent-voice-1.png" alt="Voice Recognition Interface" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/ai-agent-voice-1.svg'">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="../images/ai-agent-voice-2.png" alt="Text-to-Speech Component" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/ai-agent-voice-2.svg'">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="../images/ai_agent_voice.png" alt="Application Architecture" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/ai_agent_voice.svg'">
+                    </div>
                 </div>
             </div>
 
@@ -269,11 +275,17 @@
     </button>
 
     <script>
-        // Handle fallback for PNG to SVG if PNG is not available
-        function checkImageSrc(img) {
-            if (img.src.endsWith('.png') && img.naturalWidth === 0) {
-                img.src = img.src.replace('.png', '.svg');
-            }
+        // Function to change the main image
+        function changeMainImage(src) {
+            const mainImage = document.querySelector('.main-image');
+            mainImage.src = src;
+            
+            // Handle error if PNG fails to load
+            mainImage.onerror = function() {
+                if (this.src.endsWith('.png')) {
+                    this.src = this.src.replace('.png', '.svg');
+                }
+            };
         }
         
         // Initialize all images with error handlers
@@ -281,24 +293,12 @@
             const images = document.querySelectorAll('img');
             images.forEach(img => {
                 img.addEventListener('error', function() {
-                    if (img.src.endsWith('.png')) {
-                        img.src = img.src.replace('.png', '.svg');
+                    if (this.src.endsWith('.png')) {
+                        this.src = this.src.replace('.png', '.svg');
                     }
                 });
             });
         });
-        
-        // Function to change the main image
-        function changeMainImage(src) {
-            const mainImage = document.querySelector('.main-image');
-            mainImage.src = src;
-            // If PNG fails, try SVG
-            mainImage.addEventListener('error', function() {
-                if (mainImage.src.endsWith('.png')) {
-                    mainImage.src = mainImage.src.replace('.png', '.svg');
-                }
-            });
-        }
     </script>
     <script src="../js/main.js"></script>
     <script src="../js/i18n.js"></script>

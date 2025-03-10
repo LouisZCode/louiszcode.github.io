@@ -61,9 +61,15 @@
                     <img src="../images/lovedog_game.png" alt="Love Dog Game Screenshot" class="main-image" onerror="this.src='../images/lovedog_game.svg'">
                 </div>
                 <div class="project-thumbnail-grid">
-                    <img src="../images/lovedog_minigame1.png" alt="Wire Fixing Minigame" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/lovedog_minigame1.svg'">
-                    <img src="../images/lovedog_minigame2.png" alt="Password Minigame" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/lovedog_minigame2.svg'">
-                    <img src="../images/lovedog_minigame3.png" alt="Additional Minigame" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/lovedog_minigame3.svg'">
+                    <div class="thumbnail-container">
+                        <img src="../images/lovedog_minigame1.png" alt="Wire Fixing Minigame" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/lovedog_minigame1.svg'">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="../images/lovedog_minigame2.png" alt="Password Minigame" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/lovedog_minigame2.svg'">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="../images/lovedog_minigame3.png" alt="Additional Minigame" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='../images/lovedog_minigame3.svg'">
+                    </div>
                 </div>
             </div>
 
@@ -312,11 +318,17 @@
     </button>
 
     <script>
-        // Handle fallback for PNG to SVG if PNG is not available
-        function checkImageSrc(img) {
-            if (img.src.endsWith('.png') && img.naturalWidth === 0) {
-                img.src = img.src.replace('.png', '.svg');
-            }
+        // Function to change the main image
+        function changeMainImage(src) {
+            const mainImage = document.querySelector('.main-image');
+            mainImage.src = src;
+            
+            // Handle error if PNG fails to load
+            mainImage.onerror = function() {
+                if (this.src.endsWith('.png')) {
+                    this.src = this.src.replace('.png', '.svg');
+                }
+            };
         }
         
         // Initialize all images with error handlers
@@ -324,24 +336,12 @@
             const images = document.querySelectorAll('img');
             images.forEach(img => {
                 img.addEventListener('error', function() {
-                    if (img.src.endsWith('.png')) {
-                        img.src = img.src.replace('.png', '.svg');
+                    if (this.src.endsWith('.png')) {
+                        this.src = this.src.replace('.png', '.svg');
                     }
                 });
             });
         });
-        
-        // Function to change the main image
-        function changeMainImage(src) {
-            const mainImage = document.querySelector('.main-image');
-            mainImage.src = src;
-            // If PNG fails, try SVG
-            mainImage.addEventListener('error', function() {
-                if (mainImage.src.endsWith('.png')) {
-                    mainImage.src = mainImage.src.replace('.png', '.svg');
-                }
-            });
-        }
     </script>
     <script src="../js/main.js"></script>
     <script src="../js/i18n.js"></script>
