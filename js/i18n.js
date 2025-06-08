@@ -1,6 +1,12 @@
 // Define translations
 const translations = {
   en: {
+    // Portfolio overview projects
+    "ai-voice-overview-title": "AI Agent with Voice",
+    "ai-voice-overview-desc": "A Python application that enables natural voice interaction with language models through offline speech recognition and high-quality text-to-speech capabilities.",
+    "lovedog-overview-title": "Love Dog, AI Videogame Assets",
+    "lovedog-overview-desc": "A charming 2D platformer built in Godot where you play as a loyal dog determined to protect your owner's romantic date. Manage multiple minigames and prevent distractions that could ruin their special evening.",
+    
     // Project pages - AI Agent with Voice
     "ai-voice-title": "AI Agent with Voice",
     "ai-voice-category": "AI Assistant Development",
@@ -59,6 +65,72 @@ const translations = {
     "lovedog-feature5": "Expressive 2D Animation: Charming character animations that bring the dog protagonist to life with running, jumping, and barking actions.",
     "lovedog-feature6": "Immersive Sound Design: Ambient music that changes based on the date's status, with sound effects providing feedback on game events.",
     
+    // Love Dog Development Process section
+    "lovedog-gameplay-preview": "Gameplay Preview",
+    "lovedog-gameplay-caption": "Watch the dog protagonist in action protecting the date",
+    "lovedog-development-title": "Development Process",
+    "lovedog-development-p1": "The game was developed in one week for the Brackeys Game Jam 2025. Using the Godot Engine (version 4.3) and GDScript, I focused on creating a cohesive gameplay experience that blended platforming with minigames. The development was accelerated by leveraging AI tools to generate assets.",
+    "lovedog-development-p2": "The development process included:",
+    "lovedog-development-list1": "Conceptualizing the game design around the theme of \"Connections\"",
+    "lovedog-development-list2": "Implementing core mechanics including player movement, interactions, and the problem management system",
+    "lovedog-development-list3": "Designing and coding three unique minigames with escalating difficulty",
+    "lovedog-development-list4": "Creating pixel art assets and animations for the game's characters and environment",
+    "lovedog-development-list5": "Balancing gameplay difficulty across three progressive nights",
+    "lovedog-development-list6": "Implementing audio design with dynamic music that responds to the game state",
+    
+    // Love Dog Technical Details
+    "lovedog-tech-title": "Technical Highlights",
+    "lovedog-tech1-title": "Godot Engine 4.3",
+    "lovedog-tech1-desc": "Used for the game's core development, taking advantage of its 2D capabilities and scene system",
+    "lovedog-tech2-title": "GDScript",
+    "lovedog-tech2-desc": "Custom scripting for game mechanics, character controls, and minigame interactions",
+    "lovedog-tech3-title": "AI-Generated Assets",
+    "lovedog-tech3-desc": "Approximately 50% of assets, music, and sound effects were created using ComfyUI and other AI tools",
+    "lovedog-tech4-title": "Dynamic Audio",
+    "lovedog-tech4-desc": "Responsive music system that changes based on the state of the date",
+    
+    // Love Dog Challenges
+    "lovedog-challenges-title": "Challenges & Solutions",
+    "lovedog-challenge1-title": "Time Constraint",
+    "lovedog-challenge1-problem": "Challenge: Developing a complete game with multiple systems in only 1 week.",
+    "lovedog-challenge1-solution": "Solution: Prioritized core gameplay mechanics first, then leveraged AI tools like ComfyUI to generate assets, music, and sound effects efficiently.",
+    "lovedog-challenge2-title": "Balancing Difficulty",
+    "lovedog-challenge2-problem": "Challenge: Creating a difficulty curve that was challenging but not frustrating.",
+    "lovedog-challenge2-solution": "Solution: Implemented a dynamic difficulty system that adjusts based on the night number, with carefully tuned parameters for problem frequency and time limits.",
+    "lovedog-challenge3-title": "Minigame Integration",
+    "lovedog-challenge3-problem": "Challenge: Seamlessly integrating multiple minigames without disrupting the main gameplay flow.",
+    "lovedog-challenge3-solution": "Solution: Developed a flexible minigame manager system that handles transitions and maintains game state across different gameplay modes.",
+    
+    // Love Dog Results
+    "lovedog-results-title": "Results & Takeaways",
+    "lovedog-results-p1": "The game was successfully completed within the 1-week time constraint of the Brackeys Game Jam 2025. By leveraging AI tools like ComfyUI for asset generation, I was able to create a more polished experience than would otherwise have been possible in such a short timeframe.",
+    "lovedog-results-p2": "Key learnings from this project include:",
+    "lovedog-results-list1": "Effective scope management for game jam projects",
+    "lovedog-results-list2": "Techniques for rapidly prototyping and implementing gameplay systems",
+    "lovedog-results-list3": "Advanced use of Godot's signal system for event-driven gameplay",
+    "lovedog-results-list4": "Creating compelling game feel through responsive controls and visual feedback",
+    "lovedog-results-list5": "Integration of AI-generated art and animations with traditional game development",
+    
+    // Love Dog Reviews
+    "lovedog-reviews-title": "Player Reviews",
+    "lovedog-rating-text": "46 ratings from Brackeys Game Jam 2025.1",
+    "lovedog-review1-author": "KelvinHM",
+    "lovedog-review1-date": "February 2025",
+    "lovedog-review1-content": "\"Originally this doesn't look much, but actually this feels like one of the better 'multi-tasking' games this jam in terms of playability. The gameplay is very smooth and clear. The three different types of minigames are nicely balanced and help the gameplay a lot. The house is quite big but thanks god you add a running feature.\"",
+    "lovedog-review2-author": "Josep Valls",
+    "lovedog-review2-date": "February 2025",
+    "lovedog-review2-content": "\"This is a great entry. Lots of fun and lots to do. The amount of content and mechanics is remarkable and impressive for a single person team. Kudos on your hard work!\"",
+    "lovedog-review3-author": "VoltekPlay",
+    "lovedog-review3-date": "February 2025",
+    "lovedog-review3-content": "\"Nice jam entry, I enjoyed playing it. Very pretty art style and smooth dog animations. Variety of minigames to get rid of distractions. Big house to explore with simple platforming mechanics. Overall, you did a nice job and made a solid entry!\"",
+    
+    // Love Dog Links
+    "lovedog-links-title": "Links & Resources",
+    "lovedog-link1-text": "GitHub Repository",
+    "lovedog-link2-text": "Gameplay Video",
+    "lovedog-link3-text": "Play the Game",
+    "lovedog-link4-text": "Devlog",
+    
     // Navigation
     "nav-home": "Home",
     "nav-portfolio": "Portfolio",
@@ -66,6 +138,7 @@ const translations = {
     
     // Hero section
     "hero-greeting": "Hello, I'm",
+    "hero-ai-credit": "This website was created with the help of AI ✨",
     "hero-title": "Senior Talent Partner and AI Developer",
     "hero-description": "M.B.A. with 4+ years of experience in Talent Acquisition for DACH and EMEA regions, specializing in tech and sales recruitment. Passionate about AI development and implementation.",
     "hero-cta-portfolio": "View My Work",
@@ -172,6 +245,11 @@ const translations = {
   },
   
   de: {
+    // Portfolio overview projects
+    "ai-voice-overview-title": "KI-Agent mit Sprache",
+    "ai-voice-overview-desc": "Eine Python-Anwendung, die natürliche Sprachinteraktion mit Sprachmodellen durch Offline-Spracherkennung und hochwertige Text-zu-Sprache-Fähigkeiten ermöglicht.",
+    "lovedog-overview-title": "Love Dog, KI-Videospiel-Assets",
+    "lovedog-overview-desc": "Ein charmantes 2D-Plattformspiel, entwickelt in Godot, in dem du als treuer Hund spielst, der entschlossen ist, das romantische Date seines Besitzers zu schützen. Verwalte mehrere Minispiele und verhindere Ablenkungen, die den besonderen Abend ruinieren könnten.",
     // Project pages - AI Agent with Voice
     "ai-voice-title": "KI-Agent mit Sprache",
     "ai-voice-category": "KI-Assistentenentwicklung",
@@ -202,6 +280,72 @@ const translations = {
     "lovedog-feature4": "Dynamischer Liebesmesser: Ein reaktionsschnelles System, das verfolgt, wie gut das Date läuft, basierend auf deiner Leistung bei der Bewältigung von Ablenkungen.",
     "lovedog-feature5": "Ausdrucksstarke 2D-Animation: Charmante Charakteranimationen, die den Hundeprotagonisten mit Lauf-, Sprung- und Bellaktionen zum Leben erwecken.",
     "lovedog-feature6": "Immersives Sounddesign: Ambiente-Musik, die sich je nach Status des Dates ändert, mit Soundeffekten, die Feedback zu Spielereignissen geben.",
+    
+    // Love Dog Development Process section
+    "lovedog-gameplay-preview": "Gameplay-Vorschau",
+    "lovedog-gameplay-caption": "Sehen Sie den Hund-Protagonisten in Aktion beim Schutz des Dates",
+    "lovedog-development-title": "Entwicklungsprozess",
+    "lovedog-development-p1": "Das Spiel wurde innerhalb einer Woche für die Brackeys Game Jam 2025 entwickelt. Mit der Godot Engine (Version 4.3) und GDScript konzentrierte ich mich darauf, ein zusammenhängendes Spielerlebnis zu schaffen, das Plattform-Elemente mit Minispielen verbindet. Die Entwicklung wurde durch den Einsatz von KI-Tools zur Generierung von Assets beschleunigt.",
+    "lovedog-development-p2": "Der Entwicklungsprozess umfasste:",
+    "lovedog-development-list1": "Konzeptualisierung des Spieldesigns rund um das Thema \"Verbindungen\"",
+    "lovedog-development-list2": "Implementierung von Kernmechaniken wie Spielerbewegung, Interaktionen und dem Problem-Management-System",
+    "lovedog-development-list3": "Design und Programmierung von drei einzigartigen Minispielen mit steigendem Schwierigkeitsgrad",
+    "lovedog-development-list4": "Erstellung von Pixel-Art-Assets und Animationen für die Charaktere und Umgebung des Spiels",
+    "lovedog-development-list5": "Ausbalancierung des Schwierigkeitsgrads über drei fortschreitende Nächte",
+    "lovedog-development-list6": "Implementierung eines Audiodesigns mit dynamischer Musik, die auf den Spielzustand reagiert",
+    
+    // Love Dog Technical Details
+    "lovedog-tech-title": "Technische Highlights",
+    "lovedog-tech1-title": "Godot Engine 4.3",
+    "lovedog-tech1-desc": "Verwendet für die Kernentwicklung des Spiels, unter Ausnutzung der 2D-Fähigkeiten und des Szenensystems",
+    "lovedog-tech2-title": "GDScript",
+    "lovedog-tech2-desc": "Benutzerdefinierte Skripte für Spielmechaniken, Charaktersteuerung und Minispiel-Interaktionen",
+    "lovedog-tech3-title": "KI-generierte Assets",
+    "lovedog-tech3-desc": "Etwa 50% der Assets, Musik und Soundeffekte wurden mit ComfyUI und anderen KI-Tools erstellt",
+    "lovedog-tech4-title": "Dynamisches Audio",
+    "lovedog-tech4-desc": "Reaktives Musiksystem, das sich je nach Status des Dates ändert",
+    
+    // Love Dog Challenges
+    "lovedog-challenges-title": "Herausforderungen & Lösungen",
+    "lovedog-challenge1-title": "Zeitbeschränkung",
+    "lovedog-challenge1-problem": "Herausforderung: Entwicklung eines vollständigen Spiels mit mehreren Systemen in nur einer Woche.",
+    "lovedog-challenge1-solution": "Lösung: Priorisierung der Kern-Spielmechaniken, dann Nutzung von KI-Tools wie ComfyUI zur effizienten Generierung von Assets, Musik und Soundeffekten.",
+    "lovedog-challenge2-title": "Ausbalancierung der Schwierigkeit",
+    "lovedog-challenge2-problem": "Herausforderung: Erstellung einer Schwierigkeitskurve, die herausfordernd, aber nicht frustrierend ist.",
+    "lovedog-challenge2-solution": "Lösung: Implementierung eines dynamischen Schwierigkeitssystems, das sich basierend auf der Nachtnummer anpasst, mit sorgfältig abgestimmten Parametern für Problemhäufigkeit und Zeitlimits.",
+    "lovedog-challenge3-title": "Minispiel-Integration",
+    "lovedog-challenge3-problem": "Herausforderung: Nahtlose Integration mehrerer Minispiele ohne den Hauptspielfluss zu stören.",
+    "lovedog-challenge3-solution": "Lösung: Entwicklung eines flexiblen Minispiel-Manager-Systems, das Übergänge handhabt und den Spielzustand über verschiedene Spielmodi hinweg beibehält.",
+    
+    // Love Dog Results
+    "lovedog-results-title": "Ergebnisse & Erkenntnisse",
+    "lovedog-results-p1": "Das Spiel wurde erfolgreich innerhalb der einwöchigen Zeitbeschränkung der Brackeys Game Jam 2025, abgeschlossen. Durch den Einsatz von KI-Tools wie ComfyUI zur Asset-Generierung konnte ich ein poliertes Erlebnis schaffen, das in so kurzer Zeit sonst nicht möglich gewesen wäre.",
+    "lovedog-results-p2": "Wichtige Erkenntnisse aus diesem Projekt umfassen:",
+    "lovedog-results-list1": "Effektives Umfangsmanagement für Game-Jam-Projekte",
+    "lovedog-results-list2": "Techniken für schnelles Prototyping und Implementierung von Spielsystemen",
+    "lovedog-results-list3": "Fortgeschrittene Nutzung von Godots Signal-System für ereignisgesteuertes Gameplay",
+    "lovedog-results-list4": "Erschaffung eines überzeugenden Spielgefühls durch reaktionsschnelle Steuerung und visuelles Feedback",
+    "lovedog-results-list5": "Integration von KI-generierter Kunst und Animationen mit traditioneller Spieleentwicklung",
+    
+    // Love Dog Reviews
+    "lovedog-reviews-title": "Spielerbewertungen",
+    "lovedog-rating-text": "46 Bewertungen von der Brackeys Game Jam 2025.1",
+    "lovedog-review1-author": "KelvinHM",
+    "lovedog-review1-date": "Februar 2025",
+    "lovedog-review1-content": "\"Ursprünglich sieht es nicht nach viel aus, aber tatsächlich fühlt es sich wie eines der besseren 'Multitasking'-Spiele dieses Jams in Bezug auf die Spielbarkeit an. Das Gameplay ist sehr flüssig und klar. Die drei verschiedenen Arten von Minispielen sind gut ausbalanciert und unterstützen das Gameplay erheblich. Das Haus ist ziemlich groß, aber Gott sei Dank haben Sie eine Lauffunktion hinzugefügt.\"",
+    "lovedog-review2-author": "Josep Valls",
+    "lovedog-review2-date": "Februar 2025",
+    "lovedog-review2-content": "\"Dies ist ein großartiger Beitrag. Viel Spaß und viel zu tun. Die Menge an Inhalten und Mechaniken ist bemerkenswert und beeindruckend für ein Ein-Personen-Team. Respekt für deine harte Arbeit!\"",
+    "lovedog-review3-author": "VoltekPlay",
+    "lovedog-review3-date": "Februar 2025",
+    "lovedog-review3-content": "\"Schöner Jam-Beitrag, ich habe es gerne gespielt. Sehr hübscher Kunststil und flüssige Hundeanimationen. Vielfalt an Minispielen, um Ablenkungen loszuwerden. Großes Haus zum Erkunden mit einfachen Plattform-Mechaniken. Insgesamt hast du gute Arbeit geleistet und einen soliden Beitrag geliefert!\"",
+    
+    // Love Dog Links
+    "lovedog-links-title": "Links & Ressourcen",
+    "lovedog-link1-text": "GitHub-Repository",
+    "lovedog-link2-text": "Gameplay-Video",
+    "lovedog-link3-text": "Spiel spielen",
+    "lovedog-link4-text": "Entwicklungslog",
     
     // Project Details - AI Agent with Voice
     "aivoice-overview-title": "Projektübersicht",
@@ -237,6 +381,7 @@ const translations = {
     
     // Hero section
     "hero-greeting": "Hallo, ich bin",
+    "hero-ai-credit": "Diese Website wurde mit Hilfe von KI erstellt ✨",
     "hero-title": "Senior Talent Partner und KI-Entwickler",
     "hero-description": "M.B.A. mit mehr als 4 Jahren Erfahrung im Talent Acquisition für die DACH- und EMEA-Regionen, spezialisiert auf Tech- und Vertriebsrekrutierung. Leidenschaftlich an KI-Entwicklung und -Implementierung interessiert.",
     "hero-cta-portfolio": "Meine Arbeit ansehen",
@@ -335,7 +480,9 @@ const translations = {
     "microsoft-achievement": "Steigerung der Datenqualität (Incidents und SAF-Bereinigung) auf 99% und Reduzierung der Bearbeitungszeit um 30% in den ersten 3 Monaten, was in den folgenden Monaten beibehalten wurde.",
     
     // Honeywell Experience
-    "honeywell-position": "Human Resources Generalist, Customer Exp. Lead",
+    "honeywell-position": "Human Resources Generalist, Leiter Kundenerfahrung",
+    "honeywell-description": "Verarbeitung von allgemeinen Datentransaktionen für alle neuen EMEA- und LATAM-Honeywell-Mitarbeiter sowie Verwaltung der HR-Datenbank und Koordination von über 10 HR-Programmen.",
+    "honeywell-achievement": "Bewältigung eines 300%-Anstiegs des Transaktionsvolumens mit bestehenden Ressourcen durch Prozessverbesserungen und automatisierte Lösungen.",
     
     // Education
     "mba-degree": "Master in Betriebswirtschaftslehre",
@@ -343,6 +490,11 @@ const translations = {
   },
   
   es: {
+    // Portfolio overview projects
+    "ai-voice-overview-title": "Agente de IA con Voz",
+    "ai-voice-overview-desc": "Una aplicación Python que permite la interacción natural por voz con modelos de lenguaje mediante reconocimiento de voz sin conexión y capacidades de texto a voz de alta calidad.",
+    "lovedog-overview-title": "Love Dog, Recursos de Videojuego con IA",
+    "lovedog-overview-desc": "Un encantador juego de plataformas 2D construido en Godot donde juegas como un perro leal decidido a proteger la cita romántica de tu dueño. Gestiona múltiples minijuegos y evita distracciones que podrían arruinar su noche especial.",
     // Project pages - AI Agent with Voice
     "ai-voice-title": "Agente de IA con Voz",
     "ai-voice-category": "Desarrollo de Asistentes de IA",
@@ -401,6 +553,72 @@ const translations = {
     "lovedog-feature5": "Animación 2D Expresiva: Encantadoras animaciones de personajes que dan vida al protagonista canino con acciones de correr, saltar y ladrar.",
     "lovedog-feature6": "Diseño de Sonido Inmersivo: Música ambiental que cambia según el estado de la cita, con efectos de sonido que proporcionan retroalimentación sobre eventos del juego.",
     
+    // Love Dog Development Process section
+    "lovedog-gameplay-preview": "Vista previa del Gameplay",
+    "lovedog-gameplay-caption": "Mira al protagonista canino en acción protegiendo la cita",
+    "lovedog-development-title": "Proceso de Desarrollo",
+    "lovedog-development-p1": "El juego fue desarrollado en una semana para el Brackeys Game Jam 2025. Usando el Motor Godot (versión 4.3) y GDScript, me enfoqué en crear una experiencia de juego cohesiva que combinara plataformas con minijuegos. El desarrollo se aceleró aprovechando herramientas de IA para generar recursos.",
+    "lovedog-development-p2": "El proceso de desarrollo incluyó:",
+    "lovedog-development-list1": "Conceptualización del diseño del juego en torno al tema de \"Conexiones\"",
+    "lovedog-development-list2": "Implementación de mecánicas principales incluyendo movimiento del jugador, interacciones y el sistema de gestión de problemas",
+    "lovedog-development-list3": "Diseño y programación de tres minijuegos únicos con dificultad creciente",
+    "lovedog-development-list4": "Creación de recursos de pixel art y animaciones para los personajes y el entorno del juego",
+    "lovedog-development-list5": "Equilibrio de la dificultad del juego a lo largo de tres noches progresivas",
+    "lovedog-development-list6": "Implementación de diseño de audio con música dinámica que responde al estado del juego",
+    
+    // Love Dog Technical Details
+    "lovedog-tech-title": "Aspectos Técnicos Destacados",
+    "lovedog-tech1-title": "Motor Godot 4.3",
+    "lovedog-tech1-desc": "Utilizado para el desarrollo principal del juego, aprovechando sus capacidades 2D y sistema de escenas",
+    "lovedog-tech2-title": "GDScript",
+    "lovedog-tech2-desc": "Programación personalizada para mecánicas de juego, controles de personajes e interacciones de minijuegos",
+    "lovedog-tech3-title": "Recursos Generados por IA",
+    "lovedog-tech3-desc": "Aproximadamente el 50% de los recursos, música y efectos de sonido fueron creados usando ComfyUI y otras herramientas de IA",
+    "lovedog-tech4-title": "Audio Dinámico",
+    "lovedog-tech4-desc": "Sistema de música responsivo que cambia según el estado de la cita",
+    
+    // Love Dog Challenges
+    "lovedog-challenges-title": "Desafíos y Soluciones",
+    "lovedog-challenge1-title": "Restricción de Tiempo",
+    "lovedog-challenge1-problem": "Desafío: Desarrollar un juego completo con múltiples sistemas en solo 1 semana.",
+    "lovedog-challenge1-solution": "Solución: Prioricé primero las mecánicas principales del juego, luego aproveché herramientas de IA como ComfyUI para generar recursos, música y efectos de sonido de manera eficiente.",
+    "lovedog-challenge2-title": "Equilibrio de Dificultad",
+    "lovedog-challenge2-problem": "Desafío: Crear una curva de dificultad que fuera desafiante pero no frustrante.",
+    "lovedog-challenge2-solution": "Solución: Implementé un sistema de dificultad dinámica que se ajusta según el número de noche, con parámetros cuidadosamente ajustados para la frecuencia de problemas y límites de tiempo.",
+    "lovedog-challenge3-title": "Integración de Minijuegos",
+    "lovedog-challenge3-problem": "Desafío: Integrar perfectamente múltiples minijuegos sin interrumpir el flujo principal del juego.",
+    "lovedog-challenge3-solution": "Solución: Desarrollé un sistema flexible de gestión de minijuegos que maneja las transiciones y mantiene el estado del juego a través de diferentes modos de juego.",
+    
+    // Love Dog Results
+    "lovedog-results-title": "Resultados y Aprendizajes",
+    "lovedog-results-p1": "El juego se completó exitosamente dentro de la restricción de tiempo de 1 semana del Brackeys Game Jam 2025. Al aprovechar herramientas de IA como ComfyUI para la generación de recursos, pude crear una experiencia más pulida de lo que hubiera sido posible en un plazo tan corto.",
+    "lovedog-results-p2": "Aprendizajes clave de este proyecto incluyen:",
+    "lovedog-results-list1": "Gestión efectiva del alcance para proyectos de game jam",
+    "lovedog-results-list2": "Técnicas para prototipado rápido e implementación de sistemas de juego",
+    "lovedog-results-list3": "Uso avanzado del sistema de señales de Godot para gameplay orientado a eventos",
+    "lovedog-results-list4": "Creación de sensaciones de juego convincentes mediante controles responsivos y retroalimentación visual",
+    "lovedog-results-list5": "Integración de arte y animaciones generados por IA con desarrollo de juegos tradicional",
+    
+    // Love Dog Reviews
+    "lovedog-reviews-title": "Reseñas de Jugadores",
+    "lovedog-rating-text": "46 calificaciones del Brackeys Game Jam 2025.1",
+    "lovedog-review1-author": "KelvinHM",
+    "lovedog-review1-date": "Febrero 2025",
+    "lovedog-review1-content": "\"Originalmente no parece mucho, pero en realidad se siente como uno de los mejores juegos de 'multitarea' de este jam en términos de jugabilidad. El gameplay es muy fluido y claro. Los tres diferentes tipos de minijuegos están bien equilibrados y ayudan mucho a la jugabilidad. La casa es bastante grande pero gracias a Dios añadiste una función para correr.\"",
+    "lovedog-review2-author": "Josep Valls",
+    "lovedog-review2-date": "Febrero 2025",
+    "lovedog-review2-content": "\"Esta es una gran participación. Mucha diversión y muchas cosas que hacer. La cantidad de contenido y mecánicas es notable e impresionante para un equipo de una sola persona. ¡Felicitaciones por tu arduo trabajo!\"",
+    "lovedog-review3-author": "VoltekPlay",
+    "lovedog-review3-date": "Febrero 2025",
+    "lovedog-review3-content": "\"Buena participación en el jam, disfruté jugándolo. Estilo artístico muy bonito y animaciones fluidas del perro. Variedad de minijuegos para deshacerse de las distracciones. Gran casa para explorar con mecánicas de plataformas simples. En general, hiciste un buen trabajo y creaste una participación sólida!\"",
+    
+    // Love Dog Links
+    "lovedog-links-title": "Enlaces y Recursos",
+    "lovedog-link1-text": "Repositorio GitHub",
+    "lovedog-link2-text": "Video de Gameplay",
+    "lovedog-link3-text": "Jugar el Juego",
+    "lovedog-link4-text": "Devlog",
+    
     // Navigation
     "nav-home": "Inicio",
     "nav-portfolio": "Portafolio",
@@ -408,6 +626,7 @@ const translations = {
     
     // Hero section
     "hero-greeting": "Hola, soy",
+    "hero-ai-credit": "Este sitio web fue creado con la ayuda de IA ✨",
     "hero-title": "Senior Talent Partner y Desarrollador de IA",
     "hero-description": "M.B.A. con más de 4 años de experiencia en Adquisición de Talento para las regiones DACH y EMEA, especializado en reclutamiento de tecnología y ventas. Apasionado por el desarrollo e implementación de IA.",
     "hero-cta-portfolio": "Ver mi trabajo",
@@ -507,6 +726,8 @@ const translations = {
     
     // Honeywell Experience
     "honeywell-position": "Generalista de Recursos Humanos, Líder de Exp. al Cliente",
+    "honeywell-description": "Procesamiento de transacciones generales de datos para todos los nuevos empleados de Honeywell en EMEA y LATAM, así como administración de la base de datos de RRHH y coordinación de más de 10 programas de RRHH.",
+    "honeywell-achievement": "Manejo de un aumento del 300% en el volumen de transacciones con los recursos existentes a través de mejoras de procesos y soluciones automatizadas.",
     
     // Education
     "mba-degree": "Maestría en Administración de Empresas",

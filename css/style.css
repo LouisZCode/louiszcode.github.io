@@ -543,7 +543,15 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
     color: var(--accent-primary);
   }
   
-  /* ===== PORTFOLIO PAGE SPECIFIC ===== */
+  /* AI helper text styling */
+.ai-helper {
+  color: var(--accent-tertiary); /* Light blue color from the existing palette */
+  font-size: 1rem;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* ===== PORTFOLIO PAGE SPECIFIC ===== */
   .portfolio-header {
     padding-top: 140px;
     padding-bottom: 40px;
