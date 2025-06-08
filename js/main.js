@@ -184,4 +184,45 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 5000);
         });
     }
+    
+    // Certificate preview modal functionality
+    const certPreviews = document.querySelectorAll('.certification-preview img');
+    
+    certPreviews.forEach(img => {
+        img.addEventListener('click', function() {
+            // Create modal
+            const modal = document.createElement('div');
+            modal.className = 'certificate-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <img src="${this.src}" alt="${this.alt}">
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Show modal with animation
+            setTimeout(() => modal.classList.add('show'), 10);
+            
+            // Close modal handlers
+            const closeModal = () => {
+                modal.classList.remove('show');
+                setTimeout(() => modal.remove(), 300);
+            };
+            
+            modal.querySelector('.close-modal').addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) closeModal();
+            });
+            
+            // Close on Escape key
+            document.addEventListener('keydown', function escHandler(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                    document.removeEventListener('keydown', escHandler);
+                }
+            });
+        });
+    });
 });
