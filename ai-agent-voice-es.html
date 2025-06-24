@@ -88,6 +88,125 @@
                     </ul>
                 </div>
 
+                <div class="project-demo">
+                    <h3>Verlo en Acción</h3>
+                    <div class="demo-gif">
+                        <img src="images/ai-agent-voice-demo.gif" alt="Demo del Agente de IA con Voz" class="full-width-gif" onerror="this.src='images/ai-agent-voice.svg'">
+                    </div>
+                    <p class="demo-caption">Demostración de la interacción por voz con el agente de IA</p>
+                </div>
+
+                <div class="project-development">
+                    <h2>Proceso de Desarrollo</h2>
+                    <p>
+                        El desarrollo de este proyecto se centró en crear un sistema modular y extensible que pudiera proporcionar una interfaz de voz natural para modelos de IA mientras mantenía la privacidad y el control del usuario. El proyecto fue construido usando Python y varias bibliotecas especializadas.
+                    </p>
+                    <p>
+                        El proceso de desarrollo incluyó:
+                    </p>
+                    <ul>
+                        <li>Diseño de una arquitectura MVC flexible para separar la lógica de IA, la interfaz de usuario y el flujo de control</li>
+                        <li>Implementación del reconocimiento de voz offline usando Vosk para entrada de voz centrada en la privacidad</li>
+                        <li>Construcción de un sistema híbrido de texto a voz con XTTS-v2 para voces de alta calidad y TTS del sistema como respaldo confiable</li>
+                        <li>Creación de una interfaz TKinter responsiva con controles intuitivos e historial de conversación</li>
+                        <li>Desarrollo de una integración con Ollama para conectar con modelos de lenguaje ejecutándose localmente</li>
+                        <li>Implementación de selección de voz y opciones de voz personalizadas</li>
+                        <li>Pruebas exhaustivas y optimización para capacidad de respuesta y rendimiento</li>
+                    </ul>
+                </div>
+
+                <div class="technical-details">
+                    <h2>Aspectos Técnicos Destacados</h2>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <i class="fab fa-python"></i>
+                            <h3>Python</h3>
+                            <p>Lenguaje principal utilizado para el desarrollo de aplicaciones con varias bibliotecas especializadas</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-microphone"></i>
+                            <h3>Vosk</h3>
+                            <p>Motor de reconocimiento de voz offline para procesamiento privado y preciso de entrada de voz</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-volume-up"></i>
+                            <h3>XTTS-v2</h3>
+                            <p>Sistema avanzado de texto a voz con deep learning para respuestas de IA que suenan naturales</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-desktop"></i>
+                            <h3>TKinter</h3>
+                            <p>Toolkit GUI integrado de Python utilizado para crear la interfaz de usuario</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-brain"></i>
+                            <h3>Ollama</h3>
+                            <p>Servidor LLM local para ejecutar modelos de IA sin dependencias de la nube</p>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>Arquitectura MVC</h3>
+                            <p>Patrón de diseño de software utilizado para separación limpia de responsabilidades</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-challenges">
+                    <h2>Desafíos y Soluciones</h2>
+                    <div class="challenge-item">
+                        <h3>Precisión del Reconocimiento de Voz</h3>
+                        <p><strong>Desafío:</strong> Lograr un reconocimiento de voz confiable sin depender de servicios basados en la nube.</p>
+                        <p><strong>Solución:</strong> Implementé Vosk, un sistema de reconocimiento de voz offline con modelos personalizables, y agregué detección de silencio con umbrales adaptativos para mejorar la precisión en diferentes entornos.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Habla que Suena Natural</h3>
+                        <p><strong>Desafío:</strong> Crear voces de IA que suenen naturales y no rompan la inmersión durante la conversación.</p>
+                        <p><strong>Solución:</strong> Integré XTTS-v2, un sistema neuronal de texto a voz de vanguardia, mientras mantenía el TTS del sistema como respaldo. Agregué división de oraciones para mejor prosodia y soporte de voz personalizada.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Rendimiento del Sistema</h3>
+                        <p><strong>Desafío:</strong> Asegurar rendimiento responsivo a pesar de ejecutar reconocimiento de voz, inferencia LLM y TTS simultáneamente.</p>
+                        <p><strong>Solución:</strong> Implementé una arquitectura multi-hilo con procesamiento en segundo plano para reconocimiento de voz y TTS, junto con procesamiento asíncrono de audio para mantener la capacidad de respuesta de la UI.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Compatibilidad Multiplataforma</h3>
+                        <p><strong>Desafío:</strong> Crear una experiencia consistente a través de diferentes sistemas operativos.</p>
+                        <p><strong>Solución:</strong> Diseñé mecanismos de respaldo tanto para reconocimiento de voz como para TTS que se adaptan automáticamente a los recursos y capacidades del sistema disponibles.</p>
+                    </div>
+                </div>
+
+                <div class="project-results">
+                    <h2>Resultados y Detalles de Implementación</h2>
+                    <p>
+                        El proyecto Agente de IA con Voz crea exitosamente una interfaz de voz fluida para interactuar con modelos de IA. La aplicación demuestra cómo las tecnologías avanzadas de habla pueden combinarse con LLMs locales para crear asistentes de voz centrados en la privacidad.
+                    </p>
+                    <p>
+                        La implementación sigue el patrón MVC:
+                    </p>
+                    <ul>
+                        <li><strong>Modelo (model.py):</strong> Maneja la comunicación con Ollama, mantiene el historial de conversación y procesa respuestas de IA</li>
+                        <li><strong>Vista (view.py):</strong> Implementa la GUI de TKinter con controles de usuario y visualización de conversación</li>
+                        <li><strong>Controlador (controller.py):</strong> Conecta el modelo y la vista, gestiona los componentes de reconocimiento de voz y TTS</li>
+                    </ul>
+                    <p>
+                        Los componentes especializados incluyen:
+                    </p>
+                    <ul>
+                        <li><strong>Reconocimiento de Voz (speech.py):</strong> Implementa entrada de voz en tiempo real con Vosk, soportando retroalimentación palabra por palabra y detección adaptativa de silencio</li>
+                        <li><strong>Texto a Voz (tts.py):</strong> Proporciona salida de voz de alta calidad con XTTS-v2, con respaldo de TTS del sistema y soporte de voz personalizada</li>
+                    </ul>
+                    <p>
+                        Los principales resultados de aprendizaje de este proyecto incluyen:
+                    </p>
+                    <ul>
+                        <li>Construcción de aplicaciones estructuradas con MVC para proyectos complejos de IA</li>
+                        <li>Trabajo con reconocimiento de voz offline y sistemas neuronales de TTS</li>
+                        <li>Creación de aplicaciones responsivas y multi-hilo que manejan tareas intensivas de IA</li>
+                        <li>Diseño de interfaces de usuario que proporcionan experiencias de conversación naturales</li>
+                        <li>Integración con servidores LLM locales para aplicaciones de IA centradas en la privacidad</li>
+                    </ul>
+                </div>
+
                 <div class="project-links-section">
                     <h2>Enlaces y Recursos</h2>
                     <div class="links-grid">
