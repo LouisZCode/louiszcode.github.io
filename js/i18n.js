@@ -131,6 +131,9 @@ const translations = {
     "lovedog-link3-text": "Play the Game",
     "lovedog-link4-text": "Devlog",
     
+    // Construction Banner
+    "construction-message": "Website under active development - New features being added regularly!",
+    
     // Navigation
     "nav-home": "Home",
     "nav-portfolio": "Portfolio",
@@ -346,6 +349,9 @@ const translations = {
     "lovedog-link2-text": "Gameplay-Video",
     "lovedog-link3-text": "Spiel spielen",
     "lovedog-link4-text": "Entwicklungslog",
+    
+    // Construction Banner
+    "construction-message": "Website in aktiver Entwicklung - Neue Features werden regelmäßig hinzugefügt!",
     
     // Project Details - AI Agent with Voice
     "aivoice-overview-title": "Projektübersicht",
@@ -618,6 +624,9 @@ const translations = {
     "lovedog-link2-text": "Video de Gameplay",
     "lovedog-link3-text": "Jugar el Juego",
     "lovedog-link4-text": "Devlog",
+    
+    // Construction Banner
+    "construction-message": "Sitio web en desarrollo activo - ¡Se agregan nuevas características regularmente!",
     
     // Navigation
     "nav-home": "Inicio",

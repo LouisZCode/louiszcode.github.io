@@ -409,6 +409,23 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
     object-fit: cover;
     transition: transform 0.5s ease;
   }
+
+  /* Featured Experience section - smaller images */
+  .featured-projects .project-image {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-secondary);
+  }
+  
+  .featured-projects .project-image img {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+    width: auto;
+    height: auto;
+  }
   
   .project-card:hover .project-image img {
     transform: scale(1.05);

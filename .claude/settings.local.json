@@ -1,10 +1,15 @@
 {
-  "enableAllProjectMcpServers": false,
   "permissions": {
     "allow": [
       "Bash(chmod:*)",
       "Bash(mkdir:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(ls:*)",
+      "Bash(touch:*)",
+      "Bash(sudo chmod:*)",
+      "Bash(cp:*)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": false
 }
