@@ -747,6 +747,24 @@ const translations = {
 // Set the default language
 let currentLang = 'en';
 
+// Function to update project links based on language
+function updateProjectLinks(lang) {
+  document.querySelectorAll('.project-link').forEach(link => {
+    const project = link.getAttribute('data-project');
+    if (project) {
+      let newHref;
+      if (lang === 'de') {
+        newHref = `${project}-de.html`;
+      } else if (lang === 'es') {
+        newHref = `${project}-es.html`;
+      } else {
+        newHref = `projects/${project}.html`;
+      }
+      link.setAttribute('href', newHref);
+    }
+  });
+}
+
 // Function to update text content based on the selected language
 function updateLanguage(lang) {
   currentLang = lang;
@@ -764,6 +782,9 @@ function updateLanguage(lang) {
   
   // Update HTML lang attribute for screen readers
   document.documentElement.setAttribute('lang', lang);
+  
+  // Update project links based on language
+  updateProjectLinks(lang);
   
   // Update all translatable elements
   document.querySelectorAll('[data-i18n]').forEach(element => {

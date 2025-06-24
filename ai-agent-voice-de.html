@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Agent mit Sprachfunktion - Luis Zermeno</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Zum Inhalt springen</a>
+    <header role="banner">
+        <nav class="navbar" role="navigation">
+            <div class="logo">
+                <a href="index.html">Luis Zermeno</a>
+            </div>
+            <div class="profile-circle">
+                <img src="images/profile_luis.png" alt="Luis Zermeno">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="experience.html">Erfahrung</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn active" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-details" role="main" id="main-content">
+        <div class="container">
+            <div class="project-header">
+                <h1>KI-Agent mit Sprachfunktion</h1>
+                <div class="project-meta">
+                    <span class="project-category"><i class="fas fa-robot"></i> KI-Assistenten-Entwicklung</span>
+                    <span class="project-date"><i class="far fa-calendar-alt"></i> März 2025</span>
+                    <span class="project-duration"><i class="far fa-clock"></i> Persönliches Projekt</span>
+                    <span class="project-link"><i class="fas fa-external-link-alt"></i> <a href="https://github.com/louiszcode/ai_agent_with_voice" target="_blank">GitHub Repository</a></span>
+                </div>
+            </div>
+
+            <div class="project-showcase">
+                <div class="project-image">
+                    <img src="images/ai-agent-voice.png" alt="KI-Agent mit Sprachschnittstelle" class="main-image" onerror="this.src='images/ai-agent-voice.svg'">
+                </div>
+                <div class="project-thumbnail-grid">
+                    <div class="thumbnail-container">
+                        <img src="images/ai-agent-voice-1.png" alt="Spracherkennungsschnittstelle" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='images/ai-agent-voice-1.svg'">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="images/ai-agent-voice-2.png" alt="Text-zu-Sprache-Komponente" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='images/ai-agent-voice-2.svg'">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="images/ai_agent_voice.png" alt="Anwendungsarchitektur" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='images/ai_agent_voice.svg'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>Projektübersicht</h2>
+                    <p>
+                        Der KI-Agent mit Sprachfunktion ist eine Python-basierte Anwendung, die die Funktionalität von großen Sprachmodellen (LLMs) durch Spracheingabe und -ausgabe erweitert. Sie schafft eine natürliche Sprachschnittstelle, die es Benutzern ermöglicht, gesprochene Konversationen mit lokal über Ollama laufenden KI-Modellen zu führen.
+                    </p>
+                    <p>
+                        Dieses Projekt kombiniert Offline-Spracherkennung mit qualitativ hochwertiger Text-zu-Sprache-Umwandlung für ein nahtloses Gesprächserlebnis. Durch die Implementierung einer Model-View-Controller (MVC)-Architektur sorgt die Anwendung für eine saubere Trennung der Zuständigkeiten, was sie sowohl wartbar als auch erweiterbar macht.
+                    </p>
+                </div>
+
+                <div class="project-features">
+                    <h2>Hauptfunktionen</h2>
+                    <ul>
+                        <li><strong>Spracheingabe:</strong> Offline-Spracherkennung mit der Vosk-Bibliothek für private, genaue Transkription der Benutzereingaben.</li>
+                        <li><strong>Sprachausgabe:</strong> Duale Text-zu-Sprache-Engines mit XTTS-v2 für hochwertige, natürlich klingende Stimmen und System-TTS als Fallback-Option.</li>
+                        <li><strong>Gesprächsanzeige:</strong> Farbcodierter Gesprächsverlauf, der sowohl Benutzereingaben als auch KI-Antworten für eine einfache Referenz anzeigt.</li>
+                        <li><strong>Unterstützung mehrerer LLMs:</strong> Verbindung zu verschiedenen Sprachmodellen über Ollama, sodass Benutzer das am besten geeignete Modell für ihre Bedürfnisse auswählen können.</li>
+                        <li><strong>MVC-Architektur:</strong> Saubere Trennung der Zuständigkeiten mit Modell für KI-Logik, Ansicht für Benutzeroberfläche und Controller für die Verbindung der Komponenten.</li>
+                        <li><strong>Offline-Betrieb:</strong> Die gesamte Sprachverarbeitung erfolgt lokal, was die Privatsphäre der Benutzer schützt und den Betrieb ohne Internetverbindung ermöglicht.</li>
+                    </ul>
+                </div>
+
+                <div class="project-links-section">
+                    <h2>Links & Ressourcen</h2>
+                    <div class="links-grid">
+                        <a href="https://github.com/louiszcode/ai_agent_with_voice" target="_blank" class="link-card github">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Repository</span>
+                        </a>
+                        <a href="#" class="link-card documentation">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Dokumentation</span>
+                        </a>
+                        <a href="#" class="link-card website">
+                            <i class="fas fa-download"></i>
+                            <span>Release herunterladen</span>
+                        </a>
+                        <a href="#" class="link-card gameplay">
+                            <i class="fab fa-youtube"></i>
+                            <span>Demo-Video</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Luis Zermeno. Alle Rechte vorbehalten.</p>
+                <div class="social-links">
+                    <a href="https://github.com/louiszcode" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/luis-zermeno-3b2210108/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function changeMainImage(src) {
+            const mainImage = document.querySelector('.main-image');
+            mainImage.src = src;
+            mainImage.onerror = function() {
+                if (this.src.endsWith('.png')) {
+                    this.src = this.src.replace('.png', '.svg');
+                }
+            };
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>

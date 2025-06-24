@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente de IA con Voz - Luis Zermeno</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+    <header role="banner">
+        <nav class="navbar" role="navigation">
+            <div class="logo">
+                <a href="index.html">Luis Zermeno</a>
+            </div>
+            <div class="profile-circle">
+                <img src="images/profile_luis.png" alt="Luis Zermeno">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="experience.html">Experiencia</a></li>
+                <li><a href="portfolio.html" class="active">Portafolio</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="de">DE</button>
+                <button class="lang-btn active" data-lang="es">ES</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-details" role="main" id="main-content">
+        <div class="container">
+            <div class="project-header">
+                <h1>Agente de IA con Voz</h1>
+                <div class="project-meta">
+                    <span class="project-category"><i class="fas fa-robot"></i> Desarrollo de Asistentes de IA</span>
+                    <span class="project-date"><i class="far fa-calendar-alt"></i> Marzo 2025</span>
+                    <span class="project-duration"><i class="far fa-clock"></i> Proyecto Personal</span>
+                    <span class="project-link"><i class="fas fa-external-link-alt"></i> <a href="https://github.com/louiszcode/ai_agent_with_voice" target="_blank">Repositorio GitHub</a></span>
+                </div>
+            </div>
+
+            <div class="project-showcase">
+                <div class="project-image">
+                    <img src="images/ai-agent-voice.png" alt="Agente de IA con Interfaz de Voz" class="main-image" onerror="this.src='images/ai-agent-voice.svg'">
+                </div>
+                <div class="project-thumbnail-grid">
+                    <div class="thumbnail-container">
+                        <img src="images/ai-agent-voice-1.png" alt="Interfaz de Reconocimiento de Voz" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='images/ai-agent-voice-1.svg'">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="images/ai-agent-voice-2.png" alt="Componente de Texto a Voz" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='images/ai-agent-voice-2.svg'">
+                    </div>
+                    <div class="thumbnail-container">
+                        <img src="images/ai_agent_voice.png" alt="Arquitectura de la Aplicación" class="thumbnail" onclick="changeMainImage(this.src)" onerror="this.src='images/ai_agent_voice.svg'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>Descripción del Proyecto</h2>
+                    <p>
+                        El Agente de IA con Voz es una aplicación basada en Python que amplía la funcionalidad de los modelos de lenguaje grandes (LLMs) al añadir capacidades de entrada y salida de voz. Crea una interfaz de voz natural que permite a los usuarios mantener conversaciones habladas con modelos de IA que se ejecutan localmente a través de Ollama.
+                    </p>
+                    <p>
+                        Este proyecto combina el reconocimiento de voz offline con texto a voz de alta calidad para proporcionar una experiencia conversacional fluida. Al implementar una arquitectura Modelo-Vista-Controlador (MVC), la aplicación mantiene una clara separación de responsabilidades, haciéndola tanto mantenible como extensible.
+                    </p>
+                </div>
+
+                <div class="project-features">
+                    <h2>Características Principales</h2>
+                    <ul>
+                        <li><strong>Entrada de Voz:</strong> Reconocimiento de voz offline utilizando la biblioteca Vosk para una transcripción privada y precisa del habla del usuario.</li>
+                        <li><strong>Salida de Voz:</strong> Motores duales de texto a voz con XTTS-v2 para voces naturales de alta calidad y TTS del sistema como opción alternativa.</li>
+                        <li><strong>Visualización de Conversación:</strong> Historial de conversación con código de colores que muestra tanto las entradas del usuario como las respuestas de la IA para una fácil referencia.</li>
+                        <li><strong>Soporte para Múltiples LLM:</strong> Conexión a diferentes modelos de lenguaje a través de Ollama, permitiendo a los usuarios elegir el modelo más apropiado para sus necesidades.</li>
+                        <li><strong>Arquitectura MVC:</strong> Clara separación de responsabilidades con modelo para la lógica de IA, vista para la interfaz de usuario y controlador para conectar componentes.</li>
+                        <li><strong>Funcionamiento Offline:</strong> Todo el procesamiento de voz ocurre localmente, protegiendo la privacidad del usuario y permitiendo la operación sin conectividad a internet.</li>
+                    </ul>
+                </div>
+
+                <div class="project-links-section">
+                    <h2>Enlaces y Recursos</h2>
+                    <div class="links-grid">
+                        <a href="https://github.com/louiszcode/ai_agent_with_voice" target="_blank" class="link-card github">
+                            <i class="fab fa-github"></i>
+                            <span>Repositorio GitHub</span>
+                        </a>
+                        <a href="#" class="link-card documentation">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documentación</span>
+                        </a>
+                        <a href="#" class="link-card website">
+                            <i class="fas fa-download"></i>
+                            <span>Descargar Release</span>
+                        </a>
+                        <a href="#" class="link-card gameplay">
+                            <i class="fab fa-youtube"></i>
+                            <span>Video Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Luis Zermeno. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="https://github.com/louiszcode" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/luis-zermeno-3b2210108/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function changeMainImage(src) {
+            const mainImage = document.querySelector('.main-image');
+            mainImage.src = src;
+            mainImage.onerror = function() {
+                if (this.src.endsWith('.png')) {
+                    this.src = this.src.replace('.png', '.svg');
+                }
+            };
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>
