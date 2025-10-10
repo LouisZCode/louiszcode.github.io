@@ -34,8 +34,9 @@ Live site: [www.luiszermeno.info](https://www.luiszermeno.info)
 │   └── i18n.js             # Internationalization handling
 ├── images/                 # Image assets
 ├── projects/               # Individual project pages
-│   ├── ai-agent-voice.html
-│   └── lovedog.html
+│   ├── ai-agent-voice.html (+ ES, DE variants)
+│   ├── lovedog.html (+ ES, DE variants)
+│   └── spralingua.html (+ ES, DE variants)
 ├── index.html              # Homepage
 ├── portfolio.html          # Projects overview
 ├── experience.html         # Professional experience
@@ -68,10 +69,14 @@ Live site: [www.luiszermeno.info](https://www.luiszermeno.info)
 
 This site is deployed using GitHub Pages from the main branch. To deploy updates:
 
-1. Commit your changes:
+1. Commit your changes using Conventional Commits format:
    ```bash
    git add .
-   git commit -m "Description of changes"
+   git commit -m "feat: add new feature description"
+   # or
+   git commit -m "fix: resolve bug in navigation"
+   # or
+   git commit -m "docs: update project documentation"
    ```
 
 2. Push to GitHub:
@@ -80,6 +85,14 @@ This site is deployed using GitHub Pages from the main branch. To deploy updates
    ```
 
 3. GitHub Pages will automatically deploy the updates (typically within a minute)
+
+### Commit Types
+- `feat:` - New features
+- `fix:` - Bug fixes
+- `docs:` - Documentation only
+- `style:` - Formatting changes
+- `refactor:` - Code refactoring
+- `chore:` - Maintenance tasks
 
 ## ♿ Accessibility Features
 
