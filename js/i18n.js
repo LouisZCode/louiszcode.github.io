@@ -6,7 +6,9 @@ const translations = {
     "ai-voice-overview-desc": "A Python application that enables natural voice interaction with language models through offline speech recognition and high-quality text-to-speech capabilities.",
     "lovedog-overview-title": "Love Dog, AI Videogame Assets",
     "lovedog-overview-desc": "A charming 2D platformer built in Godot where you play as a loyal dog determined to protect your owner's romantic date. Manage multiple minigames and prevent distractions that could ruin their special evening.",
-    
+    "spralingua-overview-title": "Spralingua - AI German Teacher",
+    "spralingua-overview-desc": "An AI-powered German language teaching assistant providing personalized lessons, grammar correction, and conversation practice using advanced language models.",
+
     // Project pages - AI Agent with Voice
     "ai-voice-title": "AI Agent with Voice",
     "ai-voice-category": "AI Assistant Development",
@@ -37,7 +39,23 @@ const translations = {
     "lovedog-feature4": "Dynamic Love Meter: A responsive system that tracks how well the date is going based on your performance at managing distractions.",
     "lovedog-feature5": "Expressive 2D Animation: Charming character animations that bring the dog protagonist to life with running, jumping, and barking actions.",
     "lovedog-feature6": "Immersive Sound Design: Ambient music that changes based on the date's status, with sound effects providing feedback on game events.",
-    
+
+    // Project pages - Spralingua
+    "spralingua-title": "Spralingua - AI German Teacher",
+    "spralingua-category": "AI Language Education",
+    "spralingua-overview": "Project Overview",
+    "spralingua-description1": "Spralingua is an AI-powered German language teaching assistant designed to provide personalized, interactive language learning experiences. Built as a full-stack web application, it leverages advanced language models to offer real-time conversation practice, grammar correction, and adaptive lessons tailored to each learner's level.",
+    "spralingua-description2": "The platform combines my C2-level German fluency with AI engineering expertise to create an intelligent tutor that understands context, corrects mistakes naturally, and adapts to different learning styles. Unlike traditional language apps, Spralingua provides conversational practice that feels authentic and responds to the nuances of the German language.",
+    "spralingua-description3": "This project represents a practical application of AI in education, demonstrating how LLMs can be fine-tuned and orchestrated to serve specialized domains. It's currently live at spralingua.com, serving language learners worldwide.",
+    "spralingua-features": "Key Features",
+    "spralingua-feature1": "Personalized Conversation Practice: Engage in natural German conversations with AI that adapts to your proficiency level, from A1 to C2.",
+    "spralingua-feature2": "Intelligent Grammar Correction: Receive instant feedback on grammar mistakes with clear explanations in your native language.",
+    "spralingua-feature3": "Contextual Learning: The AI remembers conversation context and builds on previous topics for more natural progression.",
+    "spralingua-feature4": "Vocabulary Building: Learn new words and phrases in context with usage examples and cultural notes.",
+    "spralingua-feature5": "Pronunciation Guidance: Get tips on German pronunciation patterns and common pitfalls for non-native speakers.",
+    "spralingua-feature6": "Multi-Agent Architecture: Powered by LangGraph for orchestrating specialized AI agents (conversation, correction, translation).",
+    "spralingua-feature7": "Flexible Model Support: Works with both local models (Ollama) and cloud APIs (Claude) for optimal performance.",
+
     // Project Details - AI Agent with Voice
     "aivoice-overview-title": "Project Overview",
     "aivoice-overview-p1": "The AI Agent with Voice is a Python-based application that extends the functionality of large language models (LLMs) by adding speech input and output capabilities. It creates a natural voice interface that allows users to have spoken conversations with AI models running locally through Ollama.",
@@ -278,8 +296,9 @@ const translations = {
     "filter-llm": "LLM Projects",
     "filter-image-gen": "Image Generation",
     "filter-local-llm": "Local AI",
+    "filter-language": "Language AI",
     "filter-game": "AI Game Dev",
-    
+
     // Experience overview
     "experience-overview": "M.B.A. with 4+ years of experience in Talent Acquisition for the DACH region, 2 years also recruiting for EMEA (France, Italy, Spain, Benelux and Spain, DACH). Worked on both startup environments and big corp. Tackled Tech recruitment (Full-stack) and currently tackling Sales recruitment (Account Executives, Sales Engineers, BDRs).",
     
@@ -590,8 +609,9 @@ const translations = {
     "filter-llm": "LLM-Projekte",
     "filter-image-gen": "Bildgenerierung",
     "filter-local-llm": "Lokale KI",
+    "filter-language": "Sprach-KI",
     "filter-game": "KI-Spieleentwicklung",
-    
+
     // Experience overview
     "experience-overview": "M.B.A. mit mehr als 4 Jahren Erfahrung im Talent Acquisition für die DACH-Region, 2 Jahre auch für EMEA (Frankreich, Italien, Spanien, Benelux und Spanien, DACH). Erfahrung sowohl in Startup-Umgebungen als auch in großen Unternehmen. Schwerpunkt auf Tech-Rekrutierung (Full-Stack) und aktuell Vertriebsrekrutierung (Account Executives, Sales Engineers, BDRs).",
     
@@ -904,8 +924,9 @@ const translations = {
     "filter-llm": "Proyectos LLM",
     "filter-image-gen": "Generación de Imágenes",
     "filter-local-llm": "IA Local",
+    "filter-language": "IA de Idiomas",
     "filter-game": "Desarrollo de Juegos con IA",
-    
+
     // Experience overview
     "experience-overview": "M.B.A. con más de 4 años de experiencia en Adquisición de Talento para la región DACH, 2 años también reclutando para EMEA (Francia, Italia, España, Benelux y España, DACH). Experiencia tanto en entornos de startups como en grandes corporaciones. Especializado en reclutamiento tecnológico (Full-stack) y actualmente en reclutamiento de ventas (Account Executives, Sales Engineers, BDRs).",
     
