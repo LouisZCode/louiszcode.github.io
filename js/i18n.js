@@ -240,7 +240,38 @@ const translations = {
     "localllm-title": "Local LLM Integration",
     "localllm-desc": "Built a system using Ollama to run AI models locally for privacy-focused document analysis and summarization.",
     "view-details": "View Details",
-    
+
+    // Portfolio preview cards on home page
+    "preview-aivoice-title": "AI Agent with Voice",
+    "preview-aivoice-desc": "A Python application that enables natural voice interaction with language models through speech recognition and text-to-speech capabilities.",
+    "preview-lovedog-title": "Love Dog - Game Jam Project",
+    "preview-lovedog-desc": "A 2D platformer game where you play as a loyal dog protecting your owner's romantic date, featuring AI-generated assets and animations.",
+    "preview-spralingua-title": "Spralingua - AI German Teacher",
+    "preview-spralingua-desc": "An AI-powered German language teaching assistant that provides personalized lessons, grammar correction, and conversation practice using advanced language models.",
+
+    // Certifications section
+    "certifications-heading": "Certifications",
+    "cert-mba-title": "M.B.A.",
+    "cert-mba-desc": "International Business Administration",
+    "cert-mba-institution": "Karlshochschule International University",
+    "cert-hf-title": "Hugging Face Agents Course",
+    "cert-hf-desc": "Certificate of Excellence",
+    "cert-mcp-title": "The MCP Course: Unit 1",
+    "cert-mcp-desc": "Fundamentals of MCP",
+
+    // Featured experience cards on home page
+    "featured-lucanet-title": "Talent Partner",
+    "featured-lucanet-desc": "Full-cycle recruiter for revenue and financial teams, specializing in SaaS and Fintech sales roles across DACH, Benelux, Spanish, French and Italian regions.",
+    "featured-lucanet-location": "Berlin/Remote",
+    "featured-lucanet-period": "2023-Present",
+    "featured-rapid-title": "Talent and Coordination Partner",
+    "featured-rapid-desc": "Created and executed a new coordination automation process for 180+ employees, while serving as a full-cycle recruiter for tech roles.",
+    "featured-rapid-location": "Berlin/Remote",
+    "featured-rapid-period": "2022-2023",
+
+    // Filter buttons
+    "filter-all": "All",
+
     // About section
     "about-heading": "About Me",
     "about-p1": "I'm an AI Developer and enthusiast focused on creating innovative solutions through autonomous agents, fine-tuned LLMs, and custom workflows. My passion lies in developing AI applications that enhance productivity and create new opportunities for businesses and individuals.",
@@ -553,7 +584,38 @@ const translations = {
     "localllm-title": "Lokale LLM-Integration",
     "localllm-desc": "Ein System mit Ollama, um KI-Modelle lokal für datenschutzorientierte Dokumentenanalyse und -zusammenfassung auszuführen.",
     "view-details": "Details ansehen",
-    
+
+    // Portfolio preview cards on home page
+    "preview-aivoice-title": "KI-Agent mit Sprache",
+    "preview-aivoice-desc": "Eine Python-Anwendung, die natürliche Sprachinteraktion mit Sprachmodellen durch Spracherkennung und Text-zu-Sprache-Funktionen ermöglicht.",
+    "preview-lovedog-title": "Love Dog - Game Jam Projekt",
+    "preview-lovedog-desc": "Ein 2D-Plattformspiel, in dem du einen treuen Hund spielst, der das romantische Date seines Besitzers beschützt, mit KI-generierten Assets und Animationen.",
+    "preview-spralingua-title": "Spralingua - KI Deutschlehrer",
+    "preview-spralingua-desc": "Ein KI-gestützter Deutschlehrer-Assistent, der personalisierte Lektionen, Grammatikkorrektur und Konversationspraxis mit fortgeschrittenen Sprachmodellen bietet.",
+
+    // Certifications section
+    "certifications-heading": "Zertifizierungen",
+    "cert-mba-title": "M.B.A.",
+    "cert-mba-desc": "Internationale Betriebswirtschaftslehre",
+    "cert-mba-institution": "Karlshochschule International University",
+    "cert-hf-title": "Hugging Face Agents Kurs",
+    "cert-hf-desc": "Zertifikat mit Auszeichnung",
+    "cert-mcp-title": "Der MCP-Kurs: Einheit 1",
+    "cert-mcp-desc": "Grundlagen von MCP",
+
+    // Featured experience cards on home page
+    "featured-lucanet-title": "Talent Partner",
+    "featured-lucanet-desc": "Full-Cycle-Recruiter für Umsatz- und Finanzteams, spezialisiert auf SaaS- und Fintech-Vertriebsrollen in den Regionen DACH, Benelux, Spanien, Frankreich und Italien.",
+    "featured-lucanet-location": "Berlin/Remote",
+    "featured-lucanet-period": "2023-Heute",
+    "featured-rapid-title": "Talent- und Koordinationspartner",
+    "featured-rapid-desc": "Erstellung und Durchführung eines neuen Automatisierungsprozesses für die Koordination von 180+ Mitarbeitern, während ich als Full-Cycle-Recruiter für technische Rollen tätig war.",
+    "featured-rapid-location": "Berlin/Remote",
+    "featured-rapid-period": "2022-2023",
+
+    // Filter buttons
+    "filter-all": "Alle",
+
     // About section
     "about-heading": "Über mich",
     "about-p1": "Ich bin KI-Entwickler und Enthusiast, der sich auf die Entwicklung innovativer Lösungen durch autonome Agenten, feinabgestimmte LLMs und benutzerdefinierte Workflows konzentriert. Meine Leidenschaft liegt in der Entwicklung von KI-Anwendungen, die die Produktivität steigern und neue Möglichkeiten für Unternehmen und Einzelpersonen schaffen.",
@@ -868,7 +930,38 @@ const translations = {
     "localllm-title": "Integración Local de LLM",
     "localllm-desc": "Construí un sistema usando Ollama para ejecutar modelos de IA localmente para análisis y resumen de documentos centrado en la privacidad.",
     "view-details": "Ver detalles",
-    
+
+    // Portfolio preview cards on home page
+    "preview-aivoice-title": "Agente de IA con Voz",
+    "preview-aivoice-desc": "Una aplicación Python que permite la interacción por voz natural con modelos de lenguaje mediante reconocimiento de voz y capacidades de texto a voz.",
+    "preview-lovedog-title": "Love Dog - Proyecto Game Jam",
+    "preview-lovedog-desc": "Un juego de plataformas 2D donde juegas como un perro leal que protege la cita romántica de su dueño, con assets y animaciones generadas por IA.",
+    "preview-spralingua-title": "Spralingua - Profesor de Alemán IA",
+    "preview-spralingua-desc": "Un asistente de enseñanza de alemán impulsado por IA que proporciona lecciones personalizadas, corrección gramatical y práctica de conversación usando modelos de lenguaje avanzados.",
+
+    // Certifications section
+    "certifications-heading": "Certificaciones",
+    "cert-mba-title": "M.B.A.",
+    "cert-mba-desc": "Administración Internacional de Empresas",
+    "cert-mba-institution": "Karlshochschule International University",
+    "cert-hf-title": "Curso de Agentes Hugging Face",
+    "cert-hf-desc": "Certificado de Excelencia",
+    "cert-mcp-title": "El Curso MCP: Unidad 1",
+    "cert-mcp-desc": "Fundamentos de MCP",
+
+    // Featured experience cards on home page
+    "featured-lucanet-title": "Talent Partner",
+    "featured-lucanet-desc": "Reclutador de ciclo completo para equipos de ingresos y finanzas, especializado en roles de ventas SaaS y Fintech en las regiones DACH, Benelux, España, Francia e Italia.",
+    "featured-lucanet-location": "Berlín/Remoto",
+    "featured-lucanet-period": "2023-Presente",
+    "featured-rapid-title": "Talent y Coordination Partner",
+    "featured-rapid-desc": "Creación y ejecución de un nuevo proceso de automatización de coordinación para 180+ empleados, mientras actuaba como reclutador de ciclo completo para roles técnicos.",
+    "featured-rapid-location": "Berlín/Remoto",
+    "featured-rapid-period": "2022-2023",
+
+    // Filter buttons
+    "filter-all": "Todos",
+
     // About section
     "about-heading": "Sobre mí",
     "about-p1": "Soy desarrollador y entusiasta de la IA, enfocado en crear soluciones innovadoras a través de agentes autónomos, LLMs personalizados y flujos de trabajo a medida. Mi pasión radica en desarrollar aplicaciones de IA que mejoren la productividad y creen nuevas oportunidades para empresas e individuos.",
