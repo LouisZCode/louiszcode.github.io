@@ -1518,6 +1518,45 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
     color: var(--text-secondary);
 }
 
+/* Results & Impact section styling */
+.project-results {
+    margin-top: 40px;
+}
+
+.project-results h3 {
+    font-size: 1.4rem;
+    color: var(--accent-primary);
+    margin: 30px 0 20px;
+}
+
+.project-results ul {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.project-results li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 15px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.project-results li:before {
+    content: '•';
+    color: var(--accent-primary);
+    font-weight: bold;
+    position: absolute;
+    left: -10px;
+    top: 0;
+}
+
+.project-results p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
 .links-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -1597,6 +1636,15 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo-gif img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .demo-caption {
