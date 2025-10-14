@@ -1,24 +1,24 @@
 // Define translations
 const translations = {
   en: {
-    "spralingua-overview-title": "Spralingua - AI German Teacher",
-    "spralingua-overview-desc": "An AI-powered German language teaching assistant providing personalized lessons, grammar correction, and conversation practice using advanced language models.",
+    "spralingua-overview-title": "Spralingua - AI Language Learning Platform",
+    "spralingua-overview-desc": "Full-stack AI language learning platform supporting Spanish, German, Portuguese, and English. Features conversation practice, email writing exercises, voice input/output, and progress tracking across CEFR levels (A1-B2).",
 
     // Project pages - Spralingua
-    "spralingua-title": "Spralingua - AI German Teacher",
+    "spralingua-title": "Spralingua - AI Language Learning Platform",
     "spralingua-category": "AI Language Education",
     "spralingua-overview": "Project Overview",
-    "spralingua-description1": "Spralingua is an AI-powered German language teaching assistant designed to provide personalized, interactive language learning experiences. Built as a full-stack web application, it leverages advanced language models to offer real-time conversation practice, grammar correction, and adaptive lessons tailored to each learner's level.",
-    "spralingua-description2": "The platform combines my C2-level German fluency with AI engineering expertise to create an intelligent tutor that understands context, corrects mistakes naturally, and adapts to different learning styles. Unlike traditional language apps, Spralingua provides conversational practice that feels authentic and responds to the nuances of the German language.",
-    "spralingua-description3": "This project represents a practical application of AI in education, demonstrating how LLMs can be fine-tuned and orchestrated to serve specialized domains. It's currently live at spralingua.com, serving language learners worldwide.",
+    "spralingua-description1": "Spralingua is an AI-powered language learning platform designed to provide personalized, interactive experiences for learning Spanish, German, Portuguese, and English. Built as a full-stack web application with Flask and PostgreSQL, it leverages Anthropic's Claude AI to offer real-time conversation practice, email writing exercises, and adaptive lessons tailored to each learner's CEFR level (A1-B2).",
+    "spralingua-description2": "The platform combines advanced AI engineering with language education expertise to create an intelligent tutor that understands context, corrects mistakes naturally, and adapts to different learning styles. With features like Web Speech API integration for voice input and Minimax TTS for pronunciation practice, Spralingua provides an immersive learning experience that feels authentic.",
+    "spralingua-description3": "This project represents a practical application of AI in education, demonstrating how LLMs can be integrated into scalable web applications to serve specialized domains. It's currently live at spralingua.com, serving language learners worldwide.",
     "spralingua-features": "Key Features",
-    "spralingua-feature1": "Personalized Conversation Practice: Engage in natural German conversations with AI that adapts to your proficiency level, from A1 to C2.",
-    "spralingua-feature2": "Intelligent Grammar Correction: Receive instant feedback on grammar mistakes with clear explanations in your native language.",
-    "spralingua-feature3": "Contextual Learning: The AI remembers conversation context and builds on previous topics for more natural progression.",
-    "spralingua-feature4": "Vocabulary Building: Learn new words and phrases in context with usage examples and cultural notes.",
-    "spralingua-feature5": "Pronunciation Guidance: Get tips on German pronunciation patterns and common pitfalls for non-native speakers.",
-    "spralingua-feature6": "Multi-Agent Architecture: Powered by LangGraph for orchestrating specialized AI agents (conversation, correction, translation).",
-    "spralingua-feature7": "Flexible Model Support: Works with both local models (Ollama) and cloud APIs (Claude) for optimal performance.",
+    "spralingua-feature1": "Multi-Language Support: Learn Spanish, German, Portuguese, or English with full UI translation and culturally-adapted content for each language.",
+    "spralingua-feature2": "Casual Conversation Practice: Chat with AI characters (Harry & Sally) who adapt to your CEFR proficiency level (A1-B2) for natural, engaging practice.",
+    "spralingua-feature3": "Email Writing Exercises: Practice formal writing with culturally-appropriate scenarios that teach professional communication skills in your target language.",
+    "spralingua-feature4": "Voice Input & Output: Speak and listen with Web Speech API for recognition and Minimax TTS for pronunciation practice.",
+    "spralingua-feature5": "Real-Time Feedback: Receive instant grammar corrections and suggestions with dual feedback system - quick hints during practice, detailed analysis after.",
+    "spralingua-feature6": "Progress Tracking: Track your advancement through structured CEFR levels with 12 topics per level and exercise completion monitoring.",
+    "spralingua-feature7": "Personalized Experience: AI characters address you by name and adapt content to your current level and learning goals.",
 
     // Construction Banner
     "construction-message": "Website under active development - New features being added regularly!",
@@ -34,7 +34,7 @@ const translations = {
     "hero-title": "AI Application Engineer",
     "hero-subtitle": "Building Production-Ready LLM Applications",
     "hero-description": "Specialized in developing practical AI solutions with LangGraph, FastAPI, and Claude. I design multi-agent systems, RAG pipelines, and voice AI applications that solve real business problems. Background in recruitment gives me unique insight into building tools people actually want to use.",
-    "hero-tech-badge": "Python • LangChain • LangGraph • FastAPI • RAG • Vector DBs",
+    "hero-tech-badge": "Python • LangChain • LangGraph",
     "hero-cta-portfolio": "View My Work",
     "hero-cta-contact": "Contact Me",
     
@@ -48,8 +48,8 @@ const translations = {
     "localllm-desc": "Built a system using Ollama to run AI models locally for privacy-focused document analysis and summarization.",
     "view-details": "View Details",
 
-    "preview-spralingua-title": "Spralingua - AI German Teacher",
-    "preview-spralingua-desc": "An AI-powered German language teaching assistant that provides personalized lessons, grammar correction, and conversation practice using advanced language models.",
+    "preview-spralingua-title": "Spralingua - AI Language Learning Platform",
+    "preview-spralingua-desc": "Full-stack AI language learning platform supporting Spanish, German, Portuguese, and English with conversation practice, email writing exercises, and voice input/output.",
 
     // Certifications section
     "certifications-heading": "Certifications",
@@ -155,9 +155,7 @@ const translations = {
     "ai-projects-description": "A collection of AI development projects showcasing my work with large language models, image generation, and autonomous agents.",
     "filter-llm": "LLM Projects",
     "filter-image-gen": "Image Generation",
-    "filter-local-llm": "Local AI",
-    "filter-language": "Language AI",
-    "filter-game": "AI Game Dev",
+    "filter-ai-agents": "AI Agents",
 
     // Experience overview
     "experience-overview": "M.B.A. with 4+ years of experience in Talent Acquisition for the DACH region, 2 years also recruiting for EMEA (France, Italy, Spain, Benelux and Spain, DACH). Worked on both startup environments and big corp. Tackled Tech recruitment (Full-stack) and currently tackling Sales recruitment (Account Executives, Sales Engineers, BDRs).",
@@ -230,8 +228,8 @@ const translations = {
     "localllm-desc": "Ein System mit Ollama, um KI-Modelle lokal für datenschutzorientierte Dokumentenanalyse und -zusammenfassung auszuführen.",
     "view-details": "Details ansehen",
 
-    "preview-spralingua-title": "Spralingua - KI Deutschlehrer",
-    "preview-spralingua-desc": "Ein KI-gestützter Deutschlehrer-Assistent, der personalisierte Lektionen, Grammatikkorrektur und Konversationspraxis mit fortgeschrittenen Sprachmodellen bietet.",
+    "preview-spralingua-title": "Spralingua - KI-Sprachlernplattform",
+    "preview-spralingua-desc": "Full-Stack KI-Sprachlernplattform für Spanisch, Deutsch, Portugiesisch und Englisch mit Konversationspraxis, E-Mail-Schreibübungen und Spracheingabe/-ausgabe.",
 
     // Certifications section
     "certifications-heading": "Zertifizierungen",
@@ -310,9 +308,7 @@ const translations = {
     "ai-projects-description": "Eine Sammlung von KI-Entwicklungsprojekten, die meine Arbeit mit großen Sprachmodellen, Bildgenerierung und autonomen Agenten zeigt.",
     "filter-llm": "LLM-Projekte",
     "filter-image-gen": "Bildgenerierung",
-    "filter-local-llm": "Lokale KI",
-    "filter-language": "Sprach-KI",
-    "filter-game": "KI-Spieleentwicklung",
+    "filter-ai-agents": "KI-Agenten",
 
     // Experience overview
     "experience-overview": "M.B.A. mit mehr als 4 Jahren Erfahrung im Talent Acquisition für die DACH-Region, 2 Jahre auch für EMEA (Frankreich, Italien, Spanien, Benelux und Spanien, DACH). Erfahrung sowohl in Startup-Umgebungen als auch in großen Unternehmen. Schwerpunkt auf Tech-Rekrutierung (Full-Stack) und aktuell Vertriebsrekrutierung (Account Executives, Sales Engineers, BDRs).",
@@ -365,7 +361,7 @@ const translations = {
     "hero-title": "Ingeniero de Aplicaciones de IA",
     "hero-subtitle": "Construyendo Aplicaciones LLM Listas para Producción",
     "hero-description": "Especializado en desarrollar soluciones prácticas de IA con LangGraph, FastAPI y Claude. Diseño sistemas multi-agente, pipelines RAG y aplicaciones de voz IA que resuelven problemas empresariales reales. Mi experiencia en reclutamiento me da una perspectiva única para construir herramientas que la gente realmente quiere usar.",
-    "hero-tech-badge": "Python • LangChain • LangGraph • FastAPI • RAG • Vector DBs",
+    "hero-tech-badge": "Python • LangChain • LangGraph",
     "hero-cta-portfolio": "Ver mi trabajo",
     "hero-cta-contact": "Contactarme",
     
@@ -379,8 +375,8 @@ const translations = {
     "localllm-desc": "Construí un sistema usando Ollama para ejecutar modelos de IA localmente para análisis y resumen de documentos centrado en la privacidad.",
     "view-details": "Ver detalles",
 
-    "preview-spralingua-title": "Spralingua - Profesor de Alemán IA",
-    "preview-spralingua-desc": "Un asistente de enseñanza de alemán impulsado por IA que proporciona lecciones personalizadas, corrección gramatical y práctica de conversación usando modelos de lenguaje avanzados.",
+    "preview-spralingua-title": "Spralingua - Plataforma de Aprendizaje de Idiomas IA",
+    "preview-spralingua-desc": "Plataforma full-stack de aprendizaje de idiomas con IA que soporta español, alemán, portugués e inglés con práctica de conversación, ejercicios de escritura de emails y entrada/salida de voz.",
 
     // Certifications section
     "certifications-heading": "Certificaciones",
@@ -486,9 +482,7 @@ const translations = {
     "ai-projects-description": "Una colección de proyectos de desarrollo de IA que muestra mi trabajo con modelos de lenguaje grandes, generación de imágenes y agentes autónomos.",
     "filter-llm": "Proyectos LLM",
     "filter-image-gen": "Generación de Imágenes",
-    "filter-local-llm": "IA Local",
-    "filter-language": "IA de Idiomas",
-    "filter-game": "Desarrollo de Juegos con IA",
+    "filter-ai-agents": "Agentes de IA",
 
     // Experience overview
     "experience-overview": "M.B.A. con más de 4 años de experiencia en Adquisición de Talento para la región DACH, 2 años también reclutando para EMEA (Francia, Italia, España, Benelux y España, DACH). Experiencia tanto en entornos de startups como en grandes corporaciones. Especializado en reclutamiento tecnológico (Full-stack) y actualmente en reclutamiento de ventas (Account Executives, Sales Engineers, BDRs).",

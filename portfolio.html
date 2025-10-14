@@ -57,9 +57,7 @@
                 
                 <div class="filter-buttons" role="tablist" aria-label="Project filters">
                     <button class="filter-btn active" data-filter="all" data-i18n="filter-all">All</button>
-                    <button class="filter-btn" data-filter="local-llm" data-i18n="filter-local-llm">Local AI</button>
-                    <button class="filter-btn" data-filter="language-learning" data-i18n="filter-language">Language AI</button>
-                    <button class="filter-btn" data-filter="game" data-i18n="filter-game">AI Game Dev</button>
+                    <button class="filter-btn" data-filter="ai-agents" data-i18n="filter-ai-agents">AI Agents</button>
                 </div>
             </div>
         </section>
@@ -68,27 +66,27 @@
             <div class="container">
                 <div class="projects-grid">
                     <!-- Spralingua Project -->
-                    <div class="project-card" data-category="ai local-llm language-learning">
+                    <div class="project-card" data-category="ai ai-agents">
                         <div class="project-img">
-                            <img src="images/spralingua.png" alt="Spralingua AI German Teacher" onerror="this.onerror=null; this.src='images/spralingua.svg';">
+                            <img src="images/spralingua.png" alt="Spralingua AI Language Learning Platform" onerror="this.onerror=null; this.src='images/spralingua.svg';">
                         </div>
                         <div class="project-content">
-                            <h3 data-i18n="spralingua-overview-title">Spralingua - AI German Teacher</h3>
-                            <p data-i18n="spralingua-overview-desc">An AI-powered German language teaching assistant providing personalized lessons, grammar correction, and conversation practice using advanced language models.</p>
+                            <h3 data-i18n="spralingua-overview-title">Spralingua - AI Language Learning Platform</h3>
+                            <p data-i18n="spralingua-overview-desc">Full-stack AI language learning platform supporting Spanish, German, Portuguese, and English. Features conversation practice, email writing exercises, voice input/output, and progress tracking across CEFR levels (A1-B2).</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
-                                <span class="tech-tag">LangGraph</span>
-                                <span class="tech-tag">Ollama</span>
-                                <span class="tech-tag">Claude</span>
-                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Claude AI</span>
+                                <span class="tech-tag">Minimax TTS</span>
                             </div>
                             <div class="project-highlights">
                                 <ul>
-                                    <li>Full-stack AI application live at spralingua.com</li>
-                                    <li>Multi-agent architecture for specialized language tasks</li>
-                                    <li>Personalized lessons from A1 to C2 proficiency levels</li>
-                                    <li>Intelligent grammar correction with contextual explanations</li>
-                                    <li>Hybrid model support (local and cloud) for optimal performance</li>
+                                    <li>Full-stack application live at spralingua.com with Flask & PostgreSQL</li>
+                                    <li>Multi-language support: Spanish, German, Portuguese, English</li>
+                                    <li>Conversation practice with AI characters (Harry & Sally)</li>
+                                    <li>Email writing exercises with cultural adaptation</li>
+                                    <li>Voice input/output with Web Speech API and Minimax TTS</li>
                                 </ul>
                             </div>
                             <div class="project-links">
