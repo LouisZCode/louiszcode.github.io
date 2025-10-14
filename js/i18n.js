@@ -33,7 +33,7 @@ const translations = {
     "hero-ai-credit": "This website was created with the help of AI ✨",
     "hero-title": "AI Application Engineer",
     "hero-subtitle": "Building Production-Ready LLM Applications",
-    "hero-description": "Specialized in developing practical AI solutions with LangGraph, FastAPI, and Claude. I design multi-agent systems, RAG pipelines, and voice AI applications that solve real business problems. Background in recruitment gives me unique insight into building tools people actually want to use.",
+    "hero-description": "Specialized in developing practical AI solutions with LangGraph, Flask, and Claude. I design multi-agent systems, full-stack web applications, and voice AI applications that solve real business problems. Background in recruitment gives me unique insight into building tools people actually want to use.",
     "hero-tech-badge": "Python • LangChain • LangGraph",
     "hero-cta-portfolio": "View My Work",
     "hero-cta-contact": "Contact Me",
@@ -78,14 +78,14 @@ const translations = {
     "about-heading": "About Me",
     "about-p1": "I'm an AI Application Engineer focused on building production-ready LLM applications that solve real business problems. After spending a year deep in AI development—from multi-agent systems to RAG pipelines to voice AI—I'm now seeking opportunities to build impactful AI applications in Europe.",
     "about-p2": "My approach combines technical implementation with practical thinking. Before transitioning to AI engineering, I spent 4+ years as a Talent Partner, which taught me how to identify what users actually need versus what sounds impressive on paper. This background helps me build AI tools that people want to use, not just technically interesting demos.",
-    "about-p3": "I specialize in Python-based LLM applications using LangGraph for agent orchestration, FastAPI for robust APIs, and Claude/GPT-4 for reasoning tasks. My projects focus on practical applications: a German language teacher with sub-second response times, a privacy-first voice agent running entirely offline, and game development accelerated with AI-generated assets.",
+    "about-p3": "I specialize in Python-based LLM applications using LangGraph for agent orchestration, Flask for full-stack web applications, and Claude/GPT-4 for reasoning tasks. My projects focus on practical applications: a multi-language learning platform with real-time AI tutoring, voice-enabled interactions, and production-ready deployment on Railway.",
     "about-p4": "I'm looking for AI Application Engineer roles where I can contribute to building, deploying, and iterating on LLM-powered products—not training models, but making them useful.",
     
     // Skills section
     "skills-heading": "Technical Skills",
     "skills-languages-frameworks": "Languages & Frameworks",
     "skill-python": "Python (Primary)",
-    "skill-fastapi": "FastAPI",
+    "skill-flask": "Flask",
     "skill-langchain": "LangChain",
     "skill-web": "JavaScript/HTML/CSS",
     "skills-llm-tools": "LLM & AI Tools",
@@ -103,12 +103,18 @@ const translations = {
     "skill-git": "Git & GitHub",
     "skill-rest": "REST APIs",
     "skill-linux": "Linux/Windows",
+    "skills-databases": "Databases",
+    "skill-postgresql": "PostgreSQL",
+    "skill-sqlalchemy": "SQLAlchemy",
     "skills-ai-specializations": "AI Specializations",
     "skill-multiagent": "Multi-Agent Architecture",
     "skill-prompt": "Prompt Engineering",
     "skill-rag-systems": "RAG Systems",
     "skill-voice": "Voice AI (TTS/STT)",
     "skill-agent-design": "Agent Design Patterns",
+    "skill-railway": "Railway",
+    "skill-gunicorn": "Gunicorn",
+    "skill-claude-code": "Claude Code",
     "recruitment-tools": "Recruitment Tools",
     "tech-stack": "Tech Stack",
     "languages": "Languages",
@@ -193,10 +199,10 @@ const translations = {
     "ai-projects-position": "Independent AI Development",
     "ai-projects-location": "Remote",
     "ai-projects-description": "Full-time focus on building production-ready LLM applications and AI-powered tools. My recruitment background directly informs my AI development work—understanding user needs, identifying workflow pain points, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems, not just interesting technical demos.",
-    "ai-projects-achievement1": "Spralingua: Multi-agent German language teacher with <2s response times built using LangGraph for agent orchestration, FastAPI for robust APIs, and Claude for reasoning. Supports A1-C2 proficiency levels with intelligent grammar correction.",
+    "ai-projects-achievement1": "<strong>Spralingua:</strong> Multi-language learning platform with <2s response times built using LangGraph for agent orchestration, Flask for full-stack web application, and Claude for reasoning. Supports A1-B2 proficiency levels with intelligent grammar correction.",
     "ai-projects-achievement2": "Offline Voice AI Agent: Privacy-first voice assistant with 90%+ recognition accuracy, running entirely offline using Python, Vosk (speech recognition), and XTTS-v2 (neural TTS). Zero cloud dependency, zero recurring costs.",
     "ai-projects-achievement3": "AI-Accelerated Game Development: Godot game with 50% AI-generated assets (ComfyUI, stable diffusion workflows), completed in 7-day game jam with 46 player ratings averaging 4.2/5 stars.",
-    "ai-projects-tech": "Technologies: Python, LangGraph, LangChain, FastAPI, Docker, Claude API, Ollama, ChromaDB, RAG Systems, Voice AI (TTS/STT)",
+    "ai-projects-tech": "<strong>Technologies:</strong> Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG Systems, Voice AI (TTS/STT)",
     "career-bridge-text": "My recruitment background directly informs my AI development work. Four years of understanding what users need, identifying pain points in workflows, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems—not just interesting technical demos.",
   },
   
@@ -213,8 +219,10 @@ const translations = {
     // Hero section
     "hero-greeting": "Hallo, ich bin",
     "hero-ai-credit": "Diese Website wurde mit Hilfe von KI erstellt ✨",
-    "hero-title": "Senior Talent Partner und KI-Entwickler",
-    "hero-description": "M.B.A. mit mehr als 4 Jahren Erfahrung im Talent Acquisition für die DACH- und EMEA-Regionen, spezialisiert auf Tech- und Vertriebsrekrutierung. Leidenschaftlich an KI-Entwicklung und -Implementierung interessiert.",
+    "hero-title": "KI-Anwendungsingenieur",
+    "hero-subtitle": "Entwicklung produktionsreifer LLM-Anwendungen",
+    "hero-description": "Spezialisiert auf die Entwicklung praktischer KI-Lösungen mit LangGraph, Flask und Claude. Ich entwerfe Multi-Agenten-Systeme, Full-Stack-Webanwendungen und Sprach-KI-Anwendungen, die echte Geschäftsprobleme lösen. Mein Hintergrund im Recruitment gibt mir einzigartige Einblicke in den Bau von Tools, die Menschen tatsächlich nutzen möchten.",
+    "hero-tech-badge": "Python • LangChain • LangGraph",
     "hero-cta-portfolio": "Meine Arbeit ansehen",
     "hero-cta-contact": "Kontakt aufnehmen",
     
@@ -256,12 +264,45 @@ const translations = {
 
     // About section
     "about-heading": "Über mich",
-    "about-p1": "Ich bin KI-Entwickler und Enthusiast, der sich auf die Entwicklung innovativer Lösungen durch autonome Agenten, feinabgestimmte LLMs und benutzerdefinierte Workflows konzentriert. Meine Leidenschaft liegt in der Entwicklung von KI-Anwendungen, die die Produktivität steigern und neue Möglichkeiten für Unternehmen und Einzelpersonen schaffen.",
-    "about-p2": "Neben meinen technischen KI-Projekten bringe ich mehr als 4 Jahre Erfahrung als Senior Talent Partner für Technologieunternehmen in der DACH-Region mit. Diese einzigartige Kombination ermöglicht es mir, technisches Fachwissen mit personenbezogenem strategischem Denken zu verbinden.",
-    "about-p3": "Ich arbeite derzeit an mehreren KI-Initiativen, darunter maßgeschneiderte Agenten für die Rekrutierungsautomatisierung, personalisierte Lernassistenten und kreative Tools mit ComfyUI und verschiedenen großen Sprachmodellen.",
+    "about-p1": "Ich bin ein KI-Anwendungsingenieur, der sich auf den Aufbau produktionsreifer LLM-Anwendungen konzentriert, die echte Geschäftsprobleme lösen. Nach einem Jahr intensiver KI-Entwicklung—von Multi-Agenten-Systemen über RAG-Pipelines bis hin zu Sprach-KI—suche ich nun nach Möglichkeiten, wirkungsvolle KI-Anwendungen in Europa zu entwickeln.",
+    "about-p2": "Mein Ansatz kombiniert technische Umsetzung mit praktischem Denken. Bevor ich zur KI-Entwicklung wechselte, war ich 4+ Jahre als Talent Partner tätig, was mir beibrachte, zu erkennen, was Benutzer wirklich brauchen, anstatt was nur auf dem Papier beeindruckend klingt. Dieser Hintergrund hilft mir, KI-Tools zu entwickeln, die Menschen nutzen möchten, nicht nur technisch interessante Demos.",
+    "about-p3": "Ich spezialisiere mich auf Python-basierte LLM-Anwendungen unter Verwendung von LangGraph für Agenten-Orchestrierung, Flask für Full-Stack-Webanwendungen und Claude/GPT-4 für Reasoning-Aufgaben. Meine Projekte konzentrieren sich auf praktische Anwendungen: eine mehrsprachige Lernplattform mit Echtzeit-KI-Nachhilfe, sprachgesteuerten Interaktionen und produktionsreifem Deployment auf Railway.",
+    "about-p4": "Ich suche nach KI-Anwendungsingenieur-Positionen, bei denen ich zum Aufbau, zur Bereitstellung und zur Iteration von LLM-gestützten Produkten beitragen kann—nicht zum Trainieren von Modellen, sondern dazu, sie nützlich zu machen.",
     
     // Skills section
     "skills-heading": "Technische Fähigkeiten",
+    "skills-languages-frameworks": "Sprachen & Frameworks",
+    "skill-python": "Python (Hauptsprache)",
+    "skill-flask": "Flask",
+    "skill-langchain": "LangChain",
+    "skill-web": "JavaScript/HTML/CSS",
+    "skills-llm-tools": "LLM & KI-Tools",
+    "skill-openai": "OpenAI API (GPT-4)",
+    "skill-claude": "Anthropic Claude",
+    "skill-ollama": "Ollama (Lokale LLMs)",
+    "skill-llama": "Llama 3.1/3.2",
+    "skill-langfuse": "Langfuse (Observability)",
+    "skills-vector-rag": "Vektor-DBs & RAG",
+    "skill-chromadb": "ChromaDB",
+    "skill-pinecone": "Pinecone",
+    "skill-rag": "RAG-Pipeline-Design",
+    "skill-semantic": "Semantische Suche",
+    "skills-dev-deployment": "Entwicklung & Deployment",
+    "skill-git": "Git & GitHub",
+    "skill-rest": "REST APIs",
+    "skill-linux": "Linux/Windows",
+    "skills-databases": "Datenbanken",
+    "skill-postgresql": "PostgreSQL",
+    "skill-sqlalchemy": "SQLAlchemy",
+    "skills-ai-specializations": "KI-Spezialisierungen",
+    "skill-multiagent": "Multi-Agenten-Architektur",
+    "skill-prompt": "Prompt Engineering",
+    "skill-rag-systems": "RAG-Systeme",
+    "skill-voice": "Sprach-KI (TTS/STT)",
+    "skill-agent-design": "Agenten-Design-Muster",
+    "skill-railway": "Railway",
+    "skill-gunicorn": "Gunicorn",
+    "skill-claude-code": "Claude Code",
     "recruitment-tools": "Rekrutierungswerkzeuge",
     "tech-stack": "Tech-Stack",
     "languages": "Sprachen",
@@ -343,6 +384,16 @@ const translations = {
     // Education
     "mba-degree": "Master in Betriebswirtschaftslehre",
     "bachelor-degree": "Bachelor in Betriebswirtschaft",
+
+    // AI Engineering Projects (Experience page)
+    "ai-projects-position": "Unabhängige KI-Entwicklung",
+    "ai-projects-location": "Remote",
+    "ai-projects-description": "Vollzeit-Fokus auf den Aufbau produktionsreifer LLM-Anwendungen und KI-gestützter Tools. Mein Recruitment-Hintergrund beeinflusst direkt meine KI-Entwicklungsarbeit—das Verstehen von Benutzerbedürfnissen, die Identifizierung von Schwachstellen in Workflows und die Übersetzung von Geschäftsanforderungen in Lösungen gibt mir einen einzigartigen Vorteil beim Bau von KI-Anwendungen, die echte Probleme lösen, nicht nur technisch interessante Demos.",
+    "ai-projects-achievement1": "<strong>Spralingua:</strong> Mehrsprachige Lernplattform mit <2s Antwortzeiten, entwickelt mit LangGraph für Agenten-Orchestrierung, Flask für Full-Stack-Webanwendung und Claude für Reasoning. Unterstützt A1-B2-Kompetenzstufen mit intelligenter Grammatikkorrektur.",
+    "ai-projects-achievement2": "Offline-Sprach-KI-Agent: Datenschutzorientierter Sprachassistent mit 90%+ Erkennungsgenauigkeit, vollständig offline mit Python, Vosk (Spracherkennung) und XTTS-v2 (neurales TTS). Null Cloud-Abhängigkeit, null laufende Kosten.",
+    "ai-projects-achievement3": "KI-beschleunigtes Spiele-Entwicklung: Godot-Spiel mit 50% KI-generierten Assets (ComfyUI, Stable Diffusion Workflows), fertiggestellt in 7-Tage-Game-Jam mit 46 Spielerbewertungen im Durchschnitt 4,2/5 Sternen.",
+    "ai-projects-tech": "<strong>Technologien:</strong> Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG-Systeme, Sprach-KI (TTS/STT)",
+    "career-bridge-text": "Mein Recruitment-Hintergrund beeinflusst direkt meine KI-Entwicklungsarbeit. Vier Jahre des Verstehens, was Benutzer brauchen, der Identifizierung von Schwachstellen in Workflows und der Übersetzung von Geschäftsanforderungen in Lösungen gibt mir einen einzigartigen Vorteil beim Bau von KI-Anwendungen, die echte Probleme lösen—nicht nur technisch interessante Demos.",
   },
   
   es: {
@@ -360,7 +411,7 @@ const translations = {
     "hero-ai-credit": "Este sitio web fue creado con la ayuda de IA ✨",
     "hero-title": "Ingeniero de Aplicaciones de IA",
     "hero-subtitle": "Construyendo Aplicaciones LLM Listas para Producción",
-    "hero-description": "Especializado en desarrollar soluciones prácticas de IA con LangGraph, FastAPI y Claude. Diseño sistemas multi-agente, pipelines RAG y aplicaciones de voz IA que resuelven problemas empresariales reales. Mi experiencia en reclutamiento me da una perspectiva única para construir herramientas que la gente realmente quiere usar.",
+    "hero-description": "Especializado en desarrollar soluciones prácticas de IA con LangGraph, Flask y Claude. Diseño sistemas multi-agente, aplicaciones web full-stack y aplicaciones de voz IA que resuelven problemas empresariales reales. Mi experiencia en reclutamiento me da una perspectiva única para construir herramientas que la gente realmente quiere usar.",
     "hero-tech-badge": "Python • LangChain • LangGraph",
     "hero-cta-portfolio": "Ver mi trabajo",
     "hero-cta-contact": "Contactarme",
@@ -405,14 +456,14 @@ const translations = {
     "about-heading": "Sobre mí",
     "about-p1": "Soy un Ingeniero de Aplicaciones de IA enfocado en construir aplicaciones LLM listas para producción que resuelven problemas empresariales reales. Después de pasar un año profundizando en el desarrollo de IA—desde sistemas multi-agente hasta pipelines RAG y voz IA—ahora busco oportunidades para construir aplicaciones de IA impactantes en Europa.",
     "about-p2": "Mi enfoque combina implementación técnica con pensamiento práctico. Antes de hacer la transición a la ingeniería de IA, pasé más de 4 años como Talent Partner, lo que me enseñó a identificar lo que los usuarios realmente necesitan versus lo que suena impresionante en papel. Esta experiencia me ayuda a construir herramientas de IA que la gente quiere usar, no solo demos técnicamente interesantes.",
-    "about-p3": "Me especializo en aplicaciones LLM basadas en Python usando LangGraph para orquestación de agentes, FastAPI para APIs robustas, y Claude/GPT-4 para tareas de razonamiento. Mis proyectos se enfocan en aplicaciones prácticas: un profesor de alemán con tiempos de respuesta sub-segundo, un agente de voz enfocado en privacidad que funciona completamente offline, y desarrollo de juegos acelerado con assets generados por IA.",
+    "about-p3": "Me especializo en aplicaciones LLM basadas en Python usando LangGraph para orquestación de agentes, Flask para aplicaciones web full-stack, y Claude/GPT-4 para tareas de razonamiento. Mis proyectos se enfocan en aplicaciones prácticas: una plataforma de aprendizaje multilingüe con tutoría de IA en tiempo real, interacciones habilitadas por voz y despliegue listo para producción en Railway.",
     "about-p4": "Busco roles de Ingeniero de Aplicaciones de IA donde pueda contribuir a construir, desplegar e iterar sobre productos impulsados por LLMs—no entrenar modelos, sino hacerlos útiles.",
     
     // Skills section
     "skills-heading": "Habilidades técnicas",
     "skills-languages-frameworks": "Lenguajes y Frameworks",
     "skill-python": "Python (Principal)",
-    "skill-fastapi": "FastAPI",
+    "skill-flask": "Flask",
     "skill-langchain": "LangChain",
     "skill-web": "JavaScript/HTML/CSS",
     "skills-llm-tools": "Herramientas LLM e IA",
@@ -430,12 +481,18 @@ const translations = {
     "skill-git": "Git y GitHub",
     "skill-rest": "REST APIs",
     "skill-linux": "Linux/Windows",
+    "skills-databases": "Bases de Datos",
+    "skill-postgresql": "PostgreSQL",
+    "skill-sqlalchemy": "SQLAlchemy",
     "skills-ai-specializations": "Especializaciones en IA",
     "skill-multiagent": "Arquitectura Multi-Agente",
     "skill-prompt": "Prompt Engineering",
     "skill-rag-systems": "Sistemas RAG",
     "skill-voice": "IA de Voz (TTS/STT)",
     "skill-agent-design": "Patrones de Diseño de Agentes",
+    "skill-railway": "Railway",
+    "skill-gunicorn": "Gunicorn",
+    "skill-claude-code": "Claude Code",
     "recruitment-tools": "Herramientas de reclutamiento",
     "tech-stack": "Stack tecnológico",
     "languages": "Idiomas",
@@ -522,10 +579,10 @@ const translations = {
     "ai-projects-position": "Desarrollo Independiente de IA",
     "ai-projects-location": "Remoto",
     "ai-projects-description": "Enfoque de tiempo completo en construir aplicaciones LLM listas para producción y herramientas impulsadas por IA. Mi experiencia en reclutamiento informa directamente mi trabajo de desarrollo de IA—entender las necesidades de los usuarios, identificar puntos débiles en flujos de trabajo y traducir requisitos empresariales en soluciones me da una ventaja única en construir aplicaciones de IA que resuelven problemas reales, no solo demos técnicamente interesantes.",
-    "ai-projects-achievement1": "Spralingua: Profesor de alemán multi-agente con tiempos de respuesta <2s construido usando LangGraph para orquestación de agentes, FastAPI para APIs robustas, y Claude para razonamiento. Soporta niveles de dominio A1-C2 con corrección gramatical inteligente.",
+    "ai-projects-achievement1": "<strong>Spralingua:</strong> Plataforma de aprendizaje multilingüe con tiempos de respuesta <2s construida usando LangGraph para orquestación de agentes, Flask para aplicación web full-stack, y Claude para razonamiento. Soporta niveles de dominio A1-B2 con corrección gramatical inteligente.",
     "ai-projects-achievement2": "Agente de Voz IA Offline: Asistente de voz enfocado en privacidad con 90%+ de precisión de reconocimiento, funcionando completamente offline usando Python, Vosk (reconocimiento de voz), y XTTS-v2 (TTS neuronal). Cero dependencia de la nube, cero costos recurrentes.",
     "ai-projects-achievement3": "Desarrollo de Juegos Acelerado por IA: Juego en Godot con 50% de assets generados por IA (ComfyUI, flujos de trabajo de difusión estable), completado en game jam de 7 días con 46 calificaciones de jugadores promediando 4.2/5 estrellas.",
-    "ai-projects-tech": "Tecnologías: Python, LangGraph, LangChain, FastAPI, Docker, Claude API, Ollama, ChromaDB, Sistemas RAG, IA de Voz (TTS/STT)",
+    "ai-projects-tech": "<strong>Tecnologías:</strong> Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, Sistemas RAG, IA de Voz (TTS/STT)",
     "career-bridge-text": "Mi experiencia en reclutamiento informa directamente mi trabajo de desarrollo de IA. Cuatro años entendiendo lo que los usuarios necesitan, identificando puntos débiles en flujos de trabajo y traduciendo requisitos empresariales en soluciones me da una ventaja única en construir aplicaciones de IA que resuelven problemas reales—no solo demos técnicamente interesantes.",
   }
 };
@@ -540,9 +597,9 @@ function updateProjectLinks(lang) {
     if (project) {
       let newHref;
       if (lang === 'de') {
-        newHref = `${project}-de.html`;
+        newHref = `projects/${project}-de.html`;
       } else if (lang === 'es') {
-        newHref = `${project}-es.html`;
+        newHref = `projects/${project}-es.html`;
       } else {
         newHref = `projects/${project}.html`;
       }
