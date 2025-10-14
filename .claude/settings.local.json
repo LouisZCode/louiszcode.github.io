@@ -10,7 +10,13 @@
       "Bash(sudo chmod:*)",
       "Bash(cp:*)",
       "Bash(mv:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Read(//c/Users/Admin/Desktop/**)",
+      "Bash(git ls-tree:*)",
+      "Bash(python:*)",
+      "Bash(git log:*)"
     ]
   },
   "enableAllProjectMcpServers": false
