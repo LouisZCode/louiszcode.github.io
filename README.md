@@ -1,7 +1,5 @@
 # Luis Zermeno - Portfolio Website
 
-![Website Preview](images/profile_luis.png)
-
 A modern, responsive portfolio website showcasing AI development projects, professional experience, and technical skills. The site features a clean, dark-themed UI with responsive design, multilingual support, and strong accessibility features.
 
 Live site: [www.luiszermeno.info](https://www.luiszermeno.info)
