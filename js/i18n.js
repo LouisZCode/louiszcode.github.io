@@ -19,6 +19,17 @@ const translations = {
     "spralingua-feature5": "Real-Time Feedback: Receive instant grammar corrections and suggestions with dual feedback system - quick hints during practice, detailed analysis after.",
     "spralingua-feature6": "Progress Tracking: Track your advancement through structured CEFR levels with 12 topics per level and exercise completion monitoring.",
     "spralingua-feature7": "Personalized Experience: AI characters address you by name and adapt content to your current level and learning goals.",
+    "spralingua-feature1-desc": "Learn Spanish, German, Portuguese, or English with full UI translation and culturally-adapted content for each language.",
+    "spralingua-feature2-desc": "Chat with AI characters (Harry & Sally) who adapt to your CEFR proficiency level (A1-B2) for natural, engaging practice.",
+    "spralingua-feature3-desc": "Practice formal writing with culturally-appropriate scenarios that teach professional communication skills.",
+    "spralingua-feature4-desc": "Speak and listen with Web Speech API for recognition and Minimax TTS for pronunciation practice.",
+    "spralingua-feature5-desc": "Receive instant grammar corrections with dual feedback system - quick hints during practice, detailed analysis after.",
+    "spralingua-feature6-desc": "Track your advancement through structured CEFR levels with 12 topics per level and exercise completion monitoring.",
+    "back-to-portfolio": "Back to Portfolio",
+    "try-live": "Try Live",
+    "try-spralingua": "Try Spralingua Live",
+    "more-projects": "More Projects",
+    "view-portfolio": "View portfolio",
 
     // Construction Banner
     "construction-message": "Website under active development - New features being added regularly!",
@@ -62,6 +73,13 @@ const translations = {
     "localllm-title": "Local LLM Integration",
     "localllm-desc": "Built a system using Ollama to run AI models locally for privacy-focused document analysis and summarization.",
     "view-details": "View Details",
+    "portfolio-intro": "A collection of AI development projects showcasing my work with large language models, image generation, and autonomous agents.",
+    "key-features": "Key Features",
+    "more-projects-desc": "More AI projects currently in development",
+    "spralingua-highlight1": "Full-stack application live at spralingua.com",
+    "spralingua-highlight2": "Multi-language support: Spanish, German, Portuguese, English",
+    "spralingua-highlight3": "Conversation practice with AI characters",
+    "spralingua-highlight4": "Voice input/output with Web Speech API",
 
     "preview-spralingua-title": "Spralingua - AI Language Learning Platform",
     "preview-spralingua-desc": "Full-stack AI language learning platform supporting Spanish, German, Portuguese, and English with conversation practice, email writing exercises, and voice input/output.",
@@ -265,6 +283,13 @@ const translations = {
     "localllm-title": "Lokale LLM-Integration",
     "localllm-desc": "Ein System mit Ollama, um KI-Modelle lokal für datenschutzorientierte Dokumentenanalyse und -zusammenfassung auszuführen.",
     "view-details": "Details ansehen",
+    "portfolio-intro": "Eine Sammlung von KI-Entwicklungsprojekten, die meine Arbeit mit großen Sprachmodellen, Bildgenerierung und autonomen Agenten präsentiert.",
+    "key-features": "Hauptmerkmale",
+    "more-projects-desc": "Weitere KI-Projekte derzeit in Entwicklung",
+    "spralingua-highlight1": "Full-Stack-Anwendung live auf spralingua.com",
+    "spralingua-highlight2": "Mehrsprachige Unterstützung: Spanisch, Deutsch, Portugiesisch, Englisch",
+    "spralingua-highlight3": "Konversationspraxis mit KI-Charakteren",
+    "spralingua-highlight4": "Spracheingabe/-ausgabe mit Web Speech API",
 
     "preview-spralingua-title": "Spralingua - KI-Sprachlernplattform",
     "preview-spralingua-desc": "Full-Stack KI-Sprachlernplattform für Spanisch, Deutsch, Portugiesisch und Englisch mit Konversationspraxis, E-Mail-Schreibübungen und Spracheingabe/-ausgabe.",
@@ -470,6 +495,13 @@ const translations = {
     "localllm-title": "Integración Local de LLM",
     "localllm-desc": "Construí un sistema usando Ollama para ejecutar modelos de IA localmente para análisis y resumen de documentos centrado en la privacidad.",
     "view-details": "Ver detalles",
+    "portfolio-intro": "Una colección de proyectos de desarrollo de IA que muestran mi trabajo con grandes modelos de lenguaje, generación de imágenes y agentes autónomos.",
+    "key-features": "Características Principales",
+    "more-projects-desc": "Más proyectos de IA actualmente en desarrollo",
+    "spralingua-highlight1": "Aplicación full-stack en vivo en spralingua.com",
+    "spralingua-highlight2": "Soporte multilingüe: español, alemán, portugués, inglés",
+    "spralingua-highlight3": "Práctica de conversación con personajes IA",
+    "spralingua-highlight4": "Entrada/salida de voz con Web Speech API",
 
     "preview-spralingua-title": "Spralingua - Plataforma de Aprendizaje de Idiomas IA",
     "preview-spralingua-desc": "Plataforma full-stack de aprendizaje de idiomas con IA que soporta español, alemán, portugués e inglés con práctica de conversación, ejercicios de escritura de emails y entrada/salida de voz.",
@@ -657,11 +689,18 @@ function updateProjectLinks(lang) {
 function updateLanguage(lang) {
   currentLang = lang;
   
-  // Update active button state
+  // Update active button state (supports both old CSS and new Tailwind)
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.remove('active');
+    // Tailwind classes for inactive state
+    btn.classList.remove('bg-sky-500', 'text-white', 'font-bold');
+    btn.classList.add('text-slate-400');
+
     if (btn.getAttribute('data-lang') === lang) {
       btn.classList.add('active');
+      // Tailwind classes for active state
+      btn.classList.remove('text-slate-400');
+      btn.classList.add('bg-sky-500', 'text-white', 'font-bold');
     }
   });
   

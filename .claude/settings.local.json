@@ -20,7 +20,8 @@
       "Read(//c/Users/Admin/Documents/GitHub/**)",
       "Bash(git fetch:*)",
       "Bash(git pull:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(echo:*)"
     ]
   },
   "enableAllProjectMcpServers": false
