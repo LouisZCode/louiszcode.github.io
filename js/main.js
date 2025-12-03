@@ -1,111 +1,82 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        hamburger.classList.toggle('active');
+      });
+    }
+
+    // Back to top button
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.remove('opacity-0', 'pointer-events-none');
+          backToTop.classList.add('opacity-100');
+        } else {
+          backToTop.classList.add('opacity-0', 'pointer-events-none');
+          backToTop.classList.remove('opacity-100');
+        }
+      });
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Contact form handling
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+
+    if (contactForm && formSuccess) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Here you would typically send the form data to a server
+        // For this example, we just simulate success.
+        contactForm.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+
+        // After 5 seconds, reset the form and show it again
+        setTimeout(() => {
+          contactForm.reset();
+          contactForm.classList.remove('hidden');
+          formSuccess.classList.add('hidden');
+        }, 5000);
+      });
+    }
+
     // Add lazy loading to images for better performance
-    const images = document.querySelectorAll('img:not(.profile-circle img)');
+    const images = document.querySelectorAll('img');
     images.forEach(img => {
         img.setAttribute('loading', 'lazy');
-        
-        // Add PNG to SVG fallback for all images
-        img.addEventListener('error', function() {
-            if (this.src.endsWith('.png')) {
-                console.log('Image failed to load, trying SVG fallback:', this.src);
-                this.onerror = null; // Prevent infinite loop
-                this.src = this.src.replace('.png', '.svg');
-            }
-        });
     });
-
-    // Navigation menu toggle for mobile
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-    }
-
-    // Close mobile menu when a link is clicked
-    const navItems = document.querySelectorAll('.nav-links a');
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (hamburger.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            }
-        });
-    });
-
-    // Project filtering functionality
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    if (filterBtns.length > 0) {
-        // Add ARIA attributes for accessibility
-        filterBtns.forEach((btn, index) => {
-            // Set ARIA roles and attributes
-            btn.setAttribute('role', 'tab');
-            btn.setAttribute('aria-selected', btn.classList.contains('active') ? 'true' : 'false');
-            btn.setAttribute('id', `filter-tab-${btn.getAttribute('data-filter')}`);
-            btn.setAttribute('aria-controls', 'project-grid');
-            
-            btn.addEventListener('click', () => {
-                // Update active button
-                filterBtns.forEach(b => {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-selected', 'false');
-                });
-                btn.classList.add('active');
-                btn.setAttribute('aria-selected', 'true');
-                
-                const filter = btn.getAttribute('data-filter');
-                
-                // Filter projects
-                projectCards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                        card.setAttribute('aria-hidden', 'false');
-                    } else {
-                        const categories = card.getAttribute('data-category').split(' ');
-                        if (categories.includes(filter)) {
-                            card.style.display = 'block';
-                            card.setAttribute('aria-hidden', 'false');
-                        } else {
-                            card.style.display = 'none';
-                            card.setAttribute('aria-hidden', 'true');
-                        }
-                    }
-                });
-                
-                // Announce filter change to screen readers
-                const projectsContainer = document.querySelector('.projects-grid');
-                if (projectsContainer) {
-                    projectsContainer.setAttribute('aria-live', 'polite');
-                    projectsContainer.setAttribute('id', 'project-grid');
-                }
-            });
-        });
-    }
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                // Adjust for sticky header height
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: offsetPosition,
                     behavior: 'smooth'
                 });
             }
         });
     });
 
-    // Add a simple fade-in animation for project cards
+    // Fade-in animation for elements on scroll
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -115,114 +86,55 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe all project cards
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.style.opacity = '0';
-        card.style.transition = 'opacity 0.5s ease, transform 0.3s ease';
-        observer.observe(card);
+    // Observe elements with the .fade-in-scroll class
+    const fadeElements = document.querySelectorAll('.fade-in-scroll');
+    fadeElements.forEach(el => {
+        observer.observe(el);
     });
+});
 
-    // Add fade-in class for animation
-    document.head.insertAdjacentHTML('beforeend', `
-        <style>
-            .fade-in {
-                opacity: 1 !important;
-            }
-        </style>
-    `);
+// Certificate modal functions (defined globally to be accessible from onclick attributes)
+const certModal = document.getElementById('cert-modal');
+const certModalImage = document.getElementById('cert-modal-image');
+const certModalTitle = document.getElementById('cert-modal-title');
 
-    // Back to top button functionality
-    const backToTopButton = document.getElementById('back-to-top');
-    
-    if (backToTopButton) {
-        // Show button when user scrolls down 300px
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-        
-        // Scroll to top when button is clicked
-        backToTopButton.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+function openCertModal(imageSrc, title) {
+  if (certModal && certModalImage && certModalTitle) {
+    certModalImage.src = imageSrc;
+    certModalTitle.textContent = title;
+    certModal.classList.remove('hidden');
+    certModal.classList.add('flex');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+}
+
+function closeCertModal() {
+  if (certModal) {
+    certModal.classList.add('hidden');
+    certModal.classList.remove('flex');
+    document.body.style.overflow = ''; // Restore background scrolling
+  }
+}
+
+// Event listener to close modal on backdrop click
+if (certModal) {
+  certModal.addEventListener('click', (e) => {
+    // If the click is on the modal backdrop (the modal itself), close it
+    if (e.target === certModal) {
+      closeCertModal();
     }
-    
-    // Contact form functionality
-    const contactForm = document.getElementById('contact-form');
-    const formSuccess = document.getElementById('form-success');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // In a real scenario, you would send the form data to a server here
-            // For now, we'll just simulate a successful submission
-            
-            // Hide the form and show success message
-            contactForm.style.display = 'none';
-            formSuccess.classList.add('visible');
-            
-            // Reset form fields
-            contactForm.reset();
-            
-            // Optional: Hide success message and show form again after some time
-            setTimeout(() => {
-                formSuccess.classList.remove('visible');
-                contactForm.style.display = 'flex';
-            }, 5000);
-        });
-    }
-    
-    // Certificate preview modal functionality
-    const certPreviews = document.querySelectorAll('.certification-preview img');
-    
-    certPreviews.forEach(img => {
-        img.addEventListener('click', function() {
-            // Create modal
-            const modal = document.createElement('div');
-            modal.className = 'certificate-modal';
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <span class="close-modal">&times;</span>
-                    <img src="${this.src}" alt="${this.alt}">
-                </div>
-            `;
-            
-            document.body.appendChild(modal);
-            
-            // Show modal with animation
-            setTimeout(() => modal.classList.add('show'), 10);
-            
-            // Close modal handlers
-            const closeModal = () => {
-                modal.classList.remove('show');
-                setTimeout(() => modal.remove(), 300);
-            };
-            
-            modal.querySelector('.close-modal').addEventListener('click', closeModal);
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) closeModal();
-            });
-            
-            // Close on Escape key
-            document.addEventListener('keydown', function escHandler(e) {
-                if (e.key === 'Escape') {
-                    closeModal();
-                    document.removeEventListener('keydown', escHandler);
-                }
-            });
-        });
-    });
+  });
+}
+
+// Event listener to close modal on Escape key press
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !certModal.classList.contains('hidden')) {
+    closeCertModal();
+  }
 });
