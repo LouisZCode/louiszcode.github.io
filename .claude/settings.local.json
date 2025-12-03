@@ -17,7 +17,10 @@
       "Bash(git ls-tree:*)",
       "Bash(python:*)",
       "Bash(git log:*)",
-      "Read(//c/Users/Admin/Documents/GitHub/**)"
+      "Read(//c/Users/Admin/Documents/GitHub/**)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)"
     ]
   },
   "enableAllProjectMcpServers": false

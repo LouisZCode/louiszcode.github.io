@@ -37,7 +37,22 @@ const translations = {
     "hero-tech-badge": "Python • LangChain • LangGraph",
     "hero-cta-portfolio": "View My Work",
     "hero-cta-contact": "Contact Me",
-    
+    "hero-status": "Open to Work",
+
+    // Bento grid stats
+    "stats-background": "Background",
+    "stats-years-ta": "Years in Talent Acquisition",
+    "stats-education": "Education",
+    "stats-certifications": "Certifications",
+
+    // Project status
+    "project-status-live": "Live Product",
+    "try-demo": "Try Demo",
+    "coming-soon": "Coming Soon",
+    "status-building": "Building",
+    "more-certs-coming": "More Coming",
+    "more-certs-desc": "Currently pursuing additional AI certifications",
+
     // Project preview section
     "preview-heading": "Recent AI Projects",
     "ai-recruiting-title": "AI Recruiting Assistant",
@@ -199,10 +214,10 @@ const translations = {
     "ai-projects-position": "Independent AI Development",
     "ai-projects-location": "Remote",
     "ai-projects-description": "Full-time focus on building production-ready LLM applications and AI-powered tools. My recruitment background directly informs my AI development work—understanding user needs, identifying workflow pain points, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems, not just interesting technical demos.",
-    "ai-projects-achievement1": "<strong>Spralingua:</strong> Multi-language learning platform with <2s response times built using LangGraph for agent orchestration, Flask for full-stack web application, and Claude for reasoning. Supports A1-B2 proficiency levels with intelligent grammar correction.",
-    "ai-projects-achievement2": "Offline Voice AI Agent: Privacy-first voice assistant with 90%+ recognition accuracy, running entirely offline using Python, Vosk (speech recognition), and XTTS-v2 (neural TTS). Zero cloud dependency, zero recurring costs.",
-    "ai-projects-achievement3": "AI-Accelerated Game Development: Godot game with 50% AI-generated assets (ComfyUI, stable diffusion workflows), completed in 7-day game jam with 46 player ratings averaging 4.2/5 stars.",
-    "ai-projects-tech": "<strong>Technologies:</strong> Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG Systems, Voice AI (TTS/STT)",
+    "ai-projects-achievement1": "Multi-language learning platform with <2s response times built using LangGraph for agent orchestration, Flask for full-stack web application, and Claude for reasoning. Supports A1-B2 proficiency levels with intelligent grammar correction.",
+    "ai-projects-achievement2": "Privacy-first voice assistant with 90%+ recognition accuracy, running entirely offline using Python, Vosk (speech recognition), and XTTS-v2 (neural TTS). Zero cloud dependency, zero recurring costs.",
+    "ai-projects-achievement3": "Godot game with 50% AI-generated assets (ComfyUI, stable diffusion workflows), completed in 7-day game jam with 46 player ratings averaging 4.2/5 stars.",
+    "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG Systems, Voice AI (TTS/STT)",
     "career-bridge-text": "My recruitment background directly informs my AI development work. Four years of understanding what users need, identifying pain points in workflows, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems—not just interesting technical demos.",
   },
   
@@ -225,7 +240,22 @@ const translations = {
     "hero-tech-badge": "Python • LangChain • LangGraph",
     "hero-cta-portfolio": "Meine Arbeit ansehen",
     "hero-cta-contact": "Kontakt aufnehmen",
-    
+    "hero-status": "Offen für Arbeit",
+
+    // Bento grid stats
+    "stats-background": "Hintergrund",
+    "stats-years-ta": "Jahre in der Talentakquise",
+    "stats-education": "Ausbildung",
+    "stats-certifications": "Zertifizierungen",
+
+    // Project status
+    "project-status-live": "Live-Produkt",
+    "try-demo": "Demo testen",
+    "coming-soon": "Demnächst",
+    "status-building": "In Entwicklung",
+    "more-certs-coming": "Weitere folgen",
+    "more-certs-desc": "Aktuell weitere KI-Zertifizierungen in Arbeit",
+
     // Project preview section
     "preview-heading": "Aktuelle KI-Projekte",
     "ai-recruiting-title": "KI-Recruiting-Assistent",
@@ -389,10 +419,10 @@ const translations = {
     "ai-projects-position": "Unabhängige KI-Entwicklung",
     "ai-projects-location": "Remote",
     "ai-projects-description": "Vollzeit-Fokus auf den Aufbau produktionsreifer LLM-Anwendungen und KI-gestützter Tools. Mein Recruitment-Hintergrund beeinflusst direkt meine KI-Entwicklungsarbeit—das Verstehen von Benutzerbedürfnissen, die Identifizierung von Schwachstellen in Workflows und die Übersetzung von Geschäftsanforderungen in Lösungen gibt mir einen einzigartigen Vorteil beim Bau von KI-Anwendungen, die echte Probleme lösen, nicht nur technisch interessante Demos.",
-    "ai-projects-achievement1": "<strong>Spralingua:</strong> Mehrsprachige Lernplattform mit <2s Antwortzeiten, entwickelt mit LangGraph für Agenten-Orchestrierung, Flask für Full-Stack-Webanwendung und Claude für Reasoning. Unterstützt A1-B2-Kompetenzstufen mit intelligenter Grammatikkorrektur.",
-    "ai-projects-achievement2": "Offline-Sprach-KI-Agent: Datenschutzorientierter Sprachassistent mit 90%+ Erkennungsgenauigkeit, vollständig offline mit Python, Vosk (Spracherkennung) und XTTS-v2 (neurales TTS). Null Cloud-Abhängigkeit, null laufende Kosten.",
-    "ai-projects-achievement3": "KI-beschleunigtes Spiele-Entwicklung: Godot-Spiel mit 50% KI-generierten Assets (ComfyUI, Stable Diffusion Workflows), fertiggestellt in 7-Tage-Game-Jam mit 46 Spielerbewertungen im Durchschnitt 4,2/5 Sternen.",
-    "ai-projects-tech": "<strong>Technologien:</strong> Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG-Systeme, Sprach-KI (TTS/STT)",
+    "ai-projects-achievement1": "Mehrsprachige Lernplattform mit <2s Antwortzeiten, entwickelt mit LangGraph für Agenten-Orchestrierung, Flask für Full-Stack-Webanwendung und Claude für Reasoning. Unterstützt A1-B2-Kompetenzstufen mit intelligenter Grammatikkorrektur.",
+    "ai-projects-achievement2": "Datenschutzorientierter Sprachassistent mit 90%+ Erkennungsgenauigkeit, vollständig offline mit Python, Vosk (Spracherkennung) und XTTS-v2 (neurales TTS). Null Cloud-Abhängigkeit, null laufende Kosten.",
+    "ai-projects-achievement3": "Godot-Spiel mit 50% KI-generierten Assets (ComfyUI, Stable Diffusion Workflows), fertiggestellt in 7-Tage-Game-Jam mit 46 Spielerbewertungen im Durchschnitt 4,2/5 Sternen.",
+    "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG-Systeme, Sprach-KI (TTS/STT)",
     "career-bridge-text": "Mein Recruitment-Hintergrund beeinflusst direkt meine KI-Entwicklungsarbeit. Vier Jahre des Verstehens, was Benutzer brauchen, der Identifizierung von Schwachstellen in Workflows und der Übersetzung von Geschäftsanforderungen in Lösungen gibt mir einen einzigartigen Vorteil beim Bau von KI-Anwendungen, die echte Probleme lösen—nicht nur technisch interessante Demos.",
   },
   
@@ -415,7 +445,22 @@ const translations = {
     "hero-tech-badge": "Python • LangChain • LangGraph",
     "hero-cta-portfolio": "Ver mi trabajo",
     "hero-cta-contact": "Contactarme",
-    
+    "hero-status": "Disponible para trabajar",
+
+    // Bento grid stats
+    "stats-background": "Experiencia",
+    "stats-years-ta": "Años en Adquisición de Talento",
+    "stats-education": "Educación",
+    "stats-certifications": "Certificaciones",
+
+    // Project status
+    "project-status-live": "Producto en vivo",
+    "try-demo": "Probar demo",
+    "coming-soon": "Próximamente",
+    "status-building": "En desarrollo",
+    "more-certs-coming": "Más próximamente",
+    "more-certs-desc": "Actualmente obteniendo certificaciones adicionales de IA",
+
     // Project preview section
     "preview-heading": "Proyectos recientes de IA",
     "ai-recruiting-title": "Asistente de Reclutamiento con IA",
@@ -579,10 +624,10 @@ const translations = {
     "ai-projects-position": "Desarrollo Independiente de IA",
     "ai-projects-location": "Remoto",
     "ai-projects-description": "Enfoque de tiempo completo en construir aplicaciones LLM listas para producción y herramientas impulsadas por IA. Mi experiencia en reclutamiento informa directamente mi trabajo de desarrollo de IA—entender las necesidades de los usuarios, identificar puntos débiles en flujos de trabajo y traducir requisitos empresariales en soluciones me da una ventaja única en construir aplicaciones de IA que resuelven problemas reales, no solo demos técnicamente interesantes.",
-    "ai-projects-achievement1": "<strong>Spralingua:</strong> Plataforma de aprendizaje multilingüe con tiempos de respuesta <2s construida usando LangGraph para orquestación de agentes, Flask para aplicación web full-stack, y Claude para razonamiento. Soporta niveles de dominio A1-B2 con corrección gramatical inteligente.",
-    "ai-projects-achievement2": "Agente de Voz IA Offline: Asistente de voz enfocado en privacidad con 90%+ de precisión de reconocimiento, funcionando completamente offline usando Python, Vosk (reconocimiento de voz), y XTTS-v2 (TTS neuronal). Cero dependencia de la nube, cero costos recurrentes.",
-    "ai-projects-achievement3": "Desarrollo de Juegos Acelerado por IA: Juego en Godot con 50% de assets generados por IA (ComfyUI, flujos de trabajo de difusión estable), completado en game jam de 7 días con 46 calificaciones de jugadores promediando 4.2/5 estrellas.",
-    "ai-projects-tech": "<strong>Tecnologías:</strong> Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, Sistemas RAG, IA de Voz (TTS/STT)",
+    "ai-projects-achievement1": "Plataforma de aprendizaje multilingüe con tiempos de respuesta <2s construida usando LangGraph para orquestación de agentes, Flask para aplicación web full-stack, y Claude para razonamiento. Soporta niveles de dominio A1-B2 con corrección gramatical inteligente.",
+    "ai-projects-achievement2": "Asistente de voz enfocado en privacidad con 90%+ de precisión de reconocimiento, funcionando completamente offline usando Python, Vosk (reconocimiento de voz), y XTTS-v2 (TTS neuronal). Cero dependencia de la nube, cero costos recurrentes.",
+    "ai-projects-achievement3": "Juego en Godot con 50% de assets generados por IA (ComfyUI, flujos de trabajo de difusión estable), completado en game jam de 7 días con 46 calificaciones de jugadores promediando 4.2/5 estrellas.",
+    "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, Sistemas RAG, IA de Voz (TTS/STT)",
     "career-bridge-text": "Mi experiencia en reclutamiento informa directamente mi trabajo de desarrollo de IA. Cuatro años entendiendo lo que los usuarios necesitan, identificando puntos débiles en flujos de trabajo y traduciendo requisitos empresariales en soluciones me da una ventaja única en construir aplicaciones de IA que resuelven problemas reales—no solo demos técnicamente interesantes.",
   }
 };

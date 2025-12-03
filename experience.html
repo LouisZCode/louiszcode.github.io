@@ -4,249 +4,455 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Zermeno - Experience</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
     <!-- Domain canonical reference -->
     <link rel="canonical" href="https://www.luiszermeno.info/experience.html">
-    <!-- Favicon and touch icons -->
+
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
     <meta property="og:url" content="https://www.luiszermeno.info/experience.html">
     <meta property="og:site_name" content="Luis Zermeno - Experience">
+    <meta property="og:description" content="AI Application Engineer building production-ready LLM applications. Experience spans multi-agent systems, RAG pipelines, and voice AI, backed by 4+ years understanding user needs in tech recruitment.">
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Luis Zermeno - AI Application Engineer with production-ready LLM applications and 4+ years Talent Partner experience. Specialized in LangGraph, multi-agent systems, and RAG pipelines.">
     <meta name="keywords" content="AI Application Engineer, LLM developer, LangGraph, multi-agent systems, RAG pipelines, Flask developer, Python AI engineer, production AI applications, AI engineering experience, talent partner background">
-    <meta property="og:description" content="AI Application Engineer building production-ready LLM applications. Experience spans multi-agent systems, RAG pipelines, and voice AI, backed by 4+ years understanding user needs in tech recruitment.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Luis Zermeno">
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'heading': ['Space Grotesk', 'sans-serif'],
+              'body': ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a;
+      }
+      h1, h2, h3 {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
+      }
+    </style>
 </head>
-<body>
-    <a href="#main-content" class="skip-to-content">Skip to content</a>
-    <header role="banner">
-        <nav class="navbar" role="navigation" aria-label="Main Navigation">
-            <div class="logo">
-                <a href="index.html">Luis Zermeno</a>
-            </div>
-            <div class="profile-circle">
-                <img src="/images/profile_luis.png" alt="Luis Zermeno">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="nav-home">Home</a></li>
-                <li><a href="experience.html" class="active" data-i18n="nav-experience">Experience</a></li>
-                <li><a href="portfolio.html" data-i18n="nav-portfolio">Portfolio</a></li>
-            </ul>
-            <div class="language-switcher">
-                <button class="lang-btn active" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="de">DE</button>
-                <button class="lang-btn" data-lang="es">ES</button>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+<body class="min-h-screen text-slate-300 relative overflow-x-hidden">
+
+    <!-- Skip to content -->
+    <a href="#main-content" class="skip-to-content sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-sky-500 text-white px-4 py-2 rounded-lg z-50">Skip to content</a>
+
+    <!-- Animated Background Blobs -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+      <div class="absolute top-1/2 right-1/3 w-72 h-72 bg-cyan-500/5 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-slate-900/70 border-b border-slate-800" role="banner">
+      <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="text-xl font-bold text-white font-heading hover:text-sky-400 transition-colors">
+          Luis Zermeno
+        </a>
+
+        <ul class="hidden md:flex items-center gap-8">
+          <li><a href="index.html" class="text-slate-400 hover:text-white transition-colors" data-i18n="nav-home">Home</a></li>
+          <li><a href="experience.html" class="text-white font-medium hover:text-sky-400 transition-colors" data-i18n="nav-experience">Experience</a></li>
+          <li><a href="portfolio.html" class="text-slate-400 hover:text-white transition-colors" data-i18n="nav-portfolio">Portfolio</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+          <!-- Language Switcher -->
+          <div class="language-switcher flex gap-1">
+            <button class="lang-btn px-2 py-1 text-xs rounded bg-sky-500 text-white font-bold" data-lang="en">EN</button>
+            <button class="lang-btn px-2 py-1 text-xs rounded text-slate-400 hover:text-white transition-colors" data-lang="de">DE</button>
+            <button class="lang-btn px-2 py-1 text-xs rounded text-slate-400 hover:text-white transition-colors" data-lang="es">ES</button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="hamburger md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+            <span class="w-6 h-0.5 bg-white transition-transform"></span>
+            <span class="w-6 h-0.5 bg-white transition-opacity"></span>
+            <span class="w-6 h-0.5 bg-white transition-transform"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu hidden md:hidden bg-slate-900 border-t border-slate-800 px-4 py-4">
+        <ul class="flex flex-col gap-4">
+          <li><a href="index.html" class="text-slate-400 hover:text-white transition-colors" data-i18n="nav-home">Home</a></li>
+          <li><a href="experience.html" class="text-white font-medium" data-i18n="nav-experience">Experience</a></li>
+          <li><a href="portfolio.html" class="text-slate-400 hover:text-white transition-colors" data-i18n="nav-portfolio">Portfolio</a></li>
+        </ul>
+      </div>
     </header>
 
-    <main role="main" id="main-content">
-        <section class="experience-header">
-            <div class="container">
-                <h1 data-i18n="experience-heading">Professional Experience</h1>
-                <p data-i18n="experience-overview">M.B.A. with 4 years of experience in Talent Acquisition for the DACH region, 2 years also recruiting for EMEA (France, Italy, Spain, Benelux and Spain, DACH). Worked on both startup environments and big corp. Tackled Tech recruitment (Full-stack) and currently tackling Sales recruitment (Account Executives, Sales Engineers, BDRs).</p>
-                
-                <div class="resume-download">
-                    <a href="Resume_LuisZ_2025.pdf" class="btn primary-btn" download>
-                        <i class="fas fa-download"></i> <span data-i18n="download-resume">Download Resume</span>
-                    </a>
-                </div>
+    <!-- Main Content -->
+    <main role="main" id="main-content" class="p-4 md:p-8">
+
+      <div class="max-w-6xl mx-auto">
+
+        <!-- ==================== Hero Section ==================== -->
+        <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 mb-6">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <h1 class="text-3xl md:text-4xl font-bold text-white mb-4" data-i18n="experience-heading">Professional Experience</h1>
+              <p class="text-slate-400 max-w-2xl" data-i18n="experience-overview">M.B.A. with 4 years of experience in Talent Acquisition for the DACH region, 2 years also recruiting for EMEA (France, Italy, Spain, Benelux and Spain, DACH). Worked on both startup environments and big corp. Tackled Tech recruitment (Full-stack) and currently tackling Sales recruitment (Account Executives, Sales Engineers, BDRs).</p>
             </div>
-        </section>
+            <a href="Resume_LuisZ_2025.pdf" target="_blank" class="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-white font-medium py-3 px-6 rounded-xl transition-colors whitespace-nowrap">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <span data-i18n="download-resume">Download Resume</span>
+            </a>
+          </div>
+        </div>
 
-        <section class="timeline-section">
-            <div class="container">
-                <div class="timeline" role="list" aria-label="Career timeline">
-                    <!-- AI Engineering Projects Section -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2024 - Present</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <h3 data-i18n="ai-projects-position">Independent AI Development</h3>
-                                <span class="company-name" data-i18n="ai-projects-location">Remote</span>
-                            </div>
-                            <p data-i18n="ai-projects-description">Full-time focus on building production-ready LLM applications and AI-powered tools. My recruitment background directly informs my AI development work—understanding user needs, identifying workflow pain points, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems, not just interesting technical demos.</p>
-                            <ul class="achievement-list">
-                                <li data-i18n="ai-projects-achievement1"><strong>Spralingua:</strong> Multi-agent German language teacher with <2s response times built using Claude for reasoning. Supports A1-C2 proficiency levels with intelligent grammar correction.</li>
-                                <li data-i18n="ai-projects-achievement2"><strong>Offline Voice AI Agent:</strong> Privacy-first voice assistant with 90%+ recognition accuracy, running entirely offline using Python, Vosk (speech recognition), and XTTS-v2 (neural TTS). Zero cloud dependency, zero recurring costs.</li>
-                                <li data-i18n="ai-projects-achievement3"><strong>AI-Accelerated Game Development:</strong> Godot game with 50% AI-generated assets (ComfyUI, stable diffusion workflows), completed in 7-day game jam with 46 player ratings averaging 4.2/5 stars.</li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- ==================== Timeline Grid ==================== -->
+        <div class="space-y-4">
 
-                    <!-- Bridge Paragraph Before Talent Partner Section -->
-                    <div class="career-bridge">
-                        <p data-i18n="career-bridge-text">My recruitment background directly informs my AI development work. Four years of understanding what users need, identifying pain points in workflows, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems—not just interesting technical demos.</p>
-                    </div>
-
-                    <!-- LucaNet Experience (Most Recent) -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">October 2023 - Present</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <img src="images/lucanet.png" alt="LucaNet" class="company-logo">
-                                <h3 data-i18n="lucanet-position">Talent Partner</h3>
-                                <span class="company-name">LucaNet - Berlin / remote</span>
-                            </div>
-                            <p data-i18n="lucanet-description">Full-cycle recruiter for the revenue and financial teams, especially related to Account Executives, Sales Engineers, Account Managers, Consultants and Sales Operations and business development representatives (BDRs) on SaaS and Fintech related products.</p>
-                            <ul class="achievement-list">
-                                <li data-i18n="lucanet-achievement1">Sourcing, interviewing and evaluating candidates online for the DACH, Benelux, Spanish and French regions, recently opened the Italian team.</li>
-                                <li data-i18n="lucanet-achievement2">Reached 150% of my KPIs in the last two quarters.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Saily/Rapid Experience -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">June 2022 - August 2023</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <img src="images/rapid.png" alt="Saily" class="company-logo">
-                                <h3 data-i18n="saily-position">Talent and Coordination Partner</h3>
-                                <span class="company-name">Rapid API - Berlin / remote</span>
-                            </div>
-                            <p data-i18n="saily-description">Sadly, I was part of massive recent layoffs. More in this TechCrunch article: <a href="https://tcrn.ch/3He7Jdnb" target="_blank">https://tcrn.ch/3He7Jdnb</a></p>
-                            <ul class="achievement-list">
-                                <li data-i18n="saily-achievement1">As coordination lead: Creation and execution of a completely new coordination automation process for the whole team, specifically for 180+ employees. 20+ hiring managers to C-level and leadership. Around 500+ interviews were successfully coordinated automatically.</li>
-                                <li data-i18n="saily-achievement2">As a Talent Partner: Full-cycle recruiter for developers, data and engineers, especially related to backend development, frontend development, DevOps, product operations, APIs, AI, Rails, and API/Big Data.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Volocopter Experience -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">July 2021 - June 2022</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <img src="images/volocopter.png" alt="Volocopter" class="company-logo">
-                                <h3 data-i18n="velocopter-position">Talent Acquisition Specialist</h3>
-                                <span class="company-name">Volocopter - Karlsruhe / hybrid</span>
-                            </div>
-                            <p data-i18n="velocopter-description">Full-cycle recruiter for engineering, battery, tech, and project management with specialties in machine building, electrics, aerospace, programming, software development, automotive retail and energy.</p>
-                            <ul class="achievement-list">
-                                <li data-i18n="velocopter-achievement">The company went from around 200 to almost 600 employees the year I was working there.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Karlshochschule - MBA -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">June 2019 - June 2021</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <img src="images/karlshochschule.png" alt="Karlshochschule" class="company-logo">
-                                <h3 data-i18n="mba-degree">Master in Business Administration</h3>
-                                <span class="company-name">Karlshochschule International University - Germany</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Microsoft Experience -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">February 2017 - January 2019</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <img src="images/microsoft.png" alt="Microsoft" class="company-logo">
-                                <h3 data-i18n="microsoft-position">Human Resources Generalist, Data Entry Lead</h3>
-                                <span class="company-name">Microsoft - Mexico</span>
-                            </div>
-                            <p data-i18n="microsoft-description">Processed general data transactions for the EMEA, LATAM and North Microsoft employees using SAP and PeopleSoft.</p>
-                            <ul class="achievement-list">
-                                <li data-i18n="microsoft-achievement">Raised the incidents and SAF clearance of data (Quality) to 99% and the delivery handling time by 30% in the first 3 months and was maintained in the consequent months.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Honeywell Experience -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">January 2016 - January 2017</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <img src="images/honeywell.png" alt="Honeywell" class="company-logo">
-                                <h3 data-i18n="honeywell-position">Human Resources Generalist, Customer Exp. Lead</h3>
-                                <span class="company-name">Honeywell - Mexico</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bachelor's Degree - UASLP -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2010 - 2016</div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <img src="images/uaslp.png" alt="UASLP" class="company-logo">
-                                <h3 data-i18n="bachelor-degree">Bachelor of Business</h3>
-                                <span class="company-name">Universidad Autonoma de San Luis Potosi - Mexico</span>
-                            </div>
-                        </div>
-                    </div>
+          <!-- AI Engineering Projects - Featured -->
+          <div class="bg-slate-900 rounded-2xl p-1 border border-slate-700 hover:border-emerald-500/50 transition-all duration-300 group">
+            <div class="bg-slate-800 rounded-xl p-6 md:p-8">
+              <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-sky-500/20 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-white" data-i18n="ai-projects-position">Independent AI Development</h3>
+                    <p class="text-slate-500 text-sm" data-i18n="ai-projects-location">Remote</p>
+                  </div>
                 </div>
-            </div>
-        </section>
+                <span class="px-3 py-1 bg-emerald-900/30 text-emerald-400 rounded-full text-xs font-medium">2024 - Present</span>
+              </div>
 
-        <section class="skills-section">
-            <div class="container">
-                <h2 data-i18n="professional-skills">Professional Skills</h2>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3 data-i18n="recruitment-tools">Recruitment Tools</h3>
-                        <ul class="skill-list">
-                            <li><img src="images/greenhouse.png" alt="Greenhouse" class="skill-icon"> Greenhouse</li>
-                            <li><img src="images/personio.png" alt="Personio" class="skill-icon"> Personio</li>
-                            <li><img src="images/smartrecruiters.png" alt="SmartRecruiters" class="skill-icon"> SmartRecruiters</li>
-                            <li><img src="images/linkedin.png" alt="LinkedIn" class="skill-icon"> LinkedIn</li>
-                            <li><img src="images/xing.png" alt="Xing" class="skill-icon"> Xing</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3 data-i18n="languages">Languages</h3>
-                        <ul class="skill-list">
-                            <li>Spanish (Native)</li>
-                            <li>German (C2)</li>
-                            <li>English (C2)</li>
-                            <li>French (C1)</li>
-                        </ul>
-                    </div>
+              <p class="text-slate-400 mb-6" data-i18n="ai-projects-description">Full-time focus on building production-ready LLM applications and AI-powered tools. My recruitment background directly informs my AI development work—understanding user needs, identifying workflow pain points, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems, not just interesting technical demos.</p>
+
+              <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-slate-900/50 rounded-xl p-4 border border-slate-700/50">
+                  <h4 class="text-white font-medium mb-2">Spralingua</h4>
+                  <p class="text-slate-500 text-sm" data-i18n="ai-projects-achievement1">Multi-agent German language teacher with &lt;2s response times built using Claude for reasoning. Supports A1-C2 proficiency levels with intelligent grammar correction.</p>
                 </div>
+                <div class="bg-slate-900/50 rounded-xl p-4 border border-slate-700/50">
+                  <h4 class="text-white font-medium mb-2">Offline Voice AI</h4>
+                  <p class="text-slate-500 text-sm" data-i18n="ai-projects-achievement2">Privacy-first voice assistant with 90%+ recognition accuracy, running entirely offline using Python, Vosk (speech recognition), and XTTS-v2 (neural TTS).</p>
+                </div>
+                <div class="bg-slate-900/50 rounded-xl p-4 border border-slate-700/50">
+                  <h4 class="text-white font-medium mb-2">AI Game Dev</h4>
+                  <p class="text-slate-500 text-sm" data-i18n="ai-projects-achievement3">Godot game with 50% AI-generated assets (ComfyUI, stable diffusion workflows), completed in 7-day game jam with 46 player ratings averaging 4.2/5 stars.</p>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+
+          <!-- Career Bridge -->
+          <div class="bg-gradient-to-r from-purple-900/20 to-sky-900/20 rounded-2xl p-6 border border-slate-700">
+            <p class="text-slate-300 text-center italic" data-i18n="career-bridge-text">My recruitment background directly informs my AI development work. Four years of understanding what users need, identifying pain points in workflows, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems—not just interesting technical demos.</p>
+          </div>
+
+          <!-- Experience Cards Grid -->
+          <div class="grid md:grid-cols-2 gap-4">
+
+            <!-- LucaNet -->
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-sky-500/50 transition-all duration-300 group">
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="images/lucanet.png" alt="LucaNet" class="w-12 h-12 rounded-xl object-contain bg-white p-2">
+                  <div>
+                    <h3 class="text-lg font-bold text-white" data-i18n="lucanet-position">Talent Partner</h3>
+                    <p class="text-slate-500 text-sm">LucaNet - Berlin / remote</p>
+                  </div>
+                </div>
+                <span class="px-2 py-1 bg-sky-900/30 text-sky-400 rounded text-xs whitespace-nowrap">Oct 2023 - Present</span>
+              </div>
+              <p class="text-slate-400 text-sm mb-4" data-i18n="lucanet-description">Full-cycle recruiter for the revenue and financial teams, especially related to Account Executives, Sales Engineers, Account Managers, Consultants and Sales Operations and business development representatives (BDRs) on SaaS and Fintech related products.</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2 text-sm text-slate-500">
+                  <span class="text-sky-400 mt-1">•</span>
+                  <span data-i18n="lucanet-achievement1">Sourcing, interviewing and evaluating candidates online for the DACH, Benelux, Spanish and French regions, recently opened the Italian team.</span>
+                </li>
+                <li class="flex items-start gap-2 text-sm text-slate-500">
+                  <span class="text-sky-400 mt-1">•</span>
+                  <span data-i18n="lucanet-achievement2">Reached 150% of my KPIs in the last two quarters.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Rapid/Saily -->
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-purple-500/50 transition-all duration-300 group">
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="images/rapid.png" alt="Rapid" class="w-12 h-12 rounded-xl object-contain bg-white p-2">
+                  <div>
+                    <h3 class="text-lg font-bold text-white" data-i18n="saily-position">Talent and Coordination Partner</h3>
+                    <p class="text-slate-500 text-sm">Rapid API - Berlin / remote</p>
+                  </div>
+                </div>
+                <span class="px-2 py-1 bg-purple-900/30 text-purple-400 rounded text-xs whitespace-nowrap">Jun 2022 - Aug 2023</span>
+              </div>
+              <p class="text-slate-400 text-sm mb-4" data-i18n="saily-description">Sadly, I was part of massive recent layoffs. More in this TechCrunch article.</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2 text-sm text-slate-500">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span data-i18n="saily-achievement1">As coordination lead: Creation and execution of a completely new coordination automation process for the whole team, specifically for 180+ employees.</span>
+                </li>
+                <li class="flex items-start gap-2 text-sm text-slate-500">
+                  <span class="text-purple-400 mt-1">•</span>
+                  <span data-i18n="saily-achievement2">As a Talent Partner: Full-cycle recruiter for developers, data and engineers, especially related to backend development, frontend development, DevOps.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Volocopter -->
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 group">
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="images/volocopter.png" alt="Volocopter" class="w-12 h-12 rounded-xl object-contain bg-white p-2">
+                  <div>
+                    <h3 class="text-lg font-bold text-white" data-i18n="velocopter-position">Talent Acquisition Specialist</h3>
+                    <p class="text-slate-500 text-sm">Volocopter - Karlsruhe / hybrid</p>
+                  </div>
+                </div>
+                <span class="px-2 py-1 bg-cyan-900/30 text-cyan-400 rounded text-xs whitespace-nowrap">Jul 2021 - Jun 2022</span>
+              </div>
+              <p class="text-slate-400 text-sm mb-4" data-i18n="velocopter-description">Full-cycle recruiter for engineering, battery, tech, and project management with specialties in machine building, electrics, aerospace, programming, software development, automotive retail and energy.</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2 text-sm text-slate-500">
+                  <span class="text-cyan-400 mt-1">•</span>
+                  <span data-i18n="velocopter-achievement">The company went from around 200 to almost 600 employees the year I was working there.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Microsoft -->
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 group">
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div class="flex items-center gap-3">
+                  <img src="images/microsoft.png" alt="Microsoft" class="w-12 h-12 rounded-xl object-contain bg-white p-2">
+                  <div>
+                    <h3 class="text-lg font-bold text-white" data-i18n="microsoft-position">Human Resources Generalist</h3>
+                    <p class="text-slate-500 text-sm">Microsoft - Mexico</p>
+                  </div>
+                </div>
+                <span class="px-2 py-1 bg-blue-900/30 text-blue-400 rounded text-xs whitespace-nowrap">Feb 2017 - Jan 2019</span>
+              </div>
+              <p class="text-slate-400 text-sm mb-4" data-i18n="microsoft-description">Processed general data transactions for the EMEA, LATAM and North Microsoft employees using SAP and PeopleSoft.</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2 text-sm text-slate-500">
+                  <span class="text-blue-400 mt-1">•</span>
+                  <span data-i18n="microsoft-achievement">Raised the incidents and SAF clearance of data (Quality) to 99% and the delivery handling time by 30% in the first 3 months.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Education & Earlier Experience Row -->
+          <div class="grid md:grid-cols-3 gap-4">
+
+            <!-- MBA -->
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="images/karlshochschule.png" alt="Karlshochschule" class="w-10 h-10 rounded-lg object-contain bg-white p-1">
+                <div>
+                  <h3 class="text-white font-bold" data-i18n="mba-degree">Master in Business Administration</h3>
+                  <p class="text-slate-500 text-xs">Karlshochschule International University</p>
+                </div>
+              </div>
+              <span class="px-2 py-1 bg-slate-700 text-slate-400 rounded text-xs">Jun 2019 - Jun 2021</span>
+            </div>
+
+            <!-- Honeywell -->
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="images/honeywell.png" alt="Honeywell" class="w-10 h-10 rounded-lg object-contain bg-white p-1">
+                <div>
+                  <h3 class="text-white font-bold" data-i18n="honeywell-position">HR Generalist, Customer Exp. Lead</h3>
+                  <p class="text-slate-500 text-xs">Honeywell - Mexico</p>
+                </div>
+              </div>
+              <span class="px-2 py-1 bg-slate-700 text-slate-400 rounded text-xs">Jan 2016 - Jan 2017</span>
+            </div>
+
+            <!-- Bachelor's -->
+            <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="images/uaslp.png" alt="UASLP" class="w-10 h-10 rounded-lg object-contain bg-white p-1">
+                <div>
+                  <h3 class="text-white font-bold" data-i18n="bachelor-degree">Bachelor of Business</h3>
+                  <p class="text-slate-500 text-xs">Universidad Autonoma de San Luis Potosi</p>
+                </div>
+              </div>
+              <span class="px-2 py-1 bg-slate-700 text-slate-400 rounded text-xs">2010 - 2016</span>
+            </div>
+
+          </div>
+
+          <!-- Skills Section -->
+          <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
+            <h2 class="text-2xl font-bold text-white mb-6" data-i18n="professional-skills">Professional Skills</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+
+              <!-- Recruitment Tools -->
+              <div>
+                <h3 class="text-slate-400 text-xs uppercase tracking-widest mb-4" data-i18n="recruitment-tools">Recruitment Tools</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
+                    <img src="images/greenhouse.png" alt="Greenhouse" class="w-4 h-4"> Greenhouse
+                  </span>
+                  <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
+                    <img src="images/personio.png" alt="Personio" class="w-4 h-4"> Personio
+                  </span>
+                  <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
+                    <img src="images/smartrecruiters.png" alt="SmartRecruiters" class="w-4 h-4"> SmartRecruiters
+                  </span>
+                  <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
+                    <img src="images/linkedin.png" alt="LinkedIn" class="w-4 h-4"> LinkedIn
+                  </span>
+                  <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
+                    <img src="images/xing.png" alt="Xing" class="w-4 h-4"> Xing
+                  </span>
+                </div>
+              </div>
+
+              <!-- Languages -->
+              <div>
+                <h3 class="text-slate-400 text-xs uppercase tracking-widest mb-4" data-i18n="languages">Languages</h3>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="bg-slate-700/30 rounded-lg p-3">
+                    <p class="text-white font-medium">Spanish</p>
+                    <p class="text-slate-500 text-xs">Native</p>
+                  </div>
+                  <div class="bg-slate-700/30 rounded-lg p-3">
+                    <p class="text-white font-medium">German</p>
+                    <p class="text-slate-500 text-xs">C2</p>
+                  </div>
+                  <div class="bg-slate-700/30 rounded-lg p-3">
+                    <p class="text-white font-medium">English</p>
+                    <p class="text-slate-500 text-xs">C2</p>
+                  </div>
+                  <div class="bg-slate-700/30 rounded-lg p-3">
+                    <p class="text-white font-medium">French</p>
+                    <p class="text-slate-500 text-xs">C1</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </main>
 
-    <footer role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <p data-i18n="copyright">© 2025 Luis Zermeno. All Rights Reserved.</p>
-                <div class="social-links">
-                    <a href="https://github.com/louiszcode" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/luis-zermeno-3b2210108/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto px-4 py-8 mt-8 border-t border-slate-800" role="contentinfo">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-slate-500 text-sm" data-i18n="copyright">© 2025 Luis Zermeno. All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="https://github.com/louiszcode" target="_blank" class="text-slate-500 hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/luis-zermeno-3b2210108/" target="_blank" class="text-slate-500 hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
         </div>
+      </div>
     </footer>
 
-    <button id="back-to-top" class="back-to-top-btn" title="Back to Top">
-        <i class="fas fa-arrow-up"></i>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-slate-800 hover:bg-slate-700 text-white rounded-full shadow-lg border border-slate-700 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300" title="Back to Top">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/i18n.js"></script>
+
+    <!-- Page Scripts -->
+    <script>
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.querySelector('.mobile-menu');
+
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          hamburger.classList.toggle('active');
+        });
+      }
+
+      // Back to top button
+      const backToTop = document.getElementById('back-to-top');
+      if (backToTop) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            backToTop.classList.remove('opacity-0', 'pointer-events-none');
+            backToTop.classList.add('opacity-100');
+          } else {
+            backToTop.classList.add('opacity-0', 'pointer-events-none');
+            backToTop.classList.remove('opacity-100');
+          }
+        });
+
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    </script>
 </body>
-</html> 
+</html>
