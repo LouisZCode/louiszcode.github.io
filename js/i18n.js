@@ -71,7 +71,7 @@ const translations = {
     "hero-ai-credit": "This website was created with the help of AI ✨",
     "hero-title": "Talent Partner & AI Application Engineer",
     "hero-subtitle": "Building Production-Ready LLM Apps & Empowering Talent Acquisition with AI",
-    "hero-description": "Specialized in developing practical AI solutions with LangGraph, Flask, and Claude. I design multi-agent systems, full-stack web applications, and voice AI applications that solve real business problems. Background in recruitment gives me unique insight into building tools people actually want to use.",
+    "hero-description": "Specialized in developing practical AI solutions with LangChain, LangGraph, Python, and LLM calls both API and local-based. I design multi-agent systems and voice AI applications that solve real business problems. Background in recruitment gives me unique insight into building tools people actually want to use.",
     "hero-tech-badge": "Python \u2022 LangChain \u2022 LangGraph",
     "hero-cta-portfolio": "View My Work",
     "hero-cta-contact": "Contact Me",
@@ -227,32 +227,34 @@ const translations = {
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
-    "lucanet-description": "Full-cycle recruiter for the revenue and financial teams, especially related to Account Executives, Sales Engineers, Account Managers, Consultants and Sales Operations and business development representatives (BDRs) on SaaS and Fintech related products.",
-    "lucanet-achievement1": "Sourcing, interviewing and evaluating candidates online for the DACH, Benelux, Spanish and French regions, recently opened the Italian team.",
-    "lucanet-achievement2": "Reached 150% of my KPIs in the last two quarters.",
-    
+    "lucanet-description": "Full-cycle recruiter for revenue and financial teams across DACH, Benelux, Spain, France, and Italy. Recruiting Account Executives, Sales Engineers, Account Managers, Cross-sell/Upsell specialists, Sales Operations, and BDRs/SDRs for complex cloud SaaS/Fintech products.",
+    "lucanet-achievement1": "110% of hiring KPIs in last two quarters, 85% offer acceptance rate (vs 70% market standard).",
+    "lucanet-achievement2": "Built Spanish sales department from 3 to 30 employees in 1.5 years (Team Leads → BDRs → AMs → AEs).",
+    "lucanet-achievement3": "Implemented AI tools: Python/LangChain assistant, Claude Desktop, LinkedIn AI Assist, BrightHire integration with Greenhouse.",
+
     // Saily Experience
     "saily-position": "Talent and Coordination Partner",
-    "saily-description": "Sadly, I was part of massive recent layoffs. More in this TechCrunch article: https://tcrn.ch/3He7Jdnb",
-    "saily-achievement1": "As coordination lead: Creation and execution of a completely new coordination automation process for the whole team, specifically for 180+ employees. 20+ hiring managers to C-level and leadership. Around 500+ interviews were successfully coordinated automatically.",
-    "saily-achievement2": "As a Talent Partner: Full-cycle recruiter for developers, data and engineers, especially related to backend development, frontend development, DevOps, product operations, APIs, AI, Rails, and API/Big Data.",
-    
+    "saily-description": "Dual role managing talent acquisition and interview coordination for API marketplace during hyper-growth. Affected by company-wide layoffs.",
+    "saily-achievement1": "Created company-wide interview coordination automation for 180+ employees, 20+ hiring managers, 5+ C-level executives across Germany, USA and Tel-Aviv. Automated 500+ interviews, reducing scheduling friction by 90%.",
+    "saily-achievement2": "Full-cycle recruiting for developers and engineers: backend, frontend, DevOps, product operations, APIs.",
+
     // Velocopter Experience
     "velocopter-position": "Talent Acquisition Specialist",
     "velocopter-description": "Full-cycle recruiter for engineering, battery, tech, and project management with specialties in machine building, electrics, aerospace, programming, software development, automotive retail and energy.",
     "velocopter-achievement": "The company went from around 200 to almost 600 employees the year I was working there.",
-    
+
     // Microsoft Experience
-    "microsoft-position": "Human Resources Generalist, Data Entry Lead",
-    "microsoft-description": "Processed general data transactions for the EMEA, LATAM and North Microsoft employees using SAP and PeopleSoft.",
-    "microsoft-achievement": "Raised the incidents and SAF clearance of data (Quality) to 99% and the delivery handling time by 30% in the first 3 months and was maintained in the consequent months.",
+    "microsoft-position": "HR Generalist, Data Entry Lead",
+    "microsoft-description": "Processed HR data transactions for EMEA, LATAM, and APAC employees using SAP and PeopleSoft.",
+    "microsoft-achievement": "Raised data quality to 99% and delivery to 100% within first 3 months, maintained throughout tenure.",
     
     // Honeywell Experience
     "honeywell-position": "Human Resources Generalist, Customer Exp. Lead",
     
     // Education
+    "purdue-degree": "Applied Generative AI Specialization",
     "mba-degree": "Master in Business Administration",
-    "bachelor-degree": "Bachelor of Business",
+    "bachelor-degree": "Bachelor of Business Administration",
 
     // AI Engineering Projects (Experience page)
     "ai-projects-position": "Independent AI Development",
@@ -333,7 +335,7 @@ const translations = {
     "hero-ai-credit": "Diese Website wurde mit Hilfe von KI erstellt ✨",
     "hero-title": "Talent Partner & KI-Anwendungsingenieur",
     "hero-subtitle": "Entwicklung produktionsreifer LLM-Apps & KI-gestützte Talent Acquisition",
-    "hero-description": "Spezialisiert auf die Entwicklung praktischer KI-Lösungen mit LangGraph, Flask und Claude. Ich entwerfe Multi-Agenten-Systeme, Full-Stack-Webanwendungen und Sprach-KI-Anwendungen, die echte Geschäftsprobleme lösen. Mein Hintergrund im Recruitment gibt mir einzigartige Einblicke in den Bau von Tools, die Menschen tatsächlich nutzen möchten.",
+    "hero-description": "Spezialisiert auf die Entwicklung praktischer KI-Lösungen mit LangChain, LangGraph, Python und LLM-Aufrufen sowohl API- als auch lokal-basiert. Ich entwerfe Multi-Agenten-Systeme und Sprach-KI-Anwendungen, die echte Geschäftsprobleme lösen. Mein Hintergrund im Recruitment gibt mir einzigartige Einblicke in den Bau von Tools, die Menschen tatsächlich nutzen möchten.",
     "hero-tech-badge": "Python \u2022 LangChain \u2022 LangGraph",
     "hero-cta-portfolio": "Meine Arbeit ansehen",
     "hero-cta-contact": "Kontakt aufnehmen",
@@ -490,25 +492,26 @@ const translations = {
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
-    "lucanet-description": "Full-Cycle-Recruiter für Revenue- und Finanzteams, speziell für Account Executives, Sales Engineers, Account Manager, Consultants sowie Sales Operations und Business Development Representatives (BDRs) im SaaS- und Fintech-Bereich.",
-    "lucanet-achievement1": "Sourcing, Interviews und Bewertung von Kandidaten online für die DACH-, Benelux-, spanischen und französischen Regionen, kürzlich auch für das italienische Team.",
-    "lucanet-achievement2": "150% meiner KPIs in den letzten zwei Quartalen erreicht.",
-    
+    "lucanet-description": "Full-Cycle-Recruiter für Revenue- und Finanzteams in DACH, Benelux, Spanien, Frankreich und Italien. Rekrutierung von Account Executives, Sales Engineers, Account Managers, Cross-sell/Upsell-Spezialisten, Sales Operations und BDRs/SDRs für komplexe Cloud-SaaS/Fintech-Produkte.",
+    "lucanet-achievement1": "110% der Einstellungs-KPIs in den letzten zwei Quartalen, 85% Angebotsannahmequote (vs. 70% Marktstandard).",
+    "lucanet-achievement2": "Spanische Vertriebsabteilung von 3 auf 30 Mitarbeiter in 1,5 Jahren aufgebaut (Team Leads → BDRs → AMs → AEs).",
+    "lucanet-achievement3": "KI-Tools implementiert: Python/LangChain-Assistent, Claude Desktop, LinkedIn AI Assist, BrightHire-Integration mit Greenhouse.",
+
     // Saily Experience
     "saily-position": "Talent- und Koordinationspartner",
-    "saily-description": "Leider war ich von massiven Entlassungen betroffen. Mehr in diesem TechCrunch-Artikel: https://tcrn.ch/3He7Jdnb",
-    "saily-achievement1": "Als Koordinationsleiter: Erstellung und Umsetzung eines völlig neuen Koordinationsautomatisierungsprozesses für das gesamte Team, speziell für 180+ Mitarbeiter. 20+ Hiring Manager bis zur C-Ebene und Führungskräfte. Etwa 500+ Interviews wurden erfolgreich automatisch koordiniert.",
-    "saily-achievement2": "Als Talent Partner: Full-Cycle-Recruiter für Entwickler, Daten und Ingenieure, besonders im Bereich Backend-Entwicklung, Frontend-Entwicklung, DevOps, Produktoperationen, APIs, KI, Rails und API/Big Data.",
-    
+    "saily-description": "Doppelrolle bei Talentakquise und Interviewkoordination für API-Marktplatz während Hyperwachstum. Von unternehmensweiten Entlassungen betroffen.",
+    "saily-achievement1": "Unternehmensweite Interview-Koordinationsautomatisierung für 180+ Mitarbeiter, 20+ Hiring Manager, 5+ C-Level-Führungskräfte in Deutschland, USA und Tel-Aviv erstellt. 500+ Interviews automatisiert, Terminplanungsaufwand um 90% reduziert.",
+    "saily-achievement2": "Full-Cycle-Recruiting für Entwickler und Ingenieure: Backend, Frontend, DevOps, Produktoperationen, APIs.",
+
     // Velocopter Experience
     "velocopter-position": "Talent Acquisition Specialist",
     "velocopter-description": "Full-Cycle-Recruiter für Engineering, Batterie, Technik und Projektmanagement mit Schwerpunkten im Maschinenbau, Elektrotechnik, Luft- und Raumfahrt, Programmierung, Softwareentwicklung, Automobileinzelhandel und Energie.",
     "velocopter-achievement": "Das Unternehmen wuchs während meiner einjährigen Tätigkeit von etwa 200 auf fast 600 Mitarbeiter.",
-    
+
     // Microsoft Experience
-    "microsoft-position": "Human Resources Generalist, Data Entry Lead",
-    "microsoft-description": "Bearbeitung allgemeiner Datentransaktionen für die EMEA-, LATAM- und nordamerikanischen Microsoft-Mitarbeiter mit SAP und PeopleSoft.",
-    "microsoft-achievement": "Steigerung der Datenqualität (Incidents und SAF-Bereinigung) auf 99% und Reduzierung der Bearbeitungszeit um 30% in den ersten 3 Monaten, was in den folgenden Monaten beibehalten wurde.",
+    "microsoft-position": "HR Generalist, Data Entry Lead",
+    "microsoft-description": "Verarbeitung von HR-Datentransaktionen für EMEA-, LATAM- und APAC-Mitarbeiter mit SAP und PeopleSoft.",
+    "microsoft-achievement": "Datenqualität auf 99% und Lieferung auf 100% innerhalb der ersten 3 Monate gesteigert, während der gesamten Beschäftigung aufrechterhalten.",
     
     // Honeywell Experience
     "honeywell-position": "Human Resources Generalist, Leiter Kundenerfahrung",
@@ -516,8 +519,9 @@ const translations = {
     "honeywell-achievement": "Bewältigung eines 300%-Anstiegs des Transaktionsvolumens mit bestehenden Ressourcen durch Prozessverbesserungen und automatisierte Lösungen.",
     
     // Education
+    "purdue-degree": "Applied Generative AI Specialization",
     "mba-degree": "Master in Betriebswirtschaftslehre",
-    "bachelor-degree": "Bachelor in Betriebswirtschaft",
+    "bachelor-degree": "Bachelor in Betriebswirtschaftslehre",
 
     // AI Engineering Projects (Experience page)
     "ai-projects-position": "Unabhängige KI-Entwicklung",
@@ -598,7 +602,7 @@ const translations = {
     "hero-ai-credit": "Este sitio web fue creado con la ayuda de IA ✨",
     "hero-title": "Talent Partner & Ingeniero de Aplicaciones de IA",
     "hero-subtitle": "Construyendo Apps LLM & Potenciando Talent Acquisition con IA",
-    "hero-description": "Especializado en desarrollar soluciones prácticas de IA con LangGraph, Flask y Claude. Diseño sistemas multi-agente, aplicaciones web full-stack y aplicaciones de voz IA que resuelven problemas empresariales reales. Mi experiencia en reclutamiento me da una perspectiva única para construir herramientas que la gente realmente quiere usar.",
+    "hero-description": "Especializado en desarrollar soluciones prácticas de IA con LangChain, LangGraph, Python y llamadas LLM tanto API como locales. Diseño sistemas multi-agente y aplicaciones de voz IA que resuelven problemas empresariales reales. Mi experiencia en reclutamiento me da una perspectiva única para construir herramientas que la gente realmente quiere usar.",
     "hero-tech-badge": "Python \u2022 LangChain \u2022 LangGraph",
     "hero-cta-portfolio": "Ver mi trabajo",
     "hero-cta-contact": "Contactarme",
@@ -755,25 +759,26 @@ const translations = {
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
-    "lucanet-description": "Reclutador de ciclo completo para equipos de ingresos y finanzas, especialmente relacionado con Account Executives, Sales Engineers, Account Managers, Consultants y Sales Operations y representantes de desarrollo de negocios (BDRs) en productos SaaS y Fintech.",
-    "lucanet-achievement1": "Sourcing, entrevistas y evaluación de candidatos en línea para las regiones DACH, Benelux, española y francesa, recientemente abrí el equipo italiano.",
-    "lucanet-achievement2": "Alcancé el 150% de mis KPIs en los últimos dos trimestres.",
-    
+    "lucanet-description": "Reclutador de ciclo completo para equipos de ingresos y finanzas en DACH, Benelux, España, Francia e Italia. Reclutando Account Executives, Sales Engineers, Account Managers, especialistas en Cross-sell/Upsell, Sales Operations y BDRs/SDRs para productos complejos de SaaS/Fintech en la nube.",
+    "lucanet-achievement1": "110% de KPIs de contratación en los últimos dos trimestres, 85% de tasa de aceptación de ofertas (vs 70% estándar del mercado).",
+    "lucanet-achievement2": "Construí el departamento de ventas en España de 3 a 30 empleados en 1.5 años (Team Leads → BDRs → AMs → AEs).",
+    "lucanet-achievement3": "Implementé herramientas de IA: asistente Python/LangChain, Claude Desktop, LinkedIn AI Assist, integración de BrightHire con Greenhouse.",
+
     // Saily Experience
     "saily-position": "Talent and Coordination Partner",
-    "saily-description": "Lamentablemente, fui parte de despidos masivos recientes. Más información en este artículo de TechCrunch: https://tcrn.ch/3He7Jdnb",
-    "saily-achievement1": "Como líder de coordinación: Creación y ejecución de un proceso de automatización de coordinación completamente nuevo para todo el equipo, específicamente para más de 180 empleados. Más de 20 gerentes de contratación hasta nivel C y liderazgo. Alrededor de 500+ entrevistas fueron coordinadas automáticamente con éxito.",
-    "saily-achievement2": "Como Talent Partner: Reclutador de ciclo completo para desarrolladores, datos e ingenieros, especialmente relacionados con desarrollo backend, desarrollo frontend, DevOps, operaciones de producto, APIs, IA, Rails y API/Big Data.",
-    
+    "saily-description": "Rol dual gestionando adquisición de talento y coordinación de entrevistas para marketplace de APIs durante hipercrecimiento. Afectado por despidos a nivel empresa.",
+    "saily-achievement1": "Creé automatización de coordinación de entrevistas para 180+ empleados, 20+ hiring managers, 5+ ejecutivos C-level en Alemania, USA y Tel-Aviv. Automaticé 500+ entrevistas, reduciendo fricción de programación en 90%.",
+    "saily-achievement2": "Reclutamiento de ciclo completo para desarrolladores e ingenieros: backend, frontend, DevOps, operaciones de producto, APIs.",
+
     // Velocopter Experience
     "velocopter-position": "Especialista en Adquisición de Talento",
     "velocopter-description": "Reclutador de ciclo completo para ingeniería, baterías, tecnología y gestión de proyectos con especialidades en construcción de máquinas, sistemas eléctricos, aeroespacial, programación, desarrollo de software, retail automotriz y energía.",
     "velocopter-achievement": "La empresa pasó de aproximadamente 200 a casi 600 empleados durante el año que estuve trabajando allí.",
-    
+
     // Microsoft Experience
-    "microsoft-position": "Generalista de Recursos Humanos, Líder de Entrada de Datos",
-    "microsoft-description": "Procesamiento de transacciones generales de datos para los empleados de Microsoft en EMEA, LATAM y Norte utilizando SAP y PeopleSoft.",
-    "microsoft-achievement": "Aumenté la calidad de datos de incidentes y SAF al 99% y reduje el tiempo de gestión en un 30% en los primeros 3 meses, manteniéndose en los meses consecuentes.",
+    "microsoft-position": "Generalista de RRHH, Líder de Entrada de Datos",
+    "microsoft-description": "Procesamiento de transacciones de datos de RRHH para empleados de EMEA, LATAM y APAC utilizando SAP y PeopleSoft.",
+    "microsoft-achievement": "Elevé la calidad de datos al 99% y la entrega al 100% en los primeros 3 meses, mantenido durante toda la permanencia.",
     
     // Honeywell Experience
     "honeywell-position": "Generalista de Recursos Humanos, Líder de Exp. al Cliente",
@@ -781,8 +786,9 @@ const translations = {
     "honeywell-achievement": "Manejo de un aumento del 300% en el volumen de transacciones con los recursos existentes a través de mejoras de procesos y soluciones automatizadas.",
     
     // Education
+    "purdue-degree": "Especialización en IA Generativa Aplicada",
     "mba-degree": "Maestría en Administración de Empresas",
-    "bachelor-degree": "Licenciatura en Negocios",
+    "bachelor-degree": "Licenciatura en Administración de Empresas",
 
     // AI Engineering Projects (Experience page)
     "ai-projects-position": "Desarrollo Independiente de IA",
