@@ -21,7 +21,10 @@
       "Bash(git fetch:*)",
       "Bash(git pull:*)",
       "Bash(git stash:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(grep:*)",
+      "Bash(tree:*)",
+      "Bash(find:*)"
     ]
   },
   "enableAllProjectMcpServers": false

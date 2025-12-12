@@ -69,8 +69,8 @@ const translations = {
     // Hero section
     "hero-greeting": "Hello, I\'m",
     "hero-ai-credit": "This website was created with the help of AI ✨",
-    "hero-title": "AI Application Engineer",
-    "hero-subtitle": "Building Production-Ready LLM Applications",
+    "hero-title": "Talent Partner & AI Application Engineer",
+    "hero-subtitle": "Building Production-Ready LLM Apps & Empowering Talent Acquisition with AI",
     "hero-description": "Specialized in developing practical AI solutions with LangGraph, Flask, and Claude. I design multi-agent systems, full-stack web applications, and voice AI applications that solve real business problems. Background in recruitment gives me unique insight into building tools people actually want to use.",
     "hero-tech-badge": "Python \u2022 LangChain \u2022 LangGraph",
     "hero-cta-portfolio": "View My Work",
@@ -135,7 +135,7 @@ const translations = {
 
     // About section
     "about-heading": "About Me",
-    "about-p1": "I\'m an AI Application Engineer focused on building production-ready LLM applications that solve real business problems. After spending a year deep in AI development\u2014from multi-agent systems to RAG pipelines to voice AI\u2014I\'m now seeking opportunities to build impactful AI applications in Europe.",
+    "about-p1": "I\'m an AI Application Engineer focused on building production-ready LLM applications that solve real business problems. Special focus on Talent Acquisition AI projects—sourcing, evaluating, interview prep, and decision making using AI, making processes 70% faster and less biased. After spending 2 years deep in AI development—from multi-agent systems to RAG pipelines to voice AI—I\'m now seeking opportunities to build impactful AI applications in Europe.",
     "about-p2": "My approach combines technical implementation with practical thinking. Before transitioning to AI engineering, I spent 4+ years as a Talent Partner, which taught me how to identify what users actually need versus what sounds impressive on paper. This background helps me build AI tools that people want to use, not just technically interesting demos.",
     "about-p3": "I specialize in Python-based LLM applications using LangGraph for agent orchestration, Flask for full-stack web applications, and Claude/GPT-4 for reasoning tasks. My projects focus on practical applications: a multi-language learning platform with real-time AI tutoring, voice-enabled interactions, and production-ready deployment on Railway.",
     "about-p4": "I\'m looking for AI Application Engineer roles where I can contribute to building, deploying, and iterating on LLM-powered products\u2014not training models, but making them useful. ",
@@ -331,8 +331,8 @@ const translations = {
     // Hero section
     "hero-greeting": "Hallo, ich bin",
     "hero-ai-credit": "Diese Website wurde mit Hilfe von KI erstellt ✨",
-    "hero-title": "KI-Anwendungsingenieur",
-    "hero-subtitle": "Entwicklung produktionsreifer LLM-Anwendungen",
+    "hero-title": "Talent Partner & KI-Anwendungsingenieur",
+    "hero-subtitle": "Entwicklung produktionsreifer LLM-Apps & KI-gestützte Talent Acquisition",
     "hero-description": "Spezialisiert auf die Entwicklung praktischer KI-Lösungen mit LangGraph, Flask und Claude. Ich entwerfe Multi-Agenten-Systeme, Full-Stack-Webanwendungen und Sprach-KI-Anwendungen, die echte Geschäftsprobleme lösen. Mein Hintergrund im Recruitment gibt mir einzigartige Einblicke in den Bau von Tools, die Menschen tatsächlich nutzen möchten.",
     "hero-tech-badge": "Python \u2022 LangChain \u2022 LangGraph",
     "hero-cta-portfolio": "Meine Arbeit ansehen",
@@ -398,7 +398,7 @@ const translations = {
 
     // About section
     "about-heading": "Über mich",
-    "about-p1": "Ich bin ein KI-Anwendungsingenieur, der sich auf den Aufbau produktionsreifer LLM-Anwendungen konzentriert, die echte Geschäftsprobleme lösen. Nach einem Jahr intensiver KI-Entwicklung\u2014von Multi-Agenten-Systemen über RAG-Pipelines bis hin zu Sprach-KI\u2014suche ich nun nach Möglichkeiten, wirkungsvolle KI-Anwendungen in Europa zu entwickeln.",
+    "about-p1": "Ich bin ein KI-Anwendungsingenieur, der sich auf den Aufbau produktionsreifer LLM-Anwendungen konzentriert, die echte Geschäftsprobleme lösen. Besonderer Fokus auf Talent Acquisition KI-Projekte—Sourcing, Bewertung, Interview-Vorbereitung und Entscheidungsfindung mit KI, wodurch Prozesse 70% schneller und weniger voreingenommen werden. Nach 2 Jahren intensiver KI-Entwicklung—von Multi-Agenten-Systemen über RAG-Pipelines bis hin zu Sprach-KI—suche ich nun nach Möglichkeiten, wirkungsvolle KI-Anwendungen in Europa zu entwickeln.",
     "about-p2": "Mein Ansatz kombiniert technische Umsetzung mit praktischem Denken. Bevor ich zur KI-Entwicklung wechselte, war ich 4+ Jahre als Talent Partner tätig, was mir beibrachte, zu erkennen, was Benutzer wirklich brauchen, anstatt was nur auf dem Papier beeindruckend klingt. Dieser Hintergrund hilft mir, KI-Tools zu entwickeln, die Menschen nutzen möchten, nicht nur technisch interessante Demos.",
     "about-p3": "Ich spezialisiere mich auf Python-basierte LLM-Anwendungen unter Verwendung von LangGraph für Agenten-Orchestrierung, Flask für Full-Stack-Webanwendungen und Claude/GPT-4 für Reasoning-Aufgaben. Meine Projekte konzentrieren sich auf praktische Anwendungen: eine mehrsprachige Lernplattform mit Echtzeit-KI-Nachhilfe, sprachgesteuerten Interaktionen und produktionsreifem Deployment auf Railway.",
     "about-p4": "Ich suche nach KI-Anwendungsingenieur-Positionen, bei denen ich zum Aufbau, zur Bereitstellung und zur Iteration von LLM-gestützten Produkten beitragen kann\u2014nicht zum Trainieren von Modellen, sondern dazu, sie nützlich zu machen.",
@@ -596,8 +596,8 @@ const translations = {
     // Hero section
     "hero-greeting": "Hola, soy",
     "hero-ai-credit": "Este sitio web fue creado con la ayuda de IA ✨",
-    "hero-title": "Ingeniero de Aplicaciones de IA",
-    "hero-subtitle": "Construyendo Aplicaciones LLM Listas para Producción",
+    "hero-title": "Talent Partner & Ingeniero de Aplicaciones de IA",
+    "hero-subtitle": "Construyendo Apps LLM & Potenciando Talent Acquisition con IA",
     "hero-description": "Especializado en desarrollar soluciones prácticas de IA con LangGraph, Flask y Claude. Diseño sistemas multi-agente, aplicaciones web full-stack y aplicaciones de voz IA que resuelven problemas empresariales reales. Mi experiencia en reclutamiento me da una perspectiva única para construir herramientas que la gente realmente quiere usar.",
     "hero-tech-badge": "Python \u2022 LangChain \u2022 LangGraph",
     "hero-cta-portfolio": "Ver mi trabajo",
@@ -663,7 +663,7 @@ const translations = {
 
     // About section
     "about-heading": "Sobre mí",
-    "about-p1": "Soy un Ingeniero de Aplicaciones de IA enfocado en construir aplicaciones LLM listas para producción que resuelven problemas empresariales reales. Después de pasar un año profundizando en el desarrollo de IA\u2014desde sistemas multi-agente hasta pipelines RAG y voz IA\u2014ahora busco oportunidades para construir aplicaciones de IA impactantes en Europa.",
+    "about-p1": "Soy un Ingeniero de Aplicaciones de IA enfocado en construir aplicaciones LLM listas para producción que resuelven problemas empresariales reales. Enfoque especial en proyectos de IA para Talent Acquisition—sourcing, evaluación, preparación de entrevistas y toma de decisiones con IA, haciendo los procesos 70% más rápidos y menos sesgados. Después de 2 años profundizando en el desarrollo de IA—desde sistemas multi-agente hasta pipelines RAG y voz IA—ahora busco oportunidades para construir aplicaciones de IA impactantes en Europa.",
     "about-p2": "Mi enfoque combina implementación técnica con pensamiento práctico. Antes de hacer la transición a la ingeniería de IA, pasé más de 4 años como Talent Partner, lo que me enseñó a identificar lo que los usuarios realmente necesitan versus lo que suena impresionante en papel. Esta experiencia me ayuda a construir herramientas de IA que la gente quiere usar, no solo demos técnicamente interesantes.",
     "about-p3": "Me especializo en aplicaciones LLM basadas en Python usando LangGraph para orquestación de agentes, Flask para aplicaciones web full-stack, y Claude/GPT-4 para tareas de razonamiento. Mis proyectos se enfocan en aplicaciones prácticas: una plataforma de aprendizaje multilingüe con tutoría de IA en tiempo real, interacciones habilitadas por voz y despliegue listo para producción en Railway.",
     "about-p4": "Busco roles de Ingeniero de Aplicaciones de IA donde pueda contribuir a construir, desplegar e iterar sobre productos impulsados por LLMs\u2014no entrenar modelos, sino hacerlos útiles.",

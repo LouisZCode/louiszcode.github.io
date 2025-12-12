@@ -38,7 +38,7 @@ Live site: [www.luiszermeno.info](https://www.luiszermeno.info)
 ├── index.html              # Homepage
 ├── portfolio.html          # Projects overview
 ├── experience.html         # Professional experience
-└── Resume_LuisZ_2025.pdf   # Downloadable resume
+└── Resume_LuisZ_2026.pdf   # Downloadable resume
 ```
 
 ## 🚀 Setup and Deployment
