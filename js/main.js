@@ -1,140 +1,226 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
+document.addEventListener('DOMContentLoaded', function () {
 
-    if (hamburger && mobileMenu) {
-      hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        hamburger.classList.toggle('active');
-      });
+  // ===========================
+  // 1. THEME TOGGLE
+  // ===========================
+  const themeToggle = document.querySelector('.theme-toggle');
+  const html = document.documentElement;
+
+  // Restore saved theme
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  html.setAttribute('data-theme', savedTheme);
+  updateThemeButton(savedTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateThemeButton(next);
+    });
+  }
+
+  function updateThemeButton(theme) {
+    if (!themeToggle) return;
+    // Update button text based on current language
+    const lang = localStorage.getItem('preferredLanguage') || 'en';
+    if (typeof translations !== 'undefined' && translations[lang]) {
+      if (theme === 'dark') {
+        themeToggle.textContent = translations[lang]['theme-light'] || 'Light Mode';
+      } else {
+        themeToggle.textContent = translations[lang]['theme-dark'] || 'Dark Mode';
+      }
+    } else {
+      themeToggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
     }
+  }
 
-    // Back to top button
-    const backToTop = document.getElementById('back-to-top');
-    if (backToTop) {
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          backToTop.classList.remove('opacity-0', 'pointer-events-none');
-          backToTop.classList.add('opacity-100');
-        } else {
-          backToTop.classList.add('opacity-0', 'pointer-events-none');
-          backToTop.classList.remove('opacity-100');
+  // ===========================
+  // 2. CASE STUDY EXPAND/COLLAPSE
+  // ===========================
+  const projectCards = document.querySelectorAll('.project-card[data-case-study]');
+
+  projectCards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      const targetId = card.getAttribute('data-case-study');
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      // Close all others
+      document.querySelectorAll('.case-study').forEach(function (cs) {
+        if (cs.id !== targetId) {
+          cs.classList.remove('open');
         }
       });
 
-      backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Toggle clicked
+      target.classList.toggle('open');
+
+      // Scroll into view if opening
+      if (target.classList.contains('open')) {
+        setTimeout(function () {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    });
+  });
+
+  // ===========================
+  // 3. MOBILE MENU
+  // ===========================
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('open');
       });
-    }
+    });
+  }
 
-    // Contact form handling
-    const contactForm = document.getElementById('contact-form');
-    const formSuccess = document.getElementById('form-success');
+  // ===========================
+  // 4. SMOOTH ANCHOR SCROLLING
+  // ===========================
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
 
-    if (contactForm && formSuccess) {
-      contactForm.addEventListener('submit', (e) => {
+      const target = document.querySelector(href);
+      if (target) {
         e.preventDefault();
-        // Here you would typically send the form data to a server
-        // For this example, we just simulate success.
-        contactForm.classList.add('hidden');
-        formSuccess.classList.remove('hidden');
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-        // After 5 seconds, reset the form and show it again
-        setTimeout(() => {
-          contactForm.reset();
-          contactForm.classList.remove('hidden');
-          formSuccess.classList.add('hidden');
-        }, 5000);
-      });
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+
+        // Update active nav link
+        document.querySelectorAll('.nav-links a').forEach(function (l) {
+          l.classList.remove('active');
+        });
+        this.classList.add('active');
+      }
+    });
+  });
+
+  // ===========================
+  // 5. INTERSECTION OBSERVER (fade-up on scroll)
+  // ===========================
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.fade-up').forEach(function (el) {
+    observer.observe(el);
+  });
+
+  // ===========================
+  // 6. LANGUAGE SWITCHER
+  // ===========================
+  const langButtons = document.querySelectorAll('.lang-btn');
+
+  // Restore saved language
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  setActiveLanguage(savedLang);
+
+  langButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const lang = btn.getAttribute('data-lang');
+      localStorage.setItem('preferredLanguage', lang);
+      setActiveLanguage(lang);
+      translatePage(lang);
+      updateProjectLinks(lang);
+      updateThemeButton(html.getAttribute('data-theme'));
+    });
+  });
+
+  function setActiveLanguage(lang) {
+    langButtons.forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+  }
+
+  // Initial translation
+  if (savedLang !== 'en') {
+    translatePage(savedLang);
+    updateProjectLinks(savedLang);
+  }
+
+  // ===========================
+  // 7. LAZY LOADING
+  // ===========================
+  document.querySelectorAll('img').forEach(function (img) {
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
     }
+  });
 
-    // Add lazy loading to images for better performance
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-        img.setAttribute('loading', 'lazy');
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                // Adjust for sticky header height
-                const headerOffset = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Fade-in animation for elements on scroll
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements with the .fade-in-scroll class
-    const fadeElements = document.querySelectorAll('.fade-in-scroll');
-    fadeElements.forEach(el => {
-        observer.observe(el);
-    });
 });
 
-// Certificate modal functions (defined globally to be accessible from onclick attributes)
-const certModal = document.getElementById('cert-modal');
-const certModalImage = document.getElementById('cert-modal-image');
-const certModalTitle = document.getElementById('cert-modal-title');
+// ===========================
+// TRANSLATION FUNCTIONS (global scope)
+// ===========================
 
-function openCertModal(imageSrc, title) {
-  if (certModal && certModalImage && certModalTitle) {
-    certModalImage.src = imageSrc;
-    certModalTitle.textContent = title;
-    certModal.classList.remove('hidden');
-    certModal.classList.add('flex');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-  }
-}
+function translatePage(lang) {
+  if (typeof translations === 'undefined' || !translations[lang]) return;
 
-function closeCertModal() {
-  if (certModal) {
-    certModal.classList.add('hidden');
-    certModal.classList.remove('flex');
-    document.body.style.overflow = ''; // Restore background scrolling
-  }
-}
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n');
+    var translation = translations[lang][key];
 
-// Event listener to close modal on backdrop click
-if (certModal) {
-  certModal.addEventListener('click', (e) => {
-    // If the click is on the modal backdrop (the modal itself), close it
-    if (e.target === certModal) {
-      closeCertModal();
+    if (translation) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = translation;
+      } else {
+        el.innerHTML = translation;
+      }
+    }
+  });
+
+  // Also translate placeholder attributes
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang][key]) {
+      el.placeholder = translations[lang][key];
     }
   });
 }
 
-// Event listener to close modal on Escape key press
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !certModal.classList.contains('hidden')) {
-    closeCertModal();
-  }
-});
+function updateProjectLinks(lang) {
+  var suffix = '';
+  if (lang === 'de') suffix = '-de';
+  if (lang === 'es') suffix = '-es';
+
+  document.querySelectorAll('.project-link[data-project]').forEach(function (link) {
+    var project = link.getAttribute('data-project');
+    if (suffix) {
+      link.href = 'projects/' + project + suffix + '.html';
+    } else {
+      link.href = 'projects/' + project + '.html';
+    }
+  });
+}

@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Redesign Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===========================
+       DESIGN SYSTEM — HSL Tokens
+       =========================== */
+    :root {
+      /* Primary brand hue (blue-cyan range) */
+      --hue: 210;
+      --sat: 60%;
+
+      /* Transition */
+      --transition-base: 0.3s ease;
+    }
+
+    /* DARK MODE (default) */
+    [data-theme="dark"] {
+      --bg-base: hsl(var(--hue), 10%, 0%);
+      --bg-card: hsl(var(--hue), 10%, 5%);
+      --bg-raised: hsl(var(--hue), 10%, 10%);
+      --bg-hover: hsl(var(--hue), 10%, 13%);
+
+      --text-heading: hsl(0, 0%, 90%);
+      --text-body: hsl(0, 0%, 72%);
+      --text-muted: hsl(0, 0%, 50%);
+
+      --primary: hsl(var(--hue), var(--sat), 55%);
+      --primary-hover: hsl(var(--hue), var(--sat), 65%);
+      --primary-subtle: hsl(var(--hue), var(--sat), 15%);
+
+      --border-card: hsl(var(--hue), 10%, 12%);
+      --border-card-hover: hsl(var(--hue), 10%, 20%);
+
+      /* Card gradient: light from above */
+      --card-gradient: linear-gradient(
+        180deg,
+        hsl(var(--hue), 10%, 7%) 0%,
+        hsl(var(--hue), 10%, 4%) 100%
+      );
+      --card-gradient-hover: linear-gradient(
+        180deg,
+        hsl(var(--hue), 10%, 10%) 0%,
+        hsl(var(--hue), 10%, 5%) 100%
+      );
+
+      /* Dark mode depth: lighter top border */
+      --card-highlight: hsl(var(--hue), 10%, 15%);
+
+      --scrollbar-track: hsl(var(--hue), 10%, 5%);
+      --scrollbar-thumb: hsl(var(--hue), 10%, 18%);
+    }
+
+    /* LIGHT MODE */
+    [data-theme="light"] {
+      --bg-base: hsl(var(--hue), 10%, 98%);
+      --bg-card: hsl(var(--hue), 10%, 95%);
+      --bg-raised: hsl(var(--hue), 10%, 90%);
+      --bg-hover: hsl(var(--hue), 10%, 87%);
+
+      --text-heading: hsl(0, 0%, 10%);
+      --text-body: hsl(0, 0%, 28%);
+      --text-muted: hsl(0, 0%, 50%);
+
+      --primary: hsl(var(--hue), var(--sat), 45%);
+      --primary-hover: hsl(var(--hue), var(--sat), 38%);
+      --primary-subtle: hsl(var(--hue), var(--sat), 90%);
+
+      --border-card: hsl(var(--hue), 10%, 88%);
+      --border-card-hover: hsl(var(--hue), 10%, 78%);
+
+      --card-gradient: linear-gradient(
+        180deg,
+        hsl(var(--hue), 10%, 97%) 0%,
+        hsl(var(--hue), 10%, 93%) 100%
+      );
+      --card-gradient-hover: linear-gradient(
+        180deg,
+        hsl(var(--hue), 10%, 99%) 0%,
+        hsl(var(--hue), 10%, 94%) 100%
+      );
+
+      /* Light mode depth: highlight + shadow */
+      --card-highlight: hsl(var(--hue), 10%, 100%);
+
+      --scrollbar-track: hsl(var(--hue), 10%, 95%);
+      --scrollbar-thumb: hsl(var(--hue), 10%, 75%);
+    }
+
+    /* ===========================
+       RESET & BASE
+       =========================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-body);
+      background-color: var(--bg-base);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+    ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+
+    /* ===========================
+       TYPOGRAPHY
+       =========================== */
+    h1, h2, h3, h4 {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-heading);
+      line-height: 1.2;
+    }
+
+    h1 { font-size: 3.5rem; font-weight: 700; letter-spacing: -0.03em; }
+    h2 { font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; }
+    h3 { font-size: 1.25rem; font-weight: 600; }
+    h4 { font-size: 1rem; font-weight: 500; }
+
+    p { max-width: 60ch; }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color var(--transition-base);
+    }
+    a:hover { color: var(--primary-hover); }
+
+    /* ===========================
+       LAYOUT
+       =========================== */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 6rem 0;
+    }
+
+    /* ===========================
+       NAVIGATION
+       =========================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: hsla(var(--hue), 10%, 0%, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-card);
+      transition: background var(--transition-base);
+    }
+
+    [data-theme="light"] .nav {
+      background: hsla(var(--hue), 10%, 98%, 0.85);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-brand {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text-heading);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color var(--transition-base);
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text-heading);
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border-card);
+      color: var(--text-muted);
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      transition: all var(--transition-base);
+    }
+    .theme-toggle:hover {
+      border-color: var(--border-card-hover);
+      color: var(--text-heading);
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 0.25rem;
+    }
+    .lang-btn {
+      background: none;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      transition: all var(--transition-base);
+    }
+    .lang-btn:hover { color: var(--text-heading); }
+    .lang-btn.active {
+      color: var(--primary);
+      border-color: var(--primary-subtle);
+      background: var(--primary-subtle);
+    }
+
+    /* ===========================
+       HERO SECTION
+       =========================== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 64px;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 .accent {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-body);
+      margin-bottom: 2.5rem;
+      max-width: 55ch;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* ===========================
+       BUTTONS
+       =========================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      color: #fff;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-body);
+      border: 1px solid var(--border-card);
+    }
+    .btn-ghost:hover {
+      border-color: var(--border-card-hover);
+      color: var(--text-heading);
+      background: var(--bg-card);
+    }
+
+    /* ===========================
+       PROJECT CARDS
+       =========================== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--card-gradient);
+      border: 1px solid var(--border-card);
+      border-top-color: var(--card-highlight);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      position: relative;
+    }
+
+    .project-card:hover {
+      background: var(--card-gradient-hover);
+      border-color: var(--border-card-hover);
+      transform: translateY(-2px);
+    }
+
+    [data-theme="light"] .project-card {
+      box-shadow:
+        0 1px 3px hsla(var(--hue), 10%, 0%, 0.06),
+        0 6px 16px hsla(var(--hue), 10%, 0%, 0.04);
+    }
+    [data-theme="light"] .project-card:hover {
+      box-shadow:
+        0 2px 6px hsla(var(--hue), 10%, 0%, 0.08),
+        0 12px 28px hsla(var(--hue), 10%, 0%, 0.06);
+    }
+
+    .project-card-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: var(--bg-raised);
+    }
+
+    .project-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-card-image img {
+      transform: scale(1.03);
+    }
+
+    .project-card-body {
+      padding: 1.5rem;
+    }
+
+    .project-card-body h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card-outcome {
+      color: var(--text-body);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background: var(--primary-subtle);
+      color: var(--primary);
+    }
+
+    .project-card-cta {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--border-card);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .project-card-cta .arrow {
+      transition: transform var(--transition-base);
+    }
+    .project-card:hover .project-card-cta .arrow {
+      transform: translateX(4px);
+    }
+
+    /* ===========================
+       CASE STUDY EXPANSION
+       =========================== */
+    .case-study {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .case-study.open {
+      max-height: 1200px;
+      opacity: 1;
+    }
+
+    .case-study-inner {
+      padding: 2rem 0;
+    }
+
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .case-study-section h4 {
+      color: var(--primary);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+
+    .case-study-section p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .case-study-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .tech-badge {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      background: var(--bg-raised);
+      color: var(--text-body);
+      border: 1px solid var(--border-card);
+    }
+
+    .case-study-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    /* ===========================
+       ABOUT / CONTACT
+       =========================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-card {
+      background: var(--card-gradient);
+      border: 1px solid var(--border-card);
+      border-top-color: var(--card-highlight);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    [data-theme="light"] .contact-card {
+      box-shadow:
+        0 1px 3px hsla(var(--hue), 10%, 0%, 0.06),
+        0 6px 16px hsla(var(--hue), 10%, 0%, 0.04);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      color: var(--text-body);
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border-card);
+      transition: color var(--transition-base);
+    }
+    .contact-link:last-child { border-bottom: none; }
+    .contact-link:hover { color: var(--primary); }
+
+    .contact-link-icon {
+      width: 20px;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    /* ===========================
+       FOOTER
+       =========================== */
+    .footer {
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-card);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ===========================
+       SECTION HEADERS
+       =========================== */
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 0.75rem;
+    }
+
+    /* ===========================
+       RESPONSIVE
+       =========================== */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 1.5rem; }
+
+      section { padding: 4rem 0; }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-study-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .nav-links { display: none; }
+
+      .hero h1 { font-size: 2.25rem; }
+    }
+
+    /* ===========================
+       SUBTLE ENTRANCE ANIMATION
+       =========================== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .fade-up-delay-1 { animation-delay: 0.1s; }
+    .fade-up-delay-2 { animation-delay: 0.2s; }
+    .fade-up-delay-3 { animation-delay: 0.3s; }
+    .fade-up-delay-4 { animation-delay: 0.4s; }
+
+    /* ===========================
+       DIVIDER
+       =========================== */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border-card);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-brand">Luis Zermeno</a>
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <div class="lang-switcher">
+          <button class="lang-btn active">EN</button>
+          <button class="lang-btn">DE</button>
+          <button class="lang-btn">ES</button>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">Light Mode</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-label fade-up">AI Applications Engineer</span>
+        <h1 class="fade-up fade-up-delay-1">
+          I build AI products<br>that <span class="accent">solve real problems</span>
+        </h1>
+        <p class="hero-subtitle fade-up fade-up-delay-2">
+          From multilingual language learning platforms to intelligent agent systems &mdash; I design, build, and ship AI applications end to end.
+        </p>
+        <div class="hero-cta fade-up fade-up-delay-3">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#about" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Selected Work</span>
+        <h2>Projects</h2>
+        <p>AI applications built from problem to production.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project Card 1: Spralingua -->
+        <div class="project-card fade-up fade-up-delay-1" onclick="toggleCaseStudy('cs-spralingua')">
+          <div class="project-card-image">
+            <img src="images/spralingua.png" alt="Spralingua AI Language Platform"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="project-card-body">
+            <h3>Spralingua</h3>
+            <p class="project-card-outcome">
+              AI language learning platform that delivers personalized lessons, real-time grammar correction, and natural conversation practice in 4 languages.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Flask</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">TTS</span>
+            </div>
+          </div>
+          <div class="project-card-cta">
+            <span>View Case Study</span>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </div>
+
+        <!-- Project Card 2: Placeholder -->
+        <div class="project-card fade-up fade-up-delay-2" onclick="toggleCaseStudy('cs-agent')">
+          <div class="project-card-image" style="display:flex;align-items:center;justify-content:center;">
+            <span style="color:var(--text-muted);font-size:0.85rem;">Project Image</span>
+          </div>
+          <div class="project-card-body">
+            <h3>AI Voice Agent</h3>
+            <p class="project-card-outcome">
+              Conversational AI agent with real-time speech recognition and natural language understanding for hands-free task management.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">LangGraph</span>
+              <span class="tag">WebSockets</span>
+            </div>
+          </div>
+          <div class="project-card-cta">
+            <span>View Case Study</span>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </div>
+
+        <!-- Project Card 3: Placeholder -->
+        <div class="project-card fade-up fade-up-delay-3" onclick="toggleCaseStudy('cs-three')">
+          <div class="project-card-image" style="display:flex;align-items:center;justify-content:center;">
+            <span style="color:var(--text-muted);font-size:0.85rem;">Project Image</span>
+          </div>
+          <div class="project-card-body">
+            <h3>Recruitment Analytics</h3>
+            <p class="project-card-outcome">
+              Data pipeline and dashboard that reduced time-to-hire by 30% through automated candidate scoring and funnel analysis.
+            </p>
+            <div class="project-card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">OpenAI</span>
+              <span class="tag">Gradio</span>
+            </div>
+          </div>
+          <div class="project-card-cta">
+            <span>View Case Study</span>
+            <span class="arrow">&rarr;</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Case Study: Spralingua (expandable) -->
+      <div class="case-study" id="cs-spralingua">
+        <div class="case-study-inner">
+          <div class="divider" style="margin-bottom: 2rem;"></div>
+          <div class="case-study-grid">
+            <div class="case-study-section">
+              <h4>The Problem</h4>
+              <p>
+                Language learners plateau because generic apps lack personalized feedback and real conversational practice. Existing tools treat every learner the same, ignoring proficiency gaps and native language interference patterns.
+              </p>
+            </div>
+            <div class="case-study-section">
+              <h4>The Approach</h4>
+              <p>
+                Built a full-stack platform that uses Claude's language understanding to generate adaptive lessons, provide contextual grammar corrections, and simulate natural conversations. Designed a multi-agent architecture where specialized agents handle vocabulary, grammar, and conversation separately.
+              </p>
+            </div>
+            <div class="case-study-section">
+              <h4>The Result</h4>
+              <p>
+                A production application serving users across 4 languages (Spanish, German, Portuguese, English) with real-time speech-to-text, text-to-speech, and intelligent lesson progression. Deployed on Railway with PostgreSQL persistence.
+              </p>
+            </div>
+            <div class="case-study-section">
+              <h4>Key Decisions</h4>
+              <p>
+                Chose Flask over Django for faster iteration. Used Minimax TTS for natural-sounding multilingual speech. Implemented session-based learning to track progress without requiring accounts. Prioritized conversation quality over feature breadth.
+              </p>
+            </div>
+          </div>
+          <div class="case-study-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Flask</span>
+            <span class="tech-badge">Claude API</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">SQLAlchemy</span>
+            <span class="tech-badge">Minimax TTS</span>
+            <span class="tech-badge">Web Speech API</span>
+            <span class="tech-badge">Railway</span>
+            <span class="tech-badge">Gunicorn</span>
+          </div>
+          <div class="case-study-actions">
+            <a href="https://spralingua.com" class="btn btn-primary" target="_blank">Try Live Demo</a>
+            <a href="https://github.com/LouisZCode/Spralingua_AIAgents_App" class="btn btn-ghost" target="_blank">View Source</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study: Agent (expandable) -->
+      <div class="case-study" id="cs-agent">
+        <div class="case-study-inner">
+          <div class="divider" style="margin-bottom: 2rem;"></div>
+          <div class="case-study-grid">
+            <div class="case-study-section">
+              <h4>The Problem</h4>
+              <p>Placeholder case study content. This section would describe the problem the project solves.</p>
+            </div>
+            <div class="case-study-section">
+              <h4>The Approach</h4>
+              <p>Placeholder content describing design decisions, tradeoffs, and technical approach.</p>
+            </div>
+            <div class="case-study-section">
+              <h4>The Result</h4>
+              <p>Placeholder content describing measurable outcomes and impact.</p>
+            </div>
+            <div class="case-study-section">
+              <h4>Key Decisions</h4>
+              <p>Placeholder content describing architectural choices and reasoning.</p>
+            </div>
+          </div>
+          <div class="case-study-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">LangGraph</span>
+            <span class="tech-badge">WebSockets</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study: Three (expandable) -->
+      <div class="case-study" id="cs-three">
+        <div class="case-study-inner">
+          <div class="divider" style="margin-bottom: 2rem;"></div>
+          <div class="case-study-grid">
+            <div class="case-study-section">
+              <h4>The Problem</h4>
+              <p>Placeholder case study content for the third project.</p>
+            </div>
+            <div class="case-study-section">
+              <h4>The Approach</h4>
+              <p>Placeholder content describing technical approach.</p>
+            </div>
+            <div class="case-study-section">
+              <h4>The Result</h4>
+              <p>Placeholder content describing outcomes.</p>
+            </div>
+            <div class="case-study-section">
+              <h4>Key Decisions</h4>
+              <p>Placeholder content describing decisions.</p>
+            </div>
+          </div>
+          <div class="case-study-tech">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">OpenAI</span>
+            <span class="tech-badge">Gradio</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== ABOUT / CONTACT ========== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-label">About</span>
+          <h2>Luis Zermeno</h2>
+          <p>
+            I started in recruitment &mdash; understanding people, roles, and what makes a great match. Then I discovered that AI could amplify that same intuition at scale. So I made the leap.
+          </p>
+          <p>
+            Now I build AI applications end to end: from problem definition through architecture, development, and deployment. I care about products that work for real users, not just impressive demos.
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1.5rem;">
+            Based in Germany &middot; Fluent in Spanish, German, English &amp; French
+          </p>
+        </div>
+        <div class="contact-card">
+          <h3>Get in Touch</h3>
+          <a href="#" class="contact-link">
+            <span class="contact-link-icon">&#9993;</span>
+            <span>email@example.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/luis-zermeno-3b2210108/" class="contact-link" target="_blank">
+            <span class="contact-link-icon">in</span>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/louiszcode" class="contact-link" target="_blank">
+            <span class="contact-link-icon">&lt;/&gt;</span>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Luis Zermeno. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.querySelector('.theme-toggle');
+      if (html.getAttribute('data-theme') === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        btn.textContent = 'Dark Mode';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        btn.textContent = 'Light Mode';
+      }
+    }
+
+    // Case study toggle
+    function toggleCaseStudy(id) {
+      const el = document.getElementById(id);
+      // Close all others
+      document.querySelectorAll('.case-study').forEach(cs => {
+        if (cs.id !== id) cs.classList.remove('open');
+      });
+      el.classList.toggle('open');
+
+      // Scroll into view if opening
+      if (el.classList.contains('open')) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+
+    // Language switcher (visual only for preview)
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    // Smooth nav scroll
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+        document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

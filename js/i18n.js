@@ -265,6 +265,75 @@ const translations = {
     "ai-projects-achievement3": "Godot game with 50% AI-generated assets (ComfyUI, stable diffusion workflows), completed in 7-day game jam with 46 player ratings averaging 4.2/5 stars.",
     "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG Systems, Voice AI (TTS/STT)",
     "career-bridge-text": "My recruitment background directly informs my AI development work. Four years of understanding what users need, identifying pain points in workflows, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems\u2014not just interesting technical demos.",
+
+    // ========== NEW: Single-page redesign keys ==========
+
+    // Navigation
+    "nav-projects": "Projects",
+    "nav-about": "About",
+
+    // Theme toggle
+    "theme-light": "Light Mode",
+    "theme-dark": "Dark Mode",
+
+    // Hero
+    "hero-label": "AI Applications Engineer",
+    "hero-headline-prefix": "I build AI products that ",
+    "hero-headline-accent": "solve real problems",
+    "hero-subtitle-new": "From multilingual language learning platforms to intelligent agent systems \u2014 I design, build, and ship AI applications end to end.",
+    "hero-cta-projects": "View Projects",
+    "hero-cta-contact": "Get in Touch",
+
+    // Projects section
+    "section-projects-label": "Selected Work",
+    "section-projects-title": "Projects",
+    "section-projects-desc": "AI applications built from problem to production.",
+    "view-case-study": "View Case Study",
+    "project-spralingua-outcome": "AI language learning platform that delivers personalized lessons, real-time grammar correction, and natural conversation practice in 4 languages.",
+    "project-voice-agent-title": "AI Voice Agent",
+    "project-voice-agent-outcome": "Privacy-first voice assistant with 90%+ recognition accuracy, running entirely offline with zero cloud dependency.",
+    "project-recruiting-ai-title": "AI Recruiting Assistant",
+    "project-recruiting-ai-outcome": "Custom LLM assistant that automates candidate screening, interview preparation, and hiring decision support.",
+
+    // Case study labels
+    "cs-label-problem": "The Problem",
+    "cs-label-approach": "The Approach",
+    "cs-label-result": "The Result",
+    "cs-label-decisions": "Key Decisions",
+    "cs-try-demo": "Try Live Demo",
+    "cs-view-source": "View Source",
+    "cs-full-case-study": "Full Case Study",
+
+    // Case study: Spralingua
+    "cs-spralingua-problem": "Language learners plateau because generic apps lack personalized feedback and real conversational practice. Existing tools treat every learner the same, ignoring proficiency gaps and native language interference patterns.",
+    "cs-spralingua-approach": "Built a full-stack platform using Claude\u2019s language understanding to generate adaptive lessons, provide contextual grammar corrections, and simulate natural conversations. Multi-agent architecture with specialized agents for vocabulary, grammar, and conversation.",
+    "cs-spralingua-result": "A production application serving users across 4 languages (Spanish, German, Portuguese, English) with real-time speech-to-text, text-to-speech, and intelligent lesson progression. Sub-2-second conversation loop. Deployed on Railway with PostgreSQL persistence.",
+    "cs-spralingua-decisions": "Chose Flask over Django for faster iteration. Used Minimax TTS for natural-sounding multilingual speech. Implemented session-based learning to track progress without requiring accounts. Prioritized conversation quality over feature breadth.",
+
+    // Case study: Voice Agent
+    "cs-voice-agent-problem": "Cloud-based voice assistants raise privacy concerns and incur recurring costs. Users who want AI assistance with sensitive documents need an offline-first solution that never sends data externally.",
+    "cs-voice-agent-approach": "Built a fully offline voice assistant using Vosk for speech recognition and XTTS-v2 for neural text-to-speech. The entire pipeline runs locally with no cloud dependency.",
+    "cs-voice-agent-result": "Privacy-first assistant achieving 90%+ recognition accuracy with zero recurring costs. Handles document analysis and summarization entirely on-device.",
+    "cs-voice-agent-decisions": "Chose Vosk over Whisper for lower resource requirements. XTTS-v2 selected for its natural-sounding multilingual output. Designed for consumer hardware without GPU requirements.",
+
+    // Case study: Recruiting AI
+    "cs-recruiting-ai-problem": "Recruiters spend hours on repetitive screening tasks that could be automated. Manual candidate evaluation is inconsistent and prone to bias.",
+    "cs-recruiting-ai-approach": "Building a custom LLM assistant with RAG pipeline for automated candidate scoring, interview preparation, and data-driven hiring decision support.",
+    "cs-recruiting-ai-result": "In development. Targeting 70% reduction in initial screening time with more consistent evaluation criteria.",
+    "cs-recruiting-ai-decisions": "Using LangChain for document processing pipeline. RAG architecture for context-aware candidate evaluation. Designed to augment recruiter judgment, not replace it.",
+
+    // About section
+    "about-label": "About",
+    "about-name": "Luis Zermeno",
+    "about-intro": "I started in recruitment \u2014 understanding people, roles, and what makes a great match. Then I discovered that AI could amplify that same intuition at scale. So I made the leap.",
+    "about-detail": "Now I build AI applications end to end: from problem definition through architecture, development, and deployment. I care about products that work for real users, not just impressive demos.",
+    "about-meta": "Based in Germany \u00b7 Fluent in Spanish, German, English & French",
+
+    // Contact
+    "contact-title": "Get in Touch",
+
+    // Footer
+    "copyright-new": "\u00a9 2026 Luis Zermeno. All rights reserved.",
   },
   
   de: {
@@ -532,6 +601,75 @@ const translations = {
     "ai-projects-achievement3": "Godot-Spiel mit 50% KI-generierten Assets (ComfyUI, Stable Diffusion Workflows), fertiggestellt in 7-Tage-Game-Jam mit 46 Spielerbewertungen im Durchschnitt 4,2/5 Sternen.",
     "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG-Systeme, Sprach-KI (TTS/STT)",
     "career-bridge-text": "Mein Recruitment-Hintergrund beeinflusst direkt meine KI-Entwicklungsarbeit. Vier Jahre des Verstehens, was Benutzer brauchen, der Identifizierung von Schwachstellen in Workflows und der Übersetzung von Geschäftsanforderungen in Lösungen gibt mir einen einzigartigen Vorteil beim Bau von KI-Anwendungen, die echte Probleme lösen\u2014nicht nur technisch interessante Demos.",
+
+    // ========== NEW: Single-page redesign keys ==========
+
+    // Navigation
+    "nav-projects": "Projekte",
+    "nav-about": "\u00dcber mich",
+
+    // Theme toggle
+    "theme-light": "Heller Modus",
+    "theme-dark": "Dunkler Modus",
+
+    // Hero
+    "hero-label": "KI-Anwendungsingenieur",
+    "hero-headline-prefix": "Ich baue KI-Produkte, die ",
+    "hero-headline-accent": "echte Probleme l\u00f6sen",
+    "hero-subtitle-new": "Von mehrsprachigen Sprachlernplattformen bis hin zu intelligenten Agentensystemen \u2014 ich entwerfe, baue und liefere KI-Anwendungen von Anfang bis Ende.",
+    "hero-cta-projects": "Projekte ansehen",
+    "hero-cta-contact": "Kontakt aufnehmen",
+
+    // Projects section
+    "section-projects-label": "Ausgew\u00e4hlte Arbeiten",
+    "section-projects-title": "Projekte",
+    "section-projects-desc": "KI-Anwendungen vom Problem bis zur Produktion.",
+    "view-case-study": "Fallstudie ansehen",
+    "project-spralingua-outcome": "KI-Sprachlernplattform mit personalisierten Lektionen, Echtzeit-Grammatikkorrektur und nat\u00fcrlicher Konversations\u00fcbung in 4 Sprachen.",
+    "project-voice-agent-title": "KI-Sprachagent",
+    "project-voice-agent-outcome": "Datenschutzorientierter Sprachassistent mit 90%+ Erkennungsgenauigkeit, vollst\u00e4ndig offline ohne Cloud-Abh\u00e4ngigkeit.",
+    "project-recruiting-ai-title": "KI-Recruiting-Assistent",
+    "project-recruiting-ai-outcome": "Ma\u00dfgeschneiderter LLM-Assistent zur Automatisierung von Kandidatenscreening, Interviewvorbereitung und Einstellungsentscheidungen.",
+
+    // Case study labels
+    "cs-label-problem": "Das Problem",
+    "cs-label-approach": "Der Ansatz",
+    "cs-label-result": "Das Ergebnis",
+    "cs-label-decisions": "Wichtige Entscheidungen",
+    "cs-try-demo": "Live-Demo testen",
+    "cs-view-source": "Quellcode ansehen",
+    "cs-full-case-study": "Vollst\u00e4ndige Fallstudie",
+
+    // Case study: Spralingua
+    "cs-spralingua-problem": "Sprachlerner stagnieren, weil generische Apps kein personalisiertes Feedback und keine echte Konversations\u00fcbung bieten. Bestehende Tools behandeln jeden Lerner gleich und ignorieren Kompetenzl\u00fccken und Interferenzmuster der Muttersprache.",
+    "cs-spralingua-approach": "Entwicklung einer Full-Stack-Plattform mit Claude\u2019s Sprachverst\u00e4ndnis f\u00fcr adaptive Lektionen, kontextbezogene Grammatikkorrekturen und simulierte nat\u00fcrliche Konversationen. Multi-Agenten-Architektur mit spezialisierten Agenten f\u00fcr Vokabular, Grammatik und Konversation.",
+    "cs-spralingua-result": "Eine Produktionsanwendung f\u00fcr Benutzer in 4 Sprachen (Spanisch, Deutsch, Portugiesisch, Englisch) mit Echtzeit-Sprache-zu-Text, Text-zu-Sprache und intelligenter Lektionsprogression. Konversationsschleife unter 2 Sekunden. Deployed auf Railway mit PostgreSQL.",
+    "cs-spralingua-decisions": "Flask statt Django f\u00fcr schnellere Iteration gew\u00e4hlt. Minimax TTS f\u00fcr nat\u00fcrlich klingende mehrsprachige Sprache. Sitzungsbasiertes Lernen zur Fortschrittsverfolgung ohne Kontoerstellung. Konversationsqualit\u00e4t \u00fcber Funktionsumfang priorisiert.",
+
+    // Case study: Voice Agent
+    "cs-voice-agent-problem": "Cloud-basierte Sprachassistenten werfen Datenschutzbedenken auf und verursachen wiederkehrende Kosten. Nutzer, die KI-Unterst\u00fctzung f\u00fcr sensible Dokumente ben\u00f6tigen, brauchen eine Offline-L\u00f6sung, die niemals Daten extern sendet.",
+    "cs-voice-agent-approach": "Entwicklung eines vollst\u00e4ndig offline funktionierenden Sprachassistenten mit Vosk f\u00fcr Spracherkennung und XTTS-v2 f\u00fcr neurale Text-zu-Sprache. Die gesamte Pipeline l\u00e4uft lokal ohne Cloud-Abh\u00e4ngigkeit.",
+    "cs-voice-agent-result": "Datenschutzorientierter Assistent mit 90%+ Erkennungsgenauigkeit ohne wiederkehrende Kosten. Dokumentenanalyse und -zusammenfassung vollst\u00e4ndig auf dem Ger\u00e4t.",
+    "cs-voice-agent-decisions": "Vosk statt Whisper f\u00fcr geringere Ressourcenanforderungen gew\u00e4hlt. XTTS-v2 wegen nat\u00fcrlich klingender mehrsprachiger Ausgabe ausgew\u00e4hlt. F\u00fcr Consumer-Hardware ohne GPU-Anforderungen konzipiert.",
+
+    // Case study: Recruiting AI
+    "cs-recruiting-ai-problem": "Recruiter verbringen Stunden mit wiederkehrenden Screening-Aufgaben, die automatisiert werden k\u00f6nnten. Manuelle Kandidatenbewertung ist inkonsistent und anf\u00e4llig f\u00fcr Voreingenommenheit.",
+    "cs-recruiting-ai-approach": "Entwicklung eines ma\u00dfgeschneiderten LLM-Assistenten mit RAG-Pipeline f\u00fcr automatisiertes Kandidatenscoring, Interviewvorbereitung und datengest\u00fctzte Einstellungsentscheidungen.",
+    "cs-recruiting-ai-result": "In Entwicklung. Ziel: 70% Reduzierung der anf\u00e4nglichen Screening-Zeit mit konsistenteren Bewertungskriterien.",
+    "cs-recruiting-ai-decisions": "LangChain f\u00fcr die Dokumentenverarbeitungspipeline. RAG-Architektur f\u00fcr kontextbewusste Kandidatenbewertung. Konzipiert zur Unterst\u00fctzung des Recruiter-Urteils, nicht als Ersatz.",
+
+    // About section
+    "about-label": "\u00dcber mich",
+    "about-name": "Luis Zermeno",
+    "about-intro": "Ich begann im Recruitment \u2014 Menschen, Rollen und das Verst\u00e4ndnis daf\u00fcr, was ein gutes Match ausmacht. Dann entdeckte ich, dass KI diese Intuition skalieren kann. Also machte ich den Sprung.",
+    "about-detail": "Jetzt baue ich KI-Anwendungen von Anfang bis Ende: von der Problemdefinition \u00fcber die Architektur bis hin zur Entwicklung und zum Deployment. Mir sind Produkte wichtig, die f\u00fcr echte Nutzer funktionieren, nicht nur beeindruckende Demos.",
+    "about-meta": "Standort Deutschland \u00b7 Flie\u00dfend in Spanisch, Deutsch, Englisch & Franz\u00f6sisch",
+
+    // Contact
+    "contact-title": "Kontakt aufnehmen",
+
+    // Footer
+    "copyright-new": "\u00a9 2026 Luis Zermeno. Alle Rechte vorbehalten.",
   },
   
   es: {
@@ -799,6 +937,75 @@ const translations = {
     "ai-projects-achievement3": "Juego en Godot con 50% de assets generados por IA (ComfyUI, flujos de trabajo de difusión estable), completado en game jam de 7 días con 46 calificaciones de jugadores promediando 4.2/5 estrellas.",
     "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, Sistemas RAG, IA de Voz (TTS/STT)",
     "career-bridge-text": "Mi experiencia en reclutamiento informa directamente mi trabajo de desarrollo de IA. Cuatro años entendiendo lo que los usuarios necesitan, identificando puntos débiles en flujos de trabajo y traduciendo requisitos empresariales en soluciones me da una ventaja única en construir aplicaciones de IA que resuelven problemas reales\u2014no solo demos técnicamente interesantes.",
+
+    // ========== NEW: Single-page redesign keys ==========
+
+    // Navigation
+    "nav-projects": "Proyectos",
+    "nav-about": "Sobre m\u00ed",
+
+    // Theme toggle
+    "theme-light": "Modo Claro",
+    "theme-dark": "Modo Oscuro",
+
+    // Hero
+    "hero-label": "Ingeniero de Aplicaciones de IA",
+    "hero-headline-prefix": "Construyo productos de IA que ",
+    "hero-headline-accent": "resuelven problemas reales",
+    "hero-subtitle-new": "Desde plataformas multilingües de aprendizaje de idiomas hasta sistemas inteligentes de agentes \u2014 diseño, construyo y entrego aplicaciones de IA de principio a fin.",
+    "hero-cta-projects": "Ver Proyectos",
+    "hero-cta-contact": "Contactar",
+
+    // Projects section
+    "section-projects-label": "Trabajo Seleccionado",
+    "section-projects-title": "Proyectos",
+    "section-projects-desc": "Aplicaciones de IA del problema a la producción.",
+    "view-case-study": "Ver Caso de Estudio",
+    "project-spralingua-outcome": "Plataforma de aprendizaje de idiomas con IA que ofrece lecciones personalizadas, corrección gramatical en tiempo real y práctica de conversación natural en 4 idiomas.",
+    "project-voice-agent-title": "Agente de Voz con IA",
+    "project-voice-agent-outcome": "Asistente de voz enfocado en privacidad con 90%+ de precisión de reconocimiento, funcionando completamente offline sin dependencia de la nube.",
+    "project-recruiting-ai-title": "Asistente de Reclutamiento con IA",
+    "project-recruiting-ai-outcome": "Asistente LLM personalizado que automatiza el screening de candidatos, preparación de entrevistas y soporte en decisiones de contratación.",
+
+    // Case study labels
+    "cs-label-problem": "El Problema",
+    "cs-label-approach": "El Enfoque",
+    "cs-label-result": "El Resultado",
+    "cs-label-decisions": "Decisiones Clave",
+    "cs-try-demo": "Probar Demo en Vivo",
+    "cs-view-source": "Ver Código Fuente",
+    "cs-full-case-study": "Caso de Estudio Completo",
+
+    // Case study: Spralingua
+    "cs-spralingua-problem": "Los estudiantes de idiomas se estancan porque las apps genéricas carecen de retroalimentación personalizada y práctica conversacional real. Las herramientas existentes tratan a todos los estudiantes por igual, ignorando brechas de competencia y patrones de interferencia del idioma nativo.",
+    "cs-spralingua-approach": "Construí una plataforma full-stack usando la comprensión lingüística de Claude para generar lecciones adaptativas, proporcionar correcciones gramaticales contextuales y simular conversaciones naturales. Arquitectura multi-agente con agentes especializados para vocabulario, gramática y conversación.",
+    "cs-spralingua-result": "Una aplicación en producción sirviendo usuarios en 4 idiomas (español, alemán, portugués, inglés) con voz-a-texto en tiempo real, texto-a-voz y progresión inteligente de lecciones. Ciclo de conversación en menos de 2 segundos. Desplegado en Railway con PostgreSQL.",
+    "cs-spralingua-decisions": "Elegí Flask sobre Django para iteración más rápida. Minimax TTS para voz multilingüe natural. Aprendizaje basado en sesiones para seguimiento de progreso sin requerir cuentas. Prioridad en calidad de conversación sobre amplitud de funciones.",
+
+    // Case study: Voice Agent
+    "cs-voice-agent-problem": "Los asistentes de voz basados en la nube generan preocupaciones de privacidad y costos recurrentes. Los usuarios que necesitan asistencia de IA con documentos sensibles necesitan una solución offline que nunca envíe datos externamente.",
+    "cs-voice-agent-approach": "Construí un asistente de voz completamente offline usando Vosk para reconocimiento de voz y XTTS-v2 para texto-a-voz neuronal. Toda la pipeline funciona localmente sin dependencia de la nube.",
+    "cs-voice-agent-result": "Asistente enfocado en privacidad con 90%+ de precisión de reconocimiento sin costos recurrentes. Análisis y resumen de documentos completamente en el dispositivo.",
+    "cs-voice-agent-decisions": "Elegí Vosk sobre Whisper por menores requisitos de recursos. XTTS-v2 seleccionado por su salida multilingüe natural. Diseñado para hardware de consumo sin requisitos de GPU.",
+
+    // Case study: Recruiting AI
+    "cs-recruiting-ai-problem": "Los reclutadores pasan horas en tareas repetitivas de screening que podrían automatizarse. La evaluación manual de candidatos es inconsistente y propensa a sesgos.",
+    "cs-recruiting-ai-approach": "Construyendo un asistente LLM personalizado con pipeline RAG para scoring automatizado de candidatos, preparación de entrevistas y soporte de decisiones de contratación basado en datos.",
+    "cs-recruiting-ai-result": "En desarrollo. Objetivo: 70% de reducción en tiempo de screening inicial con criterios de evaluación más consistentes.",
+    "cs-recruiting-ai-decisions": "Usando LangChain para pipeline de procesamiento de documentos. Arquitectura RAG para evaluación contextual de candidatos. Diseñado para complementar el juicio del reclutador, no reemplazarlo.",
+
+    // About section
+    "about-label": "Sobre m\u00ed",
+    "about-name": "Luis Zermeno",
+    "about-intro": "Empecé en reclutamiento \u2014 entendiendo personas, roles y qué hace un gran match. Luego descubrí que la IA podía amplificar esa misma intuición a escala. Así que di el salto.",
+    "about-detail": "Ahora construyo aplicaciones de IA de principio a fin: desde la definición del problema hasta la arquitectura, desarrollo y despliegue. Me importan los productos que funcionan para usuarios reales, no solo demos impresionantes.",
+    "about-meta": "Ubicado en Alemania \u00b7 Fluido en español, alemán, inglés y francés",
+
+    // Contact
+    "contact-title": "Contactar",
+
+    // Footer
+    "copyright-new": "\u00a9 2026 Luis Zermeno. Todos los derechos reservados.",
   }
 };
 

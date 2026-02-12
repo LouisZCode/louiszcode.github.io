@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Zermeno - AI Application Engineer</title>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Luis Zermeno - AI Applications Engineer</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Domain canonical reference -->
     <link rel="canonical" href="https://www.luiszermeno.info">
@@ -21,8 +21,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- SEO & Social Media Meta Tags -->
-    <meta name="description" content="Luis Zermeno - AI Application Engineer. Former Talent Acquisition Partner bridging the gap between business needs and production-ready code.">
-    <meta name="keywords" content="AI Engineer, Python Developer, Flask, LangChain, Portfolio, Luis Zermeno, Berlin">
+    <meta name="description" content="Luis Zermeno - AI Applications Engineer. I build AI products that solve real problems — from multilingual learning platforms to intelligent agent systems.">
+    <meta name="keywords" content="AI Engineer, Python Developer, Flask, LangChain, LangGraph, Portfolio, Luis Zermeno, Berlin">
     <meta name="author" content="Luis Zermeno">
     <meta name="robots" content="index, follow">
 
@@ -30,15 +30,15 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.luiszermeno.info/">
     <meta property="og:site_name" content="Luis Zermeno - Portfolio">
-    <meta property="og:title" content="Luis Zermeno | AI Engineer & Product Builder">
+    <meta property="og:title" content="Luis Zermeno | AI Applications Engineer">
     <meta property="og:description" content="Building production-ready AI applications. View my projects: Spralingua, Voice Agents, and more.">
     <meta property="og:image" content="https://www.luiszermeno.info/images/profile_luis.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.luiszermeno.info/">
-    <meta property="twitter:title" content="Luis Zermeno | AI Engineer">
-    <meta property="twitter:description" content="Former Recruiter turned AI Engineer. I build tools that solve real business problems.">
+    <meta property="twitter:title" content="Luis Zermeno | AI Applications Engineer">
+    <meta property="twitter:description" content="I build AI products that solve real problems. From multilingual learning platforms to intelligent agent systems.">
     <meta property="twitter:image" content="https://www.luiszermeno.info/images/profile_luis.png">
 
     <!-- Structured Data for SEO -->
@@ -53,553 +53,351 @@
         "https://github.com/louiszcode",
         "https://www.linkedin.com/in/luis-zermeno-3b2210108/"
       ],
-      "jobTitle": "AI Application Engineer",
+      "jobTitle": "AI Applications Engineer",
       "knowsLanguage": ["en", "de", "es", "fr"],
-      "description": "AI Application Engineer specializing in building production-ready LLM applications with LangGraph, multi-agent systems, and RAG pipelines."
+      "description": "AI Applications Engineer specializing in building production-ready LLM applications with LangGraph, multi-agent systems, and RAG pipelines."
     }
     </script>
-
-    <!-- Tailwind Config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              'heading': ['Space Grotesk', 'sans-serif'],
-              'body': ['Inter', 'sans-serif'],
-            },
-            animation: {
-              'blob': 'blob 7s infinite',
-            },
-            keyframes: {
-              blob: {
-                '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                '100%': { transform: 'translate(0px, 0px) scale(1)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0f172a;
-      }
-      h1, h2, h3 {
-        font-family: 'Space Grotesk', sans-serif;
-      }
-      .animation-delay-2000 {
-        animation-delay: 2s;
-      }
-      .animation-delay-4000 {
-        animation-delay: 4s;
-      }
-      /* Smooth scroll */
-      html {
-        scroll-behavior: smooth;
-      }
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #1e293b;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #475569;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #64748b;
-      }
-    </style>
 </head>
-<body class="min-h-screen text-slate-300 relative overflow-x-hidden">
+<body>
 
     <!-- Skip to content -->
-    <a href="#main-content" class="skip-to-content sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-sky-500 text-white px-4 py-2 rounded-lg z-50">Skip to content</a>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-    <!-- Animated Background Blobs -->
-    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-      <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob"></div>
-      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-      <div class="absolute top-1/2 right-1/3 w-72 h-72 bg-cyan-500/5 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
-    </div>
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="nav" role="navigation" aria-label="Main Navigation">
+      <div class="container nav-inner">
+        <a href="index.html" class="nav-brand">Luis Zermeno</a>
 
-    <!-- Navigation -->
-    <header class="sticky top-0 z-40 backdrop-blur-md bg-slate-900/70 border-b border-slate-800" role="banner">
-      <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between" role="navigation" aria-label="Main Navigation">
-        <a href="index.html" class="text-xl font-bold text-white font-heading hover:text-sky-400 transition-colors">
-          Luis Zermeno
-        </a>
-
-        <ul class="hidden md:flex items-center gap-8">
-          <li><a href="index.html" class="text-white font-medium hover:text-sky-400 transition-colors" data-i18n="nav-home">Home</a></li>
-          <li><a href="experience.html" class="text-slate-400 hover:text-white transition-colors" data-i18n="nav-experience">Experience</a></li>
-          <li><a href="portfolio.html" class="text-slate-400 hover:text-white transition-colors" data-i18n="nav-portfolio">Portfolio</a></li>
+        <ul class="nav-links">
+          <li><a href="#hero" class="active" data-i18n="nav-home">Home</a></li>
+          <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+          <li><a href="#about" data-i18n="nav-about">About</a></li>
+          <li><a href="experience.html" data-i18n="nav-experience">Experience</a></li>
         </ul>
 
-        <div class="flex items-center gap-4">
-          <!-- Language Switcher -->
-          <div class="language-switcher flex gap-1">
-            <button class="lang-btn px-2 py-1 text-xs rounded bg-sky-500 text-white font-bold" data-lang="en">EN</button>
-            <button class="lang-btn px-2 py-1 text-xs rounded text-slate-400 hover:text-white transition-colors" data-lang="de">DE</button>
-            <button class="lang-btn px-2 py-1 text-xs rounded text-slate-400 hover:text-white transition-colors" data-lang="es">ES</button>
+        <div class="nav-right">
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="es">ES</button>
           </div>
-
-          <!-- Mobile Menu Button -->
-          <button class="hamburger md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
-            <span class="w-6 h-0.5 bg-white transition-transform"></span>
-            <span class="w-6 h-0.5 bg-white transition-opacity"></span>
-            <span class="w-6 h-0.5 bg-white transition-transform"></span>
+          <button class="theme-toggle" data-i18n="theme-light">Light Mode</button>
+          <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
-      </nav>
-
-      <!-- Mobile Menu -->
-      <div class="mobile-menu hidden md:hidden bg-slate-900 border-t border-slate-800 px-4 py-4">
-        <ul class="flex flex-col gap-4">
-          <li><a href="index.html" class="text-white font-medium" data-i18n="nav-home">Home</a></li>
-          <li><a href="experience.html" class="text-slate-400 hover:text-white transition-colors" data-i18n="nav-experience">Experience</a></li>
-          <li><a href="portfolio.html" class="text-slate-400 hover:text-white transition-colors" data-i18n="nav-portfolio">Portfolio</a></li>
-        </ul>
       </div>
-    </header>
+    </nav>
 
-    <!-- Main Content -->
-    <main role="main" id="main-content" class="p-4 md:p-8">
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="#hero" data-i18n="nav-home">Home</a></li>
+        <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+        <li><a href="#about" data-i18n="nav-about">About</a></li>
+        <li><a href="experience.html" data-i18n="nav-experience">Experience</a></li>
+      </ul>
+    </div>
 
-      <!-- Bento Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+    <!-- ========== MAIN CONTENT ========== -->
+    <main role="main" id="main-content">
 
-        <!-- ==================== ROW 1: Hero ==================== -->
-
-        <!-- Card: Hero Hook (2/3) -->
-        <div class="md:col-span-2 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 flex flex-col justify-center relative overflow-hidden group hover:border-slate-600 transition-colors">
-          <div class="relative z-10">
-            <!-- Open to Work Badge -->
-            <div class="flex items-center gap-2 mb-4">
-              <span class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-              </span>
-              <p class="text-slate-400 text-xs uppercase tracking-widest font-bold" data-i18n="hero-status">Open to Work</p>
-            </div>
-
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
-              <span data-i18n="hero-greeting">Hello, I'm</span>
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">Luis Zermeno</span>
+      <!-- ========== HERO ========== -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-label fade-up" data-i18n="hero-label">AI Applications Engineer</span>
+            <h1 class="fade-up delay-1">
+              <span data-i18n="hero-headline-prefix">I build AI products that </span><span class="accent" data-i18n="hero-headline-accent">solve real problems</span>
             </h1>
-
-            <h2 class="text-xl md:text-2xl font-bold text-purple-400 mb-2" data-i18n="hero-title">Talent Partner & AI Application Engineer</h2>
-
-            <h3 class="text-lg text-slate-400 mb-4" data-i18n="hero-subtitle">Building Production-Ready LLM Apps & Empowering Talent Acquisition with AI</h3>
-
-            <p class="text-slate-400 text-base max-w-xl mb-6" data-i18n="hero-description">Specialized in developing practical AI solutions with LangChain, LangGraph, Python, and LLM calls both API and local-based. I design multi-agent systems and voice AI applications that solve real business problems.</p>
-
-            <!-- Tech Badge -->
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="px-3 py-1 bg-slate-700/50 border border-slate-600 rounded-md text-xs text-sky-300 font-mono">Python</span>
-              <span class="px-3 py-1 bg-slate-700/50 border border-slate-600 rounded-md text-xs text-sky-300 font-mono">LangChain</span>
-              <span class="px-3 py-1 bg-slate-700/50 border border-slate-600 rounded-md text-xs text-sky-300 font-mono">LangGraph</span>
-            </div>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-wrap gap-3">
-              <a href="portfolio.html" class="bg-sky-500 hover:bg-sky-400 text-white font-medium py-3 px-6 rounded-xl transition-colors" data-i18n="hero-cta-portfolio">View My Work</a>
-              <a href="#contact" class="bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 px-6 rounded-xl border border-slate-600 transition-colors" data-i18n="hero-cta-contact">Contact Me</a>
+            <p class="hero-subtitle fade-up delay-2" data-i18n="hero-subtitle-new">
+              From multilingual language learning platforms to intelligent agent systems &mdash; I design, build, and ship AI applications end to end.
+            </p>
+            <div class="hero-cta fade-up delay-3">
+              <a href="#projects" class="btn btn-primary" data-i18n="hero-cta-projects">View Projects</a>
+              <a href="#about" class="btn btn-ghost" data-i18n="hero-cta-contact">Get in Touch</a>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Card: Profile Photo (1/3) -->
-        <div class="md:col-span-1 bg-slate-800 rounded-2xl h-64 md:h-auto overflow-hidden border border-slate-700 relative group">
-          <img
-            src="images/profile_luis.png"
-            alt="Luis Zermeno"
-            class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-          >
-          <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-slate-900 to-transparent p-6">
-            <p class="text-white font-bold text-lg">Luis Zermeno</p>
-            <p class="text-slate-400 text-sm">Berlin, Germany</p>
+      <!-- ========== PROJECTS ========== -->
+      <section id="projects">
+        <div class="container">
+          <div class="section-header fade-up">
+            <span class="section-label" data-i18n="section-projects-label">Selected Work</span>
+            <h2 data-i18n="section-projects-title">Projects</h2>
+            <p data-i18n="section-projects-desc">AI applications built from problem to production.</p>
           </div>
-        </div>
 
-        <!-- ==================== ROW 2: Featured Project ==================== -->
+          <div class="projects-grid">
 
-        <!-- Card: Spralingua - Featured Project (2/3, 2 rows) -->
-        <div class="md:col-span-2 md:row-span-2 bg-slate-900 rounded-2xl p-1 border border-slate-700 hover:border-sky-500/50 transition-all duration-300 group shadow-lg shadow-sky-900/5">
-          <div class="bg-slate-800 h-full rounded-xl p-6 md:p-8 flex flex-col justify-between relative overflow-hidden">
-
-            <div class="flex flex-wrap justify-between items-start gap-4 mb-6 z-10 relative">
-              <div>
-                <div class="flex items-center gap-2 mb-2">
-                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <p class="text-emerald-400 text-xs font-bold uppercase tracking-widest" data-i18n="project-status-live">Live Product</p>
-                </div>
-                <h3 class="text-3xl font-bold text-white group-hover:text-sky-400 transition-colors" data-i18n="preview-spralingua-title">Spralingua - AI Language Teacher</h3>
-                <p class="text-slate-400 mt-2 text-sm md:text-base" data-i18n="preview-spralingua-desc">An AI-powered language teaching assistant that provides personalized lessons, grammar correction, and conversation practice using advanced language models.</p>
+            <!-- Project Card 1: Spralingua -->
+            <div class="project-card fade-up delay-1" data-case-study="cs-spralingua">
+              <div class="project-card-image">
+                <img src="images/spralingua.png" alt="Spralingua AI Language Platform"
+                     onerror="this.onerror=null; this.src='images/spralingua.svg';" loading="lazy">
               </div>
-              <a href="https://spralingua.com" target="_blank" class="bg-slate-700 hover:bg-white hover:text-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2">
-                <span data-i18n="try-demo">Try Demo</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              <div class="project-card-body">
+                <h3 data-i18n="preview-spralingua-title">Spralingua</h3>
+                <p class="project-card-outcome" data-i18n="project-spralingua-outcome">
+                  AI language learning platform that delivers personalized lessons, real-time grammar correction, and natural conversation practice in 4 languages.
+                </p>
+                <div class="project-card-tags">
+                  <span class="tag">Flask</span>
+                  <span class="tag">Claude API</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">TTS</span>
+                </div>
+              </div>
+              <div class="project-card-cta">
+                <span data-i18n="view-case-study">View Case Study</span>
+                <span class="arrow">&rarr;</span>
+              </div>
+            </div>
+
+            <!-- Project Card 2: AI Voice Agent -->
+            <div class="project-card fade-up delay-2" data-case-study="cs-voice-agent">
+              <div class="project-card-image">
+                <img src="images/ai_agent_voice.png" alt="AI Voice Agent"
+                     onerror="this.onerror=null; this.src='images/ai_agent_voice.svg';" loading="lazy">
+              </div>
+              <div class="project-card-body">
+                <h3 data-i18n="project-voice-agent-title">AI Voice Agent</h3>
+                <p class="project-card-outcome" data-i18n="project-voice-agent-outcome">
+                  Privacy-first voice assistant with 90%+ recognition accuracy, running entirely offline with zero cloud dependency.
+                </p>
+                <div class="project-card-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Vosk</span>
+                  <span class="tag">XTTS-v2</span>
+                </div>
+              </div>
+              <div class="project-card-cta">
+                <span data-i18n="view-case-study">View Case Study</span>
+                <span class="arrow">&rarr;</span>
+              </div>
+            </div>
+
+            <!-- Project Card 3: Placeholder for future project -->
+            <div class="project-card fade-up delay-3" data-case-study="cs-recruiting-ai">
+              <div class="project-card-image">
+                <span class="project-card-image-placeholder" data-i18n="coming-soon">Coming Soon</span>
+              </div>
+              <div class="project-card-body">
+                <h3 data-i18n="project-recruiting-ai-title">AI Recruiting Assistant</h3>
+                <p class="project-card-outcome" data-i18n="project-recruiting-ai-outcome">
+                  Custom LLM assistant that automates candidate screening, interview preparation, and hiring decision support.
+                </p>
+                <div class="project-card-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">LangChain</span>
+                  <span class="tag">RAG</span>
+                </div>
+              </div>
+              <div class="project-card-cta">
+                <span data-i18n="view-case-study">View Case Study</span>
+                <span class="arrow">&rarr;</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Case Study: Spralingua -->
+          <div class="case-study" id="cs-spralingua">
+            <div class="case-study-inner">
+              <div class="divider" style="margin-bottom: 2rem;"></div>
+              <div class="case-study-grid">
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-problem">The Problem</h4>
+                  <p data-i18n="cs-spralingua-problem">
+                    Language learners plateau because generic apps lack personalized feedback and real conversational practice. Existing tools treat every learner the same, ignoring proficiency gaps and native language interference patterns.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-approach">The Approach</h4>
+                  <p data-i18n="cs-spralingua-approach">
+                    Built a full-stack platform using Claude's language understanding to generate adaptive lessons, provide contextual grammar corrections, and simulate natural conversations. Multi-agent architecture with specialized agents for vocabulary, grammar, and conversation.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-result">The Result</h4>
+                  <p data-i18n="cs-spralingua-result">
+                    A production application serving users across 4 languages (Spanish, German, Portuguese, English) with real-time speech-to-text, text-to-speech, and intelligent lesson progression. Sub-2-second conversation loop. Deployed on Railway with PostgreSQL persistence.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-decisions">Key Decisions</h4>
+                  <p data-i18n="cs-spralingua-decisions">
+                    Chose Flask over Django for faster iteration. Used Minimax TTS for natural-sounding multilingual speech. Implemented session-based learning to track progress without requiring accounts. Prioritized conversation quality over feature breadth.
+                  </p>
+                </div>
+              </div>
+              <div class="case-study-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Flask</span>
+                <span class="tech-badge">Claude API</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">SQLAlchemy</span>
+                <span class="tech-badge">Minimax TTS</span>
+                <span class="tech-badge">Web Speech API</span>
+                <span class="tech-badge">Railway</span>
+                <span class="tech-badge">Gunicorn</span>
+              </div>
+              <div class="case-study-actions">
+                <a href="https://spralingua.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="cs-try-demo">Try Live Demo</a>
+                <a href="https://github.com/LouisZCode/Spralingua_AIAgents_App" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="cs-view-source">View Source</a>
+                <a href="projects/spralingua.html" class="btn btn-ghost project-link" data-project="spralingua" data-i18n="cs-full-case-study">Full Case Study</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study: Voice Agent -->
+          <div class="case-study" id="cs-voice-agent">
+            <div class="case-study-inner">
+              <div class="divider" style="margin-bottom: 2rem;"></div>
+              <div class="case-study-grid">
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-problem">The Problem</h4>
+                  <p data-i18n="cs-voice-agent-problem">
+                    Cloud-based voice assistants raise privacy concerns and incur recurring costs. Users who want AI assistance with sensitive documents need an offline-first solution that never sends data externally.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-approach">The Approach</h4>
+                  <p data-i18n="cs-voice-agent-approach">
+                    Built a fully offline voice assistant using Vosk for speech recognition and XTTS-v2 for neural text-to-speech. The entire pipeline runs locally with no cloud dependency.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-result">The Result</h4>
+                  <p data-i18n="cs-voice-agent-result">
+                    Privacy-first assistant achieving 90%+ recognition accuracy with zero recurring costs. Handles document analysis and summarization entirely on-device.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-decisions">Key Decisions</h4>
+                  <p data-i18n="cs-voice-agent-decisions">
+                    Chose Vosk over Whisper for lower resource requirements. XTTS-v2 selected for its natural-sounding multilingual output. Designed for consumer hardware without GPU requirements.
+                  </p>
+                </div>
+              </div>
+              <div class="case-study-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Vosk</span>
+                <span class="tech-badge">XTTS-v2</span>
+                <span class="tech-badge">Ollama</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study: Recruiting AI -->
+          <div class="case-study" id="cs-recruiting-ai">
+            <div class="case-study-inner">
+              <div class="divider" style="margin-bottom: 2rem;"></div>
+              <div class="case-study-grid">
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-problem">The Problem</h4>
+                  <p data-i18n="cs-recruiting-ai-problem">
+                    Recruiters spend hours on repetitive screening tasks that could be automated. Manual candidate evaluation is inconsistent and prone to bias.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-approach">The Approach</h4>
+                  <p data-i18n="cs-recruiting-ai-approach">
+                    Building a custom LLM assistant with RAG pipeline for automated candidate scoring, interview preparation, and data-driven hiring decision support.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-result">The Result</h4>
+                  <p data-i18n="cs-recruiting-ai-result">
+                    In development. Targeting 70% reduction in initial screening time with more consistent evaluation criteria.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-decisions">Key Decisions</h4>
+                  <p data-i18n="cs-recruiting-ai-decisions">
+                    Using LangChain for document processing pipeline. RAG architecture for context-aware candidate evaluation. Designed to augment recruiter judgment, not replace it.
+                  </p>
+                </div>
+              </div>
+              <div class="case-study-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">LangChain</span>
+                <span class="tech-badge">RAG</span>
+                <span class="tech-badge">ChromaDB</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========== ABOUT / CONTACT ========== -->
+      <section id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-text fade-up">
+              <span class="section-label" data-i18n="about-label">About</span>
+              <h2 data-i18n="about-name">Luis Zermeno</h2>
+              <p data-i18n="about-intro">
+                I started in recruitment &mdash; understanding people, roles, and what makes a great match. Then I discovered that AI could amplify that same intuition at scale. So I made the leap.
+              </p>
+              <p data-i18n="about-detail">
+                Now I build AI applications end to end: from problem definition through architecture, development, and deployment. I care about products that work for real users, not just impressive demos.
+              </p>
+              <p class="about-meta" data-i18n="about-meta">
+                Based in Germany &middot; Fluent in Spanish, German, English &amp; French
+              </p>
+            </div>
+            <div class="contact-card fade-up delay-1">
+              <h3 data-i18n="contact-title">Get in Touch</h3>
+              <a href="https://www.linkedin.com/in/luis-zermeno-3b2210108/" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <span class="contact-link-icon">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </span>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/louiszcode" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <span class="contact-link-icon">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </span>
+                <span>GitHub</span>
+              </a>
+              <a href="Resume_LuisZ_2026.pdf" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <span class="contact-link-icon">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                </span>
+                <span data-i18n="download-resume">Download Resume</span>
               </a>
             </div>
-
-            <!-- Project Screenshot -->
-            <div class="flex-grow bg-slate-900/50 rounded-xl border border-slate-700/50 overflow-hidden mb-6 group-hover:translate-y-[-4px] transition-transform duration-500">
-              <img
-                src="images/spralingua.png"
-                alt="Spralingua Platform Screenshot"
-                class="w-full h-full object-cover object-top"
-                onerror="this.onerror=null; this.src='images/spralingua.svg';"
-              >
-            </div>
-
-            <div class="flex flex-wrap gap-2 items-center justify-between">
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-700/50 border border-slate-600 rounded-md text-xs text-sky-300 font-mono">Python</span>
-                <span class="px-3 py-1 bg-slate-700/50 border border-slate-600 rounded-md text-xs text-sky-300 font-mono">Flask</span>
-                <span class="px-3 py-1 bg-slate-700/50 border border-slate-600 rounded-md text-xs text-sky-300 font-mono flex items-center gap-2"><img src="images/claude-logo-white.png" alt="Claude API" class="w-4 h-4">Claude API</span>
-                <span class="px-3 py-1 bg-slate-700/50 border border-slate-600 rounded-md text-xs text-sky-300 font-mono">PostgreSQL</span>
-              </div>
-              <a href="projects/spralingua.html" class="project-link text-sky-400 text-sm group-hover:translate-x-1 transition-transform flex items-center gap-1" data-project="spralingua">
-                <span data-i18n="view-details">View Details</span> →
-              </a>
-            </div>
           </div>
         </div>
+      </section>
 
-        <!-- Card: Stats & Credentials (1/3) -->
-        <div class="md:col-span-1 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-slate-700 flex flex-col justify-center">
-          <div class="space-y-5">
-            <div>
-              <p class="text-slate-500 text-xs uppercase tracking-widest mb-1" data-i18n="stats-background">Background</p>
-              <div class="flex items-baseline gap-2">
-                <span class="text-3xl font-bold text-white">4+</span>
-                <span class="text-sm text-purple-400" data-i18n="stats-years-ta">Years in Talent Acquisition</span>
-              </div>
-            </div>
-            <div class="h-px bg-slate-700 w-full"></div>
-            <div>
-              <p class="text-slate-500 text-xs uppercase tracking-widest mb-1" data-i18n="stats-education">Education</p>
-              <div class="flex items-baseline gap-2">
-                <span class="text-3xl font-bold text-white">MBA</span>
-                <span class="text-sm text-sky-400" data-i18n="cert-mba-desc">International Business</span>
-              </div>
-            </div>
-            <div class="h-px bg-slate-700 w-full"></div>
-            <div>
-              <p class="text-slate-500 text-xs uppercase tracking-widest mb-1" data-i18n="stats-certifications">Certifications</p>
-              <div class="flex flex-wrap gap-2 mt-2">
-                <span class="px-2 py-1 bg-purple-900/30 text-purple-400 rounded text-xs" data-i18n="cert-hf-title">HuggingFace Agents</span>
-                <span class="px-2 py-1 bg-sky-900/30 text-sky-400 rounded text-xs" data-i18n="cert-mcp-title">MCP Course</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ==================== ROW 3: Skills & About ==================== -->
-
-        <!-- Card: Technical Skills (Full Width) -->
-        <section class="md:col-span-3 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700" id="skills">
-          <h2 class="text-2xl font-bold text-white mb-6" data-i18n="skills-heading">Technical Skills</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Languages & Frameworks -->
-            <div>
-              <h3 class="text-slate-400 text-xs uppercase tracking-widest mb-4">Languages & Frameworks</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
-                  <img src="images/python.png" alt="Python" class="w-4 h-4"> Python
-                </span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
-                  <img src="images/langgraph.png" alt="LangChain" class="w-4 h-4"> LangChain
-                </span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
-                  <img src="images/gradio-logo.png" alt="Gradio" class="w-4 h-4"> Gradio
-                </span>
-              </div>
-            </div>
-            <!-- AI & ML -->
-            <div>
-              <h3 class="text-slate-400 text-xs uppercase tracking-widest mb-4">AI & ML</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
-                  <img src="images/claude-logo-white.png" alt="Claude API" class="w-4 h-4"> Claude API
-                </span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
-                  <img src="images/openai.png" alt="OpenAI" class="w-4 h-4"> OpenAI API
-                </span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
-                  <img src="images/gemini.png" alt="Gemini" class="w-4 h-4"> Gemini API
-                </span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white">Prompt Engineering</span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white">Context Engineering</span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white">RAG</span>
-              </div>
-            </div>
-            <!-- Vector Databases & Embeddings -->
-            <div>
-              <h3 class="text-slate-400 text-xs uppercase tracking-widest mb-4">Vector DBs & Embeddings</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white">FAISS</span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white">OpenAI Embeddings</span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
-                  <img src="images/huggingface-logo.png" alt="HuggingFace" class="w-4 h-4"> HuggingFace Embeddings
-                </span>
-              </div>
-            </div>
-            <!-- Databases -->
-            <div>
-              <h3 class="text-slate-400 text-xs uppercase tracking-widest mb-4">Databases</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
-                  <img src="images/postgres.png" alt="PostgreSQL" class="w-4 h-4"> PostgreSQL
-                </span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white">SQLite</span>
-              </div>
-            </div>
-            <!-- Dev & Deployment -->
-            <div>
-              <h3 class="text-slate-400 text-xs uppercase tracking-widest mb-4">Development & Deployment</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
-                  <img src="images/git.png" alt="Git" class="w-4 h-4"> Git & GitHub
-                </span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white">Railway</span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white flex items-center gap-2">
-                  <img src="images/astral-logo.png" alt="uv" class="w-4 h-4"> uv
-                </span>
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white">Environment Management</span>
-              </div>
-            </div>
-            <!-- Voice AI -->
-            <div>
-              <h3 class="text-slate-400 text-xs uppercase tracking-widest mb-4">Voice AI</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-sm text-white">Minimax API</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ==================== ROW 4: About Me ==================== -->
-
-        <!-- Card: About Me / Why Work With Me (Full Width) -->
-        <section class="md:col-span-3 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700" id="about">
-          <h2 class="text-2xl font-bold text-white mb-4" data-i18n="about-heading">About Me</h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="space-y-4">
-              <p class="text-slate-400 leading-relaxed" data-i18n="about-p1">I'm an AI Application Engineer focused on building production-ready LLM applications that solve real business problems. Special focus on Talent Acquisition AI projects—sourcing, evaluating, interview prep, and decision making using AI, making processes 70% faster and less biased. After spending 2 years deep in AI development—from multi-agent systems to RAG pipelines to voice AI—I'm now seeking opportunities to build impactful AI applications in Europe.</p>
-              <p class="text-slate-400 leading-relaxed" data-i18n="about-p2">My approach combines technical implementation with practical thinking. Before transitioning to AI engineering, I spent 4+ years as a Talent Partner, which taught me how to identify what users actually need versus what sounds impressive on paper.</p>
-            </div>
-            <div class="space-y-4">
-              <p class="text-slate-400 leading-relaxed" data-i18n="about-p3">I specialize in Python-based LLM applications using LangChain and LangGraph for agent orchestration, with different local and API LLMs (Claude, OpenAI, etc.). My projects focus on practical applications: language learning platforms with real-time AI tutoring, voice-enabled interactions, and production-ready deployment.</p>
-              <p class="text-slate-400 leading-relaxed" data-i18n="about-p4">I'm looking for AI Application Engineer roles where I can contribute to building, deploying, and iterating on LLM-powered products—not training models, but making them useful.</p>
-            </div>
-          </div>
-          <div class="flex flex-wrap gap-2 mt-6">
-            <span class="px-3 py-1 border border-slate-600 rounded-full text-slate-400 text-xs">Problem Solver</span>
-            <span class="px-3 py-1 border border-slate-600 rounded-full text-slate-400 text-xs">Clear Communicator</span>
-            <span class="px-3 py-1 border border-slate-600 rounded-full text-slate-400 text-xs">Fast Learner</span>
-            <span class="px-3 py-1 border border-slate-600 rounded-full text-slate-400 text-xs">Detail Oriented</span>
-          </div>
-        </section>
-
-        <!-- ==================== ROW 5: Experience ==================== -->
-
-        <!-- Card: LucaNet Experience -->
-        <div class="md:col-span-1 bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-sky-500/50 transition-all duration-300 group">
-          <div class="flex items-center gap-3 mb-4">
-            <img src="images/lucanet.png" alt="LucaNet" class="w-10 h-10 rounded-lg object-contain bg-white p-1">
-            <div>
-              <h3 class="text-white font-bold" data-i18n="featured-lucanet-title">Talent Partner</h3>
-              <p class="text-slate-500 text-xs" data-i18n="featured-lucanet-period">2023-Present</p>
-            </div>
-          </div>
-          <p class="text-slate-400 text-sm mb-4" data-i18n="featured-lucanet-desc">Full-cycle recruiter for revenue and financial teams, specializing in SaaS and Fintech sales roles across DACH, Benelux, Spanish, French and Italian regions.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-400">LucaNet</span>
-            <span class="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-400" data-i18n="featured-lucanet-location">Berlin/Remote</span>
-          </div>
-        </div>
-
-        <!-- Card: Rapid Experience -->
-        <div class="md:col-span-1 bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-purple-500/50 transition-all duration-300 group">
-          <div class="flex items-center gap-3 mb-4">
-            <img src="images/rapid.png" alt="Rapid" class="w-10 h-10 rounded-lg object-contain bg-white p-1">
-            <div>
-              <h3 class="text-white font-bold" data-i18n="featured-rapid-title">Talent & Coordination Partner</h3>
-              <p class="text-slate-500 text-xs" data-i18n="featured-rapid-period">2022-2023</p>
-            </div>
-          </div>
-          <p class="text-slate-400 text-sm mb-4" data-i18n="featured-rapid-desc">Created and executed a new coordination automation process for 180+ employees, while serving as a full-cycle recruiter for tech roles.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-400">Rapid</span>
-            <span class="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-400" data-i18n="featured-rapid-location">Berlin/Remote</span>
-          </div>
-        </div>
-
-        <!-- Card: View All Experience CTA -->
-        <div class="md:col-span-1 bg-gradient-to-br from-sky-900/30 to-purple-900/30 rounded-2xl p-6 border border-slate-700 flex flex-col justify-center items-center text-center">
-          <h3 class="text-white font-bold mb-2" data-i18n="experience-heading">Featured Experience</h3>
-          <p class="text-slate-400 text-sm mb-4">Microsoft, Volocopter, Honeywell & more</p>
-          <a href="experience.html" class="bg-slate-700 hover:bg-slate-600 text-white font-medium py-2 px-4 rounded-lg transition-colors text-sm" data-i18n="view-all">View All Experience</a>
-        </div>
-
-        <!-- ==================== ROW 6: Certifications ==================== -->
-
-        <!-- Card: Certifications (2/3 width) -->
-        <div class="md:col-span-2 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-xl font-bold text-white" data-i18n="certifications-heading">Certifications</h3>
-            <span class="text-slate-500 text-xs uppercase tracking-widest">Click to enlarge</span>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <!-- HuggingFace Agents Certificate -->
-            <div class="group cursor-pointer" onclick="openCertModal('images/huggingface_agents_certificate.webp', 'Hugging Face Agents Course')">
-              <div class="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden group-hover:border-purple-500/50 transition-all duration-300">
-                <img
-                  src="images/huggingface_agents_certificate.webp"
-                  alt="Hugging Face Agents Certificate"
-                  class="w-full h-32 object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                >
-              </div>
-              <div class="mt-2">
-                <p class="text-white text-sm font-medium" data-i18n="cert-hf-title">Hugging Face Agents Course</p>
-                <p class="text-slate-500 text-xs">2025</p>
-              </div>
-            </div>
-
-            <!-- MCP Course Certificate -->
-            <div class="group cursor-pointer" onclick="openCertModal('images/mcp_course.webp', 'The MCP Course')">
-              <div class="bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden group-hover:border-sky-500/50 transition-all duration-300">
-                <img
-                  src="images/mcp_course.webp"
-                  alt="MCP Course Certificate"
-                  class="w-full h-32 object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                >
-              </div>
-              <div class="mt-2">
-                <p class="text-white text-sm font-medium" data-i18n="cert-mcp-title">The MCP Course: Unit 1</p>
-                <p class="text-slate-500 text-xs">2025</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ==================== ROW 7: Contact ==================== -->
-
-        <!-- Card: Contact Section (Full Width) -->
-        <section class="md:col-span-3 bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700" id="contact">
-          <div class="grid md:grid-cols-2 gap-8">
-            <div>
-              <h2 class="text-2xl font-bold text-white mb-4" data-i18n="contact-heading">Get In Touch</h2>
-              <p class="text-slate-400 mb-6" data-i18n="contact-text">Feel free to reach out to me for collaborations or just a friendly chat.</p>
-
-              <div class="space-y-4">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center">
-                    <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                  </div>
-                  <span class="text-slate-300">Berlin, Germany</span>
-                </div>
-                <a href="https://www.linkedin.com/in/luis-zermeno-3b2210108/" target="_blank" class="flex items-center gap-3 group">
-                  <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center group-hover:bg-sky-500 transition-colors">
-                    <svg class="w-5 h-5 text-slate-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                  </div>
-                  <span class="text-slate-300 group-hover:text-sky-400 transition-colors">LinkedIn</span>
-                </a>
-                <a href="https://github.com/louiszcode" target="_blank" class="flex items-center gap-3 group">
-                  <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center group-hover:bg-slate-600 transition-colors">
-                    <svg class="w-5 h-5 text-slate-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                  </div>
-                  <span class="text-slate-300 group-hover:text-white transition-colors">GitHub</span>
-                </a>
-              </div>
-
-              <!-- Resume Download -->
-              <a href="Resume_LuisZ_2026.pdf" target="_blank" class="mt-6 inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-white font-medium py-3 px-6 rounded-xl transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                Download Resume
-              </a>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="contact-form-container">
-              <form id="contact-form" class="space-y-4">
-                <div>
-                  <label for="name" class="block text-sm text-slate-400 mb-2" data-i18n="contact-name">Name</label>
-                  <input type="text" id="name" name="name" data-i18n-placeholder="contact-name-placeholder" placeholder="Your name" required
-                    class="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors">
-                </div>
-                <div>
-                  <label for="email" class="block text-sm text-slate-400 mb-2" data-i18n="contact-email">Email</label>
-                  <input type="email" id="email" name="email" data-i18n-placeholder="contact-email-placeholder" placeholder="Your email" required
-                    class="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors">
-                </div>
-                <div>
-                  <label for="message" class="block text-sm text-slate-400 mb-2" data-i18n="contact-message">Message</label>
-                  <textarea id="message" name="message" rows="4" data-i18n-placeholder="contact-message-placeholder" placeholder="Your message" required
-                    class="w-full bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors resize-none"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-slate-700 hover:bg-slate-600 text-white font-medium py-3 px-6 rounded-xl border border-slate-600 transition-colors" data-i18n="contact-send">Send Message</button>
-              </form>
-              <div id="form-success" class="hidden mt-4 p-4 bg-emerald-900/30 border border-emerald-500/50 rounded-lg text-emerald-400 text-center">
-                <p data-i18n="contact-success">Your message has been sent successfully!</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="max-w-6xl mx-auto px-4 py-8 mt-8 border-t border-slate-800" role="contentinfo">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-slate-500 text-sm" data-i18n="copyright">© 2025 Luis Zermeno. All Rights Reserved.</p>
-        <div class="flex gap-4">
-          <a href="https://github.com/louiszcode" target="_blank" class="text-slate-500 hover:text-white transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" role="contentinfo">
+      <div class="container footer-inner">
+        <p data-i18n="copyright-new">&copy; 2026 Luis Zermeno. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/louiszcode" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           </a>
-          <a href="https://www.linkedin.com/in/luis-zermeno-3b2210108/" target="_blank" class="text-slate-500 hover:text-white transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <a href="https://www.linkedin.com/in/luis-zermeno-3b2210108/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
         </div>
       </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-slate-800 hover:bg-slate-700 text-white rounded-full shadow-lg border border-slate-700 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300" title="Back to Top">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
-    </button>
-
-    <!-- Certificate Modal -->
-    <div id="cert-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/90 backdrop-blur-sm">
-      <div class="relative max-w-4xl w-full bg-slate-900 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl">
-        <!-- Modal Header -->
-        <div class="flex items-center justify-between p-4 border-b border-slate-700">
-          <h3 id="cert-modal-title" class="text-lg font-bold text-white">Certificate</h3>
-          <button onclick="closeCertModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-          </button>
-        </div>
-        <!-- Modal Content -->
-        <div class="p-4">
-          <img id="cert-modal-image" src="" alt="Certificate" class="w-full h-auto rounded-lg">
-        </div>
-      </div>
-    </div>
-
     <!-- Scripts -->
-    <script src="js/main.js"></script>
     <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>
