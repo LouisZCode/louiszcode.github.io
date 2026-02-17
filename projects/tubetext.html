@@ -6,7 +6,7 @@
     <title>TubeText - Case Study | Luis Zermeno</title>
     <link rel="canonical" href="https://www.luiszermeno.info/projects/tubetext.html">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <meta name="description" content="TubeText - AI-powered YouTube transcript extraction with LLM summaries, streaming translation, and audio transcription. Built with FastAPI, LangChain, OpenAI, Deepgram.">
+    <meta name="description" content="TubeText - AI-powered YouTube transcript extraction with LLM summaries, streaming translation, and audio transcription. Built with FastAPI, LangChain, OpenAI, Deepgram, Cerebras.">
     <meta name="keywords" content="YouTube transcription, AI summarization, FastAPI, LangChain, Deepgram, OpenAI, Python, SSE streaming">
 
     <!-- Fonts -->
@@ -77,8 +77,8 @@
     <section class="specs-bar">
         <div class="specs-bar-inner">
             <div>
-                <h3 data-i18n="tt-spec-framework">Framework</h3>
-                <p>FastAPI, Python 3.12</p>
+                <h3 data-i18n="tt-spec-framework">Stack</h3>
+                <p>FastAPI, Python, LangChain</p>
             </div>
             <div>
                 <h3 data-i18n="tt-spec-ai">AI Services</h3>
@@ -86,7 +86,7 @@
             </div>
             <div>
                 <h3 data-i18n="tt-spec-database">Database</h3>
-                <p>PostgreSQL + async SQLAlchemy</p>
+                <p>PostgreSQL + SQLAlchemy</p>
             </div>
             <div>
                 <h3 data-i18n="tt-spec-deployment">Deployment</h3>
@@ -133,26 +133,28 @@
                         <span class="code-block-dot red"></span>
                         <span class="code-block-dot yellow"></span>
                         <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">agents/summary_agent.py</span>
+                        <span class="code-block-filename">agents/summarize_agent.py</span>
                     </div>
-                    <pre><code><span class="kw">from</span> langchain_openai <span class="kw">import</span> ChatOpenAI
-<span class="kw">from</span> langchain_core.prompts <span class="kw">import</span> ChatPromptTemplate
+                    <pre><code><span class="kw">from</span> langchain.agents <span class="kw">import</span> create_agent
+<span class="kw">import</span> yaml
 
 <span class="comment"># Load prompt from YAML config</span>
-prompt = ChatPromptTemplate.from_messages([
-    (<span class="str">"system"</span>, prompts[<span class="str">"SUMMARIZE_PROMPT"</span>]),
-    (<span class="str">"human"</span>, <span class="str">"{transcript}"</span>)
-])
+<span class="kw">def</span> <span class="fn">load_prompts</span>():
+    <span class="kw">with</span> open(<span class="str">"agents/prompts.yaml"</span>, <span class="str">"r"</span>, encoding=<span class="str">"utf-8"</span>) <span class="kw">as</span> f:
+        <span class="kw">return</span> yaml.safe_load(f)
 
-llm = ChatOpenAI(
-    model=<span class="str">"gpt-4o-mini"</span>,
-    temperature=<span class="num">0.3</span>
+prompts = load_prompts()
+
+summary_agent = create_agent(
+    model=<span class="str">"openai:gpt-5-mini"</span>,
+    system_prompt=prompts[<span class="str">"SUMMARIZE_PROMPT"</span>]
 )
 
-chain = prompt | llm
-result = <span class="kw">await</span> chain.ainvoke({
-    <span class="str">"transcript"</span>: transcript_text
-})</code></pre>
+<span class="comment"># Invoked async from the route handler</span>
+result = <span class="kw">await</span> summary_agent.ainvoke(
+    {<span class="str">"messages"</span>: [{<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: transcript_text}]}
+)
+summary = result[<span class="str">"messages"</span>][-<span class="num">1</span>].content</code></pre>
                 </div>
             </section>
 
@@ -160,7 +162,7 @@ result = <span class="kw">await</span> chain.ainvoke({
             <section>
                 <h2 data-i18n="tt-streaming">Real-Time Streaming Translation</h2>
                 <p data-i18n="tt-streaming-desc">
-                    Translation uses Server-Sent Events (SSE) to stream results segment by segment. Cerebras Llama-3.3-70b was chosen for its fast inference speed, giving users real-time feedback instead of waiting for the entire transcript to translate.
+                    Translation uses Server-Sent Events (SSE) to stream results segment by segment. Cerebras GPT-OSS-120b was chosen for its fast inference speed, giving users real-time feedback instead of waiting for the entire transcript to translate.
                 </p>
 
                 <div class="code-block">
@@ -168,24 +170,45 @@ result = <span class="kw">await</span> chain.ainvoke({
                         <span class="code-block-dot red"></span>
                         <span class="code-block-dot yellow"></span>
                         <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">routes/video.py</span>
+                        <span class="code-block-filename">agents/translate_agent.py</span>
                     </div>
-                    <pre><code><span class="kw">async def</span> <span class="fn">translate_stream</span>(segments, target_lang):
+                    <pre><code><span class="kw">from</span> cerebras.cloud.sdk <span class="kw">import</span> AsyncCerebras
+<span class="kw">import</span> yaml, os
+
+prompts = yaml.safe_load(open(<span class="str">"agents/prompts.yaml"</span>))
+translate_prompt = prompts[<span class="str">"TRANSLATE_PROMPT"</span>]
+client = AsyncCerebras(api_key=os.environ.get(<span class="str">"CEREBRAS_API_KEY"</span>))
+
+<span class="kw">async def</span> <span class="fn">translate</span>(text: str, language: str) -> str:
+    response = <span class="kw">await</span> client.chat.completions.create(
+        model=<span class="str">"gpt-oss-120b"</span>,
+        messages=[
+            {<span class="str">"role"</span>: <span class="str">"system"</span>, <span class="str">"content"</span>: translate_prompt},
+            {<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: f<span class="str">"Translate to {language}:\n\n{text}"</span>},
+        ],
+    )
+    <span class="kw">return</span> response.choices[<span class="num">0</span>].message.content</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">routes/translate_router.py</span>
+                    </div>
+                    <pre><code><span class="kw">async def</span> <span class="fn">event_generator</span>():
     <span class="str">"""Yield SSE events as each segment is translated."""</span>
-    <span class="kw">for</span> segment <span class="kw">in</span> segments:
-        translation = <span class="kw">await</span> cerebras_client.chat.completions.create(
-            model=<span class="str">"llama-3.3-70b"</span>,
-            messages=[
-                {<span class="str">"role"</span>: <span class="str">"system"</span>, <span class="str">"content"</span>: translate_prompt},
-                {<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: segment[<span class="str">"text"</span>]}
-            ],
-            stream=<span class="kw">True</span>
-        )
-        <span class="kw">yield</span> f<span class="str">"data: {json.dumps(result)}\n\n"</span>
+    <span class="kw">for</span> i <span class="kw">in</span> range(<span class="num">0</span>, len(request.segments), CHUNK_SIZE):
+        chunk_text = <span class="str">" "</span>.join(seg.text <span class="kw">for</span> seg <span class="kw">in</span> request.segments[i:i+<span class="num">1</span>])
+        translated = <span class="kw">await</span> translate(chunk_text, request.language)
+        <span class="kw">yield</span> f<span class="str">"data: {json.dumps({'translation': translated})}\n\n"</span>
+    <span class="kw">yield</span> f<span class="str">"data: {json.dumps({'done': True})}\n\n"</span>
 
 <span class="kw">return</span> StreamingResponse(
-    translate_stream(segments, lang),
-    media_type=<span class="str">"text/event-stream"</span>
+    event_generator(),
+    media_type=<span class="str">"text/event-stream"</span>,
+    headers={<span class="str">"Cache-Control"</span>: <span class="str">"no-cache"</span>, <span class="str">"X-Accel-Buffering"</span>: <span class="str">"no"</span>},
 )</code></pre>
                 </div>
             </section>
@@ -202,20 +225,70 @@ result = <span class="kw">await</span> chain.ainvoke({
                         <span class="code-block-dot red"></span>
                         <span class="code-block-dot yellow"></span>
                         <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">database.py</span>
+                        <span class="code-block-filename">database/connection.py</span>
                     </div>
-                    <pre><code><span class="kw">from</span> sqlalchemy.ext.asyncio <span class="kw">import</span> create_async_engine, AsyncSession
+                    <pre><code><span class="kw">from</span> sqlalchemy.ext.asyncio <span class="kw">import</span> create_async_engine, async_sessionmaker
+<span class="kw">import</span> os
 
 <span class="comment"># Auto-convert to asyncpg driver</span>
-DATABASE_URL = os.getenv(<span class="str">"DATABASE_URL"</span>).replace(
-    <span class="str">"postgresql://"</span>, <span class="str">"postgresql+asyncpg://"</span>
+database_url = os.getenv(<span class="str">"DATABASE_URL"</span>)
+<span class="kw">if</span> database_url <span class="kw">and</span> database_url.startswith(<span class="str">"postgresql://"</span>):
+    database_url = database_url.replace(<span class="str">"postgresql://"</span>, <span class="str">"postgresql+asyncpg://"</span>, <span class="num">1</span>)
+
+engine = create_async_engine(database_url)
+SessionLocal = async_sessionmaker(
+    bind=engine, autoflush=<span class="kw">False</span>, autocommit=<span class="kw">False</span>
 )
 
-engine = create_async_engine(DATABASE_URL)
-
 <span class="kw">async def</span> <span class="fn">get_db</span>():
-    <span class="kw">async with</span> AsyncSession(engine) <span class="kw">as</span> session:
-        <span class="kw">yield</span> session</code></pre>
+    <span class="kw">async with</span> SessionLocal() <span class="kw">as</span> db:
+        <span class="kw">yield</span> db</code></pre>
+                </div>
+            </section>
+
+            <!-- System Design Tradeoffs -->
+            <section>
+                <h2 data-i18n="tt-tradeoffs">System Design Tradeoffs</h2>
+                <p data-i18n="tt-tradeoffs-intro">
+                    Every architectural choice has a cost. Here are the key tradeoffs I made and why.
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">architecture_decisions.md</span>
+                    </div>
+                    <pre><code><span class="comment"># ADR-001: Signed cookies for anonymous users</span>
+<span class="str">Decision:</span>  Track anonymous usage via signed HTTP-only cookies
+<span class="str">Why:</span>       No DB pollution — only a counter, no rows until signup
+<span class="str">Tradeoff:</span>  Counter resets if cookie clears (acceptable for free tier)
+
+<span class="comment"># ADR-002: JWT in HTTP-only cookies</span>
+<span class="str">Decision:</span>  Store auth tokens as HTTP-only cookies, not localStorage
+<span class="str">Why:</span>       XSS-safe — browser sends automatically, JS can't access
+<span class="str">Tradeoff:</span>  Can't read token from JS (by design)
+
+<span class="comment"># ADR-003: PostgreSQL as single data store</span>
+<span class="str">Decision:</span>  Async PostgreSQL via asyncpg — no Redis, no cache layer
+<span class="str">Why:</span>       Simpler infra, fewer moving parts to maintain
+<span class="str">Tradeoff:</span>  Requires careful handling of SQLAlchemy async patterns
+
+<span class="comment"># ADR-004: SSE for translation streaming</span>
+<span class="str">Decision:</span>  Server-Sent Events over WebSockets
+<span class="str">Why:</span>       Simpler than WebSockets for one-way data flow
+<span class="str">Tradeoff:</span>  HTTP 200 already sent — mid-stream errors need SSE error events
+
+<span class="comment"># ADR-005: Cerebras for translation</span>
+<span class="str">Decision:</span>  Cerebras GPT-OSS-120b instead of OpenAI for translation
+<span class="str">Why:</span>       Fastest inference speed available, free tier
+<span class="str">Tradeoff:</span>  Less model variety, models can be deprecated
+
+<span class="comment"># ADR-006: Deepgram for premium transcription</span>
+<span class="str">Decision:</span>  Deepgram Nova-3 for videos without captions
+<span class="str">Why:</span>       Handles any video regardless of caption availability
+<span class="str">Tradeoff:</span>  Adds yt-dlp + ffmpeg dependency — heavier infra</code></pre>
                 </div>
             </section>
 
@@ -260,43 +333,32 @@ engine = create_async_engine(DATABASE_URL)
                 <h3 data-i18n="tt-lessons">Lessons Learned</h3>
                 <div class="sidebar-lessons">
                     <div>
-                        <strong data-i18n="tt-lesson1-title">Async-First Pays Off</strong>
+                        <strong data-i18n="tt-lesson1-title">Async SQLAlchemy Gotchas</strong>
                         <p data-i18n="tt-lesson1-desc">
-                            SQLAlchemy 2.0 async sessions with asyncpg eliminate blocking DB calls. Every I/O operation runs concurrently.
+                            SQLAlchemy expires attributes after commit() — accessing them triggers a sync lazy-load that crashes async sessions (MissingGreenlet). Fixed with explicit db.refresh() after every commit.
                         </p>
                     </div>
                     <div>
-                        <strong data-i18n="tt-lesson2-title">SSE for Real-Time UX</strong>
+                        <strong data-i18n="tt-lesson2-title">SSE Error Handling</strong>
                         <p data-i18n="tt-lesson2-desc">
-                            Streaming translation segment-by-segment gives users immediate feedback instead of waiting for the full result.
+                            Once an SSE stream sends HTTP 200, you can't return error status codes mid-stream. Had to implement SSE error events so the frontend can detect and handle failures gracefully.
                         </p>
                     </div>
                     <div>
-                        <strong data-i18n="tt-lesson3-title">YAML-Driven Prompts</strong>
+                        <strong data-i18n="tt-lesson3-title">OAuth Behind Reverse Proxies</strong>
                         <p data-i18n="tt-lesson3-desc">
-                            Separating prompts from code makes prompt iteration fast. Change the YAML, redeploy — no code changes needed.
+                            Railway's proxy strips HTTPS, so FastAPI generated http:// redirect URIs — causing redirect_uri_mismatch with Google OAuth. Fixed with ProxyHeadersMiddleware to read X-Forwarded-Proto.
+                        </p>
+                    </div>
+                    <div>
+                        <strong data-i18n="tt-lesson4-title">Build-Time vs Runtime Env Vars</strong>
+                        <p data-i18n="tt-lesson4-desc">
+                            NEXT_PUBLIC_ vars are baked at build time, but Railway injects env vars at runtime only. Docker builds get undefined values unless you hardcode with ENV before the build step.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Technologies -->
-            <div class="sidebar-card">
-                <h3 data-i18n="tt-technologies">Technologies</h3>
-                <div class="sidebar-tech">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">FastAPI</span>
-                    <span class="tech-badge">LangChain</span>
-                    <span class="tech-badge">OpenAI</span>
-                    <span class="tech-badge">Deepgram</span>
-                    <span class="tech-badge">Cerebras</span>
-                    <span class="tech-badge">PostgreSQL</span>
-                    <span class="tech-badge">SQLAlchemy</span>
-                    <span class="tech-badge">Docker</span>
-                    <span class="tech-badge">Railway</span>
-                    <span class="tech-badge">Stripe</span>
-                </div>
-            </div>
 
         </aside>
 

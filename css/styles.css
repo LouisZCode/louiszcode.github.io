@@ -985,10 +985,7 @@ section {
 }
 
 .detail-hero h1 .accent {
-  background: linear-gradient(135deg, var(--primary), hsl(280, 60%, 65%));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary);
 }
 
 .detail-hero-desc {
