@@ -159,43 +159,78 @@
               </div>
             </div>
 
-            <!-- Project Card 2: AI Voice Agent -->
-            <div class="project-card fade-up delay-2" data-case-study="cs-voice-agent">
-              <div class="project-card-image">
-                <img src="images/ai_agent_voice.png" alt="AI Voice Agent"
-                     onerror="this.onerror=null; this.src='images/ai_agent_voice.svg';" loading="lazy">
-              </div>
-              <div class="project-card-body">
-                <h3 data-i18n="project-voice-agent-title">AI Voice Agent</h3>
-                <p class="project-card-outcome" data-i18n="project-voice-agent-outcome">
-                  Privacy-first voice assistant with 90%+ recognition accuracy, running entirely offline with zero cloud dependency.
-                </p>
-                <div class="project-card-tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">Vosk</span>
-                  <span class="tag">XTTS-v2</span>
-                </div>
-              </div>
-              <div class="project-card-cta">
-                <span data-i18n="view-case-study">View Case Study</span>
-                <span class="arrow">&rarr;</span>
-              </div>
-            </div>
-
-            <!-- Project Card 3: Placeholder for future project -->
-            <div class="project-card fade-up delay-3" data-case-study="cs-recruiting-ai">
+            <!-- Project Card 2: Agora Stocks -->
+            <div class="project-card fade-up delay-2">
               <div class="project-card-image">
                 <span class="project-card-image-placeholder" data-i18n="coming-soon">Coming Soon</span>
               </div>
               <div class="project-card-body">
-                <h3 data-i18n="project-recruiting-ai-title">AI Recruiting Assistant</h3>
-                <p class="project-card-outcome" data-i18n="project-recruiting-ai-outcome">
-                  Custom LLM assistant that automates candidate screening, interview preparation, and hiring decision support.
+                <h3 data-i18n="project-agora-title">Agora Stocks</h3>
+                <p class="project-card-outcome" data-i18n="project-agora-outcome">
+                  LLM council and debate platform for stock financial analysis and narrative evaluation.
+                </p>
+                <div class="project-card-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">LangGraph</span>
+                  <span class="tag">Multi-Agent</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 3: AI Powered Recruitment ATS -->
+            <div class="project-card fade-up delay-3">
+              <div class="project-card-image">
+                <span class="project-card-image-placeholder" data-i18n="coming-soon">Coming Soon</span>
+              </div>
+              <div class="project-card-body">
+                <h3 data-i18n="project-recruitment-ats-title">AI Powered Recruitment ATS</h3>
+                <p class="project-card-outcome" data-i18n="project-recruitment-ats-outcome">
+                  AI-powered applicant tracking system for automated CV screening and candidate matching.
                 </p>
                 <div class="project-card-tags">
                   <span class="tag">Python</span>
                   <span class="tag">LangChain</span>
                   <span class="tag">RAG</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 4: Life Coach AI Administration Assistant -->
+            <div class="project-card fade-up delay-4">
+              <div class="project-card-image">
+                <span class="project-card-image-placeholder" data-i18n="coming-soon">Coming Soon</span>
+              </div>
+              <div class="project-card-body">
+                <h3 data-i18n="project-lifecoach-title">Life Coach AI Assistant</h3>
+                <p class="project-card-outcome" data-i18n="project-lifecoach-outcome">
+                  AI-powered administration assistant for life coaching practices.
+                </p>
+                <div class="project-card-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">AI</span>
+                  <span class="tag">Flask</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Card 5: TubeText -->
+            <div class="project-card fade-up delay-5" data-case-study="cs-tubetext">
+              <div class="project-card-image">
+                <img src="images/tubetext_small.png" alt="TubeText YouTube AI Tool"
+                     onerror="this.onerror=null; this.src='images/tubetext.svg';" loading="lazy">
+              </div>
+              <div class="project-card-body">
+                <h3 data-i18n="project-tubetext-title">TubeText</h3>
+                <p class="project-card-outcome" data-i18n="project-tubetext-outcome">
+                  AI-powered YouTube transcript extraction with LLM summaries, real-time streaming translation, and audio transcription — deployed as a production SaaS.
+                </p>
+                <div class="project-card-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">LangChain</span>
+                  <span class="tag">OpenAI</span>
+                  <span class="tag">Deepgram</span>
+                  <span class="tag">Docker</span>
                 </div>
               </div>
               <div class="project-card-cta">
@@ -255,80 +290,53 @@
             </div>
           </div>
 
-          <!-- Case Study: Voice Agent -->
-          <div class="case-study" id="cs-voice-agent">
+          <!-- Case Study: TubeText -->
+          <div class="case-study" id="cs-tubetext">
             <div class="case-study-inner">
               <div class="divider" style="margin-bottom: 2rem;"></div>
               <div class="case-study-grid">
                 <div class="case-study-section">
                   <h4 data-i18n="cs-label-problem">The Problem</h4>
-                  <p data-i18n="cs-voice-agent-problem">
-                    Cloud-based voice assistants raise privacy concerns and incur recurring costs. Users who want AI assistance with sensitive documents need an offline-first solution that never sends data externally.
+                  <p data-i18n="cs-tubetext-problem">
+                    YouTube holds massive knowledge but extracting insights from long videos is inefficient. No tool combined transcript extraction, AI summarization, and multilingual translation in one pipeline.
                   </p>
                 </div>
                 <div class="case-study-section">
                   <h4 data-i18n="cs-label-approach">The Approach</h4>
-                  <p data-i18n="cs-voice-agent-approach">
-                    Built a fully offline voice assistant using Vosk for speech recognition and XTTS-v2 for neural text-to-speech. The entire pipeline runs locally with no cloud dependency.
+                  <p data-i18n="cs-tubetext-approach">
+                    Async FastAPI backend orchestrating multiple AI services: Deepgram Nova-3 for audio-to-text, LangChain + OpenAI GPT-4 mini for structured summaries, Cerebras Llama-3.3-70b for real-time streaming translation via SSE. PostgreSQL with async SQLAlchemy and Alembic migrations. Dockerized and deployed on Railway.
                   </p>
                 </div>
                 <div class="case-study-section">
                   <h4 data-i18n="cs-label-result">The Result</h4>
-                  <p data-i18n="cs-voice-agent-result">
-                    Privacy-first assistant achieving 90%+ recognition accuracy with zero recurring costs. Handles document analysis and summarization entirely on-device.
+                  <p data-i18n="cs-tubetext-result">
+                    Production app at tubetext.app. Transcripts in seconds, AI-generated summaries, streamed translations (Spanish, French, German, Portuguese), and PDF export. Google OAuth + Stripe integration for billing.
                   </p>
                 </div>
                 <div class="case-study-section">
                   <h4 data-i18n="cs-label-decisions">Key Decisions</h4>
-                  <p data-i18n="cs-voice-agent-decisions">
-                    Chose Vosk over Whisper for lower resource requirements. XTTS-v2 selected for its natural-sounding multilingual output. Designed for consumer hardware without GPU requirements.
+                  <p data-i18n="cs-tubetext-decisions">
+                    FastAPI for async-first performance. LangChain agents with YAML-driven prompts for maintainable AI pipelines. SSE streaming for real-time translation feedback. Deepgram over Whisper for production reliability. Docker + Railway for reproducible deployment.
                   </p>
                 </div>
               </div>
               <div class="case-study-tech">
                 <span class="tech-badge">Python</span>
-                <span class="tech-badge">Vosk</span>
-                <span class="tech-badge">XTTS-v2</span>
-                <span class="tech-badge">Ollama</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Case Study: Recruiting AI -->
-          <div class="case-study" id="cs-recruiting-ai">
-            <div class="case-study-inner">
-              <div class="divider" style="margin-bottom: 2rem;"></div>
-              <div class="case-study-grid">
-                <div class="case-study-section">
-                  <h4 data-i18n="cs-label-problem">The Problem</h4>
-                  <p data-i18n="cs-recruiting-ai-problem">
-                    Recruiters spend hours on repetitive screening tasks that could be automated. Manual candidate evaluation is inconsistent and prone to bias.
-                  </p>
-                </div>
-                <div class="case-study-section">
-                  <h4 data-i18n="cs-label-approach">The Approach</h4>
-                  <p data-i18n="cs-recruiting-ai-approach">
-                    Building a custom LLM assistant with RAG pipeline for automated candidate scoring, interview preparation, and data-driven hiring decision support.
-                  </p>
-                </div>
-                <div class="case-study-section">
-                  <h4 data-i18n="cs-label-result">The Result</h4>
-                  <p data-i18n="cs-recruiting-ai-result">
-                    In development. Targeting 70% reduction in initial screening time with more consistent evaluation criteria.
-                  </p>
-                </div>
-                <div class="case-study-section">
-                  <h4 data-i18n="cs-label-decisions">Key Decisions</h4>
-                  <p data-i18n="cs-recruiting-ai-decisions">
-                    Using LangChain for document processing pipeline. RAG architecture for context-aware candidate evaluation. Designed to augment recruiter judgment, not replace it.
-                  </p>
-                </div>
-              </div>
-              <div class="case-study-tech">
-                <span class="tech-badge">Python</span>
+                <span class="tech-badge">FastAPI</span>
                 <span class="tech-badge">LangChain</span>
-                <span class="tech-badge">RAG</span>
-                <span class="tech-badge">ChromaDB</span>
+                <span class="tech-badge">OpenAI GPT-4</span>
+                <span class="tech-badge">Deepgram</span>
+                <span class="tech-badge">Cerebras</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">SQLAlchemy</span>
+                <span class="tech-badge">Alembic</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Railway</span>
+              </div>
+              <div class="case-study-actions">
+                <a href="https://tubetext.app" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="cs-try-demo">Try Live Demo</a>
+                <a href="https://github.com/LouisZCode/Youtube-2-Text" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="cs-view-source">View Source</a>
+                <a href="projects/tubetext.html" class="btn btn-ghost project-link" data-project="tubetext" data-i18n="cs-full-case-study">Full Case Study</a>
               </div>
             </div>
           </div>

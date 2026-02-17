@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubeText - Case Study | Luis Zermeno</title>
+    <link rel="canonical" href="https://www.luiszermeno.info/projects/tubetext.html">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <meta name="description" content="TubeText - AI-powered YouTube transcript extraction with LLM summaries, streaming translation, and audio transcription. Built with FastAPI, LangChain, OpenAI, Deepgram.">
+    <meta name="keywords" content="YouTube transcription, AI summarization, FastAPI, LangChain, Deepgram, OpenAI, Python, SSE streaming">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="detail-nav">
+        <a href="../index.html#projects" class="detail-back">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Back to Projects
+        </a>
+
+        <div class="detail-nav-right">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+            <button class="theme-toggle" data-i18n="theme-light">Light Mode</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="detail-hero">
+        <div class="detail-hero-content">
+            <div class="detail-badge">
+                <span class="detail-badge-dot"></span>
+                <span data-i18n="project-status-live">Live Product</span>
+            </div>
+            <h1>
+                TubeText: <br>
+                <span class="accent">AI Transcript Engine</span>
+            </h1>
+            <p class="detail-hero-desc" data-i18n="tt-description">
+                An async backend that orchestrates multiple AI services to extract, summarize, and translate YouTube video content — turning hours of video into actionable text in seconds.
+            </p>
+
+            <div class="detail-hero-actions">
+                <a href="https://tubetext.app" target="_blank" class="btn btn-primary">
+                    Visit Live Site
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+                <a href="https://github.com/LouisZCode/Youtube-2-Text" target="_blank" class="btn btn-ghost">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    View Source
+                </a>
+            </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="detail-hero-visual">
+            <img src="../images/tubetext-demo.gif" alt="TubeText Demo" onerror="this.src='../images/tubetext_small.png'">
+            <div class="detail-stat-badge">
+                <div class="label">AI Services</div>
+                <div class="value">3</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Technical Specs Bar -->
+    <section class="specs-bar">
+        <div class="specs-bar-inner">
+            <div>
+                <h3 data-i18n="tt-spec-framework">Framework</h3>
+                <p>FastAPI, Python 3.12</p>
+            </div>
+            <div>
+                <h3 data-i18n="tt-spec-ai">AI Services</h3>
+                <p>OpenAI, Deepgram, Cerebras</p>
+            </div>
+            <div>
+                <h3 data-i18n="tt-spec-database">Database</h3>
+                <p>PostgreSQL + async SQLAlchemy</p>
+            </div>
+            <div>
+                <h3 data-i18n="tt-spec-deployment">Deployment</h3>
+                <p>Docker + Railway</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="detail-main">
+
+        <!-- Left Column - Main Content -->
+        <div class="detail-content">
+
+            <!-- The Challenge -->
+            <section>
+                <h2 data-i18n="tt-challenge">The Challenge</h2>
+                <p data-i18n="tt-challenge-p1">
+                    YouTube is one of the richest knowledge sources on the internet — tutorials, lectures, interviews, deep dives on any topic. But most videos are long, full of filler, and hard to skim. Getting to the content that matters means watching everything.
+                </p>
+                <p data-i18n="tt-challenge-p2">
+                    The technical challenge was building an <strong>async pipeline</strong> that orchestrates multiple AI services (transcription, summarization, translation) without blocking — while keeping response times fast enough for a real-time user experience.
+                </p>
+            </section>
+
+            <!-- AI Pipeline Architecture -->
+            <section>
+                <h2 data-i18n="tt-pipeline">AI Pipeline Architecture</h2>
+                <div class="detail-diagram">
+                    <img src="../images/tubetext-flow.png" alt="TubeText AI Pipeline Architecture">
+                    <p class="caption">Full AI pipeline from URL to translated transcript</p>
+                </div>
+            </section>
+
+            <!-- LangChain Summary Agent -->
+            <section>
+                <h2 data-i18n="tt-summary-agent">LangChain Summary Agent</h2>
+                <p data-i18n="tt-summary-agent-desc">
+                    Summaries are generated through a LangChain agent with YAML-driven prompts. This keeps prompt engineering separate from application logic, making it easy to iterate on prompt quality without touching code.
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">agents/summary_agent.py</span>
+                    </div>
+                    <pre><code><span class="kw">from</span> langchain_openai <span class="kw">import</span> ChatOpenAI
+<span class="kw">from</span> langchain_core.prompts <span class="kw">import</span> ChatPromptTemplate
+
+<span class="comment"># Load prompt from YAML config</span>
+prompt = ChatPromptTemplate.from_messages([
+    (<span class="str">"system"</span>, prompts[<span class="str">"SUMMARIZE_PROMPT"</span>]),
+    (<span class="str">"human"</span>, <span class="str">"{transcript}"</span>)
+])
+
+llm = ChatOpenAI(
+    model=<span class="str">"gpt-4o-mini"</span>,
+    temperature=<span class="num">0.3</span>
+)
+
+chain = prompt | llm
+result = <span class="kw">await</span> chain.ainvoke({
+    <span class="str">"transcript"</span>: transcript_text
+})</code></pre>
+                </div>
+            </section>
+
+            <!-- Streaming Translation -->
+            <section>
+                <h2 data-i18n="tt-streaming">Real-Time Streaming Translation</h2>
+                <p data-i18n="tt-streaming-desc">
+                    Translation uses Server-Sent Events (SSE) to stream results segment by segment. Cerebras Llama-3.3-70b was chosen for its fast inference speed, giving users real-time feedback instead of waiting for the entire transcript to translate.
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">routes/video.py</span>
+                    </div>
+                    <pre><code><span class="kw">async def</span> <span class="fn">translate_stream</span>(segments, target_lang):
+    <span class="str">"""Yield SSE events as each segment is translated."""</span>
+    <span class="kw">for</span> segment <span class="kw">in</span> segments:
+        translation = <span class="kw">await</span> cerebras_client.chat.completions.create(
+            model=<span class="str">"llama-3.3-70b"</span>,
+            messages=[
+                {<span class="str">"role"</span>: <span class="str">"system"</span>, <span class="str">"content"</span>: translate_prompt},
+                {<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: segment[<span class="str">"text"</span>]}
+            ],
+            stream=<span class="kw">True</span>
+        )
+        <span class="kw">yield</span> f<span class="str">"data: {json.dumps(result)}\n\n"</span>
+
+<span class="kw">return</span> StreamingResponse(
+    translate_stream(segments, lang),
+    media_type=<span class="str">"text/event-stream"</span>
+)</code></pre>
+                </div>
+            </section>
+
+            <!-- Async Database Layer -->
+            <section>
+                <h2 data-i18n="tt-async-db">Async Database Layer</h2>
+                <p data-i18n="tt-async-db-desc">
+                    The entire data layer is async — PostgreSQL via asyncpg with SQLAlchemy 2.0 async sessions. Alembic handles schema migrations. Usage tracking resets automatically on calendar month boundaries without any background jobs.
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">database.py</span>
+                    </div>
+                    <pre><code><span class="kw">from</span> sqlalchemy.ext.asyncio <span class="kw">import</span> create_async_engine, AsyncSession
+
+<span class="comment"># Auto-convert to asyncpg driver</span>
+DATABASE_URL = os.getenv(<span class="str">"DATABASE_URL"</span>).replace(
+    <span class="str">"postgresql://"</span>, <span class="str">"postgresql+asyncpg://"</span>
+)
+
+engine = create_async_engine(DATABASE_URL)
+
+<span class="kw">async def</span> <span class="fn">get_db</span>():
+    <span class="kw">async with</span> AsyncSession(engine) <span class="kw">as</span> session:
+        <span class="kw">yield</span> session</code></pre>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Right Column - Sidebar -->
+        <aside class="detail-sidebar">
+
+            <!-- Key Features -->
+            <div class="sidebar-card">
+                <h3 data-i18n="tt-features">Key Features</h3>
+                <ul class="sidebar-features">
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="tt-feature1">Caption-based transcript extraction</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="tt-feature2">Audio transcription via Deepgram Nova-3</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="tt-feature3">AI summaries with LangChain + GPT-4 mini</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="tt-feature4">Real-time streaming translation (SSE)</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="tt-feature5">PDF export with branding</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="tt-feature6">Google OAuth + Stripe billing</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Lessons Learned -->
+            <div class="sidebar-card">
+                <h3 data-i18n="tt-lessons">Lessons Learned</h3>
+                <div class="sidebar-lessons">
+                    <div>
+                        <strong data-i18n="tt-lesson1-title">Async-First Pays Off</strong>
+                        <p data-i18n="tt-lesson1-desc">
+                            SQLAlchemy 2.0 async sessions with asyncpg eliminate blocking DB calls. Every I/O operation runs concurrently.
+                        </p>
+                    </div>
+                    <div>
+                        <strong data-i18n="tt-lesson2-title">SSE for Real-Time UX</strong>
+                        <p data-i18n="tt-lesson2-desc">
+                            Streaming translation segment-by-segment gives users immediate feedback instead of waiting for the full result.
+                        </p>
+                    </div>
+                    <div>
+                        <strong data-i18n="tt-lesson3-title">YAML-Driven Prompts</strong>
+                        <p data-i18n="tt-lesson3-desc">
+                            Separating prompts from code makes prompt iteration fast. Change the YAML, redeploy — no code changes needed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="sidebar-card">
+                <h3 data-i18n="tt-technologies">Technologies</h3>
+                <div class="sidebar-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">FastAPI</span>
+                    <span class="tech-badge">LangChain</span>
+                    <span class="tech-badge">OpenAI</span>
+                    <span class="tech-badge">Deepgram</span>
+                    <span class="tech-badge">Cerebras</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">SQLAlchemy</span>
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">Railway</span>
+                    <span class="tech-badge">Stripe</span>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="detail-footer">
+        <div class="detail-footer-links">
+            <a href="https://tubetext.app" target="_blank">Live Site &rarr;</a>
+            <a href="https://github.com/LouisZCode/Youtube-2-Text" target="_blank">Source Code &rarr;</a>
+        </div>
+        <a href="../index.html#projects" class="detail-footer-back">&larr; Back to Portfolio Home</a>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
