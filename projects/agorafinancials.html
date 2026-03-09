@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgoraFinancials - Case Study | Luis Zermeno</title>
+    <link rel="canonical" href="https://www.luiszermeno.info/projects/agorafinancials.html">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <meta name="description" content="AgoraFinancials - Multi-LLM stock evaluation engine using the Pythagoras Method. 9 AI models analyze SEC filings, debate disagreements, and produce bias-reduced financial ratings. Built with FastAPI, LangChain, pgvector, OpenRouter.">
+    <meta name="keywords" content="stock evaluation, multi-LLM, financial analysis, SEC filings, RAG, pgvector, LangChain, FastAPI, OpenRouter, AI debate, Pythagoras Method">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="detail-nav">
+        <a href="../index.html#projects" class="detail-back">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Back to Projects
+        </a>
+
+        <div class="detail-nav-right">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+            <button class="theme-toggle" data-i18n="theme-light">Light Mode</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="detail-hero">
+        <div class="detail-hero-content">
+            <div class="detail-badge">
+                <span class="detail-badge-dot"></span>
+                <span data-i18n="project-status-live">Live Product</span>
+            </div>
+            <h1>
+                AgoraFinancials: <br>
+                <span class="accent" data-i18n="af-subtitle">Multi-LLM Stock Evaluator</span>
+            </h1>
+            <p class="detail-hero-desc" data-i18n="af-description">
+                A stock evaluation engine that orchestrates up to 9 LLMs to independently analyze SEC filings, then forces them to debate their disagreements, producing bias-reduced financial ratings through cross-model consensus.
+            </p>
+
+            <div class="detail-hero-actions">
+                <a href="https://agorafinancials.com" target="_blank" class="btn btn-primary">
+                    Visit Live Site
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+                <a href="https://github.com/LouisZCode/AI_Powered_Stocks_Evaluation" target="_blank" class="btn btn-ghost">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    View Source
+                </a>
+            </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="detail-hero-visual">
+            <img src="../images/agorafinancials-demo.gif" alt="AgoraFinancials Demo" onerror="this.src='../images/agorafinancials.png'">
+            <div class="detail-stat-badge">
+                <div class="label">LLM Models</div>
+                <div class="value">9</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Technical Specs Bar -->
+    <section class="specs-bar">
+        <div class="specs-bar-inner">
+            <div>
+                <h3 data-i18n="af-spec-stack">Stack</h3>
+                <p>FastAPI, Python, LangChain</p>
+            </div>
+            <div>
+                <h3 data-i18n="af-spec-ai">AI Models</h3>
+                <p>9 LLMs via OpenRouter</p>
+            </div>
+            <div>
+                <h3 data-i18n="af-spec-database">Database</h3>
+                <p>PostgreSQL + pgvector</p>
+            </div>
+            <div>
+                <h3 data-i18n="af-spec-deployment">Deployment</h3>
+                <p>Docker + Railway</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="detail-main">
+
+        <!-- Left Column - Main Content -->
+        <div class="detail-content">
+
+            <!-- The Challenge -->
+            <section>
+                <h2 data-i18n="af-challenge">The Challenge</h2>
+                <p data-i18n="af-challenge-p1">
+                    Stock analysis is drowning in information. SEC filings are dense, financial statements span dozens of pages, and understanding a company's real health takes hours of reading. LLMs are excellent at condensing this data into narratives, but a single LLM can hallucinate numbers, cherry-pick data points, and bias its own conclusions.
+                </p>
+                <p data-i18n="af-challenge-p2">
+                    The core question: <strong>how do you get reliable AI-powered financial analysis when you can't trust any single model?</strong> The answer was to make them check each other. Orchestrate multiple LLMs in parallel, compare their independent evaluations, and resolve disagreements through structured multi-round debate.
+                </p>
+            </section>
+
+            <!-- The Pythagoras Method -->
+            <section>
+                <h2 data-i18n="af-pythagoras">The Pythagoras Method</h2>
+                <p data-i18n="af-pythagoras-desc">
+                    The core innovation. Instead of trusting one LLM, multiple models independently evaluate 8 financial metrics. Their ratings are then harmonized: if models agree, the rating stands. If they conflict, they enter a structured multi-round debate until consensus is reached or the metric is flagged as complex.
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">Pipeline: 4-Step Evaluation</span>
+                    </div>
+                    <pre><code><span class="comment"># The full financial evaluation pipeline</span>
+
+<span class="str">1. INGEST</span>     SEC 10-Q filings → chunk → embed → pgvector
+               Structured financials → format as tables → cache
+
+<span class="str">2. ANALYZE</span>    N LLMs evaluate 8 metrics in parallel
+               Each rates: Excellent / Good / Neutral / Bad / Horrible
+               Fast tier: numbers only | Deep tier: RAG + reasoning
+
+<span class="str">3. HARMONIZE</span>  Compare all ratings per metric
+               All agree → aligned | Same tier → majority wins
+               Cross-tier conflict → flagged for debate
+
+<span class="str">4. DEBATE</span>     LLMs defend positions in N rounds
+               Can ACCEPT / ADD / REJECT others' arguments
+               &gt;50% consensus → adopted | else → "COMPLEX"</code></pre>
+                </div>
+            </section>
+
+            <!-- Two-Tier Model Architecture -->
+            <section>
+                <h2 data-i18n="af-two-tier">Two-Tier Model Architecture</h2>
+                <p data-i18n="af-two-tier-desc">
+                    Models are split into fast and deep tiers. Fast models crunch the numbers from injected financial tables. Deep models use a retrieval tool to pull qualitative context from SEC filings (segment breakdowns, margin drivers, management commentary), producing debate-ready reasoning. The biggest discovery: the quality jump is fast to deep, not deep to premium. Cheap models ignore retrieval instructions regardless of prompt engineering.
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">agents/agents.py</span>
+                    </div>
+                    <pre><code><span class="kw">from</span> langchain.agents <span class="kw">import</span> create_agent
+
+<span class="comment"># Two-tier model registry</span>
+MODELS = {
+    <span class="comment"># Fast tier: 3-8s, ~$0.05/eval — numbers only</span>
+    <span class="str">"grok_fast"</span>:    <span class="str">"xai:grok-4-fast-non-reasoning"</span>,
+    <span class="str">"openai_fast"</span>:  <span class="str">"openai:gpt-5-mini"</span>,
+    <span class="str">"claude_fast"</span>:  <span class="str">"anthropic:claude-3-haiku"</span>,
+    <span class="str">"mistral_fast"</span>: <span class="str">"mistral-small-2506"</span>,
+
+    <span class="comment"># Deep tier: 21-52s, ~$0.12-0.25/eval — RAG + reasoning</span>
+    <span class="str">"grok_deep"</span>:    <span class="str">"xai:grok-4-fast-reasoning"</span>,
+    <span class="str">"openai_deep"</span>:  <span class="str">"openai:gpt-5.1"</span>,
+    <span class="str">"claude_deep"</span>:  <span class="str">"anthropic:claude-sonnet-4-6"</span>,
+    <span class="str">"gemini_deep"</span>:  <span class="str">"google_genai:gemini-2.5-pro"</span>,
+    <span class="str">"mistral_deep"</span>: <span class="str">"mistral-large-2411"</span>,
+}
+
+<span class="comment"># Each model becomes a LangGraph agent with tool access</span>
+agent = create_agent(
+    model=MODELS[model_key],
+    tools=[retrieval_tool],
+    prompt=system_prompt,
+)
+
+<span class="comment"># All route through OpenRouter (unified billing)</span>
+<span class="comment"># Retry: OpenRouter → OpenRouter → Direct provider</span></code></pre>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">routes/financial_analisys.py</span>
+                    </div>
+                    <pre><code><span class="comment"># Run all selected LLMs in parallel</span>
+results = <span class="kw">await</span> asyncio.gather(*[
+    analyze_single_model(
+        ticker=ticker,
+        model_key=key,
+        financial_tables=cached_tables,
+        retrieval_tool=rag_tool,
+    )
+    <span class="kw">for</span> key <span class="kw">in</span> selected_models
+], return_exceptions=<span class="kw">True</span>)
+
+<span class="comment"># Each model outputs: 8 metrics × (rating + reason) + summary</span>
+<span class="comment"># Cached by ticker + model + filing_date — skip if already evaluated</span></code></pre>
+                </div>
+            </section>
+
+            <!-- SEC Filing RAG Pipeline -->
+            <section>
+                <h2 data-i18n="af-rag">SEC Filing RAG Pipeline</h2>
+                <p data-i18n="af-rag-desc">
+                    SEC 10-Q filings are ingested, cleaned of boilerplate, chunked respecting markdown headers, and embedded into PostgreSQL with pgvector. Deep-tier models use a LangChain retrieval tool to search these chunks by cosine similarity, pulling qualitative context that raw financial tables can't provide.
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">database/vs_addition.py</span>
+                    </div>
+                    <pre><code><span class="kw">from</span> langchain.text_splitter <span class="kw">import</span> RecursiveCharacterTextSplitter
+
+splitter = RecursiveCharacterTextSplitter(
+    chunk_size=<span class="num">2500</span>, chunk_overlap=<span class="num">300</span>,
+    separators=[<span class="str">"\n## "</span>, <span class="str">"\n### "</span>, <span class="str">"\n\n"</span>, <span class="str">"\n"</span>, <span class="str">" "</span>],
+)
+
+<span class="comment"># SEC 10-Q → Clean boilerplate → Chunk → Embed → pgvector</span>
+chunks = splitter.split_text(cleaned_filing)
+chunks = [c <span class="kw">for</span> c <span class="kw">in</span> chunks <span class="kw">if</span> len(c) > <span class="num">100</span>]  <span class="comment"># filter noise</span>
+
+<span class="comment"># Embedding: all-MiniLM-L6-v2 (384 dims, HuggingFace)</span>
+<span class="comment"># Retrieval: cosine similarity, top 8 chunks filtered by ticker</span>
+<span class="comment"># Non-US stocks: Yahoo Finance fallback (no SEC filings)</span></code></pre>
+                </div>
+            </section>
+
+            <!-- Multi-Round Debate Engine -->
+            <section>
+                <h2 data-i18n="af-debate">Multi-Round Debate Engine</h2>
+                <p data-i18n="af-debate-desc">
+                    When models disagree on a metric, they enter a structured debate. Each LLM defends its position, reviews others' arguments, and can change its rating. Position changes are tracked throughout. A sliding-window compression keeps token costs flat; without it, costs grow exponentially per round.
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">func/debate_orchestration.py</span>
+                    </div>
+                    <pre><code><span class="kw">async def</span> <span class="fn">run_debate</span>(metrics_to_debate, llm_analyses, rounds=<span class="num">2</span>):
+    <span class="kw">for</span> round_num <span class="kw">in</span> range(<span class="num">1</span>, rounds + <span class="num">1</span>):
+        <span class="kw">if</span> round_num > <span class="num">1</span>:
+            <span class="comment"># Compress earlier rounds to control token costs</span>
+            <span class="comment"># Flattens R4/R5 costs to roughly R2 levels</span>
+            history = <span class="kw">await</span> _compress_history(debate_log, mistral_fast)
+
+        positions = <span class="kw">await</span> asyncio.gather(*[
+            get_model_position(model, metric, history)
+            <span class="kw">for</span> model <span class="kw">in</span> models
+            <span class="kw">for</span> metric <span class="kw">in</span> metrics_to_debate
+        ])
+        <span class="comment"># Track: "Claude changed: Good → Neutral"</span>
+
+    <span class="comment"># Final: &gt;50% agree → rating adopted, else → "COMPLEX"</span>
+    <span class="kw">return</span> build_consensus(all_positions)</code></pre>
+                </div>
+            </section>
+
+            <!-- System Design Tradeoffs -->
+            <section>
+                <h2 data-i18n="af-tradeoffs">System Design Tradeoffs</h2>
+                <p data-i18n="af-tradeoffs-intro">
+                    Every architectural choice has a cost. Here are the key tradeoffs I made and why.
+                </p>
+
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="code-block-dot red"></span>
+                        <span class="code-block-dot yellow"></span>
+                        <span class="code-block-dot green"></span>
+                        <span class="code-block-filename">architecture_decisions.md</span>
+                    </div>
+                    <pre><code><span class="comment"># ADR-001: OpenRouter as unified gateway</span>
+<span class="str">Decision:</span>  Route all 9 models through OpenRouter first
+<span class="str">Why:</span>       Single billing, cost tracking, unified API format
+<span class="str">Tradeoff:</span>  Extra latency hop, mitigated by direct-provider fallback
+
+<span class="comment"># ADR-002: Two-tier model split (fast vs deep)</span>
+<span class="str">Decision:</span>  Fast models skip RAG, deep models get retrieval tool access
+<span class="str">Why:</span>       10x cost difference. Let users choose speed vs depth
+<span class="str">Tradeoff:</span>  Fast ratings lack qualitative reasoning
+
+<span class="comment"># ADR-003: pgvector over dedicated vector DB</span>
+<span class="str">Decision:</span>  Embeddings in PostgreSQL with pgvector extension
+<span class="str">Why:</span>       Single database for everything, simpler infra
+<span class="str">Tradeoff:</span>  Scaling limits vs Pinecone/Weaviate, but sufficient for filing data
+
+<span class="comment"># ADR-004: Debate compression via sliding window</span>
+<span class="str">Decision:</span>  Summarize earlier debate rounds before feeding next round
+<span class="str">Why:</span>       Without it, token costs grew exponentially per round
+<span class="str">Tradeoff:</span>  Loses fine detail from early rounds
+
+<span class="comment"># ADR-005: Frontend-driven pipeline orchestration</span>
+<span class="str">Decision:</span>  Frontend calls each pipeline step, holds intermediate state
+<span class="str">Why:</span>       Real-time progress UI, users see each phase live
+<span class="str">Tradeoff:</span>  More API calls, but enables per-step UX feedback
+
+<span class="comment"># ADR-006: Removed Gemini Flash entirely</span>
+<span class="str">Decision:</span>  Dropped gemini-2.5-flash from available models
+<span class="str">Why:</span>       Uncontrollable tool-calling loops inflated costs 30×
+<span class="str">Tradeoff:</span>  One fewer fast-tier option (gemini_deep still available)</code></pre>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Right Column - Sidebar -->
+        <aside class="detail-sidebar">
+
+            <!-- Key Features -->
+            <div class="sidebar-card">
+                <h3 data-i18n="af-features">Key Features</h3>
+                <ul class="sidebar-features">
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="af-feature1">9 LLMs across 5 providers in parallel</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="af-feature2">SEC filing RAG with pgvector embeddings</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="af-feature3">Pythagoras Method: harmonize + debate</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="af-feature4">PDF financial reports with score gauge</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="af-feature5">Stripe subscriptions + token economy</span>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span data-i18n="af-feature6">Watchlist with drag-drop + live scores</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Lessons Learned -->
+            <div class="sidebar-card">
+                <h3 data-i18n="af-lessons">Lessons Learned</h3>
+                <div class="sidebar-lessons">
+                    <div>
+                        <strong data-i18n="af-lesson1-title">Gemini Flash: 308 API Calls</strong>
+                        <p data-i18n="af-lesson1-desc">
+                            gemini-2.5-flash made 308 API calls in a single evaluation, 78% ending in tool calls, peaking at 794K input tokens. Cost: $3.25 vs $0.08 for Mistral. Had to remove the model entirely.
+                        </p>
+                    </div>
+                    <div>
+                        <strong data-i18n="af-lesson2-title">Debate Token Explosion</strong>
+                        <p data-i18n="af-lesson2-desc">
+                            Without compression, debate history grew exponentially. R5 token costs were 5x higher than R2. Built sliding-window summarization using mistral-fast to flatten costs, saving 30% at 5 rounds.
+                        </p>
+                    </div>
+                    <div>
+                        <strong data-i18n="af-lesson3-title">Cheap Models Skip the Tool</strong>
+                        <p data-i18n="af-lesson3-desc">
+                            The biggest quality jump is fast→deep, not deep→premium. Cheap models output "Revenue grew 16% YoY" while deep models output "Revenue grew 16% YoY, driven by iPhone +13%, Services +13%, Japan +17%." No prompt engineering fixes it.
+                        </p>
+                    </div>
+                    <div>
+                        <strong data-i18n="af-lesson4-title">Claude Haiku: Star Performer</strong>
+                        <p data-i18n="af-lesson4-desc">
+                            Across all 9 models, Claude Haiku consistently made 5-7 retrieval calls and produced the richest reasoning: segment breakdowns, margin drivers, regional data. The only model that truly followed the analysis prompt at every price tier.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="detail-footer">
+        <div class="detail-footer-links">
+            <a href="https://agorafinancials.com" target="_blank">Live Site &rarr;</a>
+            <a href="https://github.com/LouisZCode/AI_Powered_Stocks_Evaluation" target="_blank">Source Code &rarr;</a>
+        </div>
+        <a href="../index.html#projects" class="detail-footer-back">&larr; Back to Portfolio Home</a>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

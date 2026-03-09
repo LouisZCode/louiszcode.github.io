@@ -26,7 +26,8 @@
       "Bash(tree:*)",
       "Bash(find:*)",
       "Bash(node -c:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(sips:*)"
     ]
   },
   "enableAllProjectMcpServers": false

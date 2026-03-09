@@ -159,21 +159,29 @@
               </div>
             </div>
 
-            <!-- Project Card 2: Agora Stocks -->
-            <div class="project-card fade-up delay-2">
+            <!-- Project Card 2: AgoraFinancials -->
+            <div class="project-card fade-up delay-2" data-case-study="cs-agorafinancials">
               <div class="project-card-image">
-                <span class="project-card-image-placeholder" data-i18n="coming-soon">Coming Soon</span>
+                <img src="images/agorafinancials_small.png" alt="AgoraFinancials Multi-LLM Stock Evaluator"
+                     onerror="this.onerror=null; this.src='images/agorafinancials.svg';" loading="lazy">
               </div>
               <div class="project-card-body">
-                <h3 data-i18n="project-agora-title">Agora Stocks</h3>
+                <h3 data-i18n="project-agora-title">AgoraFinancials</h3>
                 <p class="project-card-outcome" data-i18n="project-agora-outcome">
-                  LLM council and debate platform for stock financial analysis and narrative evaluation.
+                  Multi-LLM stock evaluation engine that orchestrates 9 AI models to analyze SEC filings, debate disagreements, and produce bias-reduced financial ratings.
                 </p>
                 <div class="project-card-tags">
                   <span class="tag">Python</span>
-                  <span class="tag">LangGraph</span>
-                  <span class="tag">Multi-Agent</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">LangChain</span>
+                  <span class="tag">OpenRouter</span>
+                  <span class="tag">pgvector</span>
+                  <span class="tag">Docker</span>
                 </div>
+              </div>
+              <div class="project-card-cta">
+                <span data-i18n="view-case-study">View Case Study</span>
+                <span class="arrow">&rarr;</span>
               </div>
             </div>
 
@@ -286,6 +294,60 @@
                 <a href="https://spralingua.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="cs-try-demo">Try Live Demo</a>
                 <a href="https://github.com/LouisZCode/Spralingua_AIAgents_App" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="cs-view-source">View Source</a>
                 <a href="projects/spralingua.html" class="btn btn-ghost project-link" data-project="spralingua" data-i18n="cs-full-case-study">Full Case Study</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Study: AgoraFinancials -->
+          <div class="case-study" id="cs-agorafinancials">
+            <div class="case-study-inner">
+              <div class="divider" style="margin-bottom: 2rem;"></div>
+              <div class="case-study-grid">
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-problem">The Problem</h4>
+                  <p data-i18n="cs-agora-problem">
+                    Stock analysis is drowning in information. LLMs can condense SEC filings into narratives, but a single model can hallucinate numbers, cherry-pick data, and bias its conclusions. No existing tool cross-validates AI-generated financial analysis.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-approach">The Approach</h4>
+                  <p data-i18n="cs-agora-approach">
+                    Built the Pythagoras Method: multiple LLMs independently evaluate 8 financial metrics, their ratings are harmonized, and conflicts trigger structured multi-round debates until consensus. Two-tier model architecture (fast for numbers, deep for RAG-powered qualitative reasoning) with OpenRouter as unified gateway.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-result">The Result</h4>
+                  <p data-i18n="cs-agora-result">
+                    Production platform at agorafinancials.com. 9 LLMs across 5 providers running in parallel, SEC filing RAG with pgvector, PDF report generation with scoring, Stripe billing with token economy, and watchlist with live scores.
+                  </p>
+                </div>
+                <div class="case-study-section">
+                  <h4 data-i18n="cs-label-decisions">Key Decisions</h4>
+                  <p data-i18n="cs-agora-decisions">
+                    OpenRouter for unified multi-provider billing. LangChain create_agent with retrieval tools for deep-tier models. pgvector over Pinecone for simpler single-database infra. Sliding-window debate compression to keep token costs flat across rounds.
+                  </p>
+                </div>
+              </div>
+              <div class="case-study-tech">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">LangChain</span>
+                <span class="tech-badge">OpenRouter</span>
+                <span class="tech-badge">OpenAI</span>
+                <span class="tech-badge">Anthropic</span>
+                <span class="tech-badge">Google</span>
+                <span class="tech-badge">xAI</span>
+                <span class="tech-badge">Mistral</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">pgvector</span>
+                <span class="tech-badge">Stripe</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">Railway</span>
+              </div>
+              <div class="case-study-actions">
+                <a href="https://agorafinancials.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="cs-try-demo">Try Live Demo</a>
+                <a href="https://github.com/LouisZCode/AI_Powered_Stocks_Evaluation" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="cs-view-source">View Source</a>
+                <a href="projects/agorafinancials.html" class="btn btn-ghost project-link" data-project="agorafinancials" data-i18n="cs-full-case-study">Full Case Study</a>
               </div>
             </div>
           </div>
