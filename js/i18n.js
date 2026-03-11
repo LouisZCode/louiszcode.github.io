@@ -201,7 +201,7 @@ const translations = {
     "contact-success": "Your message has been sent successfully!",
     
     // Footer
-    "copyright": "© 2025 Luis Zermeno. All Rights Reserved.",
+    "copyright": "© 2026 Luis Zermeno. All Rights Reserved.",
     
     // Portfolio page
     "portfolio-description": "A collection of my professional roles and achievements spanning talent acquisition and HR.",
@@ -223,7 +223,7 @@ const translations = {
     "filter-ai-agents": "AI Agents",
 
     // Experience overview
-    "experience-overview": "M.B.A. with 4+ years of experience in Talent Acquisition for the DACH region, 2 years also recruiting for EMEA (France, Italy, Spain, Benelux and Spain, DACH). Worked on both startup environments and big corp. Tackled Tech recruitment (Full-stack) and currently tackling Sales recruitment (Account Executives, Sales Engineers, BDRs).",
+    "experience-overview": "M.B.A. with 5 years of experience in Talent Acquisition for the DACH region and EMEA (France, Italy, Spain, Benelux). Worked in both startup environments and big corp, tackling Tech recruitment (Full-stack) and Sales recruitment (Account Executives, Sales Engineers, BDRs). Now building production AI applications full-time.",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -260,8 +260,9 @@ const translations = {
     "ai-projects-position": "Independent AI Development",
     "ai-projects-location": "Remote",
     "ai-projects-description": "Full-time focus on building production-ready LLM applications and AI-powered tools. My recruitment background directly informs my AI development work\u2014understanding user needs, identifying workflow pain points, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems, not just interesting technical demos.",
-    "ai-projects-achievement1": "Multi-language learning platform with <2s response times built using LangGraph for agent orchestration, Flask for full-stack web application, and Claude for reasoning. Supports A1-B2 proficiency levels with intelligent grammar correction.",
-    "ai-projects-achievement2": "Privacy-first voice assistant with 90%+ recognition accuracy, running entirely offline using Python, Vosk (speech recognition), and XTTS-v2 (neural TTS). Zero cloud dependency, zero recurring costs.",
+    "ai-projects-achievement1": "Multi-language AI teacher with <2s response times built using Claude for reasoning. Supports A1-C2 proficiency levels with intelligent grammar correction.",
+    "ai-projects-achievement2": "Async backend orchestrating OpenAI, Deepgram, and Cerebras to extract, summarize, and stream-translate YouTube transcripts via SSE.",
+    "ai-projects-achievement3": "Multi-LLM stock evaluator using the Pythagoras Method: 9 models analyze SEC filings in parallel, harmonize ratings, and debate disagreements to consensus.",
     "ai-projects-achievement3": "Godot game with 50% AI-generated assets (ComfyUI, stable diffusion workflows), completed in 7-day game jam with 46 player ratings averaging 4.2/5 stars.",
     "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG Systems, Voice AI (TTS/STT)",
     "career-bridge-text": "My recruitment background directly informs my AI development work. Four years of understanding what users need, identifying pain points in workflows, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems\u2014not just interesting technical demos.",
@@ -422,8 +423,8 @@ const translations = {
     // About section
     "about-label": "About",
     "about-name": "Luis Zermeno",
-    "about-intro": "I started in recruitment \u2014 understanding people, roles, and what makes a great match. Then I discovered that AI could amplify that same intuition at scale. So I made the leap.",
-    "about-detail": "Now I build AI applications end to end: from problem definition through architecture, development, and deployment. I care about products that work for real users, not just impressive demos.",
+    "about-intro": "I started in recruitment - four years sourcing engineers and closing roles across DACH and EMEA for companies like LucaNet and Volocopter. That taught me how software teams work, what problems they actually face, and what \"production-ready\" means beyond the buzzword. Then I made the leap.",
+    "about-detail": "Now I build AI applications end to end. I've shipped three production products with real users and real payments - a multi-LLM financial analysis platform, a YouTube AI transcription SaaS, and a voice-powered language learning app. My stack runs from LangChain agents and RAG pipelines to Stripe billing and Docker deployment.",
     "about-meta": "Based in Germany \u00b7 Fluent in Spanish, German, English & French",
 
     // Contact
@@ -632,7 +633,7 @@ const translations = {
     "contact-success": "Ihre Nachricht wurde erfolgreich gesendet!",
     
     // Footer
-    "copyright": "© 2025 Luis Zermeno. Alle Rechte vorbehalten.",
+    "copyright": "© 2026 Luis Zermeno. Alle Rechte vorbehalten.",
     
     // Portfolio page
     "portfolio-description": "Eine Sammlung meiner beruflichen Rollen und Erfolge in den Bereichen Talentakquise und Personalwesen.",
@@ -654,7 +655,7 @@ const translations = {
     "filter-ai-agents": "KI-Agenten",
 
     // Experience overview
-    "experience-overview": "M.B.A. mit mehr als 4 Jahren Erfahrung im Talent Acquisition für die DACH-Region, 2 Jahre auch für EMEA (Frankreich, Italien, Spanien, Benelux und Spanien, DACH). Erfahrung sowohl in Startup-Umgebungen als auch in großen Unternehmen. Schwerpunkt auf Tech-Rekrutierung (Full-Stack) und aktuell Vertriebsrekrutierung (Account Executives, Sales Engineers, BDRs).",
+    "experience-overview": "M.B.A. mit 5 Jahren Erfahrung im Talent Acquisition f\u00fcr die DACH-Region und EMEA (Frankreich, Italien, Spanien, Benelux). Erfahrung sowohl in Startup-Umgebungen als auch in gro\u00dfen Unternehmen, mit Schwerpunkt auf Tech-Rekrutierung (Full-Stack) und Vertriebsrekrutierung (Account Executives, Sales Engineers, BDRs). Jetzt Vollzeit in der Entwicklung von KI-Produktionsanwendungen.",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -693,8 +694,9 @@ const translations = {
     "ai-projects-position": "Unabhängige KI-Entwicklung",
     "ai-projects-location": "Remote",
     "ai-projects-description": "Vollzeit-Fokus auf den Aufbau produktionsreifer LLM-Anwendungen und KI-gestützter Tools. Mein Recruitment-Hintergrund beeinflusst direkt meine KI-Entwicklungsarbeit\u2014das Verstehen von Benutzerbedürfnissen, die Identifizierung von Schwachstellen in Workflows und die Übersetzung von Geschäftsanforderungen in Lösungen gibt mir einen einzigartigen Vorteil beim Bau von KI-Anwendungen, die echte Probleme lösen, nicht nur technisch interessante Demos.",
-    "ai-projects-achievement1": "Mehrsprachige Lernplattform mit <2s Antwortzeiten, entwickelt mit LangGraph für Agenten-Orchestrierung, Flask für Full-Stack-Webanwendung und Claude für Reasoning. Unterstützt A1-B2-Kompetenzstufen mit intelligenter Grammatikkorrektur.",
-    "ai-projects-achievement2": "Datenschutzorientierter Sprachassistent mit 90%+ Erkennungsgenauigkeit, vollständig offline mit Python, Vosk (Spracherkennung) und XTTS-v2 (neurales TTS). Null Cloud-Abhängigkeit, null laufende Kosten.",
+    "ai-projects-achievement1": "Mehrsprachiger KI-Lehrer mit <2s Antwortzeiten, entwickelt mit Claude f\u00fcr Reasoning. Unterst\u00fctzt A1-C2-Kompetenzstufen mit intelligenter Grammatikkorrektur.",
+    "ai-projects-achievement2": "Asynchrones Backend, das OpenAI, Deepgram und Cerebras orchestriert, um YouTube-Transkripte zu extrahieren, zusammenzufassen und per SSE in Echtzeit zu \u00fcbersetzen.",
+    "ai-projects-achievement3": "Multi-LLM-Aktienbewertung mit der Pythagoras-Methode: 9 Modelle analysieren SEC-Berichte parallel, harmonisieren Bewertungen und debattieren Meinungsverschiedenheiten bis zum Konsens.",
     "ai-projects-achievement3": "Godot-Spiel mit 50% KI-generierten Assets (ComfyUI, Stable Diffusion Workflows), fertiggestellt in 7-Tage-Game-Jam mit 46 Spielerbewertungen im Durchschnitt 4,2/5 Sternen.",
     "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG-Systeme, Sprach-KI (TTS/STT)",
     "career-bridge-text": "Mein Recruitment-Hintergrund beeinflusst direkt meine KI-Entwicklungsarbeit. Vier Jahre des Verstehens, was Benutzer brauchen, der Identifizierung von Schwachstellen in Workflows und der Übersetzung von Geschäftsanforderungen in Lösungen gibt mir einen einzigartigen Vorteil beim Bau von KI-Anwendungen, die echte Probleme lösen\u2014nicht nur technisch interessante Demos.",
@@ -1065,7 +1067,7 @@ const translations = {
     "contact-success": "¡Tu mensaje ha sido enviado con éxito!",
     
     // Footer
-    "copyright": "© 2025 Luis Zermeno. Todos los derechos reservados.",
+    "copyright": "© 2026 Luis Zermeno. Todos los derechos reservados.",
     
     // Portfolio page
     "portfolio-description": "Una colección de mis roles profesionales y logros en adquisición de talento y recursos humanos.",
@@ -1087,7 +1089,7 @@ const translations = {
     "filter-ai-agents": "Agentes de IA",
 
     // Experience overview
-    "experience-overview": "M.B.A. con más de 4 años de experiencia en Adquisición de Talento para la región DACH, 2 años también reclutando para EMEA (Francia, Italia, España, Benelux y España, DACH). Experiencia tanto en entornos de startups como en grandes corporaciones. Especializado en reclutamiento tecnológico (Full-stack) y actualmente en reclutamiento de ventas (Account Executives, Sales Engineers, BDRs).",
+    "experience-overview": "M.B.A. con 5 a\u00f1os de experiencia en Adquisici\u00f3n de Talento para la regi\u00f3n DACH y EMEA (Francia, Italia, Espa\u00f1a, Benelux). Experiencia tanto en entornos de startups como en grandes corporaciones, con enfoque en reclutamiento tecnol\u00f3gico (Full-stack) y reclutamiento de ventas (Account Executives, Sales Engineers, BDRs). Ahora desarrollando aplicaciones de IA en producci\u00f3n a tiempo completo.",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -1126,8 +1128,9 @@ const translations = {
     "ai-projects-position": "Desarrollo Independiente de IA",
     "ai-projects-location": "Remoto",
     "ai-projects-description": "Enfoque de tiempo completo en construir aplicaciones LLM listas para producción y herramientas impulsadas por IA. Mi experiencia en reclutamiento informa directamente mi trabajo de desarrollo de IA\u2014entender las necesidades de los usuarios, identificar puntos débiles en flujos de trabajo y traducir requisitos empresariales en soluciones me da una ventaja única en construir aplicaciones de IA que resuelven problemas reales, no solo demos técnicamente interesantes.",
-    "ai-projects-achievement1": "Plataforma de aprendizaje multilingüe con tiempos de respuesta <2s construida usando LangGraph para orquestación de agentes, Flask para aplicación web full-stack, y Claude para razonamiento. Soporta niveles de dominio A1-B2 con corrección gramatical inteligente.",
-    "ai-projects-achievement2": "Asistente de voz enfocado en privacidad con 90%+ de precisión de reconocimiento, funcionando completamente offline usando Python, Vosk (reconocimiento de voz), y XTTS-v2 (TTS neuronal). Cero dependencia de la nube, cero costos recurrentes.",
+    "ai-projects-achievement1": "Profesor de idiomas con IA con tiempos de respuesta <2s construido usando Claude para razonamiento. Soporta niveles A1-C2 con correcci\u00f3n gramatical inteligente.",
+    "ai-projects-achievement2": "Backend as\u00edncrono que orquesta OpenAI, Deepgram y Cerebras para extraer, resumir y traducir en streaming transcripciones de YouTube v\u00eda SSE.",
+    "ai-projects-achievement3": "Evaluador de acciones multi-LLM usando el M\u00e9todo Pit\u00e1goras: 9 modelos analizan reportes SEC en paralelo, armonizan calificaciones y debaten desacuerdos hasta el consenso.",
     "ai-projects-achievement3": "Juego en Godot con 50% de assets generados por IA (ComfyUI, flujos de trabajo de difusión estable), completado en game jam de 7 días con 46 calificaciones de jugadores promediando 4.2/5 estrellas.",
     "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, Sistemas RAG, IA de Voz (TTS/STT)",
     "career-bridge-text": "Mi experiencia en reclutamiento informa directamente mi trabajo de desarrollo de IA. Cuatro años entendiendo lo que los usuarios necesitan, identificando puntos débiles en flujos de trabajo y traduciendo requisitos empresariales en soluciones me da una ventaja única en construir aplicaciones de IA que resuelven problemas reales\u2014no solo demos técnicamente interesantes.",

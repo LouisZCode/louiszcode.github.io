@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing AI development projects, professional experience, and technical skills. The site features a clean, dark-themed UI with responsive design, multilingual support, and strong accessibility features.
 
-Live site: [www.luiszermeno.info](https://www.luiszermeno.info)
+Live site: [www.lugz.dev](https://www.lugz.dev)
 
 ## 🌟 Features
 

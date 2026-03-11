@@ -57,12 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Toggle clicked
       target.classList.toggle('open');
 
-      // Scroll into view if opening
-      if (target.classList.contains('open')) {
-        setTimeout(function () {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-      }
+      // No auto-scroll — let user stay in place
     });
   });
 

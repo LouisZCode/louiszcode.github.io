@@ -631,18 +631,20 @@ section {
    10. CASE STUDY EXPANSION
    ========================= */
 .case-study {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.3s ease;
+  transition: grid-template-rows 0.4s ease, opacity 0.3s ease;
   opacity: 0;
 }
 
 .case-study.open {
-  max-height: 1200px;
+  grid-template-rows: 1fr;
   opacity: 1;
 }
 
 .case-study-inner {
+  min-height: 0;
   padding: 2rem 0;
 }
 
@@ -867,9 +869,6 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .case-study.open {
-    max-height: 2400px;
-  }
 
   /* About */
   .about-grid {
@@ -1426,6 +1425,402 @@ section {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+/* =========================================
+   17. Experience Page
+   ========================================= */
+
+/* --- Intro --- */
+.exp-hero {
+  padding: 6rem 0 0;
+}
+
+.exp-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.exp-hero h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.exp-hero p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  max-width: 44rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.exp-hero .btn {
+  margin-top: 1.5rem;
+}
+
+.exp-section {
+  padding: 3rem 0 5rem;
+}
+
+/* --- AI Hero Card --- */
+.exp-ai-hero {
+  background: var(--bg-raised);
+  border: 1px solid hsl(var(--hue), 10%, 16%);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.exp-ai-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.exp-ai-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.exp-ai-header h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.exp-ai-header .exp-ai-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.exp-ai-date {
+  font-size: 0.875rem;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.exp-ai-desc {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 44rem;
+}
+
+/* --- Project sub-cards --- */
+.exp-project-card {
+  background: hsl(var(--hue), 10%, 7%);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.exp-project-card:last-child {
+  margin-bottom: 0;
+}
+
+.exp-project-row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.exp-project-row1 h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.exp-project-row1 a {
+  font-size: 0.875rem;
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.exp-project-row1 a:hover {
+  color: var(--primary-hover);
+}
+
+.exp-project-row2 {
+  font-size: 1rem;
+  color: var(--text-body);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.exp-project-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.exp-project-chip {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background: hsl(var(--hue), 10%, 5%);
+  border: 1px solid hsl(var(--hue), 10%, 14%);
+  border-radius: 6px;
+  color: var(--text-muted);
+}
+
+/* --- Previous Experience Timeline --- */
+.exp-prev-label {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 1.5rem;
+}
+
+.exp-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Connector line */
+.exp-timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.4375rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 1px;
+  background: var(--border-card);
+}
+
+.exp-timeline-entry {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.exp-timeline-entry:last-child {
+  margin-bottom: 0;
+}
+
+/* Dot on the line */
+.exp-timeline-entry::before {
+  content: "";
+  position: absolute;
+  left: -1.625rem;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--border-card);
+  border: 2px solid var(--bg-base);
+  box-sizing: content-box;
+}
+
+.exp-timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.exp-timeline-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.exp-timeline-header-left img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  object-fit: contain;
+  background: #fff;
+  padding: 0.2rem;
+}
+
+.exp-timeline-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-heading);
+}
+
+.exp-timeline-location {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.exp-timeline-date {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.exp-timeline-achievement {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.5;
+  margin-top: 0.25rem;
+}
+
+/* --- Education & Earlier row --- */
+.exp-small-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.exp-small-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.exp-small-card .exp-card-company {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.exp-small-card h3 {
+  font-size: 0.85rem;
+  color: var(--text-heading);
+  margin-bottom: 0.1rem;
+}
+
+.exp-small-card .subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.exp-small-card .exp-date-plain {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* --- Skills section --- */
+.exp-skills {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.exp-skills h2 {
+  font-size: 1.5rem;
+  color: var(--text-heading);
+  margin-bottom: 1.5rem;
+}
+
+.exp-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.exp-skills h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.exp-tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.exp-tool-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-base);
+  border: 1px solid var(--border-card);
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-heading);
+}
+
+.exp-tool-tag img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.exp-lang-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.exp-lang-item {
+  background: var(--bg-base);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.exp-lang-item p:first-child {
+  color: var(--text-heading);
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+}
+
+.exp-lang-item p:last-child {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* --- Forward CTA --- */
+.exp-forward-cta {
+  text-align: center;
+  padding: 4rem 0 0;
+}
+
+.exp-forward-cta p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-heading);
+  margin-bottom: 1.5rem;
+}
+
+.exp-forward-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* --- Experience page responsive --- */
+@media (max-width: 768px) {
+  .exp-ai-hero {
+    padding: 1.5rem;
+  }
+  .exp-ai-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .exp-small-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .exp-skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .exp-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* =========================
