@@ -179,7 +179,7 @@ const translations = {
     "languages": "Languages",
     
     // Experience section
-    "experience-heading": "Featured Experience",
+    "experience-heading": "From recruiting top engineers to building AI applications that ship.",
     "lucanet-title": "Talent Partner",
     "lucanet-desc": "Full-cycle recruiter for revenue and financial teams, specializing in SaaS and Fintech sales roles across DACH, Benelux, Spanish, French and Italian regions.",
     "rapid-title": "Talent and Coordination Partner",
@@ -217,13 +217,13 @@ const translations = {
     
     // New translations for portfolio page
     "ai-projects-heading": "AI Projects",
-    "ai-projects-description": "A collection of AI development projects showcasing my work with large language models, image generation, and autonomous agents.",
+    "ai-projects-description": "Building production-ready LLM applications full-time. My recruitment background - understanding user needs, identifying workflow pain points, translating business requirements into solutions - is the edge.",
     "filter-llm": "LLM Projects",
     "filter-image-gen": "Image Generation",
     "filter-ai-agents": "AI Agents",
 
     // Experience overview
-    "experience-overview": "M.B.A. with 5 years of experience in Talent Acquisition for the DACH region and EMEA (France, Italy, Spain, Benelux). Worked in both startup environments and big corp, tackling Tech recruitment (Full-stack) and Sales recruitment (Account Executives, Sales Engineers, BDRs). Now building production AI applications full-time.",
+    "experience-overview": "5 years placing Account Executives, Sales Engineers, and BDRs across DACH and EMEA - now applying that user-needs instinct to production LLM tools full-time.",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -259,13 +259,7 @@ const translations = {
     // AI Engineering Projects (Experience page)
     "ai-projects-position": "Independent AI Development",
     "ai-projects-location": "Remote",
-    "ai-projects-description": "Full-time focus on building production-ready LLM applications and AI-powered tools. My recruitment background directly informs my AI development work\u2014understanding user needs, identifying workflow pain points, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems, not just interesting technical demos.",
-    "ai-projects-achievement1": "Multi-language AI teacher with <2s response times built using Claude for reasoning. Supports A1-C2 proficiency levels with intelligent grammar correction.",
-    "ai-projects-achievement2": "Async backend orchestrating OpenAI, Deepgram, and Cerebras to extract, summarize, and stream-translate YouTube transcripts via SSE.",
-    "ai-projects-achievement3": "Multi-LLM stock evaluator using the Pythagoras Method: 9 models analyze SEC filings in parallel, harmonize ratings, and debate disagreements to consensus.",
-    "ai-projects-achievement3": "Godot game with 50% AI-generated assets (ComfyUI, stable diffusion workflows), completed in 7-day game jam with 46 player ratings averaging 4.2/5 stars.",
-    "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG Systems, Voice AI (TTS/STT)",
-    "career-bridge-text": "My recruitment background directly informs my AI development work. Four years of understanding what users need, identifying pain points in workflows, and translating business requirements into solutions gives me a unique advantage in building AI applications that solve real problems\u2014not just interesting technical demos.",
+    "ai-projects-description": "Building production-ready LLM applications full-time. My recruitment background - understanding user needs, identifying workflow pain points, translating business requirements into solutions - is the edge.",
 
     // ========== NEW: Single-page redesign keys ==========
 
@@ -281,7 +275,7 @@ const translations = {
     "hero-label": "AI Applications Engineer",
     "hero-headline-prefix": "I build AI products that ",
     "hero-headline-accent": "solve real problems",
-    "hero-subtitle-new": "From multilingual language learning platforms to intelligent agent systems \u2014 I design, build, and ship AI applications end to end.",
+    "hero-subtitle-new": "From AI-powered financial analysis to real-time language learning: three shipped products with real users and real payments, built end to end.",
     "hero-cta-projects": "View Projects",
     "hero-cta-contact": "Get in Touch",
 
@@ -611,7 +605,7 @@ const translations = {
     "languages": "Sprachen",
     
     // Experience section
-    "experience-heading": "Ausgewählte Erfahrung",
+    "experience-heading": "Vom Recruiting von Top-Ingenieuren zum Bauen von KI-Anwendungen, die ausgeliefert werden.",
     "lucanet-title": "Talent Partner",
     "lucanet-desc": "Full-Cycle-Recruiter für Umsatz- und Finanzteams, spezialisiert auf SaaS- und Fintech-Vertriebsrollen in den Regionen DACH, Benelux, Spanien, Frankreich und Italien.",
     "rapid-title": "Talent- und Koordinationspartner",
@@ -649,13 +643,13 @@ const translations = {
     
     // New translations for portfolio page
     "ai-projects-heading": "KI-Projekte",
-    "ai-projects-description": "Eine Sammlung von KI-Entwicklungsprojekten, die meine Arbeit mit großen Sprachmodellen, Bildgenerierung und autonomen Agenten zeigt.",
+    "ai-projects-description": "Vollzeit produktionsreife LLM-Anwendungen bauen. Mein Recruitment-Hintergrund \u2014 Nutzerbedürfnisse verstehen, Workflow-Schwachstellen identifizieren, Geschäftsanforderungen in Lösungen übersetzen \u2014 ist der Vorteil.",
     "filter-llm": "LLM-Projekte",
     "filter-image-gen": "Bildgenerierung",
     "filter-ai-agents": "KI-Agenten",
 
     // Experience overview
-    "experience-overview": "M.B.A. mit 5 Jahren Erfahrung im Talent Acquisition f\u00fcr die DACH-Region und EMEA (Frankreich, Italien, Spanien, Benelux). Erfahrung sowohl in Startup-Umgebungen als auch in gro\u00dfen Unternehmen, mit Schwerpunkt auf Tech-Rekrutierung (Full-Stack) und Vertriebsrekrutierung (Account Executives, Sales Engineers, BDRs). Jetzt Vollzeit in der Entwicklung von KI-Produktionsanwendungen.",
+    "experience-overview": "5 Jahre Vermittlung von Account Executives, Sales Engineers und BDRs in DACH und EMEA \u2014 jetzt wird dieser Instinkt für Nutzerbedürfnisse Vollzeit auf produktive LLM-Tools angewandt.",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -693,13 +687,7 @@ const translations = {
     // AI Engineering Projects (Experience page)
     "ai-projects-position": "Unabhängige KI-Entwicklung",
     "ai-projects-location": "Remote",
-    "ai-projects-description": "Vollzeit-Fokus auf den Aufbau produktionsreifer LLM-Anwendungen und KI-gestützter Tools. Mein Recruitment-Hintergrund beeinflusst direkt meine KI-Entwicklungsarbeit\u2014das Verstehen von Benutzerbedürfnissen, die Identifizierung von Schwachstellen in Workflows und die Übersetzung von Geschäftsanforderungen in Lösungen gibt mir einen einzigartigen Vorteil beim Bau von KI-Anwendungen, die echte Probleme lösen, nicht nur technisch interessante Demos.",
-    "ai-projects-achievement1": "Mehrsprachiger KI-Lehrer mit <2s Antwortzeiten, entwickelt mit Claude f\u00fcr Reasoning. Unterst\u00fctzt A1-C2-Kompetenzstufen mit intelligenter Grammatikkorrektur.",
-    "ai-projects-achievement2": "Asynchrones Backend, das OpenAI, Deepgram und Cerebras orchestriert, um YouTube-Transkripte zu extrahieren, zusammenzufassen und per SSE in Echtzeit zu \u00fcbersetzen.",
-    "ai-projects-achievement3": "Multi-LLM-Aktienbewertung mit der Pythagoras-Methode: 9 Modelle analysieren SEC-Berichte parallel, harmonisieren Bewertungen und debattieren Meinungsverschiedenheiten bis zum Konsens.",
-    "ai-projects-achievement3": "Godot-Spiel mit 50% KI-generierten Assets (ComfyUI, Stable Diffusion Workflows), fertiggestellt in 7-Tage-Game-Jam mit 46 Spielerbewertungen im Durchschnitt 4,2/5 Sternen.",
-    "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, RAG-Systeme, Sprach-KI (TTS/STT)",
-    "career-bridge-text": "Mein Recruitment-Hintergrund beeinflusst direkt meine KI-Entwicklungsarbeit. Vier Jahre des Verstehens, was Benutzer brauchen, der Identifizierung von Schwachstellen in Workflows und der Übersetzung von Geschäftsanforderungen in Lösungen gibt mir einen einzigartigen Vorteil beim Bau von KI-Anwendungen, die echte Probleme lösen\u2014nicht nur technisch interessante Demos.",
+    "ai-projects-description": "Vollzeit produktionsreife LLM-Anwendungen bauen. Mein Recruitment-Hintergrund \u2014 Nutzerbedürfnisse verstehen, Workflow-Schwachstellen identifizieren, Geschäftsanforderungen in Lösungen übersetzen \u2014 ist der Vorteil.",
 
     // ========== NEW: Single-page redesign keys ==========
 
@@ -715,7 +703,7 @@ const translations = {
     "hero-label": "KI-Anwendungsingenieur",
     "hero-headline-prefix": "Ich baue KI-Produkte, die ",
     "hero-headline-accent": "echte Probleme l\u00f6sen",
-    "hero-subtitle-new": "Von mehrsprachigen Sprachlernplattformen bis hin zu intelligenten Agentensystemen \u2014 ich entwerfe, baue und liefere KI-Anwendungen von Anfang bis Ende.",
+    "hero-subtitle-new": "Von KI-gestützter Finanzanalyse bis hin zu Echtzeit-Sprachenlernen: drei ausgelieferte Produkte mit echten Nutzern und echten Zahlungen, von Anfang bis Ende gebaut.",
     "hero-cta-projects": "Projekte ansehen",
     "hero-cta-contact": "Kontakt aufnehmen",
 
@@ -857,8 +845,8 @@ const translations = {
     // About section
     "about-label": "\u00dcber mich",
     "about-name": "Luis Zermeno",
-    "about-intro": "Ich begann im Recruitment \u2014 Menschen, Rollen und das Verst\u00e4ndnis daf\u00fcr, was ein gutes Match ausmacht. Dann entdeckte ich, dass KI diese Intuition skalieren kann. Also machte ich den Sprung.",
-    "about-detail": "Jetzt baue ich KI-Anwendungen von Anfang bis Ende: von der Problemdefinition \u00fcber die Architektur bis hin zur Entwicklung und zum Deployment. Mir sind Produkte wichtig, die f\u00fcr echte Nutzer funktionieren, nicht nur beeindruckende Demos.",
+    "about-intro": "Ich begann im Recruitment \u2014 vier Jahre lang Ingenieure gesucht und Stellen in DACH und EMEA für Unternehmen wie LucaNet und Volocopter besetzt. Das hat mir beigebracht, wie Software-Teams arbeiten, welche Probleme sie wirklich haben und was \u201Eproduktionsreif\u201C jenseits des Buzzwords bedeutet. Dann machte ich den Sprung.",
+    "about-detail": "Jetzt baue ich KI-Anwendungen von Anfang bis Ende. Ich habe drei Produktionsprodukte mit echten Nutzern und echten Zahlungen ausgeliefert \u2014 eine Multi-LLM-Finanzanalyseplattform, ein YouTube-KI-Transkriptions-SaaS und eine sprachgesteuerte Sprachlern-App. Mein Stack reicht von LangChain-Agenten und RAG-Pipelines bis zu Stripe-Abrechnung und Docker-Deployment.",
     "about-meta": "Standort Deutschland \u00b7 Flie\u00dfend in Spanisch, Deutsch, Englisch & Franz\u00f6sisch",
 
     // Contact
@@ -1045,7 +1033,7 @@ const translations = {
     "languages": "Idiomas",
     
     // Experience section
-    "experience-heading": "Experiencia destacada",
+    "experience-heading": "De reclutar ingenieros top a construir aplicaciones de IA que se lanzan.",
     "lucanet-title": "Talent Partner",
     "lucanet-desc": "Reclutador de ciclo completo para equipos de ingresos y finanzas, especializado en roles de ventas de SaaS y Fintech en las regiones DACH, Benelux, España, Francia e Italia.",
     "rapid-title": "Talent y Coordination Partner",
@@ -1083,13 +1071,13 @@ const translations = {
     
     // New translations for portfolio page
     "ai-projects-heading": "Proyectos de IA",
-    "ai-projects-description": "Una colección de proyectos de desarrollo de IA que muestra mi trabajo con modelos de lenguaje grandes, generación de imágenes y agentes autónomos.",
+    "ai-projects-description": "Construyendo aplicaciones LLM listas para producción a tiempo completo. Mi experiencia en reclutamiento \u2014 entender las necesidades de los usuarios, identificar puntos débiles en flujos de trabajo, traducir requisitos empresariales en soluciones \u2014 es la ventaja.",
     "filter-llm": "Proyectos LLM",
     "filter-image-gen": "Generación de Imágenes",
     "filter-ai-agents": "Agentes de IA",
 
     // Experience overview
-    "experience-overview": "M.B.A. con 5 a\u00f1os de experiencia en Adquisici\u00f3n de Talento para la regi\u00f3n DACH y EMEA (Francia, Italia, Espa\u00f1a, Benelux). Experiencia tanto en entornos de startups como en grandes corporaciones, con enfoque en reclutamiento tecnol\u00f3gico (Full-stack) y reclutamiento de ventas (Account Executives, Sales Engineers, BDRs). Ahora desarrollando aplicaciones de IA en producci\u00f3n a tiempo completo.",
+    "experience-overview": "5 años colocando Account Executives, Sales Engineers y BDRs en DACH y EMEA \u2014 ahora aplicando ese instinto de necesidades del usuario a herramientas LLM en producción a tiempo completo.",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -1127,13 +1115,7 @@ const translations = {
     // AI Engineering Projects (Experience page)
     "ai-projects-position": "Desarrollo Independiente de IA",
     "ai-projects-location": "Remoto",
-    "ai-projects-description": "Enfoque de tiempo completo en construir aplicaciones LLM listas para producción y herramientas impulsadas por IA. Mi experiencia en reclutamiento informa directamente mi trabajo de desarrollo de IA\u2014entender las necesidades de los usuarios, identificar puntos débiles en flujos de trabajo y traducir requisitos empresariales en soluciones me da una ventaja única en construir aplicaciones de IA que resuelven problemas reales, no solo demos técnicamente interesantes.",
-    "ai-projects-achievement1": "Profesor de idiomas con IA con tiempos de respuesta <2s construido usando Claude para razonamiento. Soporta niveles A1-C2 con correcci\u00f3n gramatical inteligente.",
-    "ai-projects-achievement2": "Backend as\u00edncrono que orquesta OpenAI, Deepgram y Cerebras para extraer, resumir y traducir en streaming transcripciones de YouTube v\u00eda SSE.",
-    "ai-projects-achievement3": "Evaluador de acciones multi-LLM usando el M\u00e9todo Pit\u00e1goras: 9 modelos analizan reportes SEC en paralelo, armonizan calificaciones y debaten desacuerdos hasta el consenso.",
-    "ai-projects-achievement3": "Juego en Godot con 50% de assets generados por IA (ComfyUI, flujos de trabajo de difusión estable), completado en game jam de 7 días con 46 calificaciones de jugadores promediando 4.2/5 estrellas.",
-    "ai-projects-tech": "Python, LangGraph, LangChain, Flask, Docker, Claude API, Ollama, ChromaDB, Sistemas RAG, IA de Voz (TTS/STT)",
-    "career-bridge-text": "Mi experiencia en reclutamiento informa directamente mi trabajo de desarrollo de IA. Cuatro años entendiendo lo que los usuarios necesitan, identificando puntos débiles en flujos de trabajo y traduciendo requisitos empresariales en soluciones me da una ventaja única en construir aplicaciones de IA que resuelven problemas reales\u2014no solo demos técnicamente interesantes.",
+    "ai-projects-description": "Construyendo aplicaciones LLM listas para producción a tiempo completo. Mi experiencia en reclutamiento \u2014 entender las necesidades de los usuarios, identificar puntos débiles en flujos de trabajo, traducir requisitos empresariales en soluciones \u2014 es la ventaja.",
 
     // ========== NEW: Single-page redesign keys ==========
 
@@ -1149,7 +1131,7 @@ const translations = {
     "hero-label": "Ingeniero de Aplicaciones de IA",
     "hero-headline-prefix": "Construyo productos de IA que ",
     "hero-headline-accent": "resuelven problemas reales",
-    "hero-subtitle-new": "Desde plataformas multilingües de aprendizaje de idiomas hasta sistemas inteligentes de agentes \u2014 diseño, construyo y entrego aplicaciones de IA de principio a fin.",
+    "hero-subtitle-new": "Desde análisis financiero impulsado por IA hasta aprendizaje de idiomas en tiempo real: tres productos lanzados con usuarios reales y pagos reales, construidos de principio a fin.",
     "hero-cta-projects": "Ver Proyectos",
     "hero-cta-contact": "Contactar",
 
@@ -1291,8 +1273,8 @@ const translations = {
     // About section
     "about-label": "Sobre m\u00ed",
     "about-name": "Luis Zermeno",
-    "about-intro": "Empecé en reclutamiento \u2014 entendiendo personas, roles y qué hace un gran match. Luego descubrí que la IA podía amplificar esa misma intuición a escala. Así que di el salto.",
-    "about-detail": "Ahora construyo aplicaciones de IA de principio a fin: desde la definición del problema hasta la arquitectura, desarrollo y despliegue. Me importan los productos que funcionan para usuarios reales, no solo demos impresionantes.",
+    "about-intro": "Empecé en reclutamiento \u2014 cuatro años buscando ingenieros y cerrando posiciones en DACH y EMEA para empresas como LucaNet y Volocopter. Eso me enseñó cómo funcionan los equipos de software, qué problemas realmente enfrentan y qué significa \"listo para producción\" más allá del buzzword. Luego di el salto.",
+    "about-detail": "Ahora construyo aplicaciones de IA de principio a fin. He lanzado tres productos en producción con usuarios reales y pagos reales \u2014 una plataforma de análisis financiero multi-LLM, un SaaS de transcripción de YouTube con IA y una app de aprendizaje de idiomas con voz. Mi stack va desde agentes LangChain y pipelines RAG hasta facturación con Stripe y despliegue con Docker.",
     "about-meta": "Ubicado en Alemania \u00b7 Fluido en español, alemán, inglés y francés",
 
     // Contact
