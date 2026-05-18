@@ -451,10 +451,10 @@ const translations = {
     "cs-recruiting-ai-decisions": "Using LangChain for document processing pipeline. RAG architecture for context-aware candidate evaluation. Designed to augment recruiter judgment, not replace it.",
 
     // About section
-    "about-label": "About",
+    "about-label": "About Me",
     "about-name": "Luis Zermeno",
-    "about-intro": "I started in recruitment - four years sourcing engineers and closing roles across DACH and EMEA for companies like LucaNet and Volocopter. That taught me how software teams work, what problems they actually face, and what \"production-ready\" means beyond the buzzword. Then I made the leap.",
-    "about-detail": "Now I build AI applications end to end. I've shipped three production products with real users and real payments - a multi-LLM financial analysis platform, a YouTube AI transcription SaaS, and a voice-powered language learning app. My stack runs from LangChain agents and RAG pipelines to Stripe billing and Docker deployment.",
+    "about-intro": "I'm an AI Application Engineer based in Germany. Originally from Mexico, I made the move, picked up German, and grew into software the long way around — close to engineering teams first, then building alongside them.",
+    "about-detail": "Now I ship AI applications end to end. Besides the deployed products shown above — each with real users and real payments — I also take on client work in voice-cloning and security-first internal tools. My stack runs from LangChain agents and RAG pipelines to Stripe billing and Docker deployment.",
     "about-meta": "Based in Germany \u00b7 Fluent in Spanish, German, English & French",
 
     // Contact
@@ -917,8 +917,8 @@ const translations = {
     // About section
     "about-label": "\u00dcber mich",
     "about-name": "Luis Zermeno",
-    "about-intro": "Ich begann im Recruitment \u2014 vier Jahre lang Ingenieure gesucht und Stellen in DACH und EMEA für Unternehmen wie LucaNet und Volocopter besetzt. Das hat mir beigebracht, wie Software-Teams arbeiten, welche Probleme sie wirklich haben und was \u201Eproduktionsreif\u201C jenseits des Buzzwords bedeutet. Dann machte ich den Sprung.",
-    "about-detail": "Jetzt baue ich KI-Anwendungen von Anfang bis Ende. Ich habe drei Produktionsprodukte mit echten Nutzern und echten Zahlungen ausgeliefert \u2014 eine Multi-LLM-Finanzanalyseplattform, ein YouTube-KI-Transkriptions-SaaS und eine sprachgesteuerte Sprachlern-App. Mein Stack reicht von LangChain-Agenten und RAG-Pipelines bis zu Stripe-Abrechnung und Docker-Deployment.",
+    "about-intro": "Ich bin AI Application Engineer mit Sitz in Deutschland. Urspr\u00fcnglich aus Mexiko bin ich hierher gezogen, habe Deutsch gelernt und bin auf Umwegen in die Softwareentwicklung hineingewachsen \u2014 zuerst nah an Engineering-Teams, dann gemeinsam mit ihnen bauend.",
+    "about-detail": "Heute baue ich KI-Anwendungen von Anfang bis Ende. Neben den oben gezeigten Produkten \u2014 jedes mit echten Nutzern und echten Zahlungen \u2014 \u00fcbernehme ich auch Kundenprojekte rund um Voice-Cloning und sicherheitskritische interne Tools. Mein Stack reicht von LangChain-Agenten und RAG-Pipelines bis zu Stripe-Abrechnung und Docker-Deployment.",
     "about-meta": "Standort Deutschland \u00b7 Flie\u00dfend in Spanisch, Deutsch, Englisch & Franz\u00f6sisch",
 
     // Contact
@@ -1381,8 +1381,8 @@ const translations = {
     // About section
     "about-label": "Sobre m\u00ed",
     "about-name": "Luis Zermeno",
-    "about-intro": "Empecé en reclutamiento \u2014 cuatro años buscando ingenieros y cerrando posiciones en DACH y EMEA para empresas como LucaNet y Volocopter. Eso me enseñó cómo funcionan los equipos de software, qué problemas realmente enfrentan y qué significa \"listo para producción\" más allá del buzzword. Luego di el salto.",
-    "about-detail": "Ahora construyo aplicaciones de IA de principio a fin. He lanzado tres productos en producción con usuarios reales y pagos reales \u2014 una plataforma de análisis financiero multi-LLM, un SaaS de transcripción de YouTube con IA y una app de aprendizaje de idiomas con voz. Mi stack va desde agentes LangChain y pipelines RAG hasta facturación con Stripe y despliegue con Docker.",
+    "about-intro": "Soy AI Application Engineer con base en Alemania. Originario de M\u00e9xico, hice la mudanza, aprend\u00ed el idioma y me fui adentrando en el software por el camino largo \u2014 primero cerca de equipos de ingenier\u00eda, despu\u00e9s construyendo junto a ellos.",
+    "about-detail": "Hoy desarrollo aplicaciones de IA de principio a fin. Adem\u00e1s de los productos desplegados que se muestran arriba \u2014 cada uno con usuarios reales y pagos reales \u2014 tambi\u00e9n tomo proyectos para clientes en clonaci\u00f3n de voz y herramientas internas con foco en seguridad. Mi stack va desde agentes LangChain y pipelines RAG hasta facturaci\u00f3n con Stripe y despliegue con Docker.",
     "about-meta": "Ubicado en Alemania \u00b7 Fluido en español, alemán, inglés y francés",
 
     // Contact
