@@ -226,7 +226,7 @@ const translations = {
     "experience-differentiator": "Four years in B2B SaaS talent acquisition across DACH/EMEA before the pivot — I already know how software teams ship and how to talk to the humans around them.",
 
     // Experience page — new section headers
-    "section-projects": "Selected Projects",
+    "section-projects": "Live Projects",
     "section-tech-experience": "Technical Experience",
     "section-stack": "Stack",
     "section-prior": "Prior Experience — Talent Acquisition (DACH / EMEA)",
@@ -683,45 +683,45 @@ const translations = {
     "filter-ai-agents": "KI-Agenten",
 
     // Experience overview
-    "experience-overview": "Building and shipping LLM-powered products end to end — RAG pipelines, multi-agent systems, async APIs, production deployments.",
-    "experience-tagline": "Three live products with paying users.",
-    "experience-differentiator": "Four years in B2B SaaS talent acquisition across DACH/EMEA before the pivot — I already know how software teams ship and how to talk to the humans around them.",
+    "experience-overview": "Entwicklung und Auslieferung von LLM-basierten Produkten von Anfang bis Ende — RAG-Pipelines, Multi-Agent-Systeme, asynchrone APIs, Produktions-Deployments.",
+    "experience-tagline": "Drei Live-Produkte mit zahlenden Nutzern.",
+    "experience-differentiator": "Vier Jahre B2B-SaaS-Talentakquise in DACH/EMEA vor dem Wechsel — ich weiß bereits, wie Software-Teams arbeiten und wie man mit den Menschen darum spricht.",
 
     // Experience page — new section headers (English fallback)
-    "section-projects": "Selected Projects",
-    "section-tech-experience": "Technical Experience",
+    "section-projects": "Live-Projekte",
+    "section-tech-experience": "Technische Erfahrung",
     "section-stack": "Stack",
-    "section-prior": "Prior Experience — Talent Acquisition (DACH / EMEA)",
+    "section-prior": "Frühere Erfahrung — Talentakquise (DACH / EMEA)",
 
     // Selected Projects (English fallback)
-    "agora-desc": "<strong>The Pythagoras Method</strong> — 9 LLMs across 5 providers rate 8 financial metrics, resolving disagreements through structured multi-round debate. Two-tier architecture: fast extraction models + deep reasoning models with RAG tools over SEC filings, unified behind OpenRouter.",
-    "tubetext-desc": "Async FastAPI backend orchestrating <strong>Deepgram Nova-3</strong> (audio→text), <strong>GPT-4 mini via LangChain</strong> (structured summaries), and <strong>Cerebras Llama-3.3-70b</strong> (real-time SSE translation) across four languages. YAML prompt management; async SQLAlchemy + Alembic.",
-    "spralingua-desc": "<strong>Multi-agent architecture</strong> with specialized agents for vocabulary, grammar, and conversation, built on Claude. <strong>Sub-2-second voice loop</strong> end to end (Web Speech API + Minimax TTS) in 4 languages.",
+    "agora-desc": "<strong>Die Pythagoras-Methode</strong> — 9 LLMs aus 5 Anbietern bewerten 8 Finanzmetriken unabhängig voneinander und lösen Meinungsverschiedenheiten durch strukturierte Debattenrunden auf. Zwei-Ebenen-Architektur: schnelle Modelle für die Extraktion + tiefere Modelle mit RAG-Tools über SEC-Filings, vereint hinter einem OpenRouter-Gateway.",
+    "tubetext-desc": "Asynchroner FastAPI-Backend, der <strong>Deepgram Nova-3</strong> (Audio→Text), <strong>GPT-4 mini via LangChain</strong> (strukturierte Zusammenfassungen) und <strong>Cerebras Llama-3.3-70b</strong> (Echtzeit-SSE-Übersetzung) in vier Sprachen orchestriert. YAML-basiertes Prompt-Management; asynchrones SQLAlchemy + Alembic.",
+    "spralingua-desc": "<strong>Multi-Agent-Architektur</strong> mit spezialisierten Agenten für Vokabular, Grammatik und Konversation, gebaut auf Claude. <strong>Sub-2-Sekunden-Sprachschleife</strong> end-to-end (Web Speech API + Minimax TTS) in 4 Sprachen.",
 
     // Technical Experience (English fallback)
     "tech-lucanet-position": "AI / Automation Engineering",
-    "tech-lucanet-desc": "Built an internal AI recruitment assistant in Python with LangChain + Claude API — automated candidate screening, structured interview-feedback extraction from transcriptions, GTM-pipeline communications. Led ATS migration Personio → Greenhouse: scoped data model, managed data transfer, drove team adoption.",
+    "tech-lucanet-desc": "Entwicklung eines internen KI-Recruiting-Assistenten in Python mit LangChain + Claude API — automatisierte Kandidaten-Vorauswahl, strukturierte Extraktion von Interview-Feedback aus Transkripten, Kommunikation in High-Volume-GTM-Pipelines. Leitung der ATS-Migration von Personio nach Greenhouse: Definition des Datenmodells, Datentransfer, Team-Adoption.",
     "tech-rapidapi-position": "Internal Tooling",
-    "tech-rapidapi-desc": "Designed and shipped a company-wide interview-coordination automation across 180+ employees, 20+ hiring managers, and 5+ C-level executives (Germany, USA, Tel Aviv). 500+ interviews automated; ~90% reduction in scheduling friction.",
+    "tech-rapidapi-desc": "Konzeption und Auslieferung einer unternehmensweiten Interview-Koordinations-Automatisierung für 180+ Mitarbeiter, 20+ Hiring Manager und 5+ C-Level-Führungskräfte (Deutschland, USA, Tel Aviv). 500+ Interviews automatisiert; ~90% weniger Friktion bei der Terminplanung.",
 
     // Stack category headers (English fallback)
-    "stack-languages-frameworks": "Languages & Frameworks",
-    "stack-llm-ai": "LLM & AI",
-    "stack-data-infra": "Data & Infra",
+    "stack-languages-frameworks": "Sprachen & Frameworks",
+    "stack-llm-ai": "LLM & KI",
+    "stack-data-infra": "Daten & Infrastruktur",
 
     // Prior Experience condensed bullets (English fallback)
-    "prior-intro": "Four years of full-cycle B2B SaaS / Fintech recruiting across engineering and GTM. Daily engineer- and stakeholder-facing work, requirements gathering, cross-functional coordination. Foundational skills now applied to shipping AI products.",
-    "prior-lucanet": "<strong>Lucanet AG</strong> — Talent Partner (GTM, DACH/EMEA) · <span class=\"role-date\">Oct 2023 – Feb 2026</span> · 80%+ offer acceptance, ~120% of quarterly hiring targets; built Spain BDR hub and Italy GTM entry. Interviewed in EN/DE/ES/FR.",
-    "prior-rapidapi": "<strong>RapidAPI</strong> — Talent & Coordination Partner · <span class=\"role-date\">Jun 2022 – Aug 2023</span> · Full-cycle tech recruiting (backend, frontend, DevOps, APIs) across three continents.",
-    "prior-volocopter": "<strong>Volocopter</strong> — Talent Acquisition Specialist · <span class=\"role-date\">Jul 2021 – Jun 2022</span> · Supported growth from ~200 to ~600 employees; aerospace, eVTOL, battery, software roles.",
-    "prior-microsoft-honeywell": "<strong>Microsoft & Honeywell</strong> — HR Generalist roles · <span class=\"role-date\">Mexico, 2016 – 2019</span> · EMEA/LATAM/APAC HR operations.",
+    "prior-intro": "Vier Jahre Full-Cycle-Recruiting in B2B-SaaS / Fintech über Engineering und GTM. Tägliche Arbeit mit Ingenieuren und Stakeholdern, Anforderungsanalyse, funktionsübergreifende Koordination. Grundlegende Fähigkeiten, die ich heute auf das Ausliefern von KI-Produkten anwende.",
+    "prior-lucanet": "<strong>Lucanet AG</strong> — Talent Partner (GTM, DACH/EMEA) · <span class=\"role-date\">Okt 2023 – Feb 2026</span> · 80%+ Angebotsannahme, ~120% der quartalsweisen Einstellungsziele; Aufbau des Spain BDR Hubs und der GTM-Einführung in Italien. Interviews in EN/DE/ES/FR.",
+    "prior-rapidapi": "<strong>RapidAPI</strong> — Talent & Coordination Partner · <span class=\"role-date\">Jun 2022 – Aug 2023</span> · Full-Cycle Tech-Recruiting (Backend, Frontend, DevOps, APIs) über drei Kontinente.",
+    "prior-volocopter": "<strong>Volocopter</strong> — Talent Acquisition Specialist · <span class=\"role-date\">Jul 2021 – Jun 2022</span> · Unterstützte das Wachstum von ~200 auf ~600 Mitarbeiter; Aerospace, eVTOL, Batterien, Software.",
+    "prior-microsoft-honeywell": "<strong>Microsoft & Honeywell</strong> — HR-Generalist-Rollen · <span class=\"role-date\">Mexiko, 2016 – 2019</span> · EMEA/LATAM/APAC HR-Operationen.",
 
     // Hugging Face certifications (English fallback)
     "hf-cert-title": "AI Agents Fundamentals · MCP Hackathon",
 
     // Forward CTA (English fallback)
-    "cta-question": "Want to see these projects in action?",
-    "cta-view-projects": "View Projects",
+    "cta-question": "Möchten Sie diese Projekte in Aktion sehen?",
+    "cta-view-projects": "Projekte ansehen",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -1147,45 +1147,45 @@ const translations = {
     "filter-ai-agents": "Agentes de IA",
 
     // Experience overview
-    "experience-overview": "Building and shipping LLM-powered products end to end — RAG pipelines, multi-agent systems, async APIs, production deployments.",
-    "experience-tagline": "Three live products with paying users.",
-    "experience-differentiator": "Four years in B2B SaaS talent acquisition across DACH/EMEA before the pivot — I already know how software teams ship and how to talk to the humans around them.",
+    "experience-overview": "Construyendo y desplegando productos basados en LLM de extremo a extremo — pipelines RAG, sistemas multi-agente, APIs asíncronas, despliegues en producción.",
+    "experience-tagline": "Tres productos en producción con usuarios de pago.",
+    "experience-differentiator": "Cuatro años en adquisición de talento B2B SaaS en DACH/EMEA antes del cambio — ya sé cómo los equipos de software entregan productos y cómo hablar con las personas a su alrededor.",
 
     // Experience page — new section headers (English fallback)
-    "section-projects": "Selected Projects",
-    "section-tech-experience": "Technical Experience",
+    "section-projects": "Proyectos en Producción",
+    "section-tech-experience": "Experiencia Técnica",
     "section-stack": "Stack",
-    "section-prior": "Prior Experience — Talent Acquisition (DACH / EMEA)",
+    "section-prior": "Experiencia Previa — Adquisición de Talento (DACH / EMEA)",
 
     // Selected Projects (English fallback)
-    "agora-desc": "<strong>The Pythagoras Method</strong> — 9 LLMs across 5 providers rate 8 financial metrics, resolving disagreements through structured multi-round debate. Two-tier architecture: fast extraction models + deep reasoning models with RAG tools over SEC filings, unified behind OpenRouter.",
-    "tubetext-desc": "Async FastAPI backend orchestrating <strong>Deepgram Nova-3</strong> (audio→text), <strong>GPT-4 mini via LangChain</strong> (structured summaries), and <strong>Cerebras Llama-3.3-70b</strong> (real-time SSE translation) across four languages. YAML prompt management; async SQLAlchemy + Alembic.",
-    "spralingua-desc": "<strong>Multi-agent architecture</strong> with specialized agents for vocabulary, grammar, and conversation, built on Claude. <strong>Sub-2-second voice loop</strong> end to end (Web Speech API + Minimax TTS) in 4 languages.",
+    "agora-desc": "<strong>El Método Pitágoras</strong> — 9 LLMs de 5 proveedores evalúan 8 métricas financieras de forma independiente, resolviendo desacuerdos mediante rondas estructuradas de debate. Arquitectura de dos niveles: modelos rápidos para extracción + modelos profundos con herramientas RAG sobre archivos SEC, unificados detrás de OpenRouter.",
+    "tubetext-desc": "Backend FastAPI asíncrono que orquesta <strong>Deepgram Nova-3</strong> (audio→texto), <strong>GPT-4 mini vía LangChain</strong> (resúmenes estructurados) y <strong>Cerebras Llama-3.3-70b</strong> (traducción en tiempo real por SSE) en cuatro idiomas. Gestión de prompts en YAML; SQLAlchemy asíncrono + Alembic.",
+    "spralingua-desc": "<strong>Arquitectura multi-agente</strong> con agentes especializados en vocabulario, gramática y conversación, construida sobre Claude. <strong>Bucle de voz sub-2-segundos</strong> de extremo a extremo (Web Speech API + Minimax TTS) en 4 idiomas.",
 
     // Technical Experience (English fallback)
     "tech-lucanet-position": "AI / Automation Engineering",
-    "tech-lucanet-desc": "Built an internal AI recruitment assistant in Python with LangChain + Claude API — automated candidate screening, structured interview-feedback extraction from transcriptions, GTM-pipeline communications. Led ATS migration Personio → Greenhouse: scoped data model, managed data transfer, drove team adoption.",
+    "tech-lucanet-desc": "Construí un asistente interno de IA para recruiting en Python con LangChain + Claude API — selección automatizada de candidatos, extracción estructurada de feedback de entrevistas desde transcripciones, comunicaciones en pipelines GTM de alto volumen. Lideré la migración del ATS de Personio a Greenhouse: definición del modelo de datos, transferencia de datos, adopción por el equipo.",
     "tech-rapidapi-position": "Internal Tooling",
-    "tech-rapidapi-desc": "Designed and shipped a company-wide interview-coordination automation across 180+ employees, 20+ hiring managers, and 5+ C-level executives (Germany, USA, Tel Aviv). 500+ interviews automated; ~90% reduction in scheduling friction.",
+    "tech-rapidapi-desc": "Diseñé y desplegué una automatización de coordinación de entrevistas a nivel de toda la empresa para 180+ empleados, 20+ hiring managers y 5+ ejecutivos C-level (Alemania, USA, Tel Aviv). 500+ entrevistas automatizadas; ~90% de reducción en la fricción de programación.",
 
     // Stack category headers (English fallback)
-    "stack-languages-frameworks": "Languages & Frameworks",
-    "stack-llm-ai": "LLM & AI",
-    "stack-data-infra": "Data & Infra",
+    "stack-languages-frameworks": "Lenguajes y Frameworks",
+    "stack-llm-ai": "LLM e IA",
+    "stack-data-infra": "Datos e Infra",
 
     // Prior Experience condensed bullets (English fallback)
-    "prior-intro": "Four years of full-cycle B2B SaaS / Fintech recruiting across engineering and GTM. Daily engineer- and stakeholder-facing work, requirements gathering, cross-functional coordination. Foundational skills now applied to shipping AI products.",
-    "prior-lucanet": "<strong>Lucanet AG</strong> — Talent Partner (GTM, DACH/EMEA) · <span class=\"role-date\">Oct 2023 – Feb 2026</span> · 80%+ offer acceptance, ~120% of quarterly hiring targets; built Spain BDR hub and Italy GTM entry. Interviewed in EN/DE/ES/FR.",
-    "prior-rapidapi": "<strong>RapidAPI</strong> — Talent & Coordination Partner · <span class=\"role-date\">Jun 2022 – Aug 2023</span> · Full-cycle tech recruiting (backend, frontend, DevOps, APIs) across three continents.",
-    "prior-volocopter": "<strong>Volocopter</strong> — Talent Acquisition Specialist · <span class=\"role-date\">Jul 2021 – Jun 2022</span> · Supported growth from ~200 to ~600 employees; aerospace, eVTOL, battery, software roles.",
-    "prior-microsoft-honeywell": "<strong>Microsoft & Honeywell</strong> — HR Generalist roles · <span class=\"role-date\">Mexico, 2016 – 2019</span> · EMEA/LATAM/APAC HR operations.",
+    "prior-intro": "Cuatro años de recruiting full-cycle en B2B SaaS / Fintech a través de ingeniería y GTM. Trabajo diario con ingenieros y stakeholders, recopilación de requisitos, coordinación interfuncional. Habilidades fundamentales que ahora aplico para construir productos de IA.",
+    "prior-lucanet": "<strong>Lucanet AG</strong> — Talent Partner (GTM, DACH/EMEA) · <span class=\"role-date\">Oct 2023 – Feb 2026</span> · 80%+ tasa de aceptación de ofertas, ~120% de objetivos trimestrales de contratación; construí el Spain BDR Hub y la entrada GTM en Italia. Entrevisté en EN/DE/ES/FR.",
+    "prior-rapidapi": "<strong>RapidAPI</strong> — Talent & Coordination Partner · <span class=\"role-date\">Jun 2022 – Ago 2023</span> · Recruiting full-cycle (backend, frontend, DevOps, APIs) en tres continentes.",
+    "prior-volocopter": "<strong>Volocopter</strong> — Especialista en Adquisición de Talento · <span class=\"role-date\">Jul 2021 – Jun 2022</span> · Apoyé el crecimiento de ~200 a ~600 empleados; aerospace, eVTOL, baterías, software.",
+    "prior-microsoft-honeywell": "<strong>Microsoft & Honeywell</strong> — Roles de HR Generalist · <span class=\"role-date\">México, 2016 – 2019</span> · Operaciones HR para EMEA/LATAM/APAC.",
 
     // Hugging Face certifications (English fallback)
     "hf-cert-title": "AI Agents Fundamentals · MCP Hackathon",
 
     // Forward CTA (English fallback)
-    "cta-question": "Want to see these projects in action?",
-    "cta-view-projects": "View Projects",
+    "cta-question": "¿Quieres ver estos proyectos en acción?",
+    "cta-view-projects": "Ver Proyectos",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
