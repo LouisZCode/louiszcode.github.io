@@ -630,7 +630,12 @@ section {
 /* =========================
    10. CASE STUDY EXPANSION
    ========================= */
+.case-study-slot {
+  display: grid;
+}
+
 .case-study {
+  grid-area: 1 / 1;
   display: grid;
   grid-template-rows: 0fr;
   overflow: hidden;
