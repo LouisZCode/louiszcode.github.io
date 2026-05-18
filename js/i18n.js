@@ -173,12 +173,11 @@ const translations = {
     "skill-railway": "Railway",
     "skill-gunicorn": "Gunicorn",
     "skill-claude-code": "Claude Code",
-    "recruitment-tools": "Recruitment Tools",
     "tech-stack": "Tech Stack",
     "languages": "Languages",
     
     // Experience section
-    "experience-heading": "From recruiting top engineers to building AI applications that ship.",
+    "experience-heading": "AI Application Engineer",
     "lucanet-title": "Talent Partner",
     "lucanet-desc": "Full-cycle recruiter for revenue and financial teams, specializing in SaaS and Fintech sales roles across DACH, Benelux, Spanish, French and Italian regions.",
     "rapid-title": "Talent and Coordination Partner",
@@ -222,7 +221,45 @@ const translations = {
     "filter-ai-agents": "AI Agents",
 
     // Experience overview
-    "experience-overview": "5 years placing Account Executives, Sales Engineers, and BDRs across DACH and EMEA - now applying that user-needs instinct to production LLM tools full-time.",
+    "experience-overview": "Building and shipping LLM-powered products end to end — RAG pipelines, multi-agent systems, async APIs, production deployments.",
+    "experience-tagline": "Three live products with paying users.",
+    "experience-differentiator": "Four years in B2B SaaS talent acquisition across DACH/EMEA before the pivot — I already know how software teams ship and how to talk to the humans around them.",
+
+    // Experience page — new section headers
+    "section-projects": "Selected Projects",
+    "section-tech-experience": "Technical Experience",
+    "section-stack": "Stack",
+    "section-prior": "Prior Experience — Talent Acquisition (DACH / EMEA)",
+
+    // Selected Projects — rich descriptions
+    "agora-desc": "<strong>The Pythagoras Method</strong> — 9 LLMs across 5 providers rate 8 financial metrics, resolving disagreements through structured multi-round debate. Two-tier architecture: fast extraction models + deep reasoning models with RAG tools over SEC filings, unified behind OpenRouter.",
+    "tubetext-desc": "Async FastAPI backend orchestrating <strong>Deepgram Nova-3</strong> (audio→text), <strong>GPT-4 mini via LangChain</strong> (structured summaries), and <strong>Cerebras Llama-3.3-70b</strong> (real-time SSE translation) across four languages. YAML prompt management; async SQLAlchemy + Alembic.",
+    "spralingua-desc": "<strong>Multi-agent architecture</strong> with specialized agents for vocabulary, grammar, and conversation, built on Claude. <strong>Sub-2-second voice loop</strong> end to end (Web Speech API + Minimax TTS) in 4 languages.",
+
+    // Technical Experience (in-role engineering)
+    "tech-lucanet-position": "AI / Automation Engineering",
+    "tech-lucanet-desc": "Built an internal AI recruitment assistant in Python with LangChain + Claude API — automated candidate screening, structured interview-feedback extraction from transcriptions, GTM-pipeline communications. Led ATS migration Personio → Greenhouse: scoped data model, managed data transfer, drove team adoption.",
+    "tech-rapidapi-position": "Internal Tooling",
+    "tech-rapidapi-desc": "Designed and shipped a company-wide interview-coordination automation across 180+ employees, 20+ hiring managers, and 5+ C-level executives (Germany, USA, Tel Aviv). 500+ interviews automated; ~90% reduction in scheduling friction.",
+
+    // Stack category headers
+    "stack-languages-frameworks": "Languages & Frameworks",
+    "stack-llm-ai": "LLM & AI",
+    "stack-data-infra": "Data & Infra",
+
+    // Prior Experience condensed bullets
+    "prior-intro": "Four years of full-cycle B2B SaaS / Fintech recruiting across engineering and GTM. Daily engineer- and stakeholder-facing work, requirements gathering, cross-functional coordination. Foundational skills now applied to shipping AI products.",
+    "prior-lucanet": "<strong>Lucanet AG</strong> — Talent Partner (GTM, DACH/EMEA) · <span class=\"role-date\">Oct 2023 – Feb 2026</span> · 80%+ offer acceptance, ~120% of quarterly hiring targets; built Spain BDR hub and Italy GTM entry. Interviewed in EN/DE/ES/FR.",
+    "prior-rapidapi": "<strong>RapidAPI</strong> — Talent & Coordination Partner · <span class=\"role-date\">Jun 2022 – Aug 2023</span> · Full-cycle tech recruiting (backend, frontend, DevOps, APIs) across three continents.",
+    "prior-volocopter": "<strong>Volocopter</strong> — Talent Acquisition Specialist · <span class=\"role-date\">Jul 2021 – Jun 2022</span> · Supported growth from ~200 to ~600 employees; aerospace, eVTOL, battery, software roles.",
+    "prior-microsoft-honeywell": "<strong>Microsoft & Honeywell</strong> — HR Generalist roles · <span class=\"role-date\">Mexico, 2016 – 2019</span> · EMEA/LATAM/APAC HR operations.",
+
+    // Hugging Face certifications
+    "hf-cert-title": "AI Agents Fundamentals · MCP Hackathon",
+
+    // Forward CTA
+    "cta-question": "Want to see these projects in action?",
+    "cta-view-projects": "View Projects",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -598,12 +635,11 @@ const translations = {
     "skill-railway": "Railway",
     "skill-gunicorn": "Gunicorn",
     "skill-claude-code": "Claude Code",
-    "recruitment-tools": "Rekrutierungswerkzeuge",
     "tech-stack": "Tech-Stack",
     "languages": "Sprachen",
     
     // Experience section
-    "experience-heading": "Vom Recruiting von Top-Ingenieuren zum Bauen von KI-Anwendungen, die ausgeliefert werden.",
+    "experience-heading": "AI Application Engineer",
     "lucanet-title": "Talent Partner",
     "lucanet-desc": "Full-Cycle-Recruiter für Umsatz- und Finanzteams, spezialisiert auf SaaS- und Fintech-Vertriebsrollen in den Regionen DACH, Benelux, Spanien, Frankreich und Italien.",
     "rapid-title": "Talent- und Koordinationspartner",
@@ -647,7 +683,45 @@ const translations = {
     "filter-ai-agents": "KI-Agenten",
 
     // Experience overview
-    "experience-overview": "5 Jahre Vermittlung von Account Executives, Sales Engineers und BDRs in DACH und EMEA \u2014 jetzt wird dieser Instinkt für Nutzerbedürfnisse Vollzeit auf produktive LLM-Tools angewandt.",
+    "experience-overview": "Building and shipping LLM-powered products end to end — RAG pipelines, multi-agent systems, async APIs, production deployments.",
+    "experience-tagline": "Three live products with paying users.",
+    "experience-differentiator": "Four years in B2B SaaS talent acquisition across DACH/EMEA before the pivot — I already know how software teams ship and how to talk to the humans around them.",
+
+    // Experience page — new section headers (English fallback)
+    "section-projects": "Selected Projects",
+    "section-tech-experience": "Technical Experience",
+    "section-stack": "Stack",
+    "section-prior": "Prior Experience — Talent Acquisition (DACH / EMEA)",
+
+    // Selected Projects (English fallback)
+    "agora-desc": "<strong>The Pythagoras Method</strong> — 9 LLMs across 5 providers rate 8 financial metrics, resolving disagreements through structured multi-round debate. Two-tier architecture: fast extraction models + deep reasoning models with RAG tools over SEC filings, unified behind OpenRouter.",
+    "tubetext-desc": "Async FastAPI backend orchestrating <strong>Deepgram Nova-3</strong> (audio→text), <strong>GPT-4 mini via LangChain</strong> (structured summaries), and <strong>Cerebras Llama-3.3-70b</strong> (real-time SSE translation) across four languages. YAML prompt management; async SQLAlchemy + Alembic.",
+    "spralingua-desc": "<strong>Multi-agent architecture</strong> with specialized agents for vocabulary, grammar, and conversation, built on Claude. <strong>Sub-2-second voice loop</strong> end to end (Web Speech API + Minimax TTS) in 4 languages.",
+
+    // Technical Experience (English fallback)
+    "tech-lucanet-position": "AI / Automation Engineering",
+    "tech-lucanet-desc": "Built an internal AI recruitment assistant in Python with LangChain + Claude API — automated candidate screening, structured interview-feedback extraction from transcriptions, GTM-pipeline communications. Led ATS migration Personio → Greenhouse: scoped data model, managed data transfer, drove team adoption.",
+    "tech-rapidapi-position": "Internal Tooling",
+    "tech-rapidapi-desc": "Designed and shipped a company-wide interview-coordination automation across 180+ employees, 20+ hiring managers, and 5+ C-level executives (Germany, USA, Tel Aviv). 500+ interviews automated; ~90% reduction in scheduling friction.",
+
+    // Stack category headers (English fallback)
+    "stack-languages-frameworks": "Languages & Frameworks",
+    "stack-llm-ai": "LLM & AI",
+    "stack-data-infra": "Data & Infra",
+
+    // Prior Experience condensed bullets (English fallback)
+    "prior-intro": "Four years of full-cycle B2B SaaS / Fintech recruiting across engineering and GTM. Daily engineer- and stakeholder-facing work, requirements gathering, cross-functional coordination. Foundational skills now applied to shipping AI products.",
+    "prior-lucanet": "<strong>Lucanet AG</strong> — Talent Partner (GTM, DACH/EMEA) · <span class=\"role-date\">Oct 2023 – Feb 2026</span> · 80%+ offer acceptance, ~120% of quarterly hiring targets; built Spain BDR hub and Italy GTM entry. Interviewed in EN/DE/ES/FR.",
+    "prior-rapidapi": "<strong>RapidAPI</strong> — Talent & Coordination Partner · <span class=\"role-date\">Jun 2022 – Aug 2023</span> · Full-cycle tech recruiting (backend, frontend, DevOps, APIs) across three continents.",
+    "prior-volocopter": "<strong>Volocopter</strong> — Talent Acquisition Specialist · <span class=\"role-date\">Jul 2021 – Jun 2022</span> · Supported growth from ~200 to ~600 employees; aerospace, eVTOL, battery, software roles.",
+    "prior-microsoft-honeywell": "<strong>Microsoft & Honeywell</strong> — HR Generalist roles · <span class=\"role-date\">Mexico, 2016 – 2019</span> · EMEA/LATAM/APAC HR operations.",
+
+    // Hugging Face certifications (English fallback)
+    "hf-cert-title": "AI Agents Fundamentals · MCP Hackathon",
+
+    // Forward CTA (English fallback)
+    "cta-question": "Want to see these projects in action?",
+    "cta-view-projects": "View Projects",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",
@@ -1025,12 +1099,11 @@ const translations = {
     "skill-railway": "Railway",
     "skill-gunicorn": "Gunicorn",
     "skill-claude-code": "Claude Code",
-    "recruitment-tools": "Herramientas de reclutamiento",
     "tech-stack": "Stack tecnológico",
     "languages": "Idiomas",
     
     // Experience section
-    "experience-heading": "De reclutar ingenieros top a construir aplicaciones de IA que se lanzan.",
+    "experience-heading": "AI Application Engineer",
     "lucanet-title": "Talent Partner",
     "lucanet-desc": "Reclutador de ciclo completo para equipos de ingresos y finanzas, especializado en roles de ventas de SaaS y Fintech en las regiones DACH, Benelux, España, Francia e Italia.",
     "rapid-title": "Talent y Coordination Partner",
@@ -1074,7 +1147,45 @@ const translations = {
     "filter-ai-agents": "Agentes de IA",
 
     // Experience overview
-    "experience-overview": "5 años colocando Account Executives, Sales Engineers y BDRs en DACH y EMEA \u2014 ahora aplicando ese instinto de necesidades del usuario a herramientas LLM en producción a tiempo completo.",
+    "experience-overview": "Building and shipping LLM-powered products end to end — RAG pipelines, multi-agent systems, async APIs, production deployments.",
+    "experience-tagline": "Three live products with paying users.",
+    "experience-differentiator": "Four years in B2B SaaS talent acquisition across DACH/EMEA before the pivot — I already know how software teams ship and how to talk to the humans around them.",
+
+    // Experience page — new section headers (English fallback)
+    "section-projects": "Selected Projects",
+    "section-tech-experience": "Technical Experience",
+    "section-stack": "Stack",
+    "section-prior": "Prior Experience — Talent Acquisition (DACH / EMEA)",
+
+    // Selected Projects (English fallback)
+    "agora-desc": "<strong>The Pythagoras Method</strong> — 9 LLMs across 5 providers rate 8 financial metrics, resolving disagreements through structured multi-round debate. Two-tier architecture: fast extraction models + deep reasoning models with RAG tools over SEC filings, unified behind OpenRouter.",
+    "tubetext-desc": "Async FastAPI backend orchestrating <strong>Deepgram Nova-3</strong> (audio→text), <strong>GPT-4 mini via LangChain</strong> (structured summaries), and <strong>Cerebras Llama-3.3-70b</strong> (real-time SSE translation) across four languages. YAML prompt management; async SQLAlchemy + Alembic.",
+    "spralingua-desc": "<strong>Multi-agent architecture</strong> with specialized agents for vocabulary, grammar, and conversation, built on Claude. <strong>Sub-2-second voice loop</strong> end to end (Web Speech API + Minimax TTS) in 4 languages.",
+
+    // Technical Experience (English fallback)
+    "tech-lucanet-position": "AI / Automation Engineering",
+    "tech-lucanet-desc": "Built an internal AI recruitment assistant in Python with LangChain + Claude API — automated candidate screening, structured interview-feedback extraction from transcriptions, GTM-pipeline communications. Led ATS migration Personio → Greenhouse: scoped data model, managed data transfer, drove team adoption.",
+    "tech-rapidapi-position": "Internal Tooling",
+    "tech-rapidapi-desc": "Designed and shipped a company-wide interview-coordination automation across 180+ employees, 20+ hiring managers, and 5+ C-level executives (Germany, USA, Tel Aviv). 500+ interviews automated; ~90% reduction in scheduling friction.",
+
+    // Stack category headers (English fallback)
+    "stack-languages-frameworks": "Languages & Frameworks",
+    "stack-llm-ai": "LLM & AI",
+    "stack-data-infra": "Data & Infra",
+
+    // Prior Experience condensed bullets (English fallback)
+    "prior-intro": "Four years of full-cycle B2B SaaS / Fintech recruiting across engineering and GTM. Daily engineer- and stakeholder-facing work, requirements gathering, cross-functional coordination. Foundational skills now applied to shipping AI products.",
+    "prior-lucanet": "<strong>Lucanet AG</strong> — Talent Partner (GTM, DACH/EMEA) · <span class=\"role-date\">Oct 2023 – Feb 2026</span> · 80%+ offer acceptance, ~120% of quarterly hiring targets; built Spain BDR hub and Italy GTM entry. Interviewed in EN/DE/ES/FR.",
+    "prior-rapidapi": "<strong>RapidAPI</strong> — Talent & Coordination Partner · <span class=\"role-date\">Jun 2022 – Aug 2023</span> · Full-cycle tech recruiting (backend, frontend, DevOps, APIs) across three continents.",
+    "prior-volocopter": "<strong>Volocopter</strong> — Talent Acquisition Specialist · <span class=\"role-date\">Jul 2021 – Jun 2022</span> · Supported growth from ~200 to ~600 employees; aerospace, eVTOL, battery, software roles.",
+    "prior-microsoft-honeywell": "<strong>Microsoft & Honeywell</strong> — HR Generalist roles · <span class=\"role-date\">Mexico, 2016 – 2019</span> · EMEA/LATAM/APAC HR operations.",
+
+    // Hugging Face certifications (English fallback)
+    "hf-cert-title": "AI Agents Fundamentals · MCP Hackathon",
+
+    // Forward CTA (English fallback)
+    "cta-question": "Want to see these projects in action?",
+    "cta-view-projects": "View Projects",
     
     // LucaNet Experience
     "lucanet-position": "Talent Partner",

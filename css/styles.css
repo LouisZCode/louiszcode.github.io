@@ -1829,6 +1829,154 @@ section {
   gap: 1rem;
 }
 
+/* --- Hero proof + differentiator --- */
+.exp-hero-proof {
+  font-size: 1.05rem;
+  color: var(--text-heading);
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+  max-width: 44rem;
+}
+.exp-hero-proof strong { color: var(--primary); font-weight: 600; }
+.exp-hero-diff {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  max-width: 44rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Proof stats strip --- */
+.exp-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+}
+.exp-stat { text-align: center; }
+.exp-stat-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.1;
+}
+.exp-stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+/* --- Live pulse next to project URL --- */
+.exp-live-pulse {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #10b981;
+  margin-right: 0.5rem;
+  animation: pulse 2s infinite;
+  vertical-align: middle;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+}
+
+/* --- Mini architecture diagram --- */
+.exp-arch-diagram {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: hsl(var(--hue), 10%, 4%);
+  border: 1px solid var(--border-card);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.exp-arch-step {
+  padding: 0.4rem 0.7rem;
+  background: hsl(var(--hue), 10%, 8%);
+  border: 1px solid hsl(var(--hue), 10%, 16%);
+  border-radius: 6px;
+  color: var(--text-body);
+  white-space: nowrap;
+}
+.exp-arch-arrow {
+  color: var(--primary);
+  font-weight: 600;
+}
+.exp-arch-caption {
+  width: 100%;
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* --- 3-column stack grid --- */
+.exp-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* --- Learning badge (LangGraph etc.) --- */
+.exp-learning-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  background: hsla(var(--hue), var(--sat), 55%, 0.12);
+  border: 1px solid hsla(var(--hue), var(--sat), 55%, 0.3);
+  border-radius: 999px;
+  font-size: 0.6rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* --- Condensed prior experience bullet rows --- */
+.exp-prior-condensed { margin-bottom: 0; }
+.exp-prior-intro {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+  max-width: 44rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+.exp-prior-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.exp-prior-item {
+  padding: 0.85rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+.exp-prior-item strong {
+  color: var(--text-heading);
+  font-weight: 600;
+}
+.exp-prior-item .role-date {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
 /* --- Experience page responsive --- */
 @media (max-width: 768px) {
   .exp-ai-hero {
@@ -1843,6 +1991,16 @@ section {
   }
   .exp-skills-grid {
     grid-template-columns: 1fr;
+  }
+  .exp-stack-grid {
+    grid-template-columns: 1fr;
+  }
+  .exp-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .exp-arch-diagram {
+    flex-direction: column;
+    align-items: flex-start;
   }
   .exp-hero-inner {
     flex-direction: column;
