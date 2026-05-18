@@ -63,7 +63,6 @@ const translations = {
     
     // Navigation
     "nav-home": "Home",
-    "nav-portfolio": "Portfolio",
     "nav-experience": "Experience",
     
     // Hero section
@@ -488,7 +487,6 @@ const translations = {
     
     // Navigation
     "nav-home": "Startseite",
-    "nav-portfolio": "Portfolio",
     "nav-experience": "Erfahrung",
     
     // Hero section
@@ -916,7 +914,6 @@ const translations = {
     
     // Navigation
     "nav-home": "Inicio",
-    "nav-portfolio": "Portafolio",
     "nav-experience": "Experiencia",
     
     // Hero section

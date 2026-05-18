@@ -26,18 +26,21 @@ Live site: [www.lugz.dev](https://www.lugz.dev)
 ```
 /
 ├── css/
-│   └── style.css           # Main stylesheet
+│   └── styles.css          # Main stylesheet (vanilla CSS, HSL custom properties)
 ├── js/
-│   ├── main.js             # Main JavaScript functionality
-│   └── i18n.js             # Internationalization handling
+│   ├── main.js             # Theme toggle, mobile menu, case studies, smooth scroll
+│   └── i18n.js             # Translation dictionaries (EN/DE/ES) + page translator
 ├── images/                 # Image assets
-├── projects/               # Individual project pages
-│   ├── ai-agent-voice.html (+ ES, DE variants)
-│   ├── lovedog.html (+ ES, DE variants)
-│   └── spralingua.html (+ ES, DE variants)
+├── projects/               # Individual project detail pages (vanilla CSS)
+│   ├── agorafinancials.html
+│   ├── spralingua.html
+│   └── tubetext.html
 ├── index.html              # Homepage
-├── portfolio.html          # Projects overview
 ├── experience.html         # Professional experience
+├── bento-preview.html      # Archived design prototype (Tailwind, not linked)
+├── DESIGN_SYSTEM.md        # Design tokens (palette, type, components)
+├── PROJECT_PAGE_DESIGN_GUIDELINES.md   # Inverted-pyramid template (aspirational)
+├── CNAME                   # Custom domain: www.lugz.dev
 └── Resume_LuisZ_2026.pdf   # Downloadable resume
 ```
 
@@ -104,51 +107,38 @@ The site implements several accessibility best practices:
 
 ## 🌐 Multilingual Support
 
-The site supports three languages with a custom internationalization system:
+The site supports three languages via a runtime translation system:
 
 - **English** (Default)
 - **German** (Deutsch)
 - **Spanish** (Español)
 
-Language preferences are saved in localStorage. To add a new language:
+How it works:
+- Translation strings live in `js/i18n.js` under `translations.en` / `translations.de` / `translations.es`.
+- HTML elements are tagged with `data-i18n="<key>"`; `translatePage()` swaps text at runtime.
+- The selected language persists in `localStorage` under `preferredLanguage`.
 
-1. Add translations in `js/i18n.js`
-2. Add a language button in the navigation
+To add a new translatable string: add the key to **all three** dictionaries in `js/i18n.js`, then add `data-i18n="<key>"` to the corresponding HTML element.
 
 ## 🎨 Customization
 
-### Colors
+### Styling Approach
 
-Main colors can be adjusted in the CSS variables in `css/style.css`:
+The whole live site uses **vanilla CSS** (`css/styles.css`), with HSL custom properties keyed off a single `--hue` (currently `210`, blue) and `--sat`. Adjusting those two variables retones every page. Core tokens: `--bg-base`, `--bg-card`, `--text-heading`, `--text-body`, `--primary`, `--border-card`. A `data-theme="dark|light"` attribute on `<html>` flips a second variable set.
 
-```css
-:root {
-    --bg-primary: #121212;
-    --bg-secondary: #1e1e1e;
-    --bg-card: #242424;
-    --text-primary: #ffffff;
-    --text-secondary: #b3b3b3;
-    --accent-primary: #1a75ff;
-    --accent-secondary: #0a4bb3;
-    --accent-tertiary: #3a8eff;
-}
-```
+`bento-preview.html` is the only file using Tailwind CDN — an archived design prototype, not linked from the live site. See `DESIGN_SYSTEM.md` for the full Deep Space & Neon token list it references.
 
 ### Adding Projects
 
-To add a new project:
+1. Create a new HTML file in `projects/` — match the structure of the existing pages (`spralingua.html`, `agorafinancials.html`, `tubetext.html`), which all use `../css/styles.css`.
+2. Link it from the homepage's `#projects` section (`index.html`).
+3. Add all translatable strings to `js/i18n.js` (EN/DE/ES) and tag elements with `data-i18n`.
 
-1. Create a new HTML file in the `projects/` directory
-2. Add a card to `portfolio.html` with appropriate category tags
-3. Optionally add to the featured projects on the homepage
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+> Note: `PROJECT_PAGE_DESIGN_GUIDELINES.md` describes a Tailwind-based template that no current page follows. Treat it as aspirational design guidance; match existing pages for actual implementation.
 
 ## 📧 Contact
 
-- Email: [lgzg90@hotmail.com](mailto:lgzg90@hotmail.com)
+- Email: [lgzg90@gmail.com](mailto:lgzg90@gmail.com)
 - LinkedIn: [Luis Zermeno](https://www.linkedin.com/in/luis-zermeno-3b2210108/)
 - GitHub: [louiszcode](https://github.com/louiszcode)
 
