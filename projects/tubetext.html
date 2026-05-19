@@ -143,25 +143,7 @@
             </p>
 
             <div class="cs-diagram">
-<pre>
-[ YouTube URL ]
-       |
-       v
-[ FastAPI Router ]
-       |
-       +--&gt; Free Transcript        : YouTube captions -&gt; text
-       |
-       +--&gt; Premium Transcript     : yt-dlp -&gt; audio -&gt; Deepgram Nova-3 -&gt; text
-       |
-       +--&gt; Summary                : text -&gt; LangChain -&gt; OpenRouter (Cerebras)
-       |
-       +--&gt; Translation            : chunks -&gt; LLM -&gt; SSE stream
-                                                |
-                                                v
-                              [ Langfuse Observability ]
-                              Traces  &middot;  LLM-as-judge  &middot;  Human feedback
-</pre>
-                <div class="cs-diagram-caption">High-level architecture. Polished illustration to follow.</div>
+                <img src="../images/tubetext-architecture.png" alt="TubeText system architecture diagram showing four pipelines (free transcript, premium audio, AI summary, AI translation), the OpenRouter and Cerebras provider stack, and the Sentry and Langfuse observability layers.">
             </div>
         </section>
 

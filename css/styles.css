@@ -1545,6 +1545,13 @@ section {
   white-space: pre;
 }
 
+.cs-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
 .cs-diagram-caption {
   text-align: center;
   font-size: 0.75rem;
