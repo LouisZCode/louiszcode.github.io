@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgoraFinancials - Case Study | Luis Zermeno</title>
+    <title>Agora Financials - Case Study | Luis Zermeno</title>
     <link rel="canonical" href="https://www.lugz.dev/projects/agorafinancials.html">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <meta name="description" content="AgoraFinancials - Multi-LLM stock evaluation engine using the Pythagoras Method. 9 AI models analyze SEC filings, debate disagreements, and produce bias-reduced financial ratings. Built with FastAPI, LangChain, pgvector, OpenRouter.">
-    <meta name="keywords" content="stock evaluation, multi-LLM, financial analysis, SEC filings, RAG, pgvector, LangChain, FastAPI, OpenRouter, AI debate, Pythagoras Method">
+    <meta name="description" content="Agora Financials - production tool that runs 9 LLMs across 5 providers in parallel to evaluate a stock and resolves disagreements via structured multi-round debate. Built with FastAPI, LangChain, pgvector RAG over SEC filings, OpenRouter, Langfuse.">
+    <meta name="keywords" content="multi-LLM, stock evaluation, financial analysis, SEC filings, RAG, pgvector, LangChain, FastAPI, OpenRouter, Langfuse, AI debate, Pythagoras Method, Python">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Design System -->
-    <link rel="stylesheet" href="../css/styles.css?v=2026031201">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
@@ -41,14 +41,14 @@
         <div class="detail-hero-content">
             <div class="detail-badge">
                 <span class="detail-badge-dot"></span>
-                <span data-i18n="project-status-live">Live Product</span>
+                <span>Live Product</span>
             </div>
             <h1>
-                AgoraFinancials: <br>
-                <span class="accent" data-i18n="af-subtitle">Multi-LLM Stock Evaluator</span>
+                Agora Financials: <br>
+                <span class="accent">Multi-LLM Stock Evaluator</span>
             </h1>
-            <p class="detail-hero-desc" data-i18n="af-description">
-                A stock evaluation engine that orchestrates up to 9 LLMs to independently analyze SEC filings, then forces them to debate their disagreements, producing bias-reduced financial ratings through cross-model consensus.
+            <p class="detail-hero-desc">
+                A production tool that runs 9 LLMs across 5 providers in parallel to evaluate a stock, then makes them debate when they disagree &mdash; every answer grounded in SEC filings.
             </p>
 
             <div class="detail-hero-actions">
@@ -65,344 +65,255 @@
 
         <!-- Hero Visual -->
         <div class="detail-hero-visual">
-            <img src="../images/agorafinancials-demo.gif" alt="AgoraFinancials Demo" onerror="this.src='../images/agorafinancials.png'">
+            <img src="../images/agorafinancials-demo.gif" alt="Agora Financials Demo" onerror="this.src='../images/agorafinancials_small.png'">
             <div class="detail-stat-badge">
-                <div class="label">LLM Models</div>
+                <div class="label">LLMs</div>
                 <div class="value">9</div>
             </div>
         </div>
     </header>
 
-    <!-- Technical Specs Bar -->
+    <!-- Quick-summary strip -->
     <section class="specs-bar">
         <div class="specs-bar-inner">
             <div>
-                <h3 data-i18n="af-spec-stack">Stack</h3>
-                <p>FastAPI, Python, LangChain</p>
+                <h3>Core</h3>
+                <p>Python &middot; FastAPI &middot; Next.js 16 &middot; PostgreSQL + pgvector</p>
             </div>
             <div>
-                <h3 data-i18n="af-spec-ai">AI Models</h3>
-                <p>9 LLMs via OpenRouter</p>
+                <h3>AI Layer</h3>
+                <p>9 LLMs &middot; 5 Providers &middot; OpenRouter &middot; LangChain</p>
             </div>
             <div>
-                <h3 data-i18n="af-spec-database">Database</h3>
-                <p>PostgreSQL + pgvector</p>
+                <h3>Observability</h3>
+                <p>Langfuse (analysis route)</p>
             </div>
             <div>
-                <h3 data-i18n="af-spec-deployment">Deployment</h3>
-                <p>Docker + Railway</p>
+                <h3>Infra</h3>
+                <p>Docker &middot; Railway &middot; Stripe</p>
             </div>
         </div>
     </section>
 
-    <!-- Video Demo -->
-    <section class="detail-video-section">
-        <div class="detail-video-wrapper">
-            <iframe
-                src="https://www.youtube.com/embed/pggk7rnLkrU"
-                title="AgoraFinancials Demo"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
+    <!-- Case study main content (single column, no sidebar) -->
+    <div class="cs-wrapper">
 
-    <!-- Main Content -->
-    <div class="detail-main">
+        <!-- 1. The Problem -->
+        <section>
+            <h2 data-num="01">The Problem</h2>
+            <p>
+                Understanding whether a company is actually financially healthy is gated by time and expertise.
+            </p>
+            <p>
+                A single 10-Q filing is dozens of pages of dense numbers and legalese; reading enough of them to form an opinion takes hours and assumes you already know what to look for. The easy shortcut &mdash; asking one LLM &mdash; trades one slow process for one biased opinion. Models hallucinate numbers, cherry-pick data points, and bias their own conclusions. You can't tell which it's doing.
+            </p>
+            <p>
+                <strong>Agora Financials makes nine LLMs across five providers analyze the same filings in parallel, then forces them to debate the metrics they disagree on.</strong> Consensus from disagreement instead of a single opinion you can't verify.
+            </p>
+        </section>
 
-        <!-- Left Column - Main Content -->
-        <div class="detail-content">
+        <!-- 2. One-minute walkthrough -->
+        <section>
+            <h2 data-num="02">One-Minute Walkthrough</h2>
+            <div class="cs-video">
+                <iframe
+                    src="https://www.youtube.com/embed/pggk7rnLkrU"
+                    title="Agora Financials Demo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
 
-            <!-- The Challenge -->
-            <section>
-                <h2 data-i18n="af-challenge">The Challenge</h2>
-                <p data-i18n="af-challenge-p1">
-                    Stock analysis is drowning in information. SEC filings are dense, financial statements span dozens of pages, and understanding a company's real health takes hours of reading. LLMs are excellent at condensing this data into narratives, but a single LLM can hallucinate numbers, cherry-pick data points, and bias its own conclusions.
-                </p>
-                <p data-i18n="af-challenge-p2">
-                    The core question: <strong>how do you get reliable AI-powered financial analysis when you can't trust any single model?</strong> The answer was to make them check each other. Orchestrate multiple LLMs in parallel, compare their independent evaluations, and resolve disagreements through structured multi-round debate.
-                </p>
-            </section>
+        <!-- 3. System Design -->
+        <section>
+            <h2 data-num="03">System Design</h2>
+            <p>
+                One FastAPI service, four phases: <strong>ingest &rarr; analyze &rarr; harmonize &rarr; debate</strong>. Each phase is its own endpoint and runs to completion before the next starts &mdash; the frontend orchestrates the chain, holds intermediate state, and renders progress per phase so the user sees the pipeline live.
+            </p>
+            <p>
+                Nine models run in parallel via <code>asyncio.gather</code>, all routed through OpenRouter for unified billing, with direct-provider fallback when OpenRouter degrades. pgvector holds the SEC filing embeddings in the same Postgres that holds app data &mdash; one database, not two.
+            </p>
 
-            <!-- The Pythagoras Method -->
-            <section>
-                <h2 data-i18n="af-pythagoras">The Pythagoras Method</h2>
-                <p data-i18n="af-pythagoras-desc">
-                    The core innovation. Instead of trusting one LLM, multiple models independently evaluate 8 financial metrics. Their ratings are then harmonized: if models agree, the rating stands. If they conflict, they enter a structured multi-round debate until consensus is reached or the metric is flagged as complex.
-                </p>
+            <h3>Four design choices worth discussing</h3>
+            <p>
+                <strong>OpenRouter as the unified gateway, with direct-provider fallback.</strong> Five providers (xAI, OpenAI, Anthropic, Google, Mistral) behind one API key, one billing dashboard, one cost-reporting format. Each model call routes through OpenRouter first; if it fails or stalls, the same call retries directly against the provider's native endpoint. The cost is one extra network hop on the happy path; the gain is being able to add or swap a model via env var instead of an integration.
+            </p>
+            <p>
+                <strong>Two-tier model split &mdash; fast vs. deep, not cheap vs. expensive.</strong> The fast tier (four models, 3&ndash;8s, ~$0.05 per metric) gets the pre-formatted financial tables only. The deep tier (five models, 21&ndash;52s, ~$0.12&ndash;0.25 per metric) gets the same tables <em>plus</em> a retrieval tool over pgvector for qualitative context from MD&amp;A and segment notes. The discovery worth stating: the quality jump is fast&rarr;deep, not deep&rarr;premium. Cheap models often skip the retrieval tool entirely no matter how the prompt asks them not to, so paying for "premium fast" loses to plain "deep."
+            </p>
+            <p>
+                <strong>Multi-round debate with sliding-window history compression.</strong> When models disagree on a metric, the debate orchestrator runs N rounds in parallel: each model defends, reviews others' arguments, and can ACCEPT / CHANGE / REJECT. Position changes are tracked structurally (<em>"Claude: Good &rarr; Neutral"</em>). The non-obvious part: debate history grows fast. A naive implementation pastes every prior response into every next prompt and token costs balloon &mdash; R5 was ~5&times; R2 in early tests. The fix is a sliding window: keep the last two rounds verbatim, summarize everything older into a compact table via one cheap <code>mistral_fast</code> call. R5 flattens to roughly R2 cost.
+            </p>
+            <p>
+                <strong>Three-layer caching, because every step in the pipeline costs money.</strong> Each expensive operation has a cache key in front of it.
+                <em>SEC filings &rarr; chunks</em>, keyed by <code>(ticker, year, quarter)</code> &mdash; re-ingesting a filing that's already in the <code>chunks</code> table skips the SEC download, the boilerplate filtering, the chunking, <em>and</em> the embedding API call.
+                <em>Structured financial tables</em>, keyed by <code>(ticker, latest_filing_date)</code> in a separate <code>financial_statements</code> table &mdash; the analysis route reads from here only, never re-hits SEC at request time.
+                <em>LLM evaluations</em>, keyed by <code>(ticker, llm_model, latest_filing_date)</code> in <code>llm_financial_analysis</code> &mdash; the full structured response stored as JSONB. At request time, the code splits the requested models into "already cached" and "needs to run" and only fires LLM calls for the latter. The same ticker re-evaluated against the same filing costs nothing in API spend.
+            </p>
 
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">Pipeline: 4-Step Evaluation</span>
-                    </div>
-                    <pre><code><span class="comment"># The full financial evaluation pipeline</span>
+            <div class="cs-diagram">
+<pre>
+  INGEST                    ANALYZE                       HARMONIZE       DEBATE
+  ──────                    ───────                       ─────────       ──────
+  SEC EDGAR
+  (10-Q via                 9 LLMs · 5 providers          aligned          parallel rounds
+   edgartools)        ─►    via OpenRouter            ─►  majority    ─►   ACCEPT / CHANGE
+        │                                                 wins             / REJECT
+        ▼                   ┌── fast tier (4) ──┐         flagged
+  chunk · embed             │   numbers only    │         for debate      sliding-window
+  (3-small, 1536d)            │   3-8s, ~$0.05    │                         compression
+        │                   └───────────────────┘                                │
+        ▼                   ┌── deep tier (5) ──┐                                ▼
+  pgvector                  │   + RAG over      │                          consensus
+  (PostgreSQL)              │   pgvector        │                          or "COMPLEX"
+                            │   21-52s, ~$0.12  │                                │
+  yfinance fallback         └───────────────────┘                                ▼
+  for non-US tickers                                                       PDF report
 
-<span class="str">1. INGEST</span>     SEC 10-Q filings → chunk → embed → pgvector
-               Structured financials → format as tables → cache
+                ─────────── Langfuse traces · latency · tokens · cost · errors ───────────
+                                       (today: ANALYZE only)
+</pre>
+                <p class="cs-diagram-caption">Polished diagram coming &mdash; this ASCII is a stand-in.</p>
+            </div>
+        </section>
 
-<span class="str">2. ANALYZE</span>    N LLMs evaluate 8 metrics in parallel
-               Each rates: Excellent / Good / Neutral / Bad / Horrible
-               Fast tier: numbers only | Deep tier: RAG + reasoning
+        <!-- 4. Stack & Why -->
+        <section>
+            <h2 data-num="04">Stack &amp; Why</h2>
+            <p>
+                Four groups, each choice with a short note on the reasoning behind it.
+            </p>
 
-<span class="str">3. HARMONIZE</span>  Compare all ratings per metric
-               All agree → aligned | Same tier → majority wins
-               Cross-tier conflict → flagged for debate
+            <h3>Backend</h3>
+            <ul>
+                <li>
+                    <strong>Python 3.12</strong> &mdash; every LLM provider (OpenAI, Anthropic, Google, xAI, Mistral) and orchestration library (LangChain, LangGraph) ships a first-class Python SDK. Async/await + Pydantic cover concurrency and types without a second language in the stack.
+                </li>
+                <li>
+                    <strong>FastAPI</strong> &mdash; native async + Pydantic schemas means request/response models are defined once. Endpoint typing flows through to OpenAPI docs for free.
+                </li>
+                <li>
+                    <strong>PostgreSQL with the pgvector extension + async SQLAlchemy 2.0 + Alembic</strong> &mdash; one database holds both relational data (users, watchlists, Stripe subscriptions) and the SEC filing embeddings. No second datastore to operate or sync.
+                </li>
+            </ul>
 
-<span class="str">4. DEBATE</span>     LLMs defend positions in N rounds
-               Can ACCEPT / ADD / REJECT others' arguments
-               &gt;50% consensus → adopted | else → "COMPLEX"</code></pre>
-                </div>
-            </section>
+            <h3>Frontend</h3>
+            <ul>
+                <li>
+                    <strong>Next.js 16 + React 19 + TypeScript</strong> &mdash; SSR on the landing page for SEO, client-side state for the analysis flow. TypeScript end-to-end so the API contract is enforced from request to render.
+                </li>
+                <li>
+                    <strong>dnd-kit for the watchlist</strong> &mdash; drag-and-drop reordering of tracked tickers without the legacy react-dnd footprint.
+                </li>
+            </ul>
 
-            <!-- Two-Tier Model Architecture -->
-            <section>
-                <h2 data-i18n="af-two-tier">Two-Tier Model Architecture</h2>
-                <p data-i18n="af-two-tier-desc">
-                    Models are split into fast and deep tiers. Fast models crunch the numbers from injected financial tables. Deep models use a retrieval tool to pull qualitative context from SEC filings (segment breakdowns, margin drivers, management commentary), producing debate-ready reasoning. The biggest discovery: the quality jump is fast to deep, not deep to premium. Cheap models ignore retrieval instructions regardless of prompt engineering.
-                </p>
+            <h3>AI Layer</h3>
+            <ul>
+                <li>
+                    <strong>5 providers, 9 models via OpenRouter</strong> &mdash; xAI (Grok 4.1 Fast, Grok 4), OpenAI (GPT-5 Mini, GPT-5.1), Anthropic (Claude 3 Haiku, Claude Sonnet 4.6), Google (Gemini 2.5 Pro, deep tier only), Mistral (Small 3.2, Large 2411). One API key, one cost-reporting surface.
+                </li>
+                <li>
+                    <strong>LangChain <code>create_agent</code> + LangGraph for tool-calling orchestration</strong> &mdash; each model becomes an agent with optional retrieval-tool access (deep tier only).
+                    <em>LangGraph's tool-call budget is set at invoke time via <code>{"recursion_limit": 12}</code> on <code>.ainvoke()</code>, not when the agent is created. Each tool call costs ~2 steps, so 12 steps caps deep models at ~5 retrievals per metric. Without this, some models skip the retrieval tool entirely &mdash; the prompt alone doesn't tell them they're budget-constrained.</em>
+                </li>
+                <li>
+                    <strong>pgvector RAG over SEC filings, with aggressive ingestion filtering</strong> &mdash; filings chunked with <code>RecursiveCharacterTextSplitter</code> at 2500 chars / 300 overlap, respecting markdown headers. A 53-pattern boilerplate blocklist strips SEC legalese, exhibit references, signatures, form headers, and forward-looking-statement disclaimers before chunking; anything under 100 characters is dropped. Embedded with OpenAI's <code>text-embedding-3-small</code> (1536 dims) via OpenRouter &mdash; same gateway as the LLM calls, so embedding spend rolls into the same cost surface. Retrieval at query time is cosine similarity with the <code>&lt;-&gt;</code> operator, top-8 chunks filtered by ticker.
+                </li>
+                <li>
+                    <strong>Multi-round debate with sliding-window compression</strong> &mdash; the orchestrator keeps the last two rounds in full context and summarizes older rounds via one cheap <code>mistral_fast</code> call. Compression overhead is &lt;0.5%; savings at five rounds are ~30%.
+                    <em>Gemini 2.5 Flash was pulled from the fast tier after a single evaluation produced 308 API calls and 794K input tokens because the model wouldn't stop calling the retrieval tool &mdash; $3.25 on one analysis versus ~$0.08 for the other fast models. Lesson: cheap stops being cheap when instruction-following breaks down.</em>
+                </li>
+                <li>
+                    <strong>WeasyPrint + Jinja2 for the PDF report</strong> &mdash; HTML/CSS templating to a downloadable evaluation. No separate report-rendering service to run.
+                </li>
+            </ul>
 
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">agents/agents.py</span>
-                    </div>
-                    <pre><code><span class="kw">from</span> langchain.agents <span class="kw">import</span> create_agent
+            <h3>Infrastructure &amp; Auth</h3>
+            <ul>
+                <li>
+                    <strong>GitHub OAuth + Google OAuth via Authlib, JWT in HTTP-only cookies</strong> &mdash; XSS-safe, browser sends automatically, no password storage to maintain.
+                </li>
+                <li>
+                    <strong>Anonymous rate-limiting via signed cookie</strong> &mdash; non-logged-in visitors get three analyses, tracked through a signed HTTP-only <code>agora_session</code> cookie. Zero DB rows until they sign up.
+                </li>
+                <li>
+                    <strong>Stripe subscriptions + per-token top-ups</strong> &mdash; Free (70 tokens/mo), Hobbyist ($20/mo, 500), Investor ($49/mo, 1,200), Trader ($89/mo, 2,500). Webhooks are the source of truth: <code>checkout.session.completed</code> sets the tier, <code>invoice.paid</code> refills monthly, <code>customer.subscription.deleted</code> resets to free. Token costs are 2 (fast model) or 10 (deep model) per analysis.
+                </li>
+                <li>
+                    <strong>edgartools for SEC ingestion, yfinance fallback for non-US tickers</strong> &mdash; edgartools handles US filings; yfinance fills in non-US data where SEC isn't available.
+                </li>
+                <li>
+                    <strong>Docker + Railway</strong> &mdash; backend, frontend, Postgres on one platform. No Kubernetes complexity for a three-service app.
+                </li>
+            </ul>
+        </section>
 
-<span class="comment"># Two-tier model registry</span>
-MODELS = {
-    <span class="comment"># Fast tier: 3-8s, ~$0.05/eval — numbers only</span>
-    <span class="str">"grok_fast"</span>:    <span class="str">"xai:grok-4-fast-non-reasoning"</span>,
-    <span class="str">"openai_fast"</span>:  <span class="str">"openai:gpt-5-mini"</span>,
-    <span class="str">"claude_fast"</span>:  <span class="str">"anthropic:claude-3-haiku"</span>,
-    <span class="str">"mistral_fast"</span>: <span class="str">"mistral-small-2506"</span>,
+        <!-- 5. Evaluation -->
+        <section>
+            <h2 data-num="05">Evaluation</h2>
+            <p>
+                Observability is wired today on the heaviest route &mdash; the multi-LLM analysis &mdash; and the deeper evaluation layers (LLM-as-judge for structured output, tool use, debate consistency) are the next thing on the roadmap. The plan is to build them on the same Langfuse foundation that's already in place.
+            </p>
 
-    <span class="comment"># Deep tier: 21-52s, ~$0.12-0.25/eval — RAG + reasoning</span>
-    <span class="str">"grok_deep"</span>:    <span class="str">"xai:grok-4-fast-reasoning"</span>,
-    <span class="str">"openai_deep"</span>:  <span class="str">"openai:gpt-5.1"</span>,
-    <span class="str">"claude_deep"</span>:  <span class="str">"anthropic:claude-sonnet-4-6"</span>,
-    <span class="str">"gemini_deep"</span>:  <span class="str">"google_genai:gemini-2.5-pro"</span>,
-    <span class="str">"mistral_deep"</span>: <span class="str">"mistral-large-2411"</span>,
-}
-
-<span class="comment"># Each model becomes a LangGraph agent with tool access</span>
-agent = create_agent(
-    model=MODELS[model_key],
-    tools=[retrieval_tool],
-    prompt=system_prompt,
-)
-
-<span class="comment"># All route through OpenRouter (unified billing)</span>
-<span class="comment"># Retry: OpenRouter → OpenRouter → Direct provider</span></code></pre>
-                </div>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">routes/financial_analisys.py</span>
-                    </div>
-                    <pre><code><span class="comment"># Run all selected LLMs in parallel</span>
-results = <span class="kw">await</span> asyncio.gather(*[
-    analyze_single_model(
-        ticker=ticker,
-        model_key=key,
-        financial_tables=cached_tables,
-        retrieval_tool=rag_tool,
-    )
-    <span class="kw">for</span> key <span class="kw">in</span> selected_models
-], return_exceptions=<span class="kw">True</span>)
-
-<span class="comment"># Each model outputs: 8 metrics × (rating + reason) + summary</span>
-<span class="comment"># Cached by ticker + model + filing_date — skip if already evaluated</span></code></pre>
-                </div>
-            </section>
-
-            <!-- SEC Filing RAG Pipeline -->
-            <section>
-                <h2 data-i18n="af-rag">SEC Filing RAG Pipeline</h2>
-                <p data-i18n="af-rag-desc">
-                    SEC 10-Q filings are ingested, cleaned of boilerplate, chunked respecting markdown headers, and embedded into PostgreSQL with pgvector. Deep-tier models use a LangChain retrieval tool to search these chunks by cosine similarity, pulling qualitative context that raw financial tables can't provide.
-                </p>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">database/vs_addition.py</span>
-                    </div>
-                    <pre><code><span class="kw">from</span> langchain.text_splitter <span class="kw">import</span> RecursiveCharacterTextSplitter
-
-splitter = RecursiveCharacterTextSplitter(
-    chunk_size=<span class="num">2500</span>, chunk_overlap=<span class="num">300</span>,
-    separators=[<span class="str">"\n## "</span>, <span class="str">"\n### "</span>, <span class="str">"\n\n"</span>, <span class="str">"\n"</span>, <span class="str">" "</span>],
-)
-
-<span class="comment"># SEC 10-Q → Clean boilerplate → Chunk → Embed → pgvector</span>
-chunks = splitter.split_text(cleaned_filing)
-chunks = [c <span class="kw">for</span> c <span class="kw">in</span> chunks <span class="kw">if</span> len(c) > <span class="num">100</span>]  <span class="comment"># filter noise</span>
-
-<span class="comment"># Embedding: all-MiniLM-L6-v2 (384 dims, HuggingFace)</span>
-<span class="comment"># Retrieval: cosine similarity, top 8 chunks filtered by ticker</span>
-<span class="comment"># Non-US stocks: Yahoo Finance fallback (no SEC filings)</span></code></pre>
-                </div>
-            </section>
-
-            <!-- Multi-Round Debate Engine -->
-            <section>
-                <h2 data-i18n="af-debate">Multi-Round Debate Engine</h2>
-                <p data-i18n="af-debate-desc">
-                    When models disagree on a metric, they enter a structured debate. Each LLM defends its position, reviews others' arguments, and can change its rating. Position changes are tracked throughout. A sliding-window compression keeps token costs flat; without it, costs grow exponentially per round.
-                </p>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">func/debate_orchestration.py</span>
-                    </div>
-                    <pre><code><span class="kw">async def</span> <span class="fn">run_debate</span>(metrics_to_debate, llm_analyses, rounds=<span class="num">2</span>):
-    <span class="kw">for</span> round_num <span class="kw">in</span> range(<span class="num">1</span>, rounds + <span class="num">1</span>):
-        <span class="kw">if</span> round_num > <span class="num">1</span>:
-            <span class="comment"># Compress earlier rounds to control token costs</span>
-            <span class="comment"># Flattens R4/R5 costs to roughly R2 levels</span>
-            history = <span class="kw">await</span> _compress_history(debate_log, mistral_fast)
-
-        positions = <span class="kw">await</span> asyncio.gather(*[
-            get_model_position(model, metric, history)
-            <span class="kw">for</span> model <span class="kw">in</span> models
-            <span class="kw">for</span> metric <span class="kw">in</span> metrics_to_debate
-        ])
-        <span class="comment"># Track: "Claude changed: Good → Neutral"</span>
-
-    <span class="comment"># Final: &gt;50% agree → rating adopted, else → "COMPLEX"</span>
-    <span class="kw">return</span> build_consensus(all_positions)</code></pre>
-                </div>
-            </section>
-
-            <!-- System Design Tradeoffs -->
-            <section>
-                <h2 data-i18n="af-tradeoffs">System Design Tradeoffs</h2>
-                <p data-i18n="af-tradeoffs-intro">
-                    Every architectural choice has a cost. Here are the key tradeoffs I made and why.
-                </p>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">architecture_decisions.md</span>
-                    </div>
-                    <pre><code><span class="comment"># ADR-001: OpenRouter as unified gateway</span>
-<span class="str">Decision:</span>  Route all 9 models through OpenRouter first
-<span class="str">Why:</span>       Single billing, cost tracking, unified API format
-<span class="str">Tradeoff:</span>  Extra latency hop, mitigated by direct-provider fallback
-
-<span class="comment"># ADR-002: Two-tier model split (fast vs deep)</span>
-<span class="str">Decision:</span>  Fast models skip RAG, deep models get retrieval tool access
-<span class="str">Why:</span>       10x cost difference. Let users choose speed vs depth
-<span class="str">Tradeoff:</span>  Fast ratings lack qualitative reasoning
-
-<span class="comment"># ADR-003: pgvector over dedicated vector DB</span>
-<span class="str">Decision:</span>  Embeddings in PostgreSQL with pgvector extension
-<span class="str">Why:</span>       Single database for everything, simpler infra
-<span class="str">Tradeoff:</span>  Scaling limits vs Pinecone/Weaviate, but sufficient for filing data
-
-<span class="comment"># ADR-004: Debate compression via sliding window</span>
-<span class="str">Decision:</span>  Summarize earlier debate rounds before feeding next round
-<span class="str">Why:</span>       Without it, token costs grew exponentially per round
-<span class="str">Tradeoff:</span>  Loses fine detail from early rounds
-
-<span class="comment"># ADR-005: Frontend-driven pipeline orchestration</span>
-<span class="str">Decision:</span>  Frontend calls each pipeline step, holds intermediate state
-<span class="str">Why:</span>       Real-time progress UI, users see each phase live
-<span class="str">Tradeoff:</span>  More API calls, but enables per-step UX feedback
-
-<span class="comment"># ADR-006: Removed Gemini Flash entirely</span>
-<span class="str">Decision:</span>  Dropped gemini-2.5-flash from available models
-<span class="str">Why:</span>       Uncontrollable tool-calling loops inflated costs 30×
-<span class="str">Tradeoff:</span>  One fewer fast-tier option (gemini_deep still available)</code></pre>
-                </div>
-            </section>
-
-        </div>
-
-        <!-- Right Column - Sidebar -->
-        <aside class="detail-sidebar">
-
-            <!-- Key Features -->
-            <div class="sidebar-card">
-                <h3 data-i18n="af-features">Key Features</h3>
-                <ul class="sidebar-features">
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="af-feature1">9 LLMs across 5 providers in parallel</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="af-feature2">SEC filing RAG with pgvector embeddings</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="af-feature3">Pythagoras Method: harmonize + debate</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="af-feature4">PDF financial reports with score gauge</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="af-feature5">Stripe subscriptions + token economy</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="af-feature6">Watchlist with drag-drop + live scores</span>
-                    </li>
-                </ul>
+            <h3>What's wired today &mdash; Langfuse on the analysis route</h3>
+            <p>
+                Every analysis request opens a Langfuse trace named <code>financial-analysis</code>. LangChain's <code>CallbackHandler</code> auto-captures each model call as a child span, with token counts and cost lifted from OpenRouter's response (the <code>extra_body={"usage": {"include": True}}</code> flag is on, so per-call cost is visible per provider). The <code>trace_id</code> is returned in the API response, ready for user-feedback scores to be attached later.
+            </p>
+            <p>
+                What that buys today: latency, token usage, cost, and errors per request, per model, queryable in one place.
+            </p>
+            <div class="cs-diagram">
+                <img src="../images/agorafinancials-langfuse.png" alt="Langfuse traces for Agora Financials showing the financial-analysis trace name, per-request latency (28-48s), token counts (21K-83K combined), and total cost ($0.001-$0.011 per analysis).">
+                <p class="cs-diagram-caption">Live Langfuse view &mdash; one trace per analysis, four recent requests across tickers ZETA, NOW, NBIS, PLTR.</p>
             </div>
 
-            <!-- Lessons Learned -->
-            <div class="sidebar-card">
-                <h3 data-i18n="af-lessons">Lessons Learned</h3>
-                <div class="sidebar-lessons">
-                    <div>
-                        <strong data-i18n="af-lesson1-title">Gemini Flash: 308 API Calls</strong>
-                        <p data-i18n="af-lesson1-desc">
-                            gemini-2.5-flash made 308 API calls in a single evaluation, 78% ending in tool calls, peaking at 794K input tokens. Cost: $3.25 vs $0.08 for Mistral. Had to remove the model entirely.
-                        </p>
-                    </div>
-                    <div>
-                        <strong data-i18n="af-lesson2-title">Debate Token Explosion</strong>
-                        <p data-i18n="af-lesson2-desc">
-                            Without compression, debate history grew exponentially. R5 token costs were 5x higher than R2. Built sliding-window summarization using mistral-fast to flatten costs, saving 30% at 5 rounds.
-                        </p>
-                    </div>
-                    <div>
-                        <strong data-i18n="af-lesson3-title">Cheap Models Skip the Tool</strong>
-                        <p data-i18n="af-lesson3-desc">
-                            The biggest quality jump is fast→deep, not deep→premium. Cheap models output "Revenue grew 16% YoY" while deep models output "Revenue grew 16% YoY, driven by iPhone +13%, Services +13%, Japan +17%." No prompt engineering fixes it.
-                        </p>
-                    </div>
-                    <div>
-                        <strong data-i18n="af-lesson4-title">Claude Haiku: Star Performer</strong>
-                        <p data-i18n="af-lesson4-desc">
-                            Across all 9 models, Claude Haiku consistently made 5-7 retrieval calls and produced the richest reasoning: segment breakdowns, margin drivers, regional data. The only model that truly followed the analysis prompt at every price tier.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <h3>Where it's going &mdash; three LLM-as-judge layers, on the same trace data</h3>
+            <p>
+                Each one builds on traces Langfuse is already collecting, so the work is judge prompts and Langfuse UI configuration, not new instrumentation. The three planned judges:
+            </p>
+            <ul>
+                <li><strong>Structured-output schema compliance</strong> &mdash; does every model return the expected shape? Eight metrics, each with rating + reason + confidence. Catches schema drift across model upgrades.</li>
+                <li><strong>Tool-use behavior</strong> &mdash; deep-tier models <em>should</em> hit the retrieval tool. The Gemini-Flash incident showed this can also fail in the other direction (a model calling the tool 78% of the time and never stopping). A judge that scores tool-call counts and patterns flags both failure modes systematically.</li>
+                <li><strong>Debate consistency</strong> &mdash; position changes are already tracked structurally (<em>"Claude: Good &rarr; Neutral"</em>). The judge scores whether the new reasoning actually engages the counter-argument or just restates an opinion. Catches the case where models flip without justification.</li>
+            </ul>
+        </section>
 
-        </aside>
+        <!-- 6. Results -->
+        <section>
+            <h2 data-num="06">Results</h2>
+            <ul>
+                <li><strong>Live at agorafinancials.com.</strong> GitHub + Google OAuth, free tier available (three anonymous analyses, then 70 tokens/month signed up). Stripe subscriptions and per-token top-ups wired end to end through webhooks.</li>
+                <li><strong>9 LLMs across 5 providers, evaluating 8 financial-health metrics per ticker.</strong> Four fast (3&ndash;8s, ~$0.05/eval) and five deep (21&ndash;52s, ~$0.12&ndash;0.25/eval) running in parallel under <code>asyncio.gather</code>, all behind OpenRouter with direct-provider fallback.</li>
+                <li><strong>pgvector RAG over SEC filings.</strong> 10-Qs chunked, embedded with MiniLM-L6-v2, retrieved by ticker. Deep-tier models pull qualitative context (segment margins, MD&amp;A commentary) that raw tables can't provide.</li>
+                <li><strong>Multi-round debate with sliding-window compression.</strong> Flattens R5 token cost to roughly R2 levels &mdash; ~30% savings on five-round debates with minimal context loss.</li>
+                <li><strong>Cost visibility per request</strong> via OpenRouter usage data flowing into Langfuse. Every model call, every provider, costed to the cent.</li>
+                <li><strong>PDF reports via WeasyPrint + Jinja2</strong> &mdash; downloadable evaluations rendered from HTML/CSS templates, no separate report service.</li>
+            </ul>
+        </section>
 
+        <!-- 7. Roadmap -->
+        <section>
+            <h2 data-num="07">Roadmap</h2>
+            <ul>
+                <li><strong>Extend Langfuse tracing to every route</strong> &mdash; analysis is wired; debate, harmonization, ingestion, and PDF generation are next. End-to-end traces let cost rollups and judges see the full request, not just the heaviest leg.</li>
+                <li><strong>LLM-as-judge for structured output</strong> &mdash; verify every model returns the expected metric/rating/reason shape on every analysis. Catches schema drift before it ships to the report.</li>
+                <li><strong>LLM-as-judge for tool use</strong> &mdash; flag deep-tier models that skip the retrieval tool, and also models that won't stop calling it. Both failure modes get measured systematically.</li>
+                <li><strong>LLM-as-judge for debate consistency</strong> &mdash; score whether a model's position change actually engages the counter-argument. Position changes are tracked structurally today; quality of those changes isn't measured.</li>
+                <li><strong>Year and quarter metadata filtering on retrieval</strong> &mdash; the chunks table already stores <code>year</code>, <code>quarter</code>, and <code>filing_date</code> per chunk, but retrieval today only filters by ticker. Adding them to the WHERE clause unlocks "the latest quarter only" or "the last fiscal year" as scoping options for the deep-tier prompts &mdash; one query change away.</li>
+                <li><strong>Re-ranking layer over the top-N chunks</strong> &mdash; cosine top-8 returns "most similar," not necessarily "most useful." A cross-encoder or MMR pass over a wider candidate set (top-30) would re-score for relevance and diversity, reducing the case where eight nearly-duplicate paragraphs crowd out genuinely different context.</li>
+                <li><strong>Narrative SEC extraction beyond raw financials</strong> &mdash; extend ingestion to MD&amp;A and Risk Factors so deep-tier prompts can lean on qualitative context that the structured tables don't capture.</li>
+                <li><strong>Persistent PDF report storage tied to the watchlist</strong> &mdash; today reports generate on demand and disappear; persist them per ticker so past evaluations stay reachable from the user's watched list.</li>
+                <li><strong>Finnhub fallback for non-US tickers</strong> &mdash; yfinance is inconsistent on international stocks; Finnhub provides standardized GAAP/IFRS data for the same tickers.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- End-of-page logo -->
+    <div class="cs-end-mark">
+        <a href="https://agorafinancials.com" target="_blank" aria-label="Visit Agora Financials">
+            <img src="../images/agorafinancials_small.png" alt="Agora Financials">
+        </a>
     </div>
 
     <!-- Footer -->
