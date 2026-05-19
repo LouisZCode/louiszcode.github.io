@@ -1582,7 +1582,7 @@ section {
    with the page center because .cs-wrapper has margin: 0 auto. */
 .cs-video {
   position: relative;
-  width: min(100vw - 3rem, 1080px);
+  width: min(100vw - 3rem, 880px);
   margin-left: 50%;
   transform: translateX(-50%);
   aspect-ratio: 16 / 9;
