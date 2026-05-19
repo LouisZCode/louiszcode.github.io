@@ -152,28 +152,7 @@
             </p>
 
             <div class="cs-diagram">
-<pre>
-  INGEST                    ANALYZE                       HARMONIZE       DEBATE
-  ──────                    ───────                       ─────────       ──────
-  SEC EDGAR
-  (10-Q via                 9 LLMs · 5 providers          aligned          parallel rounds
-   edgartools)        ─►    via OpenRouter            ─►  majority    ─►   ACCEPT / CHANGE
-        │                                                 wins             / REJECT
-        ▼                   ┌── fast tier (4) ──┐         flagged
-  chunk · embed             │   numbers only    │         for debate      sliding-window
-  (3-small, 1536d)            │   3-8s, ~$0.05    │                         compression
-        │                   └───────────────────┘                                │
-        ▼                   ┌── deep tier (5) ──┐                                ▼
-  pgvector                  │   + RAG over      │                          consensus
-  (PostgreSQL)              │   pgvector        │                          or "COMPLEX"
-                            │   21-52s, ~$0.12  │                                │
-  yfinance fallback         └───────────────────┘                                ▼
-  for non-US tickers                                                       PDF report
-
-                ─────────── Langfuse traces · latency · tokens · cost · errors ───────────
-                                       (today: ANALYZE only)
-</pre>
-                <p class="cs-diagram-caption">Polished diagram coming &mdash; this ASCII is a stand-in.</p>
+                <img src="../images/agorafinancials-architecture.png" alt="Agora Financials system architecture diagram. Four columns: INGEST (SEC EDGAR via edgartools, chunk and embed, pgvector, yfinance fallback for non-US tickers), ANALYZE (9 LLMs across 5 providers via OpenRouter, fast tier of 4 models doing numbers-only in 3-8 seconds at ~$0.05, deep tier of 5 models with RAG over pgvector in 21-52 seconds at ~$0.12), HARMONIZE (aligned by majority wins, or flagged for debate), and DEBATE (parallel rounds with ACCEPT/CHANGE/REJECT, sliding-window compression, consensus or COMPLEX, final PDF report). A Langfuse observability lane at the bottom traces latency, tokens, cost, and errors — wired today on the ANALYZE step only.">
             </div>
         </section>
 

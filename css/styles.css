@@ -1577,9 +1577,14 @@ section {
   margin-bottom: 0.25rem;
 }
 
+/* Breaks out wider than the 760px text column so the walkthrough feels prominent.
+   Centered via translateX trick relative to the parent's center, which coincides
+   with the page center because .cs-wrapper has margin: 0 auto. */
 .cs-video {
   position: relative;
-  width: 100%;
+  width: min(100vw - 3rem, 1080px);
+  margin-left: 50%;
+  transform: translateX(-50%);
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg);
   overflow: hidden;
