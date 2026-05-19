@@ -146,10 +146,18 @@
             </p>
             <p>
                 <strong>Three-layer caching, because every step in the pipeline costs money.</strong> Each expensive operation has a cache key in front of it.
-                <em>SEC filings &rarr; chunks</em>, keyed by <code>(ticker, year, quarter)</code> &mdash; re-ingesting a filing that's already in the <code>chunks</code> table skips the SEC download, the boilerplate filtering, the chunking, <em>and</em> the embedding API call.
-                <em>Structured financial tables</em>, keyed by <code>(ticker, latest_filing_date)</code> in a separate <code>financial_statements</code> table &mdash; the analysis route reads from here only, never re-hits SEC at request time.
-                <em>LLM evaluations</em>, keyed by <code>(ticker, llm_model, latest_filing_date)</code> in <code>llm_financial_analysis</code> &mdash; the full structured response stored as JSONB. At request time, the code splits the requested models into "already cached" and "needs to run" and only fires LLM calls for the latter. The same ticker re-evaluated against the same filing costs nothing in API spend.
             </p>
+            <ul>
+                <li>
+                    <strong>SEC filings &rarr; chunks</strong>, keyed by <code>(ticker, year, quarter)</code> &mdash; re-ingesting a filing that's already in the <code>chunks</code> table skips the SEC download, the boilerplate filtering, the chunking, and the embedding API call.
+                </li>
+                <li>
+                    <strong>Structured financial tables</strong>, keyed by <code>(ticker, latest_filing_date)</code> in a separate <code>financial_statements</code> table &mdash; the analysis route reads from here only, never re-hits SEC at request time.
+                </li>
+                <li>
+                    <strong>LLM evaluations</strong>, keyed by <code>(ticker, llm_model, latest_filing_date)</code> in <code>llm_financial_analysis</code> &mdash; the full structured response stored as JSONB. At request time, the code splits the requested models into "already cached" and "needs to run" and only fires LLM calls for the latter. The same ticker re-evaluated against the same filing costs nothing in API spend.
+                </li>
+            </ul>
 
             <div class="cs-diagram">
                 <img src="../images/agorafinancials-architecture.png" alt="Agora Financials system architecture diagram. Four columns: INGEST (SEC EDGAR via edgartools, chunk and embed, pgvector, yfinance fallback for non-US tickers), ANALYZE (9 LLMs across 5 providers via OpenRouter, fast tier of 4 models doing numbers-only in 3-8 seconds at ~$0.05, deep tier of 5 models with RAG over pgvector in 21-52 seconds at ~$0.12), HARMONIZE (aligned by majority wins, or flagged for debate), and DEBATE (parallel rounds with ACCEPT/CHANGE/REJECT, sliding-window compression, consensus or COMPLEX, final PDF report). A Langfuse observability lane at the bottom traces latency, tokens, cost, and errors — wired today on the ANALYZE step only.">
