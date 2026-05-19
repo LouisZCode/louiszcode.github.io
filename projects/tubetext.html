@@ -6,8 +6,8 @@
     <title>TubeText - Case Study | Luis Zermeno</title>
     <link rel="canonical" href="https://www.lugz.dev/projects/tubetext.html">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <meta name="description" content="TubeText - AI-powered YouTube transcript extraction with LLM summaries, streaming translation, and audio transcription. Built with FastAPI, LangChain, OpenAI, Deepgram, Cerebras.">
-    <meta name="keywords" content="YouTube transcription, AI summarization, FastAPI, LangChain, Deepgram, OpenAI, Python, SSE streaming">
+    <meta name="description" content="TubeText - production tool that transcribes, translates, and summarizes YouTube video content, with Langfuse observability, LLM-as-judge evaluation, and human feedback loops. Built with FastAPI, Deepgram, OpenRouter, Cerebras, PostgreSQL.">
+    <meta name="keywords" content="YouTube transcription, AI summarization, FastAPI, Langfuse, LLM-as-judge, Deepgram, OpenRouter, Cerebras, SSE streaming, Python">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,14 +41,14 @@
         <div class="detail-hero-content">
             <div class="detail-badge">
                 <span class="detail-badge-dot"></span>
-                <span data-i18n="project-status-live">Live Product</span>
+                <span>Live Product</span>
             </div>
             <h1>
                 TubeText: <br>
                 <span class="accent">AI Transcript Engine</span>
             </h1>
-            <p class="detail-hero-desc" data-i18n="tt-description">
-                An async backend that orchestrates multiple AI services to extract, summarize, and translate YouTube video content — turning hours of video into actionable text in seconds.
+            <p class="detail-hero-desc">
+                A production tool that transcribes, translates, and summarizes video content, with AI quality evaluation built in &mdash; currently with organic paying clients.
             </p>
 
             <div class="detail-hero-actions">
@@ -67,301 +67,242 @@
         <div class="detail-hero-visual">
             <img src="../images/tubetext-demo.gif" alt="TubeText Demo" onerror="this.src='../images/tubetext_small.png'">
             <div class="detail-stat-badge">
-                <div class="label">AI Services</div>
-                <div class="value">3</div>
+                <div class="label">Languages</div>
+                <div class="value">5</div>
             </div>
         </div>
     </header>
 
-    <!-- Technical Specs Bar -->
+    <!-- Quick-summary strip -->
     <section class="specs-bar">
         <div class="specs-bar-inner">
             <div>
-                <h3 data-i18n="tt-spec-framework">Stack</h3>
-                <p>FastAPI, Python, LangChain</p>
+                <h3>Core</h3>
+                <p>Python &middot; FastAPI &middot; Next.js 16 &middot; PostgreSQL</p>
             </div>
             <div>
-                <h3 data-i18n="tt-spec-ai">AI Services</h3>
-                <p>OpenAI, Deepgram, Cerebras</p>
+                <h3>AI Layer</h3>
+                <p>Deepgram &middot; OpenRouter &middot; Cerebras</p>
             </div>
             <div>
-                <h3 data-i18n="tt-spec-database">Database</h3>
-                <p>PostgreSQL + SQLAlchemy</p>
+                <h3>Observability</h3>
+                <p>Langfuse &middot; LLM-as-judge &middot; Sentry</p>
             </div>
             <div>
-                <h3 data-i18n="tt-spec-deployment">Deployment</h3>
-                <p>Docker + Railway</p>
+                <h3>Infra</h3>
+                <p>Docker &middot; Railway &middot; Stripe</p>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <div class="detail-main">
+    <!-- Case study main content (single column, no sidebar) -->
+    <div class="cs-wrapper">
 
-        <!-- Left Column - Main Content -->
-        <div class="detail-content">
+        <!-- 1. The Problem -->
+        <section>
+            <h2 data-num="01">The Problem</h2>
+            <p>
+                YouTube is one of the best places to learn &mdash; but learning from it is slow.
+            </p>
+            <p>
+                A 40-minute talk hides 5 minutes of substance, and the language barrier makes the cost higher: if the talk you need is in a language you don't speak, you either skip it or sit through machine-translated captions that miss the nuance.
+            </p>
+            <p>
+                <strong>TubeText turns any YouTube video into a structured transcript, a focused summary, and a translation in 20+ languages.</strong> Watch what matters, in the language you read fastest.
+            </p>
+        </section>
 
-            <!-- The Challenge -->
-            <section>
-                <h2 data-i18n="tt-challenge">The Challenge</h2>
-                <p data-i18n="tt-challenge-p1">
-                    YouTube is one of the richest knowledge sources on the internet — tutorials, lectures, interviews, deep dives on any topic. But most videos are long, full of filler, and hard to skim. Getting to the content that matters means watching everything.
-                </p>
-                <p data-i18n="tt-challenge-p2">
-                    The technical challenge was building an <strong>async pipeline</strong> that orchestrates multiple AI services (transcription, summarization, translation) without blocking — while keeping response times fast enough for a real-time user experience.
-                </p>
-            </section>
-
-            <!-- AI Pipeline Architecture -->
-            <section>
-                <h2 data-i18n="tt-pipeline">AI Pipeline Architecture</h2>
-                <div class="detail-diagram">
-                    <img src="../images/tubetext-flow.png" alt="TubeText AI Pipeline Architecture">
-                    <p class="caption">Full AI pipeline from URL to translated transcript</p>
-                </div>
-            </section>
-
-            <!-- LangChain Summary Agent -->
-            <section>
-                <h2 data-i18n="tt-summary-agent">LangChain Summary Agent</h2>
-                <p data-i18n="tt-summary-agent-desc">
-                    Summaries are generated through a LangChain agent with YAML-driven prompts. This keeps prompt engineering separate from application logic, making it easy to iterate on prompt quality without touching code.
-                </p>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">agents/summarize_agent.py</span>
-                    </div>
-                    <pre><code><span class="kw">from</span> langchain.agents <span class="kw">import</span> create_agent
-<span class="kw">import</span> yaml
-
-<span class="comment"># Load prompt from YAML config</span>
-<span class="kw">def</span> <span class="fn">load_prompts</span>():
-    <span class="kw">with</span> open(<span class="str">"agents/prompts.yaml"</span>, <span class="str">"r"</span>, encoding=<span class="str">"utf-8"</span>) <span class="kw">as</span> f:
-        <span class="kw">return</span> yaml.safe_load(f)
-
-prompts = load_prompts()
-
-summary_agent = create_agent(
-    model=<span class="str">"openai:gpt-5-mini"</span>,
-    system_prompt=prompts[<span class="str">"SUMMARIZE_PROMPT"</span>]
-)
-
-<span class="comment"># Invoked async from the route handler</span>
-result = <span class="kw">await</span> summary_agent.ainvoke(
-    {<span class="str">"messages"</span>: [{<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: transcript_text}]}
-)
-summary = result[<span class="str">"messages"</span>][-<span class="num">1</span>].content</code></pre>
-                </div>
-            </section>
-
-            <!-- Streaming Translation -->
-            <section>
-                <h2 data-i18n="tt-streaming">Real-Time Streaming Translation</h2>
-                <p data-i18n="tt-streaming-desc">
-                    Translation uses Server-Sent Events (SSE) to stream results segment by segment. Cerebras GPT-OSS-120b was chosen for its fast inference speed, giving users real-time feedback instead of waiting for the entire transcript to translate.
-                </p>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">agents/translate_agent.py</span>
-                    </div>
-                    <pre><code><span class="kw">from</span> cerebras.cloud.sdk <span class="kw">import</span> AsyncCerebras
-<span class="kw">import</span> yaml, os
-
-prompts = yaml.safe_load(open(<span class="str">"agents/prompts.yaml"</span>))
-translate_prompt = prompts[<span class="str">"TRANSLATE_PROMPT"</span>]
-client = AsyncCerebras(api_key=os.environ.get(<span class="str">"CEREBRAS_API_KEY"</span>))
-
-<span class="kw">async def</span> <span class="fn">translate</span>(text: str, language: str) -> str:
-    response = <span class="kw">await</span> client.chat.completions.create(
-        model=<span class="str">"gpt-oss-120b"</span>,
-        messages=[
-            {<span class="str">"role"</span>: <span class="str">"system"</span>, <span class="str">"content"</span>: translate_prompt},
-            {<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: f<span class="str">"Translate to {language}:\n\n{text}"</span>},
-        ],
-    )
-    <span class="kw">return</span> response.choices[<span class="num">0</span>].message.content</code></pre>
-                </div>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">routes/translate_router.py</span>
-                    </div>
-                    <pre><code><span class="kw">async def</span> <span class="fn">event_generator</span>():
-    <span class="str">"""Yield SSE events as each segment is translated."""</span>
-    <span class="kw">for</span> i <span class="kw">in</span> range(<span class="num">0</span>, len(request.segments), CHUNK_SIZE):
-        chunk_text = <span class="str">" "</span>.join(seg.text <span class="kw">for</span> seg <span class="kw">in</span> request.segments[i:i+<span class="num">1</span>])
-        translated = <span class="kw">await</span> translate(chunk_text, request.language)
-        <span class="kw">yield</span> f<span class="str">"data: {json.dumps({'translation': translated})}\n\n"</span>
-    <span class="kw">yield</span> f<span class="str">"data: {json.dumps({'done': True})}\n\n"</span>
-
-<span class="kw">return</span> StreamingResponse(
-    event_generator(),
-    media_type=<span class="str">"text/event-stream"</span>,
-    headers={<span class="str">"Cache-Control"</span>: <span class="str">"no-cache"</span>, <span class="str">"X-Accel-Buffering"</span>: <span class="str">"no"</span>},
-)</code></pre>
-                </div>
-            </section>
-
-            <!-- Async Database Layer -->
-            <section>
-                <h2 data-i18n="tt-async-db">Async Database Layer</h2>
-                <p data-i18n="tt-async-db-desc">
-                    The entire data layer is async — PostgreSQL via asyncpg with SQLAlchemy 2.0 async sessions. Alembic handles schema migrations. Usage tracking resets automatically on calendar month boundaries without any background jobs.
-                </p>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">database/connection.py</span>
-                    </div>
-                    <pre><code><span class="kw">from</span> sqlalchemy.ext.asyncio <span class="kw">import</span> create_async_engine, async_sessionmaker
-<span class="kw">import</span> os
-
-<span class="comment"># Auto-convert to asyncpg driver</span>
-database_url = os.getenv(<span class="str">"DATABASE_URL"</span>)
-<span class="kw">if</span> database_url <span class="kw">and</span> database_url.startswith(<span class="str">"postgresql://"</span>):
-    database_url = database_url.replace(<span class="str">"postgresql://"</span>, <span class="str">"postgresql+asyncpg://"</span>, <span class="num">1</span>)
-
-engine = create_async_engine(database_url)
-SessionLocal = async_sessionmaker(
-    bind=engine, autoflush=<span class="kw">False</span>, autocommit=<span class="kw">False</span>
-)
-
-<span class="kw">async def</span> <span class="fn">get_db</span>():
-    <span class="kw">async with</span> SessionLocal() <span class="kw">as</span> db:
-        <span class="kw">yield</span> db</code></pre>
-                </div>
-            </section>
-
-            <!-- System Design Tradeoffs -->
-            <section>
-                <h2 data-i18n="tt-tradeoffs">System Design Tradeoffs</h2>
-                <p data-i18n="tt-tradeoffs-intro">
-                    Every architectural choice has a cost. Here are the key tradeoffs I made and why.
-                </p>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">architecture_decisions.md</span>
-                    </div>
-                    <pre><code><span class="comment"># ADR-001: Signed cookies for anonymous users</span>
-<span class="str">Decision:</span>  Track anonymous usage via signed HTTP-only cookies
-<span class="str">Why:</span>       No DB pollution — only a counter, no rows until signup
-<span class="str">Tradeoff:</span>  Counter resets if cookie clears (acceptable for free tier)
-
-<span class="comment"># ADR-002: JWT in HTTP-only cookies</span>
-<span class="str">Decision:</span>  Store auth tokens as HTTP-only cookies, not localStorage
-<span class="str">Why:</span>       XSS-safe — browser sends automatically, JS can't access
-<span class="str">Tradeoff:</span>  Can't read token from JS (by design)
-
-<span class="comment"># ADR-003: PostgreSQL as single data store</span>
-<span class="str">Decision:</span>  Async PostgreSQL via asyncpg — no Redis, no cache layer
-<span class="str">Why:</span>       Simpler infra, fewer moving parts to maintain
-<span class="str">Tradeoff:</span>  Requires careful handling of SQLAlchemy async patterns
-
-<span class="comment"># ADR-004: SSE for translation streaming</span>
-<span class="str">Decision:</span>  Server-Sent Events over WebSockets
-<span class="str">Why:</span>       Simpler than WebSockets for one-way data flow
-<span class="str">Tradeoff:</span>  HTTP 200 already sent — mid-stream errors need SSE error events
-
-<span class="comment"># ADR-005: Cerebras for translation</span>
-<span class="str">Decision:</span>  Cerebras GPT-OSS-120b instead of OpenAI for translation
-<span class="str">Why:</span>       Fastest inference speed available, free tier
-<span class="str">Tradeoff:</span>  Less model variety, models can be deprecated
-
-<span class="comment"># ADR-006: Deepgram for premium transcription</span>
-<span class="str">Decision:</span>  Deepgram Nova-3 for videos without captions
-<span class="str">Why:</span>       Handles any video regardless of caption availability
-<span class="str">Tradeoff:</span>  Adds yt-dlp + ffmpeg dependency — heavier infra</code></pre>
-                </div>
-            </section>
-
-        </div>
-
-        <!-- Right Column - Sidebar -->
-        <aside class="detail-sidebar">
-
-            <!-- Key Features -->
-            <div class="sidebar-card">
-                <h3 data-i18n="tt-features">Key Features</h3>
-                <ul class="sidebar-features">
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="tt-feature1">Caption-based transcript extraction</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="tt-feature2">Audio transcription via Deepgram Nova-3</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="tt-feature3">AI summaries with LangChain + GPT-4 mini</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="tt-feature4">Real-time streaming translation (SSE)</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="tt-feature5">PDF export with branding</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="tt-feature6">Google OAuth + Stripe billing</span>
-                    </li>
-                </ul>
+        <!-- 2. One-minute walkthrough -->
+        <section>
+            <h2 data-num="02">One-Minute Walkthrough</h2>
+            <div class="cs-video-placeholder">
+                <strong>Video coming soon</strong>
+                A one-minute screen recording covering the four flows: free transcript, premium transcript, summary, translation.
             </div>
+        </section>
 
-            <!-- Lessons Learned -->
-            <div class="sidebar-card">
-                <h3 data-i18n="tt-lessons">Lessons Learned</h3>
-                <div class="sidebar-lessons">
-                    <div>
-                        <strong data-i18n="tt-lesson1-title">Async SQLAlchemy Gotchas</strong>
-                        <p data-i18n="tt-lesson1-desc">
-                            SQLAlchemy expires attributes after commit() — accessing them triggers a sync lazy-load that crashes async sessions (MissingGreenlet). Fixed with explicit db.refresh() after every commit.
-                        </p>
-                    </div>
-                    <div>
-                        <strong data-i18n="tt-lesson2-title">SSE Error Handling</strong>
-                        <p data-i18n="tt-lesson2-desc">
-                            Once an SSE stream sends HTTP 200, you can't return error status codes mid-stream. Had to implement SSE error events so the frontend can detect and handle failures gracefully.
-                        </p>
-                    </div>
-                    <div>
-                        <strong data-i18n="tt-lesson3-title">OAuth Behind Reverse Proxies</strong>
-                        <p data-i18n="tt-lesson3-desc">
-                            Railway's proxy strips HTTPS, so FastAPI generated http:// redirect URIs — causing redirect_uri_mismatch with Google OAuth. Fixed with ProxyHeadersMiddleware to read X-Forwarded-Proto.
-                        </p>
-                    </div>
-                    <div>
-                        <strong data-i18n="tt-lesson4-title">Build-Time vs Runtime Env Vars</strong>
-                        <p data-i18n="tt-lesson4-desc">
-                            NEXT_PUBLIC_ vars are baked at build time, but Railway injects env vars at runtime only. Docker builds get undefined values unless you hardcode with ENV before the build step.
-                        </p>
-                    </div>
-                </div>
+        <!-- 3. System Design -->
+        <section>
+            <h2 data-num="03">System Design</h2>
+            <p>
+                One FastAPI service. Four pipelines. Every call traced end-to-end through Langfuse.
+            </p>
+            <p>
+                No event queue, no worker pool &mdash; the async runtime handles current scale on its own, with <code>asyncio.to_thread</code> bridging the sync SDKs (yt-dlp, Deepgram) into the async stack.
+            </p>
+
+            <h3>Three design choices worth discussing</h3>
+            <p>
+                <strong>Residential proxy + error classification, not naive retry.</strong> YouTube blocks cloud IPs aggressively. Every request routes through Webshare's rotating residential pool, and exceptions from both <code>youtube-transcript-api</code> and <code>yt-dlp</code> are classified into five buckets: <em>transient</em>, <em>no_captions</em>, <em>unavailable</em>, <em>bad_input</em>, <em>unknown</em>. Only <em>transient</em> retries; the rest map to user-facing messages ("try Premium", "video is private") instead of generic failure.
+            </p>
+            <p>
+                <strong>Async orchestration with bounded retry budgets.</strong> The free path retries 3 times with (0.5s, 1s, 2s) backoff because each attempt is cheap. The premium path retries only 2 times with 3s backoff because each attempt is 30&ndash;90s of yt-dlp + Deepgram work &mdash; same pattern, different budget.
+            </p>
+            <p>
+                <strong>Three-tier freemium without DB pollution.</strong> Anonymous users (5 videos/month) are tracked by a signed HTTP-only cookie. Zero database writes until they create an account &mdash; saves storage and avoids "what do we do with abandoned anonymous data?" questions cleanly.
+            </p>
+
+            <div class="cs-diagram">
+<pre>
+[ YouTube URL ]
+       |
+       v
+[ FastAPI Router ]
+       |
+       +--&gt; Free Transcript        : YouTube captions -&gt; text
+       |
+       +--&gt; Premium Transcript     : yt-dlp -&gt; audio -&gt; Deepgram Nova-3 -&gt; text
+       |
+       +--&gt; Summary                : text -&gt; LangChain -&gt; OpenRouter (Cerebras)
+       |
+       +--&gt; Translation            : chunks -&gt; LLM -&gt; SSE stream
+                                                |
+                                                v
+                              [ Langfuse Observability ]
+                              Traces  &middot;  LLM-as-judge  &middot;  Human feedback
+</pre>
+                <div class="cs-diagram-caption">High-level architecture. Polished illustration to follow.</div>
             </div>
+        </section>
 
+        <!-- 4. Stack & Why -->
+        <section>
+            <h2 data-num="04">Stack &amp; Why</h2>
+            <p>
+                Four groups, each choice with a short note on the reasoning behind it.
+            </p>
 
-        </aside>
+            <h3>Backend</h3>
+            <ul>
+                <li>
+                    <strong>Python 3.12</strong> &mdash; the AI ecosystem is built here. Every provider (Deepgram, OpenAI, Cerebras, OpenRouter, LangChain) ships a first-class Python SDK, and async/await + Pydantic cover concurrency and types without a second language in the stack.
+                </li>
+                <li>
+                    <strong>FastAPI</strong> &mdash; native async + Pydantic schemas means request/response models are defined once, not twice. Endpoint typing flows through to OpenAPI docs for free.
+                </li>
+                <li>
+                    <strong>PostgreSQL + async SQLAlchemy 2.0 + Alembic</strong> &mdash; one data store, no Redis cache layer to maintain. Alembic gives reviewable migrations (4 versions so far).
+                </li>
+            </ul>
 
+            <h3>Frontend</h3>
+            <ul>
+                <li>
+                    <strong>Next.js 16 + React 19 + TypeScript</strong> &mdash; SSR for SEO on the landing page; React 19 transitions for the SSE translation UI so chunks render without jank as they stream in. TypeScript end-to-end so the API contract is enforced from request to render.
+                </li>
+            </ul>
+
+            <h3>AI Layer</h3>
+            <ul>
+                <li>
+                    <strong>Deepgram Nova-3 for premium transcription</strong> &mdash; YouTube captions are missing on ~20% of videos. Nova-3 outperforms Whisper-large on noisy audio at predictable per-second pricing ($0.0000723/s, empirically derived from invoices and baked into Langfuse cost rollups).
+                </li>
+                <li>
+                    <strong>OpenRouter as LLM gateway, pinned to Cerebras</strong> &mdash; one API key, one billing dashboard, swap providers via env var. Cerebras delivers ~10&times; the throughput of standard endpoints &mdash; matters because translation streams chunk-by-chunk over SSE and latency per chunk is user-visible.
+                </li>
+                <li>
+                    <strong><code>openai/gpt-oss-120b</code> for summary and translation</strong> &mdash; strong instruction-following at a fraction of GPT-4 cost; one model for both keeps prompts and evaluation consistent.
+                </li>
+                <li>
+                    <strong>YAML-driven prompts</strong> &mdash; prompts live in <code>agents/prompts.yaml</code>, separated from application logic. Iteration doesn't require code changes.
+                </li>
+            </ul>
+
+            <h3>Infrastructure &amp; Auth</h3>
+            <ul>
+                <li>
+                    <strong>Server-Sent Events for translation streaming</strong> &mdash; simpler than WebSockets for one-way data flow.
+                    <em>Once HTTP 200 is sent you can't return error status mid-stream, so error events are part of the stream protocol &mdash; the frontend listens for <code>{"error": ...}</code> payloads, not HTTP codes.</em>
+                </li>
+                <li>
+                    <strong>JWT in HTTP-only cookies (Google OAuth)</strong> &mdash; XSS-safe, browser sends automatically, no password storage to maintain.
+                    <em>Behind Railway's reverse proxy, FastAPI generated <code>http://</code> redirect URIs and Google rejected with <code>redirect_uri_mismatch</code>. Fixed with <code>ProxyHeadersMiddleware</code> reading <code>X-Forwarded-Proto</code>.</em>
+                </li>
+                <li>
+                    <strong>Stripe Checkout + webhooks</strong> &mdash; webhooks as source of truth. Lifetime purchases identified as <code>status=active</code> with <code>subscription_id=null</code>.
+                </li>
+                <li>
+                    <strong>Webshare residential proxy</strong> &mdash; <code>-rotate</code> username suffix gives per-request IP rotation, defeats YouTube's cloud-IP blocks without managing an IP pool myself.
+                </li>
+                <li>
+                    <strong>Docker + Railway (3 services)</strong> &mdash; PostgreSQL, backend, frontend on one platform. No Kubernetes complexity for a three-service app.
+                </li>
+                <li>
+                    <strong>Sentry for non-AI error capture</strong> &mdash; pairs with Langfuse, which covers the AI side. Two systems by design: LLM calls and their costs go to Langfuse, everything else (HTTP errors, unhandled exceptions, deploy regressions) goes to Sentry. Different signal types, kept on different dashboards.
+                </li>
+            </ul>
+        </section>
+
+        <!-- 5. Evaluation -->
+        <section>
+            <h2 data-num="05">Evaluation</h2>
+            <p>
+                Three layers of observability run in production. This is the part most AI portfolio projects skip &mdash; and the part interviewers actually want to ask about.
+            </p>
+
+            <h3>1. Langfuse traces &mdash; every call, every cost</h3>
+            <p>
+                A two-level trace pattern wraps every user action:
+            </p>
+            <ul>
+                <li><strong>Outer span</strong> = the user-facing action (transcript / summary / translation) with judge-readable <code>input</code> and <code>output</code> text, plus metadata: <code>user_id</code>, language tag, tier tag.</li>
+                <li><strong>Inner generation</strong> = the LLM call itself, with token counts and cost (from OpenRouter's API response, or a hardcoded rate for Deepgram).</li>
+            </ul>
+            <p>
+                Why two levels: LLM judges need plain text I/O at the top, not nested chunk-level logs. The outer span is the user's action; the inner generation has the cost details. Costs roll up from inner to outer automatically &mdash; margin per request is visible in Langfuse, not a spreadsheet.
+            </p>
+
+            <h3>2. LLM-as-judge &mdash; adequacy on translations</h3>
+            <p>
+                Configured in the Langfuse UI, an adequacy judge runs on every translation trace. The judge is <code>openai/gpt-4o-mini</code> via OpenRouter, and it walks an idea-by-idea checklist over source vs. translation &mdash; each idea labelled <code>PRESERVED</code>, <code>MISSING</code>, <code>DISTORTED</code>, or <code>ADDED</code> &mdash; producing a 1&ndash;5 score plus written reasoning.
+            </p>
+            <p>
+                What this catches that BLEU and ROUGE don't: hallucinated additions, dropped sentences, register shifts. A summary-faithfulness judge is wired on the same pattern, pending UI activation.
+            </p>
+
+            <h3>3. Human feedback &mdash; sampled, idempotent, attached to traces</h3>
+            <p>
+                The frontend shows a thumbs prompt on 10% of outputs (configurable, to avoid feedback fatigue). Submissions write a Langfuse score with an idempotent ID &mdash; <code>{trace_id}:{name}</code> &mdash; so resubmits upsert instead of duplicate. Thumbs-down comments (up to 500 chars) flow into the trace as searchable feedback, and a per-IP rate limit (30 / 5 min) blocks spam without forcing an auth wall.
+            </p>
+
+            <h3>Sessions &mdash; per-video cohort analysis</h3>
+            <p>
+                On top of the three layers above, sessions group everything by source video. The frontend generates a <code>crypto.randomUUID()</code> per YouTube URL; the backend attaches it via an <code>X-Session-Id</code> header. All three premium outputs (transcript / summary / translation) for the same video roll up into one Langfuse Session &mdash; letting me answer "did this video produce a bad transcript <em>and</em> a bad summary, or just one of them?" instead of guessing.
+            </p>
+        </section>
+
+        <!-- 6. Results -->
+        <section>
+            <h2 data-num="06">Results</h2>
+            <ul>
+                <li><strong>Live with paying users.</strong> Stripe Checkout across three plans: &euro;5/month, &euro;49/year, &euro;79 lifetime.</li>
+                <li><strong>Three-tier freemium.</strong> Anonymous (5 videos/month, cookie-tracked, zero DB rows), free (20/month), premium (unlimited).</li>
+                <li><strong>20+ target languages supported</strong>, four currently surfaced in the production UI (Spanish, Portuguese, German, French). Expansion gated on adequacy-judge scores per language &mdash; if the judge says quality is shaky, the language doesn't ship.</li>
+                <li><strong>End-to-end cost visibility per request.</strong> Deepgram + OpenRouter costs roll up to the parent span; tier margin is visible in Langfuse.</li>
+                <li><strong>Async pipeline holds under load</strong> despite sync-SDK bridges; no event queue needed at current scale.</li>
+            </ul>
+        </section>
+
+        <!-- 7. Roadmap -->
+        <section>
+            <h2 data-num="07">Roadmap</h2>
+            <ul>
+                <li><strong>Summary-faithfulness judge</strong> &mdash; second LLM-as-judge for the summary endpoint. Judge prompt drafted, pending Langfuse UI activation.</li>
+                <li><strong>Chained workflows</strong> &mdash; summarize from a translation, translate from a summary. Today each action restarts from the transcript.</li>
+                <li><strong>Batch transcription &mdash; playlists and per-creator search</strong> &mdash; expand from single video to entire YouTube playlists, and let users transcribe everything a given creator has uploaded. One workflow handles many.</li>
+                <li><strong>User action history</strong> &mdash; a personal database of videos done, summaries generated, and translations completed. Lets users revisit past work, re-export, and build on it instead of restarting each session.</li>
+                <li><strong>Move yt-dlp + Deepgram off the request path</strong> &mdash; background worker so a FastAPI worker doesn't hold a connection for 60+ seconds on long videos.</li>
+                <li><strong>ISO-code standardization</strong> across summary and translate APIs &mdash; today the summary endpoint uses ISO codes and the translate endpoint uses display names. Internal consistency, easier to extend.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- End-of-page logo -->
+    <div class="cs-end-mark">
+        <a href="https://tubetext.app" target="_blank" aria-label="Visit TubeText">
+            <img src="../images/tubetext_small.png" alt="TubeText">
+        </a>
     </div>
 
     <!-- Footer -->
