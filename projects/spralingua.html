@@ -6,8 +6,8 @@
     <title>Spralingua - Case Study | Luis Zermeno</title>
     <link rel="canonical" href="https://www.lugz.dev/projects/spralingua.html">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <meta name="description" content="Spralingua - An AI-powered language learning platform with voice synthesis, grammar correction, and adaptive conversations. Built with Python, Flask, Claude API.">
-    <meta name="keywords" content="AI language learning, voice synthesis, Claude API, Python Flask, full-stack development, AI tutor">
+    <meta name="description" content="Spralingua - my first shipped AI product. A character-driven language tutor in 4 languages, built on Flask + Claude Haiku 3 + Minimax TTS, with the engineering lessons (and scrappy fixes) that came with V1.">
+    <meta name="keywords" content="AI language tutor, Claude API, Minimax TTS, Web Speech API, Flask, PostgreSQL, YAML prompts, AI conversation, Spralingua, Python">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,9 +21,9 @@
 
     <!-- Navigation -->
     <nav class="detail-nav">
-        <a href="../index.html#projects" class="detail-back" data-i18n="spral-back-to-portfolio">
+        <a href="../index.html#projects" class="detail-back">
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-            Back to Portfolio
+            Back to Projects
         </a>
 
         <div class="detail-nav-right">
@@ -41,24 +41,20 @@
         <div class="detail-hero-content">
             <div class="detail-badge">
                 <span class="detail-badge-dot"></span>
-                <span data-i18n="spral-live-app">Live Production App</span>
+                <span>Live &middot; First Shipped AI Product</span>
             </div>
-            <h1 data-i18n="spral-title">
+            <h1>
                 Spralingua: <br>
-                <span class="accent">AI Language Tutor</span>
+                <span class="accent">AI Language Tutor You Can Talk To</span>
             </h1>
-            <p class="detail-hero-desc" data-i18n="spral-description">
-                An immersive language learning platform that uses Voice-to-Text and LLMs to simulate real-world conversations, bridging the gap between textbook theory and speaking confidence.
+            <p class="detail-hero-desc">
+                A character-driven Claude conversation loop in four languages &mdash; speak into your browser, hear a generated voice reply, get grammar feedback and a hint phrase on the side. My first shipped AI product, with the engineering scars to prove it.
             </p>
 
             <div class="detail-hero-actions">
-                <a href="https://spralingua.com" target="_blank" class="btn btn-primary" data-i18n="spral-visit-live">
+                <a href="https://spralingua.com" target="_blank" class="btn btn-primary">
                     Visit Live Site
                     <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                </a>
-                <a href="https://github.com/LouisZCode/Spralingua_AIAgents_App" target="_blank" class="btn btn-ghost" data-i18n="spral-view-source">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    View Source
                 </a>
             </div>
         </div>
@@ -67,222 +63,228 @@
         <div class="detail-hero-visual">
             <img src="../images/spralingua-demo.gif" alt="Spralingua Demo" onerror="this.src='../images/spralingua.png'">
             <div class="detail-stat-badge">
-                <div class="label" data-i18n="spral-response-time">Response Time</div>
-                <div class="value">&lt;2s</div>
+                <div class="label">Characters</div>
+                <div class="value">2</div>
             </div>
         </div>
     </header>
 
-    <!-- Technical Specs Bar -->
+    <!-- Quick-summary strip -->
     <section class="specs-bar">
         <div class="specs-bar-inner">
             <div>
-                <h3 data-i18n="spral-stack">Stack</h3>
-                <p data-i18n="spral-stack-value">Python, Flask, JavaScript</p>
+                <h3>Core</h3>
+                <p>Python 3.12 &middot; Flask &middot; PostgreSQL + SQLAlchemy</p>
             </div>
             <div>
-                <h3 data-i18n="spral-ai-models">AI Models</h3>
-                <p data-i18n="spral-ai-models-value">Claude 3.5, Minimax TTS</p>
+                <h3>AI Layer</h3>
+                <p>Claude Haiku 3 &middot; YAML prompts &middot; 3 calls/turn</p>
             </div>
             <div>
-                <h3 data-i18n="spral-database">Database</h3>
-                <p data-i18n="spral-database-value">PostgreSQL + SQLAlchemy</p>
+                <h3>Voice</h3>
+                <p>Web Speech API (STT) &middot; Minimax TTS (out)</p>
             </div>
             <div>
-                <h3 data-i18n="spral-deployment">Deployment</h3>
-                <p data-i18n="spral-deployment-value">Railway + Gunicorn</p>
+                <h3>Infra</h3>
+                <p>Gunicorn &middot; Railway &middot; print() logs (V1)</p>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <div class="detail-main">
+    <!-- Case study main content (single column, no sidebar) -->
+    <div class="cs-wrapper">
 
-        <!-- Left Column - Main Content -->
-        <div class="detail-content">
+        <!-- 01 The Problem -->
+        <section>
+            <h2 data-num="01">The Problem</h2>
+            <p>
+                Learning a language from a textbook is one problem. Speaking it out loud without freezing is a different one entirely.
+            </p>
+            <p>
+                Most language apps are vocabulary drills and matching exercises &mdash; useful for memorization, useless for the moment when someone is waiting for you to reply. The bridge from <em>I know this word</em> to <em>I can use this word out loud</em> is conversation, and conversation is gated by access (tutors are expensive, scheduling-dependent, and beginner mistakes feel public) and by latency (a typed exchange is not the same exercise as a spoken one).
+            </p>
+            <p>
+                <strong>Spralingua is an AI tutor you can talk to.</strong> A Claude-powered character chats with you in your target language, listens through your browser's mic, replies with a generated voice, and quietly produces grammar feedback and a hint phrase on the side &mdash; on every turn.
+            </p>
+        </section>
 
-            <!-- The Challenge -->
-            <section>
-                <h2 data-i18n="spral-challenge">The Challenge</h2>
-                <p data-i18n="spral-challenge-p1">
-                    Most language apps (like Duolingo) focus on vocabulary and grammar drills, but fail to prepare users for the anxiety of real-time conversation. I wanted to build a tool that forces the user to <em>speak</em>, not just tap buttons.
-                </p>
-                <p data-i18n="spral-challenge-p2">
-                    The technical hurdle was <strong>latency</strong>. A conversation loop (User Speak → Transcribe → LLM Think → TTS → Audio Playback) usually takes 4-5 seconds. This destroys immersion. I needed to get it under 2 seconds while maintaining conversation quality.
-                </p>
-            </section>
-
-            <!-- System Architecture -->
-            <section>
-                <h2 data-i18n="spral-architecture">System Architecture</h2>
-                <div class="detail-diagram">
-                    <img src="../images/spralingua-flow.png" alt="Spralingua System Architecture Flowchart">
-                    <p class="caption" data-i18n="spral-arch-caption">Spralingua System Architecture</p>
-                </div>
-            </section>
-
-            <!-- Key Technical Implementation -->
-            <section>
-                <h2 data-i18n="spral-tech-impl">Key Technical Implementation</h2>
-                <p data-i18n="spral-tech-impl-p1">
-                    Managing context history was crucial. I implemented a rolling-window context manager in Python to ensure the AI remembers the conversation without exceeding token limits or increasing costs.
-                </p>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">conversation_manager.py</span>
-                    </div>
-                    <pre><code><span class="kw">def</span> <span class="fn">update_history</span>(self, user_input, ai_response):
-<span class="comment"># Append new interaction to conversation</span>
-self.history.append({<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: user_input})
-self.history.append({<span class="str">"role"</span>: <span class="str">"assistant"</span>, <span class="str">"content"</span>: ai_response})
-
-<span class="comment"># Maintain rolling window of last 10 turns</span>
-<span class="kw">if</span> len(self.history) > <span class="num">20</span>:
-    self.history = self.history[-<span class="num">20</span>:]
-
-<span class="kw">return</span> self.history</code></pre>
-                </div>
-            </section>
-
-            <!-- Grammar Correction Engine -->
-            <section>
-                <h2 data-i18n="spral-grammar-engine">Grammar Correction Engine</h2>
-                <p data-i18n="spral-grammar-engine-p1">
-                    The app doesn't just correct errors - it explains <em>why</em> something is wrong. I engineered specialized prompts that leverage my C2-level German knowledge to provide pedagogically sound corrections.
-                </p>
-
-                <div class="code-block">
-                    <div class="code-block-header">
-                        <span class="code-block-dot red"></span>
-                        <span class="code-block-dot yellow"></span>
-                        <span class="code-block-dot green"></span>
-                        <span class="code-block-filename">grammar_agent.py</span>
-                    </div>
-                    <pre><code>GRAMMAR_PROMPT = <span class="str">"""
-You are a language tutor. When the user makes a mistake:
-1. Identify the specific error type (case, gender, word order)
-2. Provide the corrected version
-3. Explain the rule in simple terms
-4. Give one similar example for practice
-
-Always be encouraging - mistakes are learning opportunities.
-"""</span></code></pre>
-                </div>
-            </section>
-
-            <!-- Screenshots Gallery -->
-            <section>
-                <h2 data-i18n="spral-screenshots">App Screenshots</h2>
-                <div class="detail-gallery">
-                    <div class="detail-gallery-item">
-                        <img src="../images/spralingua-1.png" alt="Conversation Interface" onerror="this.src='../images/spralingua.svg'">
-                        <p class="caption" data-i18n="spral-screenshot1-caption">AI Conversation Practice</p>
-                    </div>
-                    <div class="detail-gallery-item">
-                        <img src="../images/spralingua-2.png" alt="Grammar Correction" onerror="this.src='../images/spralingua.svg'">
-                        <p class="caption" data-i18n="spral-screenshot2-caption">Grammar Correction</p>
-                    </div>
-                    <div class="detail-gallery-item">
-                        <img src="../images/spralingua-3.png" alt="Character Selection" onerror="this.src='../images/spralingua.svg'">
-                        <p class="caption" data-i18n="spral-screenshot3-caption">Character Selection</p>
-                    </div>
-                    <div class="detail-gallery-item">
-                        <img src="../images/spralingua.png" alt="Dashboard" onerror="this.src='../images/spralingua.svg'">
-                        <p class="caption" data-i18n="spral-screenshot4-caption">Main Dashboard</p>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-
-        <!-- Right Column - Sidebar -->
-        <aside class="detail-sidebar">
-
-            <!-- Key Features -->
-            <div class="sidebar-card">
-                <h3 data-i18n="spral-key-features">Key Features</h3>
-                <ul class="sidebar-features">
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="spral-feature1">Real-time Voice Synthesis (TTS)</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="spral-feature2">Grammar Correction Engine</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="spral-feature3">Multi-language Support (ES, DE, PT, EN)</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="spral-feature4">AI Character Conversations</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="spral-feature5">Adaptive Difficulty Levels</span>
-                    </li>
-                    <li>
-                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        <span data-i18n="spral-feature6">Conversation History Persistence</span>
-                    </li>
-                </ul>
+        <!-- 02 One-Minute Walkthrough -->
+        <section>
+            <h2 data-num="02">One-Minute Walkthrough</h2>
+            <div class="cs-video-placeholder">
+                <strong>Video coming soon</strong>
+                A one-minute screen recording covering character selection, picking a target language and level, a few spoken turns with the AI character, and the grammar-feedback panel that appears alongside each reply.
             </div>
+        </section>
 
-            <!-- Lessons Learned -->
-            <div class="sidebar-card">
-                <h3 data-i18n="spral-lessons-learned">Lessons Learned</h3>
-                <div class="sidebar-lessons">
-                    <div>
-                        <strong data-i18n="spral-lesson1-title">Prompt Engineering</strong>
-                        <p data-i18n="spral-lesson1-desc">
-                            The AI "persona" needs specific guardrails to prevent breaking character. I learned to add explicit constraints in system prompts.
-                        </p>
-                    </div>
-                    <div>
-                        <strong data-i18n="spral-lesson2-title">Latency Optimization</strong>
-                        <p data-i18n="spral-lesson2-desc">
-                            Streaming responses and parallel API calls reduced perceived latency by 60%. Every millisecond matters in conversation.
-                        </p>
-                    </div>
-                    <div>
-                        <strong data-i18n="spral-lesson3-title">Database Design</strong>
-                        <p data-i18n="spral-lesson3-desc">
-                            PostgreSQL with SQLAlchemy ORM was the right choice for storing conversation history and user progress efficiently.
-                        </p>
-                    </div>
-                </div>
+        <!-- 03 System Design -->
+        <section>
+            <h2 data-num="03">System Design</h2>
+            <p>
+                One Flask service, three Claude calls per turn, two audio providers, four languages.
+            </p>
+            <p>
+                Speech in via the browser's Web Speech API &mdash; free, native, sub-second. Speech out via Minimax's <code>speech-02-turbo</code> voices, one cloned voice per character. In between sits a Claude Haiku 3 conversation agent driven by a YAML personality file, plus two sidecar Claude calls: one for grammar feedback on what the user just said, one for a hint phrase to scaffold what they could say next. All three fire per turn.
+            </p>
+
+            <h3>Three design choices worth discussing</h3>
+            <p>
+                <strong>Characters as YAML personality files, not inline strings.</strong> Each character (Harry, Sally) is a YAML file in <code>/prompts/personalities</code> that defines voice, tone, mannerisms, and how they react across learner levels. The conversation prompt is built dynamically from the YAML plus the user's target language and level setting. Adding a new character is one file, not a code change. Character consistency across sessions stops being a copy-paste discipline and starts being a data file that you version-control.
+            </p>
+            <p>
+                <strong>Conversation history in the Flask session cookie, not in worker memory.</strong> Production multi-worker Gunicorn doesn't share state across workers, and storing conversation in module-level dicts caused a real bug &mdash; users' histories could surface in someone else's chat when requests hit a different worker. The fix is to keep the rolling last-20-message history directly in the Flask session, which travels with the user via signed cookie. The trade-off is a larger cookie payload; the alternative (a Redis instance) wasn't worth running for one feature, and the session-bound approach makes worker crashes recoverable without ever crossing user boundaries.
+            </p>
+            <p>
+                <strong>Asymmetric speech stack &mdash; browser STT in, Minimax TTS out.</strong> Speech-to-text is the <em>user's</em> voice. It just needs to land as transcribed text, no expression required, and Web Speech API handles it free and sub-second in supported browsers. Text-to-speech is the <em>character's</em> voice. That one needs to sound like someone; Minimax's <code>speech-02-turbo</code> with cloned voices gives Harry and Sally identities you can hear. Free for the half that doesn't need polish, paid for the half that does.
+            </p>
+
+            <div class="cs-diagram">
+                <img src="../images/spralingua-architecture.png" alt="Spralingua V1 system architecture diagram. Browser layer with Web Speech API for input, Flask backend at /api/chat fanning out into three Claude Haiku 3 calls per turn (conversation reply, grammar feedback, hint generator), aggregated response sent through Minimax speech-02-turbo for character voice synthesis, and audio playback in the browser.">
             </div>
+        </section>
 
-            <!-- Technologies -->
-            <div class="sidebar-card">
-                <h3 data-i18n="spral-technologies">Technologies</h3>
-                <div class="sidebar-tech">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">Flask</span>
-                    <span class="tech-badge">PostgreSQL</span>
-                    <span class="tech-badge">Claude API</span>
-                    <span class="tech-badge">Minimax TTS</span>
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Railway</span>
-                </div>
-            </div>
+        <!-- 04 Stack & Why -->
+        <section>
+            <h2 data-num="04">Stack &amp; Why</h2>
+            <p>
+                Four groups, each choice with a short note on the reasoning behind it. This is V1, so a few honest "good enough for now" calls show up &mdash; they're flagged.
+            </p>
 
-        </aside>
+            <h3>Backend</h3>
+            <ul>
+                <li>
+                    <strong>Python 3.12</strong> &mdash; the Anthropic SDK ships first-class in Python, and the same language carries the voice-pipeline glue without adding a second runtime to the project.
+                </li>
+                <li>
+                    <strong>Flask 3.1.2 + Jinja2 templates</strong> &mdash; server-rendered, no SPA, no bundler. The simplest path from "AI conversation works locally" to "AI conversation works at a URL." For a first shipped product, every layer of build-step complexity I didn't add was a layer that couldn't break in production.
+                </li>
+                <li>
+                    <strong>PostgreSQL + SQLAlchemy 2.0.43</strong> &mdash; user progress, level tracking, character preferences. One small Postgres on Railway. No migrations tool wired in; migrations were hand-written scripts in <code>/migrations</code>, which was fine at this scale but won't be at V2's.
+                </li>
+                <li>
+                    <strong>Gunicorn for WSGI</strong> &mdash; multi-worker process model. The session-bleeding bug described in System Design is the lesson that came with it.
+                </li>
+            </ul>
 
+            <h3>Frontend</h3>
+            <ul>
+                <li>
+                    <strong>Vanilla JavaScript for the voice loop</strong> &mdash; Web Speech API for input, fetch-and-play for the TTS response, Lottie animations for character avatars. A few hundred lines total. No React, no build step, no framework runtime; the whole frontend ships with the Flask response.
+                </li>
+            </ul>
+
+            <h3>AI Layer</h3>
+            <ul>
+                <li>
+                    <strong>Anthropic Claude SDK direct</strong> &mdash; no LangChain, no orchestration framework. For a single-provider single-model project, the direct SDK was the right amount of plumbing. Tools and orchestration libraries earn their weight when there are multiple providers or branching agent graphs &mdash; neither was true here.
+                </li>
+                <li>
+                    <strong><code>claude-3-haiku-20240307</code></strong> &mdash; Haiku 3 (March 2024 release). The character should reply at conversation pace, not analyst pace; Haiku was fast and cheap enough to make three calls per turn affordable.
+                    <em>V2 will revisit &mdash; Haiku 4.5 is a more capable model at similar cost, and the gap on character coherence is large enough to justify the migration.</em>
+                </li>
+                <li>
+                    <strong>Three Claude calls per turn &mdash; conversation, grammar feedback, hint generator</strong> &mdash; the orchestration is sequential in Python, not a framework. Conversation reply first, then feedback on the user's last input, then hint for what to say next.
+                    <em>The three calls hit the same Claude client instance, and early on the conversation reply's context started bleeding into the hint output &mdash; the hint would echo phrases from the reply. A 0.5-second <code>time.sleep</code> between calls was the scrappy patch that shipped V1. The right fix, deferred to V2, is separate Claude client instances per role so there's no shared context surface to bleed across.</em>
+                </li>
+                <li>
+                    <strong>YAML prompts and personalities</strong> &mdash; <code>/prompts/personalities/*.yaml</code> for character voices, <code>/prompts/templates</code> for prompt scaffolds, <code>conversation_prompt_builder.py</code> for runtime composition. Same separation pattern that later carried into TubeText and Agora; Spralingua is where this habit started.
+                </li>
+                <li>
+                    <strong>Minimax <code>speech-02-turbo</code></strong> &mdash; the turbo tier favors latency over the HD tier's expressive range. For conversation-pace replies, turbo wins; HD's quality margin shows up most on long-form narration that this project doesn't do.
+                </li>
+                <li>
+                    <strong>Web Speech API for STT</strong> &mdash; browser-native, free, sub-second on supported browsers.
+                    <em>Browser support is uneven &mdash; Chrome and Edge work well, Firefox is patchy. For V1 the trade was acceptable; V2 will add a server-side STT fallback (Deepgram or Whisper) for browsers that don't support it.</em>
+                </li>
+            </ul>
+
+            <h3>Infrastructure &amp; Auth</h3>
+            <ul>
+                <li>
+                    <strong>Flask sessions + Bcrypt</strong> &mdash; signed session cookies, 7-day lifetime. No OAuth, no JWT, no third-party auth provider. The smallest auth surface that worked; everything more elaborate was deferred until there was a reason to add it.
+                </li>
+                <li>
+                    <strong>Railway for hosting</strong> &mdash; Flask + Postgres on one platform. No Kubernetes, no separate database service, no DNS plumbing. Same single-platform reasoning that later applied to Agora.
+                </li>
+                <li>
+                    <strong>No payment layer in V1</strong> &mdash; the product is free. Monetization is V2 work; the Stripe pattern I built for Agora ports cleanly when it's time.
+                </li>
+                <li>
+                    <strong>Observability via <code>print()</code> statements</strong> with topic prefixes (<code>[MINIMAX]</code>, <code>[CLAUDE CLIENT]</code>, <code>[TTS REQUEST]</code>). Honest: for a first shipped AI product, this is what observability actually was. Langfuse plus structured logging is a V2 priority, not a V1 omission to hide.
+                </li>
+            </ul>
+        </section>
+
+        <!-- 05 Evaluation -->
+        <section>
+            <h2 data-num="05">Evaluation</h2>
+            <p>
+                This is where Spralingua V1 is honest. There is no formal evaluation layer &mdash; no Langfuse, no LLM-as-judge, no automated scoring. The eval pipeline was: I used the app, early users tried it, and bugs surfaced through real use.
+            </p>
+            <p>
+                Two production lessons came out of that loop, and both shaped V2's roadmap.
+            </p>
+
+            <h3>1. Eval-by-use &mdash; session bleeding across Gunicorn workers</h3>
+            <p>
+                The bug surfaced the way V1 bugs usually do: I opened my own session and saw a conversation I hadn't had. Worker-local conversation state was leaking across users when requests hit different workers. The fix was to persist conversation history directly into the signed Flask session cookie on every turn, so history travels with the user and never crosses session boundaries. The "evaluation" here was running the app yourself with eyes open &mdash; no instrumented test would have caught it on the first pass, because it only triggered under multi-worker production load.
+            </p>
+
+            <h3>2. Eval-by-use &mdash; context bleeding between sequential Claude calls</h3>
+            <p>
+                The hint generator started echoing phrases from the conversation reply. Same Claude client instance, two sequential calls, with enough context surface for state to leak between them. The scrappy V1 fix was a 0.5-second <code>time.sleep</code> between the conversation reply and the hint call, which empirically resolved the bleed but is the kind of patch that needs to die in V2. The proper fix &mdash; separate client instances per role &mdash; is on the V2 list along with the multi-agent architecture that makes it natural.
+            </p>
+
+            <h3>3. What V2's evaluation layer will look like</h3>
+            <p>
+                The same Langfuse foundation that runs Agora's observability today is the obvious starting point: per-turn traces capturing the three Claude calls, latency on the full voice loop (input transcript &rarr; TTS audio playback), grammar-feedback quality scored via LLM-as-judge, and structured-output validation on hint payloads so schema drift across model upgrades doesn't ship to the user. None of it exists in V1; all of it is teed up.
+            </p>
+        </section>
+
+        <!-- 06 Results -->
+        <section>
+            <h2 data-num="06">Results</h2>
+            <ul>
+                <li><strong>Live at spralingua.com.</strong> First shipped AI product; the conversation flow runs end-to-end in production today.</li>
+                <li><strong>Four languages working end-to-end</strong> &mdash; English, German, Spanish, Portuguese. Target-language selection drives both the prompt assembly (via <code>language_mapper</code>) and the Minimax voice config per character.</li>
+                <li><strong>Two character personalities with cloned voices</strong> &mdash; Harry and Sally, each defined by a YAML personality file and a Minimax voice clone. New characters are additive at the YAML layer, no code changes.</li>
+                <li><strong>Three Claude calls per turn, validated in production</strong> &mdash; one conversation reply plus two sidecar calls (grammar feedback, hint phrase). The pattern works; V2 will rebuild it as a proper multi-agent system with separate client instances.</li>
+                <li><strong>Architecture habits forged here carried forward</strong> &mdash; YAML-defined prompts, single-platform deployment, separation of services from routes, and "build the smallest thing that ships" are decisions Spralingua taught me before TubeText and Agora.</li>
+            </ul>
+        </section>
+
+        <!-- 07 Roadmap -->
+        <section>
+            <h2 data-num="07">Roadmap &mdash; What V2 Becomes</h2>
+            <p>
+                V2 is well underway. Spralingua V1 proved the architecture pattern; V2 is where the lessons get answered. A glimpse, not a spec sheet &mdash; the full reveal comes when V2 ships.
+            </p>
+            <ul>
+                <li><strong>Stateful agent coordination</strong> &mdash; the three sequential Python calls retire. Conversation memory becomes a property of the agent runtime, not a thing I patch with <code>time.sleep</code>.</li>
+                <li><strong>A faster model at conversation pace</strong> &mdash; Haiku 3 hands off to a model picked specifically for low-latency inference. Replies arrive sooner, character coherence holds.</li>
+                <li><strong>Production observability from day one</strong> &mdash; every turn instrumented, costed, and grouped by session. The <code>print()</code>-logs era ends; V2 will know its own latency before its users do.</li>
+                <li><strong>Real-time streaming voice loop</strong> &mdash; request/response gives way to WebSocket-driven streaming, end to end. Audio plays back as it's generated, not after the full reply lands.</li>
+                <li><strong>Server-side speech recognition with proper utterance detection</strong> &mdash; Web Speech API moves aside for an enterprise-grade STT engine. The input half of the voice loop stops depending on which browser the user happens to be on.</li>
+                <li><strong>Cloned character voices</strong> &mdash; Harry and Sally were preset voices in V1. V2 opens the door to voices cloned from real recordings, including ones you might recognize.</li>
+                <li><strong>Voice or text &mdash; your call</strong> &mdash; speaking stays the headline mode; typing slots in alongside it, for accessibility, quieter environments, or quick iteration.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- End-of-page logo -->
+    <div class="cs-end-mark">
+        <a href="https://spralingua.com" target="_blank" aria-label="Visit Spralingua">
+            <img src="../images/spralingua.png" alt="Spralingua">
+        </a>
     </div>
 
     <!-- Footer -->
     <footer class="detail-footer">
         <div class="detail-footer-links">
-            <a href="https://spralingua.com" target="_blank" data-i18n="spral-live-site">Live Site &rarr;</a>
-            <a href="https://github.com/LouisZCode/Spralingua_AIAgents_App" target="_blank" data-i18n="spral-source-code">Source Code &rarr;</a>
+            <a href="https://spralingua.com" target="_blank">Live Site &rarr;</a>
         </div>
-        <a href="../index.html#projects" class="detail-footer-back" data-i18n="spral-back-home">&larr; Back to Portfolio Home</a>
+        <a href="../index.html#projects" class="detail-footer-back">&larr; Back to Portfolio Home</a>
     </footer>
 
     <script src="../js/i18n.js"></script>
