@@ -53,3 +53,8 @@ CLAUDE.md
 DESIGN_SYSTEM.md
 todo_list.md
 LEARNINGS.md
+
+# Screen recordings (source files for demo GIFs — keep out of the repo)
+*.mov
+*.mp4
+Screen Recording*
