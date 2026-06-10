@@ -1621,6 +1621,29 @@ section {
   display: block;
 }
 
+/* Top greeting mascot — more breathing room above, tighter below
+   (negative margin counteracts .cs-wrapper's 5rem top padding) */
+.cs-top-mark {
+  max-width: 760px;
+  margin: 0 auto -2.5rem;
+  padding: 3.5rem 1.5rem 0;
+  text-align: center;
+}
+
+.cs-top-mark a {
+  display: inline-block;
+  opacity: 0.45;
+  transition: opacity 0.25s ease;
+}
+
+.cs-top-mark a:hover { opacity: 0.9; }
+
+.cs-top-mark img {
+  width: 90px;
+  height: auto;
+  display: block;
+}
+
 .cs-draft-banner {
   background: hsla(45, 80%, 55%, 0.12);
   border-bottom: 1px solid hsla(45, 80%, 55%, 0.3);
