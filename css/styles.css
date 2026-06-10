@@ -577,6 +577,15 @@ section {
   font-size: 0.85rem;
 }
 
+/* Spralingua mascot badge — show full emblem on a branded paper panel */
+.project-card-image--badge {
+  background: radial-gradient(circle at 50% 42%, #fdf6e1 0%, #fafaf7 72%);
+}
+.project-card-image--badge img {
+  object-fit: contain;
+  padding: 0.6rem 0;
+}
+
 .project-card-body {
   padding: 1.5rem;
 }
