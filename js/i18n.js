@@ -234,7 +234,7 @@ const translations = {
     // Selected Projects — rich descriptions
     "agora-desc": "<strong>The Pythagoras Method</strong> — 9 LLMs across 5 providers rate 8 financial metrics, resolving disagreements through structured multi-round debate. Two-tier architecture: fast extraction models + deep reasoning models with RAG tools over SEC filings, unified behind OpenRouter.",
     "tubetext-desc": "Async FastAPI backend orchestrating <strong>Deepgram Nova-3</strong> (audio→text), <strong>GPT-4 mini via LangChain</strong> (structured summaries), and <strong>Cerebras Llama-3.3-70b</strong> (real-time SSE translation) across four languages. YAML prompt management; async SQLAlchemy + Alembic.",
-    "spralingua-desc": "<strong>Multi-agent architecture</strong> with specialized agents for vocabulary, grammar, and conversation, built on Claude. <strong>Sub-2-second voice loop</strong> end to end (Web Speech API + Minimax TTS) in 4 languages.",
+    "spralingua-desc": "<strong>Real-time voice agent</strong> — a per-client Pipecat pipeline (Deepgram → Cerebras on LangGraph → MiniMax) streams speech over a WebSocket in <strong>under 2.5 seconds</strong>, with post-session goal and pronunciation scoring.",
 
     // Technical Experience (in-role engineering)
     "tech-lucanet-position": "AI / Automation Engineering",
@@ -320,7 +320,7 @@ const translations = {
     "section-projects-title": "Projects",
     "section-projects-desc": "AI applications built from problem to production.",
     "view-case-study": "View Case Study",
-    "project-spralingua-outcome": "AI language learning platform that delivers personalized lessons, real-time grammar correction, and natural conversation practice in 4 languages.",
+    "project-spralingua-outcome": "Real-time AI voice tutor — speak into your browser and a streaming agent replies in under 2.5 seconds, then scores both your lesson goals and your pronunciation.",
     "project-voice-agent-title": "AI Voice Agent",
     "project-voice-agent-outcome": "Privacy-first voice assistant with 90%+ recognition accuracy, running entirely offline with zero cloud dependency.",
     "project-recruiting-ai-title": "AI Recruiting Assistant",
@@ -433,10 +433,10 @@ const translations = {
     "cs-full-case-study": "Full Case Study",
 
     // Case study: Spralingua
-    "cs-spralingua-problem": "Language learners plateau because generic apps lack personalized feedback and real conversational practice. Existing tools treat every learner the same, ignoring proficiency gaps and native language interference patterns.",
-    "cs-spralingua-approach": "Built a full-stack platform using Claude\u2019s language understanding to generate adaptive lessons, provide contextual grammar corrections, and simulate natural conversations. Multi-agent architecture with specialized agents for vocabulary, grammar, and conversation.",
-    "cs-spralingua-result": "A production application serving users across 4 languages (Spanish, German, Portuguese, English) with real-time speech-to-text, text-to-speech, and intelligent lesson progression. Sub-2-second conversation loop. Deployed on Railway with PostgreSQL persistence.",
-    "cs-spralingua-decisions": "Chose Flask over Django for faster iteration. Used Minimax TTS for natural-sounding multilingual speech. Implemented session-based learning to track progress without requiring accounts. Prioritized conversation quality over feature breadth.",
+    "cs-spralingua-problem": "Speaking a new language out loud in real time is the skill apps skip. Vocabulary drills don\u2019t prepare you for the moment someone is waiting for your reply \u2014 and they never tell you whether you were even understandable.",
+    "cs-spralingua-approach": "A real-time voice agent: a per-client Pipecat pipeline streams browser audio through Deepgram speech recognition, a Cerebras LLM on LangGraph, and MiniMax voices over a WebSocket. Silero VAD gates each turn so replies never fragment.",
+    "cs-spralingua-result": "Live at spralingua.com with sub-2.5-second turn latency and true multi-user concurrency. Every session is scored on two axes \u2014 goal completion via an LLM judge and pronunciation via Azure Speech \u2014 across 7 locales and CEFR A1\u2013B1 lessons.",
+    "cs-spralingua-decisions": "Per-client pipelines for structural multi-user isolation. VAD-gated buffering to stop fragmented replies. Evaluation runs post-session so scoring never adds to live latency. Lessons are YAML files, not code.",
 
     // Case study: Voice Agent
     "cs-voice-agent-problem": "Cloud-based voice assistants raise privacy concerns and incur recurring costs. Users who want AI assistance with sensitive documents need an offline-first solution that never sends data externally.",

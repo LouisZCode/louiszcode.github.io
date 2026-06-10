@@ -144,13 +144,13 @@
               <div class="project-card-body">
                 <h3 data-i18n="preview-spralingua-title">Spralingua</h3>
                 <p class="project-card-outcome" data-i18n="project-spralingua-outcome">
-                  AI language learning platform that delivers personalized lessons, real-time grammar correction, and natural conversation practice in 4 languages.
+                  Real-time AI voice tutor — speak into your browser and a streaming agent replies in under 2.5 seconds, then scores both your lesson goals and your pronunciation.
                 </p>
                 <div class="project-card-tags">
-                  <span class="tag">Flask</span>
-                  <span class="tag">Claude API</span>
-                  <span class="tag">PostgreSQL</span>
-                  <span class="tag">TTS</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">Pipecat</span>
+                  <span class="tag">Cerebras</span>
+                  <span class="tag">MiniMax TTS</span>
                 </div>
               </div>
               <div class="project-card-cta">
@@ -223,42 +223,44 @@
                   <div class="case-study-section">
                     <h4 data-i18n="cs-label-problem">The Problem</h4>
                     <p data-i18n="cs-spralingua-problem">
-                      Language learners plateau because generic apps lack personalized feedback and real conversational practice. Existing tools treat every learner the same, ignoring proficiency gaps and native language interference patterns.
+                      Speaking a new language out loud in real time is the skill apps skip. Vocabulary drills don't prepare you for the moment someone is waiting for your reply — and they never tell you whether you were even understandable.
                     </p>
                   </div>
                   <div class="case-study-section">
                     <h4 data-i18n="cs-label-approach">The Approach</h4>
                     <p data-i18n="cs-spralingua-approach">
-                      Built a full-stack platform using Claude's language understanding to generate adaptive lessons, provide contextual grammar corrections, and simulate natural conversations. Multi-agent architecture with specialized agents for vocabulary, grammar, and conversation.
+                      A real-time voice agent: a per-client Pipecat pipeline streams browser audio through Deepgram speech recognition, a Cerebras LLM on LangGraph, and MiniMax voices over a WebSocket. Silero VAD gates each turn so replies never fragment.
                     </p>
                   </div>
                   <div class="case-study-section">
                     <h4 data-i18n="cs-label-result">The Result</h4>
                     <p data-i18n="cs-spralingua-result">
-                      A production application serving users across 4 languages (Spanish, German, Portuguese, English) with real-time speech-to-text, text-to-speech, and intelligent lesson progression. Sub-2-second conversation loop. Deployed on Railway with PostgreSQL persistence.
+                      Live at spralingua.com with sub-2.5-second turn latency and true multi-user concurrency. Every session is scored on two axes — goal completion via an LLM judge and pronunciation via Azure Speech — across 7 locales and CEFR A1–B1 lessons.
                     </p>
                   </div>
                   <div class="case-study-section">
                     <h4 data-i18n="cs-label-decisions">Key Decisions</h4>
                     <p data-i18n="cs-spralingua-decisions">
-                      Chose Flask over Django for faster iteration. Used Minimax TTS for natural-sounding multilingual speech. Implemented session-based learning to track progress without requiring accounts. Prioritized conversation quality over feature breadth.
+                      Per-client pipelines for structural multi-user isolation. VAD-gated buffering to stop fragmented replies. Evaluation runs post-session so scoring never adds to live latency. Lessons are YAML files, not code.
                     </p>
                   </div>
                 </div>
                 <div class="case-study-tech">
                   <span class="tech-badge">Python</span>
-                  <span class="tech-badge">Flask</span>
-                  <span class="tech-badge">Claude API</span>
+                  <span class="tech-badge">FastAPI</span>
+                  <span class="tech-badge">Pipecat</span>
+                  <span class="tech-badge">Deepgram</span>
+                  <span class="tech-badge">Cerebras</span>
+                  <span class="tech-badge">LangGraph</span>
+                  <span class="tech-badge">MiniMax TTS</span>
+                  <span class="tech-badge">Next.js</span>
                   <span class="tech-badge">PostgreSQL</span>
-                  <span class="tech-badge">SQLAlchemy</span>
-                  <span class="tech-badge">Minimax TTS</span>
-                  <span class="tech-badge">Web Speech API</span>
-                  <span class="tech-badge">Railway</span>
-                  <span class="tech-badge">Gunicorn</span>
+                  <span class="tech-badge">Langfuse</span>
+                  <span class="tech-badge">Azure Speech</span>
                 </div>
                 <div class="case-study-actions">
                   <a href="https://spralingua.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-i18n="cs-try-demo">Try Live Demo</a>
-                  <a href="https://github.com/LouisZCode/Spralingua_AIAgents_App" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="cs-view-source">View Source</a>
+                  <a href="https://github.com/LouisZCode/Spralingua_V2" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="cs-view-source">View Source</a>
                   <a href="projects/spralingua.html" class="btn btn-ghost project-link" data-project="spralingua" data-i18n="cs-full-case-study">Full Case Study</a>
                 </div>
               </div>
