@@ -6,8 +6,8 @@
     <title>Spralingua - Case Study | Luis Zermeno</title>
     <link rel="canonical" href="https://www.lugz.dev/projects/spralingua.html">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
-    <meta name="description" content="Spralingua - my first shipped AI product. A character-driven language tutor in 4 languages, built on Flask + Claude Haiku 3 + Minimax TTS, with the engineering lessons (and scrappy fixes) that came with V1.">
-    <meta name="keywords" content="AI language tutor, Claude API, Minimax TTS, Web Speech API, Flask, PostgreSQL, YAML prompts, AI conversation, Spralingua, Python">
+    <meta name="description" content="Spralingua v2 - a real-time AI voice tutor. Speak into your browser and a streaming agent replies in under 2.5s, built on a per-client Pipecat pipeline (Deepgram + Cerebras + MiniMax), with post-session goal and pronunciation scoring.">
+    <meta name="keywords" content="real-time voice agent, Pipecat, Deepgram, Cerebras, MiniMax TTS, LangGraph, FastAPI, Next.js, Langfuse, pronunciation assessment, AI language tutor, Spralingua">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,14 +41,14 @@
         <div class="detail-hero-content">
             <div class="detail-badge">
                 <span class="detail-badge-dot"></span>
-                <span>Live &middot; First Shipped AI Product</span>
+                <span>Live &middot; Real-Time AI Voice Agent</span>
             </div>
             <h1>
                 Spralingua: <br>
-                <span class="accent">AI Language Tutor You Can Talk To</span>
+                <span class="accent">Real-Time Voice Tutor You Can Talk To</span>
             </h1>
             <p class="detail-hero-desc">
-                A character-driven Claude conversation loop in four languages &mdash; speak into your browser, hear a generated voice reply, get grammar feedback and a hint phrase on the side. My first shipped AI product, with the engineering scars to prove it.
+                Speak into your browser and a streaming AI agent answers in under 2.5 seconds &mdash; server-side speech recognition, a Cerebras-hosted LLM, and dynamic MiniMax voices &mdash; then scores both <em>what</em> you said and <em>how</em> you said it. Live at spralingua.com.
             </p>
 
             <div class="detail-hero-actions">
@@ -63,8 +63,8 @@
         <div class="detail-hero-visual">
             <img src="../images/spralingua-demo.gif" alt="Spralingua Demo" onerror="this.src='../images/spralingua.png'">
             <div class="detail-stat-badge">
-                <div class="label">Characters</div>
-                <div class="value">2</div>
+                <div class="label">Live TTFB</div>
+                <div class="value">&lt;2.5s</div>
             </div>
         </div>
     </header>
@@ -73,23 +73,30 @@
     <section class="specs-bar">
         <div class="specs-bar-inner">
             <div>
-                <h3>Core</h3>
-                <p>Python 3.12 &middot; Flask &middot; PostgreSQL + SQLAlchemy</p>
+                <h3>Pipeline</h3>
+                <p>Pipecat &middot; WebSocket &middot; per-client</p>
             </div>
             <div>
-                <h3>AI Layer</h3>
-                <p>Claude Haiku 3 &middot; YAML prompts &middot; 3 calls/turn</p>
+                <h3>Voice Chain</h3>
+                <p>Deepgram Nova-2 &rarr; Cerebras gpt-oss-120b &rarr; MiniMax 2.8-turbo</p>
             </div>
             <div>
-                <h3>Voice</h3>
-                <p>Web Speech API (STT) &middot; Minimax TTS (out)</p>
+                <h3>Evaluation</h3>
+                <p>LLM goal judge &middot; Azure pronunciation</p>
             </div>
             <div>
                 <h3>Infra</h3>
-                <p>Gunicorn &middot; Railway &middot; print() logs (V1)</p>
+                <p>FastAPI &middot; Next.js 16 &middot; Postgres 18 &middot; Langfuse v4</p>
             </div>
         </div>
     </section>
+
+    <!-- Top greeting mascot (links to live site) -->
+    <div class="cs-end-mark">
+        <a href="https://spralingua.com" target="_blank" rel="noopener" aria-label="Visit Spralingua">
+            <img src="../images/brand/spralingua/mascot.png" alt="Spralingua" onerror="this.onerror=null; this.src='../images/spralingua.png';">
+        </a>
+    </div>
 
     <!-- Case study main content (single column, no sidebar) -->
     <div class="cs-wrapper">
@@ -98,13 +105,13 @@
         <section>
             <h2 data-num="01">The Problem</h2>
             <p>
-                Learning a language from a textbook is one problem. Speaking it out loud without freezing is a different one entirely.
+                Reading a language is one skill. Speaking it without freezing is a different one entirely.
             </p>
             <p>
-                Most language apps are vocabulary drills and matching exercises &mdash; useful for memorization, useless for the moment when someone is waiting for you to reply. The bridge from <em>I know this word</em> to <em>I can use this word out loud</em> is conversation, and conversation is gated by access (tutors are expensive, scheduling-dependent, and beginner mistakes feel public) and by latency (a typed exchange is not the same exercise as a spoken one).
+                Most apps drill vocabulary and matching exercises &mdash; useful for memorization, useless for the moment someone is waiting for you to reply out loud. That moment is gated by two things: <em>latency</em> (a typed exchange isn't the same exercise as a spoken one) and <em>feedback</em> (you need to know not just whether you made your point, but whether you were understandable). Spralingua V1 proved the conversation loop &mdash; request/response, browser speech recognition, a few sequential Claude calls per turn &mdash; but it couldn't stream, and it had no way to tell you how you did.
             </p>
             <p>
-                <strong>Spralingua is an AI tutor you can talk to.</strong> A Claude-powered character chats with you in your target language, listens through your browser's mic, replies with a generated voice, and quietly produces grammar feedback and a hint phrase on the side &mdash; on every turn.
+                <strong>Spralingua V2 is a real-time voice agent.</strong> You talk, it talks back in under 2.5 seconds over a streaming WebSocket pipeline, and when the session ends it grades the conversation on two axes &mdash; did you complete the lesson's goals, and how was your pronunciation.
             </p>
         </section>
 
@@ -113,7 +120,7 @@
             <h2 data-num="02">One-Minute Walkthrough</h2>
             <div class="cs-video-placeholder">
                 <strong>Video coming soon</strong>
-                A one-minute screen recording covering character selection, picking a target language and level, a few spoken turns with the AI character, and the grammar-feedback panel that appears alongside each reply.
+                A one-minute screen recording covering lesson and voice selection, a live spoken conversation with the streaming agent, and the post-session summary with goal and pronunciation scores.
             </div>
         </section>
 
@@ -121,25 +128,47 @@
         <section>
             <h2 data-num="03">System Design</h2>
             <p>
-                One Flask service, three Claude calls per turn, two audio providers, four languages.
+                A fresh Pipecat pipeline is assembled per client at WebSocket connect: <code>STT &rarr; VAD-gated buffer &rarr; LLM &rarr; TTS</code>, streaming audio in and out of the browser.
             </p>
             <p>
-                Speech in via the browser's Web Speech API &mdash; free, native, sub-second. Speech out via Minimax's <code>speech-02-turbo</code> voices, one cloned voice per character. In between sits a Claude Haiku 3 conversation agent driven by a YAML personality file, plus two sidecar Claude calls: one for grammar feedback on what the user just said, one for a hint phrase to scaffold what they could say next. All three fire per turn.
+                Every stateful piece &mdash; the agent, the STT and TTS sessions, the audio buffer, the logger &mdash; is instantiated <em>inside</em> the per-connection builder. There is no shared global pipeline, which is exactly what lets multiple users talk to the agent at the same time without their conversations crossing.
             </p>
 
             <h3>Three design choices worth discussing</h3>
             <p>
-                <strong>Characters as YAML personality files, not inline strings.</strong> Each character (Harry, Sally) is a YAML file in <code>/prompts/personalities</code> that defines voice, tone, mannerisms, and how they react across learner levels. The conversation prompt is built dynamically from the YAML plus the user's target language and level setting. Adding a new character is one file, not a code change. Character consistency across sessions stops being a copy-paste discipline and starts being a data file that you version-control.
+                <strong>A per-client pipeline, not a global agent.</strong> V1's biggest production bug was conversation state leaking across Gunicorn workers &mdash; I once opened my own session and saw a conversation I hadn't had. V2 makes that structurally impossible: connection state is born and dies inside <code>run_pipeline()</code>, scoped to one WebSocket. Multi-user isolation isn't a feature bolted on; it's a property of where the objects live.
             </p>
             <p>
-                <strong>Conversation history in the Flask session cookie, not in worker memory.</strong> Production multi-worker Gunicorn doesn't share state across workers, and storing conversation in module-level dicts caused a real bug &mdash; users' histories could surface in someone else's chat when requests hit a different worker. The fix is to keep the rolling last-20-message history directly in the Flask session, which travels with the user via signed cookie. The trade-off is a larger cookie payload; the alternative (a Redis instance) wasn't worth running for one feature, and the session-bound approach makes worker crashes recoverable without ever crossing user boundaries.
+                <strong>VAD-gated buffering between speech recognition and the LLM.</strong> Streaming STT emits partial transcriptions continuously. Forwarding each one to the LLM produces fragmented, overlapping replies &mdash; the agent answers three times in a row. A converter sits between the two stages, clears its buffer when the user starts speaking, accumulates transcription text, and emits exactly one complete utterance to the LLM when Silero VAD detects 1.5 seconds of silence.
+                <em>Clearing the buffer on speech-start is also the interruption-safety mechanism: stale partial text from a sentence the user abandoned is discarded instead of reaching the model.</em>
             </p>
             <p>
-                <strong>Asymmetric speech stack &mdash; browser STT in, Minimax TTS out.</strong> Speech-to-text is the <em>user's</em> voice. It just needs to land as transcribed text, no expression required, and Web Speech API handles it free and sub-second in supported browsers. Text-to-speech is the <em>character's</em> voice. That one needs to sound like someone; Minimax's <code>speech-02-turbo</code> with cloned voices gives Harry and Sally identities you can hear. Free for the half that doesn't need polish, paid for the half that does.
+                <strong>Evaluation runs after the call, not during it.</strong> Both scorers &mdash; the goal evaluator and the Azure pronunciation pass &mdash; fire at disconnect, in their own non-fatal try/except blocks. Nothing about grading touches the live turn loop, so the sub-2.5-second pipeline TTFB stays clean while the user still gets a full scored summary seconds after they finish.
             </p>
 
             <div class="cs-diagram">
-                <img src="../images/spralingua-architecture.png" alt="Spralingua V1 system architecture diagram. Browser layer with Web Speech API for input, Flask backend at /api/chat fanning out into three Claude Haiku 3 calls per turn (conversation reply, grammar feedback, hint generator), aggregated response sent through Minimax speech-02-turbo for character voice synthesis, and audio playback in the browser.">
+<pre>
+  Browser (mic)                                        Browser (speaker)
+       │                                                      ▲
+       │  audio frames                       agent speech     │
+       ▼                                                      │
+  ┌────────────────────────  WebSocket (Pipecat)  ───────────────────┐
+  │                                                                  │
+  │   Deepgram Nova-2 ──▶ VAD-gated buffer ──▶ Cerebras gpt-oss-120b │
+  │       (STT)            (Silero 1.5s)        (LangGraph agent)     │
+  │                                                  │               │
+  │                                                  ▼               │
+  │                                         MiniMax 2.8-turbo (TTS) ──┘
+  │
+  └──────────────────────────────────────────────────────────────────
+                              │ per-turn traces
+                              ▼
+              Langfuse v4   ·   Postgres (1 row / session)
+                              │ at disconnect
+                              ▼
+         Goal evaluator (LLM judge)  +  Azure pronunciation
+</pre>
+                <p class="cs-diagram-caption">One per-client pipeline per WebSocket. Live loop stays in the box; scoring runs once the call ends.</p>
             </div>
         </section>
 
@@ -147,70 +176,61 @@
         <section>
             <h2 data-num="04">Stack &amp; Why</h2>
             <p>
-                Four groups, each choice with a short note on the reasoning behind it. This is V1, so a few honest "good enough for now" calls show up &mdash; they're flagged.
+                Four groups, each choice with a short note on the reasoning behind it. V2 answers the V1 roadmap, so several of these are the deliberate replacements for V1's "good enough for now" calls.
             </p>
 
             <h3>Backend</h3>
             <ul>
                 <li>
-                    <strong>Python 3.12</strong> &mdash; the Anthropic SDK ships first-class in Python, and the same language carries the voice-pipeline glue without adding a second runtime to the project.
+                    <strong>FastAPI + uvicorn, Python 3.12 (uv-managed)</strong> &mdash; an async runtime is non-negotiable for a per-client WebSocket pipeline. FastAPI accepts the socket and hands it straight to the pipeline builder; uvicorn carries the concurrent connections.
                 </li>
                 <li>
-                    <strong>Flask 3.1.2 + Jinja2 templates</strong> &mdash; server-rendered, no SPA, no bundler. The simplest path from "AI conversation works locally" to "AI conversation works at a URL." For a first shipped product, every layer of build-step complexity I didn't add was a layer that couldn't break in production.
-                </li>
-                <li>
-                    <strong>PostgreSQL + SQLAlchemy 2.0.43</strong> &mdash; user progress, level tracking, character preferences. One small Postgres on Railway. No migrations tool wired in; migrations were hand-written scripts in <code>/migrations</code>, which was fine at this scale but won't be at V2's.
-                </li>
-                <li>
-                    <strong>Gunicorn for WSGI</strong> &mdash; multi-worker process model. The session-bleeding bug described in System Design is the lesson that came with it.
+                    <strong>Pipecat 0.0.98 for the audio pipeline</strong> &mdash; the framework owns frame ordering and transport so the application code is just the stages and their adapters. The pipeline is the source of truth for ordering; components talk through frames, never side channels.
                 </li>
             </ul>
 
             <h3>Frontend</h3>
             <ul>
                 <li>
-                    <strong>Vanilla JavaScript for the voice loop</strong> &mdash; Web Speech API for input, fetch-and-play for the TTS response, Lottie animations for character avatars. A few hundred lines total. No React, no build step, no framework runtime; the whole frontend ships with the Flask response.
+                    <strong>Next.js 16 + React 19 + Tailwind CSS 4 + TypeScript</strong> &mdash; V1's vanilla-JS-on-Flask-templates frontend retires. A typed component tree makes the connection lifecycle (setup &rarr; briefing &rarr; live chat &rarr; scored summary) something you can reason about instead of a pile of event handlers.
+                </li>
+                <li>
+                    <strong><code>@pipecat-ai/client-js</code> over a WebSocket transport</strong> &mdash; the official client handles the <code>WebSocketTransport</code> + <code>ProtobufFrameSerializer</code> handshake, microphone capture, and audio playback. Bot text bubbles are revealed on a delay tied to the audio duration so the caption lands as the voice finishes, not before.
                 </li>
             </ul>
 
             <h3>AI Layer</h3>
             <ul>
                 <li>
-                    <strong>Anthropic Claude SDK direct</strong> &mdash; no LangChain, no orchestration framework. For a single-provider single-model project, the direct SDK was the right amount of plumbing. Tools and orchestration libraries earn their weight when there are multiple providers or branching agent graphs &mdash; neither was true here.
+                    <strong>Deepgram Nova-2 for speech-to-text</strong> &mdash; V1 leaned on the browser's Web Speech API, which is free but uneven across browsers. Server-side STT makes the input half of the loop independent of which browser the user happens to open.
                 </li>
                 <li>
-                    <strong><code>claude-3-haiku-20240307</code></strong> &mdash; Haiku 3 (March 2024 release). The character should reply at conversation pace, not analyst pace; Haiku was fast and cheap enough to make three calls per turn affordable.
-                    <em>V2 will revisit &mdash; Haiku 4.5 is a more capable model at similar cost, and the gap on character coherence is large enough to justify the migration.</em>
+                    <strong>Cerebras <code>gpt-oss-120b</code> via OpenRouter, on LangChain + LangGraph</strong> &mdash; the model is picked specifically for low-latency inference; conversation pace lives or dies on time-to-first-token. LangGraph carries a layered prompt middleware and an <code>InMemorySaver</code> keyed by user, and OpenRouter is pinned with <code>provider.order=["cerebras"]</code> so routing can't silently drift to a slower host.
                 </li>
                 <li>
-                    <strong>Three Claude calls per turn &mdash; conversation, grammar feedback, hint generator</strong> &mdash; the orchestration is sequential in Python, not a framework. Conversation reply first, then feedback on the user's last input, then hint for what to say next.
-                    <em>The three calls hit the same Claude client instance, and early on the conversation reply's context started bleeding into the hint output &mdash; the hint would echo phrases from the reply. A 0.5-second <code>time.sleep</code> between calls was the scrappy patch that shipped V1. The right fix, deferred to V2, is separate Claude client instances per role so there's no shared context surface to bleed across.</em>
+                    <strong>MiniMax <code>speech-2.8-turbo</code> for text-to-speech</strong> &mdash; the turbo tier favors latency over the HD tier's expressive range, and a <code>VOICE_MAP</code> picks the voice per session.
+                    <em>MiniMax's <code>model</code> and <code>voice_id</code> are constructor arguments on the TTS service, not fields on <code>InputParams</code> &mdash; putting them in <code>InputParams</code> silently falls back to the defaults, so you get audio in the wrong voice with no error.</em>
                 </li>
                 <li>
-                    <strong>YAML prompts and personalities</strong> &mdash; <code>/prompts/personalities/*.yaml</code> for character voices, <code>/prompts/templates</code> for prompt scaffolds, <code>conversation_prompt_builder.py</code> for runtime composition. Same separation pattern that later carried into TubeText and Agora; Spralingua is where this habit started.
+                    <strong>Lessons as YAML, not code</strong> &mdash; one file per lesson under <code>agents/prompts/</code>, branching on a <code>type</code> field (<code>conversation</code> for open practice, <code>respond</code> for scripted roleplay). Adding a lesson is dropping a file; the loader builds the path from the id. The same prompts-as-data habit started in V1 and carried through.
                 </li>
                 <li>
-                    <strong>Minimax <code>speech-02-turbo</code></strong> &mdash; the turbo tier favors latency over the HD tier's expressive range. For conversation-pace replies, turbo wins; HD's quality margin shows up most on long-form narration that this project doesn't do.
-                </li>
-                <li>
-                    <strong>Web Speech API for STT</strong> &mdash; browser-native, free, sub-second on supported browsers.
-                    <em>Browser support is uneven &mdash; Chrome and Edge work well, Firefox is patchy. For V1 the trade was acceptable; V2 will add a server-side STT fallback (Deepgram or Whisper) for browsers that don't support it.</em>
+                    <strong>Cerebras again as the post-session goal judge</strong> &mdash; the evaluator is a single structured-output call (<code>.with_structured_output</code> into a nested Pydantic model) that scores each lesson goal independently with evidence and reasoning.
                 </li>
             </ul>
 
-            <h3>Infrastructure &amp; Auth</h3>
+            <h3>Infrastructure &amp; Data</h3>
             <ul>
                 <li>
-                    <strong>Flask sessions + Bcrypt</strong> &mdash; signed session cookies, 7-day lifetime. No OAuth, no JWT, no third-party auth provider. The smallest auth surface that worked; everything more elaborate was deferred until there was a reason to add it.
+                    <strong>PostgreSQL 18 + async SQLAlchemy 2 + asyncpg + Alembic</strong> &mdash; one row per WebSocket session in <code>activity_session</code>, with evaluator results stored as JSONB and a frozen snapshot of the lesson YAML captured at connect so a later history view shows what the user actually saw. The startup is fail-loud: if Postgres is unreachable, the server exits rather than booting half-broken.
+                    <em>Alembic runs sync (psycopg2) while the app runs async (asyncpg); <code>env.py</code> swaps the driver in the DSN string before handing it to Alembic.</em>
                 </li>
                 <li>
-                    <strong>Railway for hosting</strong> &mdash; Flask + Postgres on one platform. No Kubernetes, no separate database service, no DNS plumbing. Same single-platform reasoning that later applied to Agora.
+                    <strong>Langfuse v4 for per-turn observability</strong> &mdash; each turn opens its own trace with the STT, LLM, and TTS spans nested underneath, so every turn is independently inspectable for latency and cost.
+                    <em>The LangChain <code>CallbackHandler</code> got dropped: it measures full-chain duration (request fired &rarr; last token), which is confounded by response length and can't answer "which stage was the bottleneck?" A hand-rolled span captures true time-to-first-token instead.</em>
                 </li>
                 <li>
-                    <strong>No payment layer in V1</strong> &mdash; the product is free. Monetization is V2 work; the Stripe pattern I built for Agora ports cleanly when it's time.
-                </li>
-                <li>
-                    <strong>Observability via <code>print()</code> statements</strong> with topic prefixes (<code>[MINIMAX]</code>, <code>[CLAUDE CLIENT]</code>, <code>[TTS REQUEST]</code>). Honest: for a first shipped AI product, this is what observability actually was. Langfuse plus structured logging is a V2 priority, not a V1 omission to hide.
+                    <strong>Azure AI Speech for pronunciation assessment</strong> &mdash; scripted-mode per-turn scoring (accuracy, fluency, completeness, prosody), run post-session against the Deepgram transcript as ground truth.
                 </li>
             </ul>
         </section>
@@ -219,25 +239,23 @@
         <section>
             <h2 data-num="05">Evaluation</h2>
             <p>
-                This is where Spralingua V1 is honest. There is no formal evaluation layer &mdash; no Langfuse, no LLM-as-judge, no automated scoring. The eval pipeline was: I used the app, early users tried it, and bugs surfaced through real use.
-            </p>
-            <p>
-                Two production lessons came out of that loop, and both shaped V2's roadmap.
+                This is the largest reversal from V1, which had no evaluation layer at all &mdash; the eval pipeline was "I used the app and bugs surfaced." V2 measures itself on three levels.
             </p>
 
-            <h3>1. Eval-by-use &mdash; session bleeding across Gunicorn workers</h3>
+            <h3>1. Per-turn tracing &mdash; is the pipeline fast, and where's the time going?</h3>
             <p>
-                The bug surfaced the way V1 bugs usually do: I opened my own session and saw a conversation I hadn't had. Worker-local conversation state was leaking across users when requests hit different workers. The fix was to persist conversation history directly into the signed Flask session cookie on every turn, so history travels with the user and never crosses session boundaries. The "evaluation" here was running the app yourself with eyes open &mdash; no instrumented test would have caught it on the first pass, because it only triggered under multi-worker production load.
+                Every turn is its own Langfuse trace, with the speech-recognition, LLM, and speech-synthesis spans nesting underneath. The turn span captures user-perceived turn time (user starts speaking &rarr; bot starts speaking, which honestly includes the unavoidable 1.5s VAD silence wait), while the narrower pipeline-only number is preserved as a separate attribute for the "how fast is our pipeline" question. Because the auto-instrumented chain handler conflated full duration with latency, the LLM span is hand-rolled to record actual time-to-first-token &mdash; the number that decides whether the conversation feels real-time.
             </p>
 
-            <h3>2. Eval-by-use &mdash; context bleeding between sequential Claude calls</h3>
+            <h3>2. Goal evaluation &mdash; did the student do what the lesson asked?</h3>
             <p>
-                The hint generator started echoing phrases from the conversation reply. Same Claude client instance, two sequential calls, with enough context surface for state to leak between them. The scrappy V1 fix was a 0.5-second <code>time.sleep</code> between the conversation reply and the hint call, which empirically resolved the bleed but is the kind of patch that needs to die in V2. The proper fix &mdash; separate client instances per role &mdash; is on the V2 list along with the multi-agent architecture that makes it natural.
+                When the session closes, a single LLM judge (Cerebras <code>gpt-oss-120b</code>) scores the transcript against the lesson's goals. It returns a nested structured result &mdash; an overall score against a pass threshold, plus a per-goal verdict with an exact quote from the student as evidence and a one- or two-sentence rationale. The judge is instructed to pass an in-language attempt even with grammar errors, and to fail wrong-language, wrong-act, or no-attempt &mdash; competence at the speech act, not perfection.
             </p>
 
-            <h3>3. What V2's evaluation layer will look like</h3>
+            <h3>3. Pronunciation assessment &mdash; how did they sound?</h3>
             <p>
-                The same Langfuse foundation that runs Agora's observability today is the obvious starting point: per-turn traces capturing the three Claude calls, latency on the full voice loop (input transcript &rarr; TTS audio playback), grammar-feedback quality scored via LLM-as-judge, and structured-output validation on hint payloads so schema drift across model upgrades doesn't ship to the user. None of it exists in V1; all of it is teed up.
+                Azure AI Speech scores each user turn in scripted mode, pairing the captured audio with the Deepgram transcript as the reference text so omissions, insertions, and mispronunciations are flagged against ground truth. The summary modal is CEFR-level-aware: it leads with accuracy, then progressively surfaces fluency, completeness, and prosody at higher levels, and collapses per-word detail down to threshold-gated callouts so a beginner sees encouragement instead of a wall of red.
+                <em>Audio and text come from two independent producers, so they're joined by a shared per-VAD-stop sequence number; orphan audio (a breath, a mic glitch, an STT miss) is dropped and counted rather than silently misaligning a score to the wrong turn.</em>
             </p>
         </section>
 
@@ -245,28 +263,24 @@
         <section>
             <h2 data-num="06">Results</h2>
             <ul>
-                <li><strong>Live at spralingua.com.</strong> First shipped AI product; the conversation flow runs end-to-end in production today.</li>
-                <li><strong>Four languages working end-to-end</strong> &mdash; English, German, Spanish, Portuguese. Target-language selection drives both the prompt assembly (via <code>language_mapper</code>) and the Minimax voice config per character.</li>
-                <li><strong>Two character personalities with cloned voices</strong> &mdash; Harry and Sally, each defined by a YAML personality file and a Minimax voice clone. New characters are additive at the YAML layer, no code changes.</li>
-                <li><strong>Three Claude calls per turn, validated in production</strong> &mdash; one conversation reply plus two sidecar calls (grammar feedback, hint phrase). The pattern works; V2 will rebuild it as a proper multi-agent system with separate client instances.</li>
-                <li><strong>Architecture habits forged here carried forward</strong> &mdash; YAML-defined prompts, single-platform deployment, separation of services from routes, and "build the smallest thing that ships" are decisions Spralingua taught me before TubeText and Agora.</li>
+                <li><strong>Live at spralingua.com</strong> &mdash; the real-time voice loop runs end-to-end in production, streaming over a WebSocket from browser mic to browser speaker.</li>
+                <li><strong>Under 2.5 seconds time-to-first-byte</strong> on the live pipeline (user stops speaking &rarr; bot starts speaking), measured per turn in Langfuse.</li>
+                <li><strong>Multi-client by design</strong> &mdash; each connection runs an isolated pipeline, so concurrent users never share state. V1's worker-bleed bug is structurally gone.</li>
+                <li><strong>Two-axis scoring every session</strong> &mdash; goal completion via an LLM judge and pronunciation via Azure Speech, both persisted as JSONB on a single session row.</li>
+                <li><strong>Seven pronunciation locales available</strong> (en-US, de-DE, es-ES, es-MX, fr-FR, zh-CN, ja-JP), with CEFR A1 and B1 lessons live as YAML.</li>
+                <li><strong>Every V1 roadmap item shipped</strong> &mdash; streaming voice loop, server-side speech recognition, a faster conversation-pace model, and production observability from day one. The <code>print()</code>-logs era is over.</li>
             </ul>
         </section>
 
         <!-- 07 Roadmap -->
         <section>
-            <h2 data-num="07">Roadmap &mdash; What V2 Becomes</h2>
-            <p>
-                V2 is well underway. Spralingua V1 proved the architecture pattern; V2 is where the lessons get answered. A glimpse, not a spec sheet &mdash; the full reveal comes when V2 ships.
-            </p>
+            <h2 data-num="07">Roadmap</h2>
             <ul>
-                <li><strong>Stateful agent coordination</strong> &mdash; the three sequential Python calls retire. Conversation memory becomes a property of the agent runtime, not a thing I patch with <code>time.sleep</code>.</li>
-                <li><strong>A faster model at conversation pace</strong> &mdash; Haiku 3 hands off to a model picked specifically for low-latency inference. Replies arrive sooner, character coherence holds.</li>
-                <li><strong>Production observability from day one</strong> &mdash; every turn instrumented, costed, and grouped by session. The <code>print()</code>-logs era ends; V2 will know its own latency before its users do.</li>
-                <li><strong>Real-time streaming voice loop</strong> &mdash; request/response gives way to WebSocket-driven streaming, end to end. Audio plays back as it's generated, not after the full reply lands.</li>
-                <li><strong>Server-side speech recognition with proper utterance detection</strong> &mdash; Web Speech API moves aside for an enterprise-grade STT engine. The input half of the voice loop stops depending on which browser the user happens to be on.</li>
-                <li><strong>Cloned character voices</strong> &mdash; Harry and Sally were preset voices in V1. V2 opens the door to voices cloned from real recordings, including ones you might recognize.</li>
-                <li><strong>Voice or text &mdash; your call</strong> &mdash; speaking stays the headline mode; typing slots in alongside it, for accessibility, quieter environments, or quick iteration.</li>
+                <li><strong>Authentication and a per-user data model</strong> &mdash; the user id is hardcoded today while the prompt and LLM layers are still being iterated; real accounts land once that design settles.</li>
+                <li><strong>More lessons and levels</strong> &mdash; A2 and B2 situations, additive at the YAML layer with no loader changes.</li>
+                <li><strong>WebSocket reconnection</strong> &mdash; today a dropped connection or a changed selector means a fresh connect; graceful reconnection is next.</li>
+                <li><strong>Character voices cloned from real recordings</strong> &mdash; moving beyond preset MiniMax voices to identities you might recognize.</li>
+                <li><strong>Voice or text, your call</strong> &mdash; speaking stays the headline mode, with typed input alongside it for accessibility and quieter environments.</li>
             </ul>
         </section>
 
@@ -275,7 +289,7 @@
     <!-- End-of-page logo -->
     <div class="cs-end-mark">
         <a href="https://spralingua.com" target="_blank" aria-label="Visit Spralingua">
-            <img src="../images/spralingua.png" alt="Spralingua">
+            <img src="../images/brand/spralingua/mascot.png" alt="Spralingua" onerror="this.onerror=null; this.src='../images/spralingua.png';">
         </a>
     </div>
 
